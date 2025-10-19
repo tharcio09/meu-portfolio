@@ -2,8 +2,7 @@
 
 Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e trajetória como desenvolvedor web. O projeto foi construído com foco em um design moderno, minimalista, responsivo e com uma ótima experiência de usuário.
 
-**[➡️ Acesse a versão ao vivo aqui!](https://seu-link-do-vercel.com)** 
-
+**[➡️ Acesse a versão ao vivo aqui!](http://meu-portfolio-eight-gules.vercel.app/)** 
 ---
 
 ## ✨ Principais Funcionalidades
