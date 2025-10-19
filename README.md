@@ -2,7 +2,7 @@
 
 Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e trajetória como desenvolvedor web. O projeto foi construído com foco em um design moderno, minimalista, responsivo e com uma ótima experiência de usuário.
 
-**[➡️ Acesse a versão ao vivo aqui!](https://meu-portfolio-tharcio09s-projects.vercel.app/)** 
+**[➡️ Acesse a versão ao vivo aqui!](https://tharcio-portfolio.vercel.app/)** 
 ---
 
 ## ✨ Principais Funcionalidades
