@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Estilos do tema claro (padrão) */
+    @apply bg-light-bg text-primary-text transition-colors duration-300;
+  }
+
+  .dark body {
+    /* Estilos do tema escuro (quando a tag <html> tem a classe .dark) */
+    @apply bg-dark-bg text-light-text;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
