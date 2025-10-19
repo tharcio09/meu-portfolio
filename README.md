@@ -23,7 +23,7 @@ Este projeto foi construído com as mais modernas tecnologias do ecossistema fro
 
 ## 📸 Preview
 
-![Screenshot do Portfólio](./screenshot-portfolio.png)
+![Screenshot do Portfólio](./screenshot-portfolio.PNG)
 
 
 ## 🚀 Rodando o Projeto Localmente
