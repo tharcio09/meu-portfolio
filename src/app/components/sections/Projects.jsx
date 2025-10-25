@@ -14,6 +14,14 @@ const projectsData = [
     demoUrl: 'https://jogo-da-velha-react-neon.vercel.app/',
     tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
   },
+  {
+    title: 'HelpFlow - Sistema de HelpDesk',
+    description: 'Aplicação Full-Stack para gestão de tickets, com autenticação (GitHub via NextAuth), DB (Prisma/Supabase) e autorização por papéis.',
+    imageUrl: '/images/helpflow-screenshot.png',
+    githubUrl: 'https://github.com/tharcio09/helpflow',
+    demoUrl: 'https://helpflow.vercel.app/', 
+    tags: ['Next.js', 'React', 'Prisma', 'Supabase', 'NextAuth', 'Tailwind'],
+  },
   // Adicione mais projetos aqui no futuro
 ];
 
