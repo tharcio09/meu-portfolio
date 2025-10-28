@@ -22,7 +22,14 @@ const projectsData = [
     demoUrl: 'https://helpflow.vercel.app/', 
     tags: ['Next.js', 'React', 'Prisma', 'Supabase', 'NextAuth', 'Tailwind'],
   },
-  // Adicione mais projetos aqui no futuro
+  {
+    title: 'Crypto Dashboard',
+    description: 'Dashboard interativo que busca e exibe dados de criptomoedas da API CoinGecko, com filtro em tempo real e página de detalhes.',
+    imageUrl: '/images/screenshot-crypto.png',
+    githubUrl: 'https://github.com/tharcio09/crypto-dashboard',
+    demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'API', 'CoinGecko'],
+  },
 ];
 
 const Projects = () => {
