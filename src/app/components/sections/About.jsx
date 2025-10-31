@@ -9,7 +9,7 @@ import {
   SiPostman, SiNotion
 } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
-import { LuAward } from 'react-icons/lu'; // <-- 1. ÍCONE ADICIONADO
+import { LuAward } from 'react-icons/lu';
 
 const skills = [
   { icon: <SiHtml5 />, name: 'HTML5' },
@@ -39,7 +39,6 @@ const About = () => {
       >
         <h2 className="text-3xl font-bold text-center mb-12">Sobre Mim</h2>
         <div className="grid md:grid-cols-5 gap-10 items-center">
-
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="md:col-span-2 relative w-64 h-64 mx-auto"
@@ -51,12 +50,10 @@ const About = () => {
               className="rounded-full border-4 border-neon-purple shadow-lg object-cover"
             />
           </motion.div>
-
           <div className="md:col-span-3 text-secondary-text dark:text-dark-text leading-relaxed">
             <p className="mb-4">
               Olá! Sou o Tharcio, um desenvolvedor web apaixonado por tecnologia e estudante de Análise e Desenvolvimento de Sistemas. Minha jornada na programação é movida pela curiosidade e pelo prazer de criar soluções que realmente funcionam.
             </p>
-
             <p>
               Atualmente, estou focado em aprofundar minhas habilidades em todo o ecossistema JavaScript, com foco em Node.js para o back-end e React/Next.js para o front-end, além de bancos de dados como MySQL. Acredito que a melhor forma de aprender é construindo, por isso dedico meu tempo à criação de projetos pessoais. Sou um profissional proativo e dedicado, buscando uma oportunidade de estágio para colaborar com uma equipe, aprender com desenvolvedores experientes e transformar meu conhecimento em valor real.
             </p>
@@ -81,17 +78,16 @@ const About = () => {
           </div>
         </div>
 
-        {/* --- 2. SEÇÃO DE CERTIFICADOS  --- */}
         <div className="mt-16">
           <h3 className="text-2xl font-semibold mb-6 text-primary-text dark:text-light-text text-center">
             Certificados e Cursos
           </h3>
-          
+
           <div className="max-w-2xl mx-auto grid md:grid-cols-1 gap-6">
-            
+
             <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center gap-5">
               <LuAward size={40} className="text-neon-blue flex-shrink-0" />
-              
+
               <div className="flex-grow text-center sm:text-left">
                 <h4 className="font-bold text-lg text-primary-text dark:text-light-text">
                   Desenvolvimento Front-end (HTML, CSS, JS)
@@ -100,20 +96,21 @@ const About = () => {
                   Rocketseat - Emitido em 21/02/2025
                 </p>
               </div>
-              
-              <a 
-                href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb" 
-                target="_blank" 
+
+              <motion.a
+                href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="py-2 px-4 text-sm font-semibold rounded-lg transition-colors flex-shrink-0 mt-4 sm:mt-0 text-neon-blue border border-neon-blue hover:bg-neon-blue/10 dark:bg-neon-blue dark:text-dark-bg dark:hover:bg-neon-purple"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="py-2 px-6 bg-neon-blue text-dark-bg font-semibold rounded-lg shadow-lg hover:bg-neon-purple transition-all duration-300 dark:text-dark-bg text-sm flex-shrink-0 mt-4 sm:mt-0"
               >
                 Ver Credencial
-              </a>
+              </motion.a>
             </div>
-
           </div>
         </div>
-        
+
       </motion.div>
     </section>
   );
