@@ -1,4 +1,4 @@
-// ./src/app/components/Navbar.jsx
+
 'use client';
 
 import Link from 'next/link';
@@ -19,7 +19,6 @@ const Navbar = () => {
           Tharcio.dev
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="text-primary-text dark:text-light-text hover:text-neon-blue transition-colors">
@@ -28,7 +27,6 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Social Icons & Theme Switcher */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeSwitcher />
           <a href="https://github.com/tharcio09" target="_blank" rel="noopener noreferrer" className="text-2xl text-primary-text dark:text-light-text hover:text-neon-blue"><FaGithub /></a>
@@ -36,7 +34,6 @@ const Navbar = () => {
           <a href="mailto:tharciosantos09@gmail.com" className="text-2xl text-primary-text dark:text-light-text hover:text-neon-blue"><FaEnvelope /></a>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-4">
           <ThemeSwitcher />
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -45,7 +42,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden mt-4 flex flex-col items-center space-y-4">
           {navLinks.map((link) => (

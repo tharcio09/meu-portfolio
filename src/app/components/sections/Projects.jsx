@@ -1,4 +1,4 @@
-// ./src/app/components/sections/Projects.jsx
+
 'use client';
 
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-// components/ui/ProjectCard.jsx
+
 'use client';
 
 import Image from 'next/image';

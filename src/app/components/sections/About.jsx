@@ -1,18 +1,15 @@
-// ./src/app/components/sections/About.jsx
 'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-// --- (INÍCIO DA MUDANÇA) ---
-// 1. Removemos o SiVscode da primeira linha
 import {
   SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiNodedotjs, SiReact,
   SiNextdotjs, SiMysql, SiMongodb, SiGit, SiGithub,
   SiPostman, SiNotion
 } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
-
+import { LuAward } from 'react-icons/lu'; // <-- 1. ÍCONE ADICIONADO
 
 const skills = [
   { icon: <SiHtml5 />, name: 'HTML5' },
@@ -83,6 +80,40 @@ const About = () => {
             ))}
           </div>
         </div>
+
+        {/* --- 2. SEÇÃO DE CERTIFICADOS  --- */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-semibold mb-6 text-primary-text dark:text-light-text text-center">
+            Certificados e Cursos
+          </h3>
+          
+          <div className="max-w-2xl mx-auto grid md:grid-cols-1 gap-6">
+            
+            <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center gap-5">
+              <LuAward size={40} className="text-neon-blue flex-shrink-0" />
+              
+              <div className="flex-grow text-center sm:text-left">
+                <h4 className="font-bold text-lg text-primary-text dark:text-light-text">
+                  Desenvolvimento Front-end (HTML, CSS, JS)
+                </h4>
+                <p className="text-sm text-secondary-text dark:text-dark-text mt-1">
+                  Rocketseat - Emitido em 21/02/2025
+                </p>
+              </div>
+              
+              <a 
+                href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="py-2 px-4 text-sm font-semibold rounded-lg transition-colors flex-shrink-0 mt-4 sm:mt-0 text-neon-blue border border-neon-blue hover:bg-neon-blue/10 dark:bg-neon-blue dark:text-dark-bg dark:hover:bg-neon-purple"
+              >
+                Ver Credencial
+              </a>
+            </div>
+
+          </div>
+        </div>
+        
       </motion.div>
     </section>
   );

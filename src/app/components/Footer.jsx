@@ -1,4 +1,3 @@
-// ./src/app/components/Footer.jsx
 
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 

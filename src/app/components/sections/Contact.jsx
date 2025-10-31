@@ -1,4 +1,4 @@
-// ./src/app/components/sections/Contact.jsx
+
 'use client';
 
 import { useState } from 'react';
@@ -18,7 +18,6 @@ const Contact = () => {
     e.preventDefault();
     setStatus('Enviando...');
 
-    // Parâmetros do template que correspondem ao nosso template no EmailJS
     const templateParams = {
         name: formData.name,
         email: formData.email,
@@ -33,7 +32,6 @@ const Contact = () => {
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       setStatus('Mensagem enviada com sucesso!');
-      // Limpa o formulário após o envio bem-sucedido
       setFormData({ name: '', email: '', message: '' });
     }, (err) => {
       console.log('FAILED...', err);

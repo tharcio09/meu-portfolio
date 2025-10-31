@@ -1,10 +1,9 @@
-// components/sections/Experience.jsx
+
 'use client';
 
 import { motion } from 'framer-motion';
 import { FaBriefcase } from 'react-icons/fa';
 
-// SEUS DADOS REAIS - BASTA PREENCHER OS NOMES E DATAS
 const experiencesData = [
   {
     role: 'Auxiliar Administrativo',
