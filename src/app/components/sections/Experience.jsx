@@ -29,7 +29,7 @@ const experiencesData = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-16">
+    <section id="experiencia" className="py-16">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

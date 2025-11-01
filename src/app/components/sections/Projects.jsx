@@ -34,7 +34,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-16">
+    <section id="projetos" className="py-16">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

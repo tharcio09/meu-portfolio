@@ -1,8 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import Image from 'next/image';
-
 import {
   SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiNodedotjs, SiReact,
   SiNextdotjs, SiMysql, SiMongodb, SiGit, SiGithub,
@@ -29,8 +28,30 @@ const skills = [
 ];
 
 const About = () => {
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useTransform(y, [-128, 128], [10, -10]);
+  const rotateY = useTransform(x, [-128, 128], [-10, 10]);
+  const springConfig = { stiffness: 300, damping: 20 };
+  const springRotateX = useSpring(rotateX, springConfig);
+  const springRotateY = useSpring(rotateY, springConfig);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left - (rect.width / 2);
+    const mouseY = e.clientY - rect.top - (rect.height / 2);
+    x.set(mouseX);
+    y.set(mouseY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
-    <section id="about" className="py-16">
+    <section id="sobre-mim" className="py-16">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -39,8 +60,16 @@ const About = () => {
       >
         <h2 className="text-3xl font-bold text-center mb-12">Sobre Mim</h2>
         <div className="grid md:grid-cols-5 gap-10 items-center">
+
           <motion.div
             whileHover={{ scale: 1.05 }}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              perspective: 800,
+              rotateX: springRotateX,
+              rotateY: springRotateY,
+            }}
             className="md:col-span-2 relative w-64 h-64 mx-auto"
           >
             <Image
@@ -48,8 +77,10 @@ const About = () => {
               alt="Foto de Tharcio Santos"
               fill={true}
               className="rounded-full border-4 border-neon-purple shadow-lg object-cover"
+              priority={true}
             />
           </motion.div>
+
           <div className="md:col-span-3 text-secondary-text dark:text-dark-text leading-relaxed">
             <p className="mb-4">
               Olá! Sou o Tharcio, um desenvolvedor web apaixonado por tecnologia e estudante de Análise e Desenvolvimento de Sistemas. Minha jornada na programação é movida pela curiosidade e pelo prazer de criar soluções que realmente funcionam.
@@ -82,12 +113,9 @@ const About = () => {
           <h3 className="text-2xl font-semibold mb-6 text-primary-text dark:text-light-text text-center">
             Certificados e Cursos
           </h3>
-
           <div className="max-w-2xl mx-auto grid md:grid-cols-1 gap-6">
-
             <div className="bg-light-card dark:bg-dark-card rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center gap-5">
               <LuAward size={40} className="text-neon-blue flex-shrink-0" />
-
               <div className="flex-grow text-center sm:text-left">
                 <h4 className="font-bold text-lg text-primary-text dark:text-light-text">
                   Desenvolvimento Front-end (HTML, CSS, JS)
@@ -96,7 +124,6 @@ const About = () => {
                   Rocketseat - Emitido em 21/02/2025
                 </p>
               </div>
-
               <motion.a
                 href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb"
                 target="_blank"

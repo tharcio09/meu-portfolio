@@ -1,5 +1,3 @@
-
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -9,7 +7,6 @@ import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Configuração de SEO
 export const metadata = {
   title: "Tharcio Santos | Desenvolvedor Full-Stack",
   description: "Portfólio profissional de Tharcio Santos, um desenvolvedor web iniciante em React, Next.js e Node.js.",
@@ -18,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning data-scroll-behavior="smooth">
       <body className={inter.className}>
         <ThemeProvider>
           <Navbar />
@@ -27,8 +24,10 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </ThemeProvider>
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );
 }
+
+
