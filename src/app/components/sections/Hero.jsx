@@ -10,11 +10,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-[80vh] flex items-center justify-center text-center overflow-hidden">
 
-      {/* --- Ícones Flutuantes (com opacidade aumentada) --- */}
-
-      {/* Ícone 1: React */}
       <motion.div
-        // --- MUDANÇA AQUI: de /10 para /20 ---
         className="absolute top-1/4 left-1/4 text-5xl md:text-7xl text-neon-blue/20 dark:text-neon-blue/20"
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
         transition={{ 
@@ -27,9 +23,7 @@ const Hero = () => {
         <FaReact />
       </motion.div>
 
-      {/* Ícone 2: Node.js */}
       <motion.div
-        // --- MUDANÇA AQUI: de /10 para /20 ---
         className="absolute top-1/3 right-1/4 text-6xl md:text-8xl text-neon-purple/20 dark:text-neon-purple/20"
         animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
         transition={{ 
@@ -43,9 +37,7 @@ const Hero = () => {
         <FaNodeJs />
       </motion.div>
       
-      {/* Ícone 3: JavaScript */}
       <motion.div
-        // --- MUDANÇA AQUI: de /10 e /5 para /20 e /10 ---
         className="absolute bottom-1/4 left-1/3 text-4xl md:text-6xl text-gray-900/20 dark:text-white/10"
         animate={{ y: [0, -10, 0] }} 
         transition={{ 
@@ -59,9 +51,7 @@ const Hero = () => {
         <SiJavascript />
       </motion.div>
 
-      {/* Ícone 4: Next.js */}
       <motion.div
-        // --- MUDANÇA AQUI: de /10 e /5 para /20 e /10 ---
         className="absolute bottom-1/3 right-1/3 text-5xl md:text-7xl text-gray-900/20 dark:text-white/10"
         animate={{ y: [0, 10, 0] }} 
         transition={{ 
@@ -75,7 +65,6 @@ const Hero = () => {
         <SiNextdotjs />
       </motion.div>
 
-      {/* Conteúdo Principal (NA FRENTE) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -83,13 +72,13 @@ const Hero = () => {
         className="relative z-10 flex flex-col items-center gap-4"
       >
         <h1 className="text-4xl md:text-6xl font-bold">
-          <TypingEffect text="Olá, eu sou Tharcio," />
+          <TypingEffect text="Olá, eu sou Tharcio Santos" />
         </h1>
         <p className="text-xl md:text-3xl text-neon-purple">
-          Desenvolvedor Web Full-Stack
+          Desenvolvedor Full-Stack
         </p>
         <p className="max-w-2xl text-secondary-text dark:text-dark-text mt-2">
-          Focado em traduzir problemas complexos em código limpo, funcional e com uma ótima experiência para o usuário.
+          Focado em construir projetos desafiadores com React, Next.js e Node.js. Sou um estudante proativo e de rápido aprendizado, pronto para aplicar minha dedicação total e contribuir com a equipe.
         </p>
         <motion.div
           whileHover={{ scale: 1.05 }}
