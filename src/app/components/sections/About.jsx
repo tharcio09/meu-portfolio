@@ -2,26 +2,39 @@
 
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import Image from 'next/image';
+
 import {
   SiHtml5, SiCss3, SiJavascript, SiTailwindcss, SiNodedotjs, SiReact,
   SiNextdotjs, SiMysql, SiMongodb, SiGit, SiGithub,
-  SiPostman, SiNotion
+  SiPostman, SiNotion,
+  SiPrisma, SiSupabase, SiFigma,
+  SiVite, SiFramer, SiAuth0
 } from 'react-icons/si';
+
 import { VscCode } from 'react-icons/vsc';
 import { LuAward } from 'react-icons/lu';
 
 const skills = [
+  // Front-end
   { icon: <SiHtml5 />, name: 'HTML5' },
   { icon: <SiCss3 />, name: 'CSS3' },
   { icon: <SiJavascript />, name: 'JavaScript' },
   { icon: <SiReact />, name: 'React' },
   { icon: <SiNextdotjs />, name: 'Next.js' },
-  { icon: <SiNodedotjs />, name: 'Node.js' },
   { icon: <SiTailwindcss />, name: 'Tailwind CSS' },
+  { icon: <SiFramer />, name: 'Framer Motion' },
+  // Back-end
+  { icon: <SiNodedotjs />, name: 'Node.js' },
+  { icon: <SiPrisma />, name: 'Prisma' },
+  { icon: <SiSupabase />, name: 'Supabase' },
   { icon: <SiMysql />, name: 'MySQL' },
   { icon: <SiMongodb />, name: 'MongoDB' },
+  // Ferramentas
   { icon: <SiGit />, name: 'Git' },
   { icon: <SiGithub />, name: 'GitHub' },
+  { icon: <SiVite />, name: 'Vite' },
+  { icon: <SiAuth0 />, name: 'NextAuth' },
+  { icon: <SiFigma />, name: 'Figma' },
   { icon: <VscCode />, name: 'VS Code' },
   { icon: <SiPostman />, name: 'Postman' },
   { icon: <SiNotion />, name: 'Notion' },
@@ -81,12 +94,16 @@ const About = () => {
             />
           </motion.div>
 
+          {/* Texto "Sobre Mim" (Atualizado) */}
           <div className="md:col-span-3 text-secondary-text dark:text-dark-text leading-relaxed">
             <p className="mb-4">
-              Olá! Sou o Tharcio, um desenvolvedor web apaixonado por tecnologia e estudante de Análise e Desenvolvimento de Sistemas. Minha jornada na programação é movida pela curiosidade e pelo prazer de criar soluções que realmente funcionam.
+              Desenvolvedor Full-Stack em início de carreira, com foco em React, Next.js, Node.js e Tailwind CSS. Apaixonado por tecnologia e pelo processo de transformar ideias em soluções digitais eficientes.
+            </p>
+            <p className="mb-4">
+              Busco uma oportunidade para aplicar e expandir meus conhecimentos, valorizando o aprendizado contínuo e o trabalho em equipe.
             </p>
             <p>
-              Atualmente, estou focado em aprofundar minhas habilidades em todo o ecossistema JavaScript, com foco em Node.js para o back-end e React/Next.js para o front-end, além de bancos de dados como MySQL. Acredito que a melhor forma de aprender é construindo, por isso dedico meu tempo à criação de projetos pessoais. Sou um profissional proativo e dedicado, buscando uma oportunidade de estágio para colaborar com uma equipe, aprender com desenvolvedores experientes e transformar meu conhecimento em valor real.
+              Minhas principais stacks incluem Front-end (React, Next.js, Tailwind CSS), Back-end (Node.js, Prisma, Supabase) e Ferramentas (Git/GitHub, Figma, NextAuth).
             </p>
           </div>
         </div>
@@ -118,7 +135,7 @@ const About = () => {
               <LuAward size={40} className="text-neon-blue flex-shrink-0" />
               <div className="flex-grow text-center sm:text-left">
                 <h4 className="font-bold text-lg text-primary-text dark:text-light-text">
-                  Desenvolvimento Front-end (HTML, CSS, JS)
+                  NLW Connect (Fullstack)
                 </h4>
                 <p className="text-sm text-secondary-text dark:text-dark-text mt-1">
                   Rocketseat - Emitido em 21/02/2025
