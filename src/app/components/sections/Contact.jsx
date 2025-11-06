@@ -19,9 +19,9 @@ const Contact = () => {
     setStatus('Enviando...');
 
     const templateParams = {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
     };
 
     emailjs.send(

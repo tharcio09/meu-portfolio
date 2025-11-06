@@ -21,7 +21,7 @@ const Footer = () => {
           </motion.a>
           
           <motion.a
-            href="https://www.linkedin.com/in/tharcio-santos/"
+            href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl text-primary-text dark:text-light-text hover:text-neon-purple dark:hover:text-neon-purple transition-colors"

@@ -47,7 +47,7 @@ const Navbar = () => {
             <FaGithub />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/tharcio-santos/"
+            href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors"
@@ -90,7 +90,7 @@ const Navbar = () => {
           ))}
           <div className="flex space-x-6 pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 w-full justify-center">
             <motion.a href="https://github.com/tharcio09" target="_blank" rel="noopener noreferrer" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaGithub /></motion.a>
-            <motion.a href="https://www.linkedin.com/in/tharcio-santos/" target="_blank" rel="noopener noreferrer" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaLinkedin /></motion.a>
+            <motion.a href="https://www.linkedin.com/in/tharcio-santos-dev/" target="_blank" rel="noopener noreferrer" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaLinkedin /></motion.a>
             <motion.a href="mailto:tharciosantos09@gmail.com" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaEnvelope /></motion.a>
           </div>
         </div>
