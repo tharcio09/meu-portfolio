@@ -71,7 +71,6 @@ O projeto reflete minhas habilidades em desenvolvimento moderno, utilizando as m
 - **[Vercel Analytics](https://vercel.com/analytics)** - Analytics do site
 
 ### Ferramentas de Desenvolvimento
-- **TypeScript** (tipagem estática)
 - **ESLint** (linting de código)
 - **PostCSS** (processamento de CSS)
 - **Autoprefixer** (compatibilidade de navegadores)
