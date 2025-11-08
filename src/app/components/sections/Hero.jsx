@@ -3,93 +3,87 @@
 import { motion } from 'framer-motion';
 import TypingEffect from '../ui/TypingEffect';
 import Link from 'next/link';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiJavascript, SiNextdotjs } from 'react-icons/si';
+import Section from '../ui/Section';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center justify-center text-center overflow-hidden">
-
+    <Section id="home" className="relative min-h-[90vh] flex items-center justify-center text-center overflow-hidden px-0">
+      {/* Hero Content */}
       <motion.div
-        className="absolute top-1/4 left-1/4 text-5xl md:text-7xl text-neon-blue/20 dark:text-neon-blue/20"
-        animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-        transition={{ 
-          duration: 4, 
-          repeat: Infinity, 
-          repeatType: "mirror", 
-          ease: "easeInOut" 
-        }}
-      >
-        <FaReact />
-      </motion.div>
-
-      <motion.div
-        className="absolute top-1/3 right-1/4 text-6xl md:text-8xl text-neon-purple/20 dark:text-neon-purple/20"
-        animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
-        transition={{ 
-          duration: 5, 
-          repeat: Infinity, 
-          repeatType: "mirror", 
-          ease: "easeInOut",
-          delay: 0.5 
-        }}
-      >
-        <FaNodeJs />
-      </motion.div>
-      
-      <motion.div
-        className="absolute bottom-1/4 left-1/3 text-4xl md:text-6xl text-gray-900/20 dark:text-white/10"
-        animate={{ y: [0, -10, 0] }} 
-        transition={{ 
-          duration: 3.5, 
-          repeat: Infinity, 
-          repeatType: "mirror", 
-          ease: "easeInOut",
-          delay: 1 
-        }}
-      >
-        <SiJavascript />
-      </motion.div>
-
-      <motion.div
-        className="absolute bottom-1/3 right-1/3 text-5xl md:text-7xl text-gray-900/20 dark:text-white/10"
-        animate={{ y: [0, 10, 0] }} 
-        transition={{ 
-          duration: 3, 
-          repeat: Infinity, 
-          repeatType: "mirror", 
-          ease: "easeInOut",
-          delay: 0.2 
-        }}
-      >
-        <SiNextdotjs />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        className="relative z-10 flex flex-col items-center gap-10 text-center max-w-4xl mx-auto px-6"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center gap-4"
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <h1 className="text-4xl md:text-6xl font-bold">
-          <TypingEffect text="Olá, eu sou Tharcio Santos" />
-        </h1>
-        <p className="text-xl md:text-3xl text-neon-purple">
-          Desenvolvedor Full-Stack
-        </p>
-        <p className="max-w-2xl text-secondary-text dark:text-dark-text mt-2">
-          Focado em construir projetos desafiadores com React, Next.js e Node.js. Sou um estudante proativo e de rápido aprendizado, pronto para aplicar minha dedicação total e contribuir com a equipe.
-        </p>
+        {/* Greeting */}
         <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Link href="#contato" className="mt-6 px-8 py-3 bg-neon-blue text-dark-bg font-semibold rounded-lg shadow-lg hover:bg-neon-purple transition-all duration-300">
-            Entre em Contato
+          <span className="text-lg md:text-xl lg:text-2xl text-secondary-text dark:text-dark-text font-medium tracking-wide">
+            <TypingEffect text="Olá, eu sou" />
+          </span>
+        </motion.div>
+
+        {/* Name */}
+        <motion.h1
+          className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-[1.1] tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <span className="block bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue bg-clip-text text-transparent">
+            Tharcio
+          </span>
+        </motion.h1>
+
+        {/* Role */}
+        <motion.div
+          className="flex flex-col items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-neon-blue tracking-wide">
+            Desenvolvedor Full-Stack
+          </p>
+          <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-neon-blue to-transparent rounded-full opacity-60" />
+        </motion.div>
+
+        {/* Description */}
+        <motion.p
+          className="max-w-2xl text-base md:text-lg lg:text-xl text-secondary-text dark:text-dark-text leading-relaxed mt-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Focado em construir projetos desafiadores com React, Next.js e Node.js. Sou um estudante proativo e de rápido aprendizado, pronto para aplicar minha dedicação total e contribuir com a equipe.
+        </motion.p>
+
+        {/* CTA Button */}
+        <motion.div
+          className="mt-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <Link 
+            href="#contato" 
+            className="group inline-flex items-center gap-2.5 px-10 py-4 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue text-dark-bg font-bold text-base md:text-lg rounded-xl shadow-lg hover:shadow-neon-lg transition-all duration-300 ease-out"
+          >
+            <span>Entre em Contato</span>
+            <motion.span
+              className="text-lg"
+              animate={{ x: [0, 4, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1, ease: 'easeInOut' }}
+            >
+              →
+            </motion.span>
           </Link>
         </motion.div>
       </motion.div>
-    </section>
+    </Section>
   );
 };
 

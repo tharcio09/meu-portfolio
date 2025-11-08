@@ -1,9 +1,8 @@
-
 'use client';
 
 import { motion } from 'framer-motion';
 import ProjectCard from '../ui/ProjectCard';
-
+import Section from '../ui/Section';
 
 const projectsData = [
   {
@@ -33,22 +32,57 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
   return (
-    <section id="projetos" className="py-16">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold text-center mb-12">Projetos</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
+    <Section id="projetos">
+      <motion.div className="text-center mb-20">
+        <motion.h2 
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Projetos
+        </motion.h2>
+        <motion.div
+          className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-purple to-transparent rounded-full mx-auto mb-6 opacity-60"
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 0.6, scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <motion.p
+          className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Alguns dos projetos que desenvolvi para demonstrar minhas habilidades
+        </motion.p>
       </motion.div>
-    </section>
+      <motion.div
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        {projectsData.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
+      </motion.div>
+    </Section>
   );
 };
 

@@ -2,18 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tema e scroll */
 @layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+
   body {
-    /* Estilos do tema claro (padrão) */
-    @apply bg-light-bg text-primary-text transition-colors duration-300;
+    @apply bg-light-bg text-primary-text transition-colors duration-500;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   .dark body {
-    /* Estilos do tema escuro (quando a tag <html> tem a classe .dark) */
     @apply bg-dark-bg text-light-text;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Melhorar contraste e legibilidade */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  /* Scrollbar customizada */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-light-bg dark:bg-dark-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neon-blue/30 dark:bg-neon-blue/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neon-blue/50 dark:bg-neon-blue/70;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+/* Utilitários customizados */
+@layer utilities {
+  .glass {
+    @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md;
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 10px rgba(39, 215, 254, 0.5), 0 0 20px rgba(39, 215, 254, 0.3);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 10px rgba(167, 121, 233, 0.5), 0 0 20px rgba(167, 121, 233, 0.3);
+  }
 }

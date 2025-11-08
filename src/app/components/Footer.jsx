@@ -5,35 +5,35 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-light-card dark:bg-dark-card text-center py-6">
-      <div className="container mx-auto">
-        <div className="flex justify-center space-x-6 mb-4">
-          
+    <footer className="bg-light-card/90 dark:bg-dark-card/90 backdrop-blur-lg text-center py-10 border-t border-gray-200/30 dark:border-gray-800/30 transition-all duration-300" role="contentinfo">
+      <div className="container mx-auto max-w-7xl px-6">
+        <div className="flex justify-center space-x-6 mb-6">
           <motion.a
             href="https://github.com/tharcio09"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl text-primary-text dark:text-light-text hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
+            aria-label="Visite meu perfil no GitHub"
+            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
             <FaGithub />
           </motion.a>
-          
           <motion.a
             href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl text-primary-text dark:text-light-text hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
+            aria-label="Visite meu perfil no LinkedIn"
+            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
             <FaLinkedin />
           </motion.a>
-          
           <motion.a
             href="mailto:tharciosantos09@gmail.com"
-            className="text-2xl text-primary-text dark:text-light-text hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
+            aria-label="Envie um email para Tharcio Santos"
+            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >

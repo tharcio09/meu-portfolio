@@ -14,9 +14,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-light-bg/70 dark:bg-dark-bg/70 backdrop-blur-sm sticky top-0 z-50 p-4 border-b border-gray-200 dark:border-gray-800">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-neon-blue hover:text-neon-purple transition-colors">
+    <nav className="bg-light-bg/90 dark:bg-dark-bg/90 backdrop-blur-lg sticky top-0 z-50 p-4 border-b border-gray-200/30 dark:border-gray-800/30 shadow-sm transition-all duration-300" role="navigation" aria-label="Navegação principal">
+      <div className="container mx-auto max-w-7xl flex justify-between items-center">
+        <Link href="/" className="text-2xl font-bold text-neon-blue hover:text-neon-purple transition-colors" aria-label="Voltar para o início">
           Tharcio.dev
         </Link>
 
@@ -25,7 +25,7 @@ const Navbar = () => {
             <MotionLink
               key={link.href}
               href={link.href}
-              className="text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors"
+              className="text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -40,7 +40,7 @@ const Navbar = () => {
             href="https://github.com/tharcio09"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors"
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -50,7 +50,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors"
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -58,7 +58,7 @@ const Navbar = () => {
           </motion.a>
           <motion.a
             href="mailto:tharciosantos09@gmail.com"
-            className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors"
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -68,7 +68,12 @@ const Navbar = () => {
 
         <div className="md:hidden flex items-center gap-4">
           <ThemeSwitcher />
-          <button onClick={() => setIsOpen(!isOpen)}>
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+            className="text-neon-blue hover:text-neon-purple transition-colors"
+          >
             {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
           </button>
         </div>
@@ -81,7 +86,7 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors text-lg"
+              className="text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors text-lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -89,9 +94,9 @@ const Navbar = () => {
             </MotionLink>
           ))}
           <div className="flex space-x-6 pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 w-full justify-center">
-            <motion.a href="https://github.com/tharcio09" target="_blank" rel="noopener noreferrer" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaGithub /></motion.a>
-            <motion.a href="https://www.linkedin.com/in/tharcio-santos-dev/" target="_blank" rel="noopener noreferrer" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaLinkedin /></motion.a>
-            <motion.a href="mailto:tharciosantos09@gmail.com" className="text-2xl text-primary-text hover:text-neon-purple dark:text-light-text dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaEnvelope /></motion.a>
+            <motion.a href="https://github.com/tharcio09" target="_blank" rel="noopener noreferrer" className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaGithub /></motion.a>
+            <motion.a href="https://www.linkedin.com/in/tharcio-santos-dev/" target="_blank" rel="noopener noreferrer" className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaLinkedin /></motion.a>
+            <motion.a href="mailto:tharciosantos09@gmail.com" className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors" whileHover={{ scale: 1.2 }}><FaEnvelope /></motion.a>
           </div>
         </div>
       )}

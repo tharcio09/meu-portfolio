@@ -1,8 +1,8 @@
-
 'use client';
 
 import { motion } from 'framer-motion';
 import { FaBriefcase } from 'react-icons/fa';
+import Section from '../ui/Section';
 
 const experiencesData = [
   {
@@ -29,38 +29,83 @@ const experiencesData = [
 
 const Experience = () => {
   return (
-    <section id="experiencia" className="py-16">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold text-center mb-12">Experiência Profissional</h2>
-        <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-9 top-0 h-full w-0.5 bg-neon-purple/50"></div>
-          
-          {experiencesData.map((exp, index) => (
-            <div key={index} className="relative pl-20 pb-8">
-              <div className="absolute left-0 top-1.5 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 bg-light-card dark:bg-dark-card rounded-full border-2 border-neon-purple">
-                <FaBriefcase className="text-neon-blue" />
-              </div>
-              
-              <div className="p-5 rounded-lg bg-light-card dark:bg-dark-card shadow-md dark:shadow-none">
-                <p className="text-sm text-neon-purple font-semibold">{exp.period}</p>
-                <h3 className="text-xl font-bold mt-1 text-primary-text dark:text-light-text">{exp.role}</h3>
-                <p className="text-md text-secondary-text dark:text-dark-text mb-3">{exp.company}</p>
-                <ul className="list-disc pl-5 space-y-1 text-secondary-text dark:text-dark-text">
-                  {exp.description.map((desc, i) => (
-                    <li key={i}>{desc}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
+    <Section id="experiencia">
+      <motion.div className="text-center mb-20">
+        <motion.h2 
+          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Experiência Profissional
+        </motion.h2>
+        <motion.div
+          className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-blue to-transparent rounded-full mx-auto mb-6 opacity-60"
+          initial={{ opacity: 0, scaleX: 0 }}
+          whileInView={{ opacity: 0.6, scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        />
+        <motion.p
+          className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Minha trajetória profissional e experiências adquiridas
+        </motion.p>
       </motion.div>
-    </section>
+      <div className="relative max-w-4xl mx-auto px-4">
+        {/* Timeline vertical - apenas no desktop */}
+        <div className="hidden md:block absolute left-12 h-full w-0.5 bg-gradient-to-b from-neon-blue via-neon-purple to-neon-blue opacity-40"></div>
+        
+        {experiencesData.map((exp, index) => (
+          <motion.div
+            key={index}
+            className="relative pb-12 md:pl-32"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            {/* Ícone - Mobile: acima do card | Desktop: à esquerda */}
+            <motion.div 
+              className="absolute left-1/2 md:left-0 -top-2 md:top-2 transform -translate-x-1/2 md:-translate-x-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-full border-4 border-neon-blue shadow-neon-blue z-20"
+              whileHover={{ scale: 1.15, rotate: 360 }}
+              transition={{ duration: 0.6 }}
+            >
+              <FaBriefcase className="text-neon-blue text-lg md:text-xl" />
+            </motion.div>
+            
+            {/* Card de experiência */}
+            <motion.div 
+              className="relative pt-8 md:pt-0 md:ml-8 p-5 md:p-8 rounded-2xl bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
+              whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(39, 215, 254, 0.2)' }}
+            >
+              <p className="text-xs md:text-sm lg:text-base text-neon-purple font-bold mb-2">{exp.period}</p>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mt-1 md:mt-2 mb-2 text-primary-text dark:text-light-text">{exp.role}</h3>
+              <p className="text-base md:text-lg lg:text-xl text-secondary-text dark:text-dark-text mb-3 md:mb-4 font-medium">{exp.company}</p>
+              <ul className="list-disc pl-5 md:pl-6 space-y-2 md:space-y-3 text-sm md:text-base text-secondary-text dark:text-dark-text">
+                {exp.description.map((desc, i) => (
+                  <motion.li 
+                    key={i}
+                    className="leading-relaxed"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.2 + i * 0.1 }}
+                  >
+                    {desc}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
+        ))}
+      </div>
+    </Section>
   );
 };
 
