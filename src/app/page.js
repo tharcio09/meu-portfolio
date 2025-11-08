@@ -1,4 +1,3 @@
-// app/page.js
 
 'use client';
 
@@ -9,7 +8,6 @@ import Projects from './components/sections/Projects';
 import Contact from './components/sections/Contact';
 import Experience from './components/sections/Experience';
 
-// Lazy load do ParticlesBackground para melhorar performance
 const ParticlesBackground = dynamic(
   () => import('./components/ParticlesBackground'),
   { 
