@@ -9,7 +9,7 @@
 
 **Portfólio moderno e interativo desenvolvido com Next.js, apresentando um design dark futurista com elementos neon**
 
-[🌐 **Acesse o site ao vivo**](https://tharcioport.vercel.app/) • [📧 **Entre em contato**](mailto:tharciosantos09@gmail.com)
+[🌐 **Acesse o site ao vivo**](https://tharcio-portfolio.vercel.app/) • [📧 **Entre em contato**](mailto:tharciosantos09@gmail.com)
 
 </div>
 
