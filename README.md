@@ -216,7 +216,7 @@ Desenvolvedor Full-Stack focado em React, Next.js e Node.js.
 - **LinkedIn**: [linkedin.com/in/tharcio-santos-dev](https://www.linkedin.com/in/tharcio-santos-dev/)
 - **GitHub**: [github.com/tharcio09](https://github.com/tharcio09)
 - **Email**: [tharciosantos09@gmail.com](mailto:tharciosantos09@gmail.com)
-- **Portfólio**: [tharcioport.vercel.app](https://tharcioport.vercel.app/)
+- **Portfólio**: [tharcio-port.vercel.app](https://tharcio-portfolio.vercel.app/)
 
 ---
 
