@@ -36,7 +36,6 @@ export const metadata = {
     telephone: false,
   },
   
-  // Open Graph
   openGraph: {
     title: "Tharcio Santos | Desenvolvedor Full-Stack",
     description: "Portfólio profissional de Tharcio Santos, um desenvolvedor web Full-Stack especializado em React, Next.js, Node.js e Tailwind CSS.",
