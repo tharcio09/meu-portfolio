@@ -6,7 +6,13 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "Arial"],
+});
+
 
 export const metadata = {
   title: "Tharcio Santos | Desenvolvedor Full-Stack",
@@ -78,7 +84,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-light-bg text-primary-text`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Toaster position="top-center" reverseOrder={false} />
           <div className="relative z-10">
