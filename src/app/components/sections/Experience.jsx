@@ -6,13 +6,13 @@ import Section from '../ui/Section';
 
 const experiencesData = [
   {
-    role: 'Auxiliar Administrativo',
+    role: 'Auxiliar Administrativo (Controlador de Manutenção)',
     company: 'EPOS - Empresa Portuguesa de Obras Subterrâneas',
     period: '05/2023 - 10/2023',
     description: [
-      'Análise e processamento de solicitações técnicas, definindo prioridades e documentando requisitos para a equipe.',
-      'Criação de relatórios para rastrear a performance de sistemas, utilizando dados para apoiar a tomada de decisão técnica.',
-      'Colaboração direta com equipes técnicas, fornecendo documentação e suporte para otimizar o fluxo de trabalho.',
+      'Recebimento e análise de pedidos de manutenção, definindo prioridades para a equipe técnica.',
+      'Elaboração de relatórios de parada e controle de equipamentos para apoiar a tomada de decisão.',
+      'Colaboração direta com equipes técnicas, fornecendo documentação e suporte ao fluxo de trabalho.',
     ],
   },
   {
@@ -20,9 +20,9 @@ const experiencesData = [
     company: 'Komaq Manutenção e Serviços',
     period: '01/2022 - 05/2022',
     description: [
-      'Execução de diagnósticos e reparos em sistemas complexos, seguindo especificações técnicas para garantir a funcionalidade.',
-      'Trabalho colaborativo em um ambiente técnico, oferecendo suporte prático para alcançar os objetivos da equipe.',
-      'Gerenciamento de componentes e recursos essenciais para garantir a execução eficiente dos projetos.',
+      'Diagnóstico e reforma de rompedores e cilindros hidráulicos, seguindo especificações técnicas.',
+      'Apoio direto à equipe de manutenção técnica em um ambiente colaborativo.',
+      'Organização e controle de peças e ferramentas para garantir a eficiência dos reparos.',
     ],
   },
 ];
@@ -31,7 +31,7 @@ const Experience = () => {
   return (
     <Section id="experiencia">
       <motion.div className="text-center mb-20">
-        <motion.h2 
+        <motion.h2
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const Experience = () => {
       <div className="relative max-w-4xl mx-auto px-4">
         {/* Timeline vertical - apenas no desktop */}
         <div className="hidden md:block absolute left-12 h-full w-0.5 bg-gradient-to-b from-neon-blue via-neon-purple to-neon-blue opacity-40"></div>
-        
+
         {experiencesData.map((exp, index) => (
           <motion.div
             key={index}
@@ -71,16 +71,16 @@ const Experience = () => {
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
             {/* Ícone - Mobile: acima do card | Desktop: à esquerda */}
-            <motion.div 
+            <motion.div
               className="absolute left-1/2 md:left-0 -top-2 md:top-2 transform -translate-x-1/2 md:-translate-x-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-full border-4 border-neon-blue shadow-neon-blue z-20"
               whileHover={{ scale: 1.15, rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
               <FaBriefcase className="text-neon-blue text-lg md:text-xl" />
             </motion.div>
-            
+
             {/* Card de experiência */}
-            <motion.div 
+            <motion.div
               className="relative pt-8 md:pt-0 md:ml-8 p-5 md:p-8 rounded-2xl bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
               whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(39, 215, 254, 0.2)' }}
             >
@@ -89,7 +89,7 @@ const Experience = () => {
               <p className="text-base md:text-lg lg:text-xl text-secondary-text dark:text-dark-text mb-3 md:mb-4 font-medium">{exp.company}</p>
               <ul className="list-disc pl-5 md:pl-6 space-y-2 md:space-y-3 text-sm md:text-base text-secondary-text dark:text-dark-text">
                 {exp.description.map((desc, i) => (
-                  <motion.li 
+                  <motion.li
                     key={i}
                     className="leading-relaxed"
                     initial={{ opacity: 0, x: -20 }}

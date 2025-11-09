@@ -21,7 +21,7 @@ export default function AnimatedBackground() {
         transition-opacity duration-1000
       "
       style={{
-        filter: 'blur(100px)', // Desfoque forte
+        filter: 'blur(100px)',
       }}
     />
   );
