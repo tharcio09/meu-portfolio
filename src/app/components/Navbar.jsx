@@ -8,7 +8,8 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 import { navLinks } from '../../data/constants';
 import { motion } from 'framer-motion';
 
-const MotionLink = motion(Link);
+// ✅ Nova API do Framer Motion
+const MotionLink = motion.create(Link);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,39 +49,23 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           <ThemeSwitcher />
 
-          <motion.a
-            href="https://github.com/tharcio09"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir perfil do GitHub de Tharcio Santos"
-            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaGithub />
-          </motion.a>
-
-          <motion.a
-            href="https://www.linkedin.com/in/tharcio-santos-dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir perfil do LinkedIn de Tharcio Santos"
-            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaLinkedin />
-          </motion.a>
-
-          <motion.a
-            href="mailto:tharciosantos09@gmail.com"
-            aria-label="Enviar e-mail para Tharcio Santos"
-            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <FaEnvelope />
-          </motion.a>
+          {[
+            { href: 'https://github.com/tharcio09', icon: <FaGithub /> },
+            { href: 'https://www.linkedin.com/in/tharcio-santos-dev/', icon: <FaLinkedin /> },
+            { href: 'mailto:tharciosantos09@gmail.com', icon: <FaEnvelope /> },
+          ].map(({ href, icon }, i) => (
+            <motion.a
+              key={i}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
+              whileHover={{ scale: 1.2, y: -2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {icon}
+            </motion.a>
+          ))}
         </div>
 
         {/* Menu mobile */}
@@ -113,38 +98,6 @@ const Navbar = () => {
               {link.label}
             </MotionLink>
           ))}
-
-          {/* Ícones sociais no menu mobile */}
-          <div className="flex space-x-6 pt-4 mt-4 border-t border-gray-200 dark:border-gray-700 w-full justify-center">
-            <motion.a
-              href="https://github.com/tharcio09"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Abrir perfil do GitHub de Tharcio Santos"
-              className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-              whileHover={{ scale: 1.2 }}
-            >
-              <FaGithub />
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/in/tharcio-santos-dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Abrir perfil do LinkedIn de Tharcio Santos"
-              className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-              whileHover={{ scale: 1.2 }}
-            >
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="mailto:tharciosantos09@gmail.com"
-              aria-label="Enviar e-mail para Tharcio Santos"
-              className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-              whileHover={{ scale: 1.2 }}
-            >
-              <FaEnvelope />
-            </motion.a>
-          </div>
         </div>
       )}
     </nav>
