@@ -200,9 +200,6 @@ O projeto está hospedado na **Vercel** e pode ser acessado em:
 3. Configure as variáveis de ambiente
 4. Deploy automático a cada push
 
-## 📝 Licença
-
-Este projeto é de uso pessoal. Todos os direitos reservados.
 
 ## 👨‍💻 Autor
 
