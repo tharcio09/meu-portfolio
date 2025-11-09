@@ -15,7 +15,7 @@ const Footer = () => {
             href="https://github.com/tharcio09"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Abrir perfil do GitHub de Tharcio Santos"
+            aria-label="GitHub de Tharcio Santos"
             className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -27,7 +27,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Abrir perfil do LinkedIn de Tharcio Santos"
+            aria-label="LinkedIn de Tharcio Santos"
             className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}

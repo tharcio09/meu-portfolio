@@ -8,7 +8,6 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 import { navLinks } from '../../data/constants';
 import { motion } from 'framer-motion';
 
-// ✅ Nova API do Framer Motion
 const MotionLink = motion.create(Link);
 
 const Navbar = () => {
@@ -25,6 +24,7 @@ const Navbar = () => {
           href="/"
           className="text-2xl font-bold text-neon-blue hover:text-neon-purple transition-colors"
           aria-label="Voltar para o início"
+          title="Página inicial - Tharcio.dev"
         >
           Tharcio.dev
         </Link>
@@ -39,6 +39,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label={`Ir para a seção ${link.label}`}
+              title={`Ir para a seção ${link.label}`}
             >
               {link.label}
             </MotionLink>
@@ -49,23 +50,42 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           <ThemeSwitcher />
 
-          {[
-            { href: 'https://github.com/tharcio09', icon: <FaGithub /> },
-            { href: 'https://www.linkedin.com/in/tharcio-santos-dev/', icon: <FaLinkedin /> },
-            { href: 'mailto:tharciosantos09@gmail.com', icon: <FaEnvelope /> },
-          ].map(({ href, icon }, i) => (
-            <motion.a
-              key={i}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-              whileHover={{ scale: 1.2, y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {icon}
-            </motion.a>
-          ))}
+          <motion.a
+            href="https://github.com/tharcio09"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub de Tharcio Santos"
+            title="GitHub de Tharcio Santos"
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
+            whileHover={{ scale: 1.2, y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaGithub aria-hidden="true" />
+          </motion.a>
+
+          <motion.a
+            href="https://www.linkedin.com/in/tharcio-santos-dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Tharcio Santos"
+            title="LinkedIn de Tharcio Santos"
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
+            whileHover={{ scale: 1.2, y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaLinkedin aria-hidden="true" />
+          </motion.a>
+
+          <motion.a
+            href="mailto:tharciosantos09@gmail.com"
+            aria-label="Enviar e-mail para Tharcio Santos"
+            title="Enviar e-mail para Tharcio Santos"
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
+            whileHover={{ scale: 1.2, y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaEnvelope aria-hidden="true" />
+          </motion.a>
         </div>
 
         {/* Menu mobile */}
@@ -77,7 +97,11 @@ const Navbar = () => {
             aria-expanded={isOpen}
             className="text-neon-blue hover:text-neon-purple transition-colors"
           >
-            {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+            {isOpen ? (
+              <HiX className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <HiMenu className="h-6 w-6" aria-hidden="true" />
+            )}
           </button>
         </div>
       </div>
@@ -94,6 +118,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               aria-label={`Ir para a seção ${link.label}`}
+              title={`Ir para a seção ${link.label}`}
             >
               {link.label}
             </MotionLink>
