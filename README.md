@@ -1,13 +1,18 @@
-# 💻 Tharcio Santos - Portfólio Profissional
 
 <div align="center">
+
+# 💻 Tharcio Santos — Portfólio Profissional  
+### Desenvolvedor Full-Stack | React • Next.js • Tailwind • Node.js  
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.6-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
-![TypeScript](https://img.shields.io/badge/Framer_Motion-12.23-0055FF?style=for-the-badge&logo=framer)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23-ff0055?style=for-the-badge&logo=framer)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
+[![Deploy Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://tharcio-portfolio.vercel.app/)
+[![Status](https://img.shields.io/badge/Status-Online-success?style=for-the-badge)](https://tharcio-portfolio.vercel.app/)
 
-**Portfólio moderno e interativo desenvolvido com Next.js, apresentando um design dark futurista com elementos neon**
+**Portfólio moderno e interativo desenvolvido com Next.js, apresentando um design dark futurista com elementos neon.**
 
 [🌐 **Acesse o site ao vivo**](https://tharcio-portfolio.vercel.app/) • [📧 **Entre em contato**](mailto:tharciosantos09@gmail.com)
 
@@ -15,138 +20,101 @@
 
 ---
 
+## ⚡ Resumo Rápido
+
+| Seção | Link |
+|-------|------|
+| 🧑‍💻 **Demo Online** | [tharcio-portfolio.vercel.app](https://tharcio-portfolio.vercel.app) |
+| 🧠 **Stack Principal** | Next.js • React • Tailwind • Framer Motion |
+| 💬 **Contato** | [tharciosantos09@gmail.com](mailto:tharciosantos09@gmail.com) |
+| 📂 **Repositório** | [github.com/tharcio09/tharcioport](https://github.com/tharcio09/tharcioport) |
+
+---
+
 ## 📖 Sobre o Projeto
 
-Este é o meu portfólio pessoal profissional, desenvolvido para apresentar minha trajetória, habilidades técnicas e projetos como Desenvolvedor Full-Stack. O site foi construído com foco em uma experiência visual impactante, combinando um design dark futurista com cores neon (azul e roxo), animações suaves e um layout totalmente responsivo.
+Este é o meu portfólio profissional, desenvolvido para apresentar minha trajetória, habilidades técnicas e projetos como **Desenvolvedor Full-Stack**.  
 
-O projeto reflete minhas habilidades em desenvolvimento moderno, utilizando as mais recentes tecnologias do ecossistema React e Next.js, com atenção especial à performance, acessibilidade e experiência do usuário.
+O site combina um **design dark futurista com cores neon (azul e roxo)**, animações suaves e uma experiência totalmente responsiva.  
+Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **performance, UX e impacto visual**.
+
+---
 
 ## ✨ Destaques e Recursos
 
 ### 🎨 Design e Visual
-- **Estilo Dark Futurista**: Design moderno com paleta de cores neon (azul e roxo)
-- **Glassmorphism**: Efeitos de vidro fosco aplicados em cards e componentes
-- **Partículas Interativas**: Fundo animado com partículas usando tsparticles
-- **Gradientes Neon**: Efeitos de brilho e gradientes personalizados em elementos-chave
-- **Tema Claro/Escuro**: Suporte completo a ambos os temas com transições suaves
+- **Estilo Dark Futurista** com paleta neon (azul e roxo)
+- **Glassmorphism**: efeitos de vidro fosco em componentes
+- **Partículas Interativas** (tsparticles)
+- **Gradientes Neon** e brilhos dinâmicos
+- **Tema Claro/Escuro** com transições suaves
 
 ### 🎭 Animações e Interatividade
-- **Animações Suaves**: Transições e animações de entrada usando Framer Motion
-- **Scroll Reveal**: Elementos aparecem suavemente ao fazer scroll
-- **Hover Effects**: Microinterações em cards, botões e links
-- **Typing Effect**: Efeito de digitação no texto de boas-vindas
-- **Stagger Animations**: Animações sequenciais em listas e grids
+- Animações de entrada com **Framer Motion**
+- **Scroll Reveal** e **Hover Effects**
+- **Typing Effect** no texto de boas-vindas
+- **Animações Sequenciais (Stagger)** em grids e listas
 
 ### 📱 Responsividade e Performance
-- **Design Responsivo**: Totalmente adaptado para desktop, tablet e mobile
-- **Lazy Loading**: Carregamento otimizado de componentes e imagens
-- **Otimizações SEO**: Metadados completos para melhor indexação
-- **PWA Ready**: Configuração para Progressive Web App
-- **Performance Otimizada**: Build otimizado para produção
+- Layout **100% responsivo**
+- **Lazy Loading** para imagens e componentes
+- **SEO otimizado** com metadados completos
+- **PWA Ready** e **build otimizado** para produção
 
-### 🛠️ Funcionalidades
-- **Seção Hero**: Apresentação impactante com animações de entrada
-- **Sobre Mim**: Informações pessoais e perfil profissional
-- **Experiência Profissional**: Timeline visual da trajetória profissional
-- **Projetos**: Grid de projetos com cards interativos
-- **Contato**: Formulário funcional integrado com EmailJS
-- **Navegação Suave**: Scroll suave entre seções
+### 🛠️ Funcionalidades Principais
+- **Seção Hero** com CTA animado  
+- **Sobre Mim** com perfil e habilidades  
+- **Timeline Profissional** animada  
+- **Grid de Projetos Interativo**  
+- **Formulário de Contato funcional (EmailJS)**  
+- **Scroll suave** entre seções  
+
+---
+
+## ✅ Checklist de Recursos
+
+- [x] Tema dark/light com transição suave  
+- [x] Fundo animado com partículas  
+- [x] Efeito de digitação e animações de entrada  
+- [x] Formulário funcional via EmailJS  
+- [x] Deploy automatizado na Vercel  
+- [x] Performance otimizada e responsiva  
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
 ### Core
-- **[Next.js 15.5.6](https://nextjs.org/)** - Framework React com SSR e SSG
-- **[React 19.1.0](https://react.dev/)** - Biblioteca JavaScript para interfaces
-- **[Tailwind CSS 3.4](https://tailwindcss.com/)** - Framework CSS utility-first
+- **[Next.js 15.5.6](https://nextjs.org/)** — Framework React com SSR e SSG  
+- **[React 19.1.0](https://react.dev/)** — Biblioteca para interfaces reativas  
+- **[Tailwind CSS 3.4](https://tailwindcss.com/)** — Estilização moderna e rápida  
 
 ### Animações e Efeitos
-- **[Framer Motion 12.23](https://www.framer.com/motion/)** - Biblioteca de animações
-- **[tsparticles 3.9](https://particles.js.org/)** - Sistema de partículas interativas
+- **[Framer Motion 12.23](https://www.framer.com/motion/)** — Animações fluidas  
+- **[tsparticles 3.9](https://particles.js.org/)** — Fundo de partículas interativas  
 
 ### Utilitários
-- **[next-themes](https://github.com/pacocoursey/next-themes)** - Gerenciamento de temas
-- **[EmailJS](https://www.emailjs.com/)** - Envio de emails via formulário
-- **[react-hot-toast](https://react-hot-toast.com/)** - Notificações toast
-- **[react-icons](https://react-icons.github.io/react-icons/)** - Ícones SVG
-- **[Vercel Analytics](https://vercel.com/analytics)** - Analytics do site
+- **[next-themes](https://github.com/pacocoursey/next-themes)** — Gerenciamento de tema  
+- **[EmailJS](https://www.emailjs.com/)** — Envio de emails via formulário  
+- **[react-hot-toast](https://react-hot-toast.com/)** — Notificações  
+- **[react-icons](https://react-icons.github.io/react-icons/)** — Ícones SVG  
+- **[Vercel Analytics](https://vercel.com/analytics)** — Métricas de uso  
 
-### Ferramentas de Desenvolvimento
-- **ESLint** (linting de código)
-- **PostCSS** (processamento de CSS)
-- **Autoprefixer** (compatibilidade de navegadores)
-
-## 📸 Preview
-
-![Screenshot do Portfólio](screenshot-portfolio.PNG)
-
-*Design dark futurista com elementos neon e animações suaves*
-
-## 🚀 Como Executar o Projeto
-
-### Pré-requisitos
-- Node.js 18+ instalado
-- npm ou yarn como gerenciador de pacotes
-- Conta no EmailJS (para o formulário de contato)
-
-### Instalação
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/tharcio09/tharcioport.git
-   cd tharcioport
-   ```
-
-2. **Instale as dependências:**
-   ```bash
-   npm install
-   # ou
-   yarn install
-   ```
-
-3. **Configure as variáveis de ambiente:**
-   
-   Crie um arquivo `.env.local` na raiz do projeto:
-   ```env
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=seu_service_id
-   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=seu_template_id
-   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
-   ```
-
-   > 💡 Para obter suas credenciais do EmailJS, acesse [emailjs.com](https://www.emailjs.com/) e crie uma conta gratuita.
-
-4. **Execute o servidor de desenvolvimento:**
-   ```bash
-   npm run dev
-   # ou
-   yarn dev
-   ```
-
-5. **Acesse no navegador:**
-   
-   Abra [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
-
-### Build para Produção
-
-```bash
-# Criar build de produção
-npm run build
-
-# Iniciar servidor de produção
-npm start
-```
+---
 
 ## 📁 Estrutura do Projeto
 
 ```
+
 tharcioport/
 ├── public/
-│   ├── images/          # Imagens dos projetos e perfil
+│   ├── images/          # Imagens e ícones
 │   ├── icons/           # Ícones PWA
 │   └── manifest.json    # Manifesto PWA
 ├── src/
 │   ├── app/
 │   │   ├── components/
-│   │   │   ├── sections/    # Componentes de seções
+│   │   │   ├── sections/    # Seções principais
 │   │   │   │   ├── Hero.jsx
 │   │   │   │   ├── About.jsx
 │   │   │   │   ├── Experience.jsx
@@ -160,66 +128,120 @@ tharcioport/
 │   │   │   ├── Footer.jsx
 │   │   │   ├── ParticlesBackground.jsx
 │   │   │   └── ThemeProvider.jsx
-│   │   ├── globals.css      # Estilos globais
-│   │   ├── layout.js        # Layout principal
-│   │   └── page.js          # Página inicial
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
 │   └── data/
-│       └── constants.js     # Constantes e dados
-├── tailwind.config.js       # Configuração do Tailwind
-├── next.config.mjs          # Configuração do Next.js
-└── package.json             # Dependências do projeto
+│       └── constants.js
+├── tailwind.config.js
+├── next.config.mjs
+└── package.json
+
+````
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- Node.js 18+  
+- npm ou yarn  
+- Conta no EmailJS (para o formulário)
+
+### Instalação
+
+```bash
+git clone https://github.com/tharcio09/tharcioport.git
+cd tharcioport
+npm install
+````
+
+Crie o arquivo `.env.local`:
+
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=seu_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=seu_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
 ```
 
-## 🎯 Seções do Portfólio
+Execute o servidor:
 
-### 🏠 Hero
-Seção inicial com apresentação pessoal, efeito de digitação e call-to-action destacado.
+```bash
+npm run dev
+```
 
-### 👤 Sobre Mim
-Informações pessoais, foto de perfil com efeito 3D, habilidades técnicas e certificados.
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-### 💼 Experiência Profissional
-Timeline visual da trajetória profissional com animações de entrada.
+### Build de Produção
 
-### 🚀 Projetos
-Grid responsivo de projetos com cards interativos, links para repositórios e demos.
+```bash
+npm run build
+npm start
+```
 
-### 📧 Contato
-Formulário funcional integrado com EmailJS para envio de mensagens em tempo real.
+---
+
+## 📸 Preview
+
+![Screenshot do Portfólio](screenshot-portfolio.PNG)
+
+> *Design dark futurista com elementos neon e animações suaves.*
+
+---
+
+## 🧠 Aprendizados Técnicos
+
+Durante o desenvolvimento deste portfólio, aprofundei conhecimentos em:
+
+* Otimização de imagens e lazy loading no Next.js
+* Controle de tema dinâmico com `next-themes`
+* Uso avançado do Framer Motion para transições fluidas
+* Boas práticas de acessibilidade e performance em React
+
+---
 
 ## 🌐 Deploy
 
-O projeto está hospedado na **Vercel** e pode ser acessado em:
+Hospedado na **Vercel**
+🔗 [https://tharcio-portfolio.vercel.app](https://tharcio-portfolio.vercel.app)
 
-**[https://tharcioport.vercel.app/](https://tharcioport.vercel.app/)**
+### Deploy Manual
 
-### Deploy na Vercel
-
-1. Faça push do código para o GitHub
+1. Faça push para o GitHub
 2. Importe o repositório na [Vercel](https://vercel.com)
 3. Configure as variáveis de ambiente
 4. Deploy automático a cada push
 
+---
 
 ## 👨‍💻 Autor
 
 **Tharcio Santos**
-
 Desenvolvedor Full-Stack focado em React, Next.js e Node.js.
 
-## 📫 Contato
+📫 **Contato**
 
-- **LinkedIn**: [linkedin.com/in/tharcio-santos-dev](https://www.linkedin.com/in/tharcio-santos-dev/)
-- **GitHub**: [github.com/tharcio09](https://github.com/tharcio09)
-- **Email**: [tharciosantos09@gmail.com](mailto:tharciosantos09@gmail.com)
-- **Portfólio**: [tharcio-port.vercel.app](https://tharcio-portfolio.vercel.app/)
+* [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/)
+* [GitHub](https://github.com/tharcio09)
+* [Email](mailto:tharciosantos09@gmail.com)
+* [Portfólio](https://tharcio-portfolio.vercel.app/)
+
+---
+
+## 🪪 Licença
+
+Distribuído sob a licença **MIT**.
+Veja `LICENSE` para mais detalhes.
 
 ---
 
 <div align="center">
 
-**Desenvolvido com ❤️ por Tharcio Santos**
-
-⭐ Se este projeto foi útil, considere dar uma estrela!
+**Desenvolvido com ❤️ por [Tharcio Santos](https://github.com/tharcio09)**
+⭐ Se este projeto foi útil, considere deixar uma estrela!
 
 </div>
+```
+
+---
+
