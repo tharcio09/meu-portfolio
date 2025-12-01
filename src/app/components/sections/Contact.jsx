@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -84,6 +83,25 @@ const Contact = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  const inputClasses = `
+    w-full p-4 rounded-lg border-2 
+    bg-light-bg/50 dark:bg-dark-bg/50 
+    text-primary-text dark:text-light-text 
+    border-gray-300 dark:border-gray-700 
+    placeholder-secondary-text dark:placeholder-dark-text
+    focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue 
+    transition-all duration-300
+    
+    /* Corrige o fundo amarelo do navegador ao preencher automático */
+    [&:-webkit-autofill]:bg-transparent
+    [&:-webkit-autofill]:text-primary-text
+    [&:-webkit-autofill]:shadow-[0_0_0_100px_rgba(255,255,255,0.8)_inset]
+    dark:[&:-webkit-autofill]:shadow-[0_0_0_100px_rgba(17,24,39,0.8)_inset]
+    dark:[&:-webkit-autofill]:text-white
+    [&:-webkit-autofill]:transition-colors
+    [&:-webkit-autofill]:duration-5000
+  `;
+
   return (
     <Section id="contato">
       <div className="max-w-2xl mx-auto px-6">
@@ -135,24 +153,11 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              aria-required="true"
-              aria-invalid={errors.name ? 'true' : 'false'}
-              className="w-full p-4 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-neon-blue 
-                         bg-light-bg/50 dark:bg-dark-bg/50 text-primary-text dark:text-light-text 
-                         border-gray-300 dark:border-gray-700 focus:border-neon-blue
-                         placeholder-secondary-text dark:placeholder-dark-text
-                         transition-all duration-300"
+              className={inputClasses}
             />
-            {errors.name && (
-              <motion.p 
-                className="text-red-500 dark:text-red-400 text-sm mt-1 flex items-center gap-1"
-                initial={{ opacity: 0, y: -5 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                {errors.name}
-              </motion.p>
-            )}
+            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </motion.div>
+
           <motion.div variants={fieldVariants}>
             <label htmlFor="email" className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2">
               Seu Email <span className="text-neon-blue">*</span>
@@ -165,24 +170,11 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              aria-required="true"
-              aria-invalid={errors.email ? 'true' : 'false'}
-              className="w-full p-4 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-neon-blue 
-                         bg-light-bg/50 dark:bg-dark-bg/50 text-primary-text dark:text-light-text 
-                         border-gray-300 dark:border-gray-700 focus:border-neon-blue
-                         placeholder-secondary-text dark:placeholder-dark-text
-                         transition-all duration-300"
+              className={inputClasses}
             />
-            {errors.email && (
-              <motion.p 
-                className="text-red-500 dark:text-red-400 text-sm mt-1 flex items-center gap-1"
-                initial={{ opacity: 0, y: -5 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                {errors.email}
-              </motion.p>
-            )}
+            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </motion.div>
+
           <motion.div variants={fieldVariants}>
             <label htmlFor="message" className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2">
               Sua Mensagem <span className="text-neon-blue">*</span>
@@ -195,75 +187,33 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              aria-required="true"
-              aria-invalid={errors.message ? 'true' : 'false'}
-              className="w-full p-4 rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-neon-blue 
-                         bg-light-bg/50 dark:bg-dark-bg/50 text-primary-text dark:text-light-text 
-                         border-gray-300 dark:border-gray-700 focus:border-neon-blue
-                         placeholder-secondary-text dark:placeholder-dark-text
-                         resize-none transition-all duration-300"
+              className={`${inputClasses} resize-none`}
             ></textarea>
-            {errors.message && (
-              <motion.p 
-                className="text-red-500 dark:text-red-400 text-sm mt-1 flex items-center gap-1"
-                initial={{ opacity: 0, y: -5 }}
-                animate={{ opacity: 1, y: 0 }}
-              >
-                {errors.message}
-              </motion.p>
-            )}
+            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
           </motion.div>
+
           <motion.div className="text-center" variants={fieldVariants}>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={isSending}
               aria-label={isSending ? 'Enviando mensagem...' : 'Enviar mensagem'}
-              className="relative px-10 py-4 font-bold rounded-xl shadow-lg 
-                         bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue 
-                         text-dark-bg text-base md:text-lg
-                         transition-all duration-300 ease-out
-                         hover:shadow-neon-lg
-                         disabled:opacity-50 disabled:cursor-not-allowed
-                         overflow-hidden group"
+              className="w-full py-4 px-8 rounded-xl text-white font-bold text-lg transition-all duration-300
+                         bg-gradient-to-r from-cyan-500 via-purple-600 to-cyan-500 bg-[length:200%_auto]
+                         hover:bg-right hover:shadow-[0_0_30px_rgba(6,182,212,0.7)]
+                         shadow-[0_0_15px_rgba(6,182,212,0.4)]
+                         disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none
+                         flex items-center justify-center gap-2"
             >
-              <span className="relative z-10 flex items-center gap-2">
-                {isSending ? (
-                  <>
-                    <motion.svg
-                      className="animate-spin h-5 w-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </motion.svg>
-                    Enviando...
-                  </>
-                ) : (
-                  'Enviar Mensagem'
-                )}
-              </span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-neon-purple via-neon-blue to-neon-purple"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: '100%' }}
-                transition={{ duration: 0.6 }}
-                style={{ opacity: 0.3 }}
-              />
+              {isSending ? (
+                <>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <span>Enviando...</span>
+                </>
+              ) : (
+                'Enviar Mensagem'
+              )}
             </motion.button>
           </motion.div>
         </motion.form>

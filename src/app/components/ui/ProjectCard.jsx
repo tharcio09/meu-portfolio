@@ -24,6 +24,7 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags })
       variants={cardVariants}
       whileHover={{ y: -12, scale: 1.02 }}
     >
+      {/* Imagem do Projeto */}
       <div className="relative h-56 w-full overflow-hidden">
         <Image 
           src={imageUrl} 
@@ -40,14 +41,16 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags })
         <h3 className="text-2xl font-bold mb-3 text-primary-text dark:text-light-text group-hover:text-neon-blue transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-secondary-text dark:text-dark-text flex-grow mb-4 leading-relaxed">
+        <p className="text-secondary-text dark:text-dark-text flex-grow mb-4 leading-relaxed text-sm md:text-base">
           {description}
         </p>
+        
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2 mb-6">
           {tags.map((tag, index) => (
             <motion.span 
               key={tag}
-              className="text-xs bg-neon-blue/10 dark:bg-neon-blue/20 text-neon-blue dark:text-neon-blue px-3 py-1.5 rounded-full font-medium border border-neon-blue/30"
+              className="text-xs bg-neon-blue/5 dark:bg-neon-blue/10 text-neon-blue border border-neon-blue/20 px-3 py-1 rounded-full font-medium"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -58,31 +61,38 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags })
           ))}
         </div>
         
-        <div className="mt-auto flex justify-end space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-auto flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-700/50">
+          
           <motion.a 
             href={githubUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            aria-label={`Ver código do projeto ${title} no GitHub`}
-            className="flex items-center gap-2 px-4 py-2 bg-light-bg/50 dark:bg-dark-bg/50 rounded-lg text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-all duration-300 hover:bg-neon-blue/10 dark:hover:bg-neon-blue/20 border border-neon-blue/20 hover:border-neon-blue/50"
-            whileHover={{ scale: 1.1, y: -2 }}
+            aria-label={`Ver código do projeto ${title}`}
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold transition-all duration-300
+                       border-2 border-cyan-500/50 text-cyan-500 dark:text-cyan-400
+                       hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-cyan-600 dark:hover:text-white hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <FaGithub className="text-xl" />
-            <span className="text-sm font-medium">Código</span>
+            <span className="text-sm">Código</span>
           </motion.a>
-          <motion.a 
-            href={demoUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label={`Ver demonstração do projeto ${title}`}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue text-dark-bg rounded-xl font-semibold shadow-lg hover:shadow-neon-lg transition-all duration-300 ease-out"
-            whileHover={{ scale: 1.1, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <FaExternalLinkAlt className="text-lg" />
-            <span className="text-sm">Demo</span>
-          </motion.a>
+          {demoUrl && (
+            <motion.a 
+              href={demoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label={`Ver demonstração do projeto ${title}`}
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-white font-bold shadow-lg transition-all duration-300
+                         bg-gradient-to-r from-cyan-500 via-purple-600 to-cyan-500 bg-[length:200%_auto]
+                         hover:bg-right hover:shadow-[0_0_25px_rgba(6,182,212,0.6)]"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaExternalLinkAlt className="text-lg" />
+              <span className="text-sm">Demo</span>
+            </motion.a>
+          )}
         </div>
       </div>
     </motion.div>
