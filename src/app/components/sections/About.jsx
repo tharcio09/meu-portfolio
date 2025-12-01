@@ -12,6 +12,7 @@ import {
 } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc';
 import { LuAward } from 'react-icons/lu';
+import { FaUserGraduate } from 'react-icons/fa'; // Novo ícone para Faculdade
 
 const skills = [
   { icon: <SiHtml5 />, name: 'HTML5' },
@@ -39,6 +40,7 @@ const skills = [
 const About = () => {
   return (
     <Section id="sobre-mim">
+      {/* --- SEÇÃO SOBRE MIM --- */}
       <motion.div className="text-center mb-20">
         <motion.h2 
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
@@ -66,7 +68,9 @@ const About = () => {
           Conheça um pouco sobre minha trajetória e habilidades
         </motion.p>
       </motion.div>
+
       <div className="grid md:grid-cols-5 gap-12 items-center max-w-6xl mx-auto">
+        {/* FOTO DE PERFIL */}
         <motion.div
           className="md:col-span-2 relative w-64 h-64 mx-auto"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -95,6 +99,7 @@ const About = () => {
           </motion.div>
         </motion.div>
 
+        {/* TEXTO SOBRE MIM */}
         <motion.div 
           className="md:col-span-3 text-secondary-text dark:text-dark-text leading-relaxed space-y-4"
           initial={{ opacity: 0, x: 50 }}
@@ -103,10 +108,10 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="text-lg">
-            Desenvolvedor Full-Stack em início de carreira, com foco em React, Next.js, Node.js e Tailwind CSS. Apaixonado por tecnologia e pelo processo de transformar ideias em soluções digitais eficientes.
+            Desenvolvedor <strong className="text-neon-blue">Full-Stack</strong> em início de carreira, com foco em <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong> e <strong>Tailwind CSS</strong>. Apaixonado por tecnologia e pelo processo de transformar ideias em soluções digitais eficientes.
           </p>
           <p className="text-lg">
-            Busco uma oportunidade para aplicar e expandir meus conhecimentos, valorizando o aprendizado contínuo e o trabalho em equipe.
+            Busco uma oportunidade para aplicar e expandir meus conhecimentos, valorizando o <strong className="text-neon-purple">aprendizado contínuo</strong> e o trabalho em equipe.
           </p>
           <p className="text-lg">
             Minhas principais stacks incluem Front-end (React, Next.js, Tailwind CSS), Back-end (Node.js, Prisma, Supabase) e Ferramentas (Git/GitHub, Figma, NextAuth).
@@ -114,6 +119,7 @@ const About = () => {
         </motion.div>
       </div>
 
+      {/* --- SEÇÃO FERRAMENTAS --- */}
       <div className="mt-24">
         <motion.div className="text-center mb-16">
           <motion.h3 
@@ -163,6 +169,7 @@ const About = () => {
         </motion.div>
       </div>
 
+      {/* --- SEÇÃO FORMAÇÃO E CURSOS --- */}
       <div className="mt-24">
         <motion.div className="text-center mb-16">
           <motion.h3 
@@ -172,7 +179,7 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            Certificados e Cursos
+            Formação Acadêmica e Cursos
           </motion.h3>
           <motion.div
             className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-blue to-transparent rounded-full mx-auto opacity-60"
@@ -182,6 +189,7 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           />
         </motion.div>
+        
         <motion.div
           className="max-w-3xl mx-auto grid md:grid-cols-1 gap-6"
           initial="hidden"
@@ -189,26 +197,51 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ staggerChildren: 0.2 }}
         >
+          {/* CARD 1: FACULDADE */}
           <motion.div
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-xl shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
+            variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
             whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(39, 215, 254, 0.2)' }}
           >
-            <motion.div
-              whileHover={{ rotate: 360, scale: 1.1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <LuAward size={50} className="text-neon-blue flex-shrink-0" />
+            <motion.div whileHover={{ rotate: 360, scale: 1.1 }} transition={{ duration: 0.6 }}>
+              <FaUserGraduate size={50} className="text-neon-blue flex-shrink-0" />
             </motion.div>
             <div className="flex-grow text-center sm:text-left">
-              <h4 className="font-bold text-xl text-primary-text dark:text-light-text mb-2">
+              <h4 className="font-bold text-xl text-primary-text dark:text-light-text mb-1">
+                Análise e Desenvolvimento de Sistemas
+              </h4>
+              <p className="text-base text-neon-purple font-semibold mb-2">
+                Centro Universitário Anhanguera
+              </p>
+              <p className="text-sm text-secondary-text dark:text-dark-text">
+                Graduação • Em andamento
+              </p>
+            </div>
+            <div className="flex-shrink-0 mt-4 sm:mt-0">
+               <span className="py-2 px-4 bg-neon-blue/10 text-neon-blue border border-neon-blue/30 rounded-lg text-sm font-semibold">
+                 Cursando
+               </span>
+            </div>
+          </motion.div>
+
+          {/* CARD 2: ROCKETSEAT */}
+          <motion.div
+            className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-xl shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
+            variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
+            whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(39, 215, 254, 0.2)' }}
+          >
+            <motion.div whileHover={{ rotate: 360, scale: 1.1 }} transition={{ duration: 0.6 }}>
+              <LuAward size={50} className="text-neon-purple flex-shrink-0" />
+            </motion.div>
+            <div className="flex-grow text-center sm:text-left">
+              <h4 className="font-bold text-xl text-primary-text dark:text-light-text mb-1">
                 NLW Connect (Fullstack)
               </h4>
-              <p className="text-base text-secondary-text dark:text-dark-text">
-                Rocketseat - Emitido em 21/02/2025
+              <p className="text-base text-neon-purple font-semibold mb-2">
+                Rocketseat
+              </p>
+              <p className="text-sm text-secondary-text dark:text-dark-text">
+                Certificado de Conclusão • Emitido em 21/02/2025
               </p>
             </div>
             <motion.a
@@ -218,7 +251,6 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="py-3 px-8 bg-gradient-to-r from-neon-blue via-neon-purple to-neon-blue text-dark-bg font-bold rounded-xl shadow-lg hover:shadow-neon-lg transition-all duration-300 text-sm flex-shrink-0 mt-4 sm:mt-0"
-              aria-label="Ver credencial do certificado NLW Connect"
             >
               Ver Credencial
             </motion.a>
