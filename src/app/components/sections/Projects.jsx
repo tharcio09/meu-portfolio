@@ -6,14 +6,6 @@ import Section from '../ui/Section';
 
 const projectsData = [
   {
-    title: 'Jogo da Velha com React',
-    description: 'Um clássico Jogo da Velha construído para demonstrar o uso de componentes, estado (useState) e lógica de eventos no React.',
-    imageUrl: '/images/jogo-da-velha.png',
-    githubUrl: 'https://github.com/tharcio09/jogo-da-velha-react',
-    demoUrl: 'https://jogo-da-velha-react-neon.vercel.app/',
-    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
-  },
-  {
     title: 'HelpFlow - Sistema de HelpDesk',
     description: 'Aplicação Full-Stack para gestão de tickets, com autenticação (GitHub via NextAuth), DB (Prisma/Supabase) e autorização por papéis.',
     imageUrl: '/images/helpflow-screenshot.png',
@@ -22,12 +14,28 @@ const projectsData = [
     tags: ['Next.js', 'React', 'Prisma', 'Supabase', 'NextAuth', 'Tailwind'],
   },
   {
+    title: 'Minha Lista de Mercado (PWA)',
+    description: 'App Mobile-First focado em UX. Possui lista mestra inteligente, busca híbrida, organização automática por setores e integração com WhatsApp.',
+    imageUrl: '/images/lista-mercado-screenshot.png',
+    githubUrl: 'https://github.com/tharcio09/lista-mercado',
+    demoUrl: 'https://lista-mercado-sage.vercel.app/',
+    tags: ['React', 'Vite', 'PWA', 'Tailwind CSS', 'Local Storage'],
+  },
+  {
     title: 'Crypto Dashboard',
     description: 'Dashboard interativo que busca e exibe dados de criptomoedas da API CoinGecko, com filtro em tempo real e página de detalhes.',
     imageUrl: '/images/screenshot-crypto.png',
     githubUrl: 'https://github.com/tharcio09/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
     tags: ['Next.js', 'React', 'Tailwind CSS', 'API', 'CoinGecko'],
+  },
+  {
+    title: 'Jogo da Velha com React',
+    description: 'Um clássico Jogo da Velha construído para demonstrar o uso de componentes, estado (useState) e lógica de eventos no React.',
+    imageUrl: '/images/jogo-da-velha.png',
+    githubUrl: 'https://github.com/tharcio09/jogo-da-velha-react',
+    demoUrl: 'https://jogo-da-velha-react-neon.vercel.app/',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
   },
 ];
 
@@ -72,7 +80,7 @@ const Projects = () => {
         </motion.p>
       </motion.div>
       <motion.div
-        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto"
+        className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
