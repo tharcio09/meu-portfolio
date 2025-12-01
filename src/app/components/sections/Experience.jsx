@@ -6,13 +6,13 @@ import Section from '../ui/Section';
 
 const experiencesData = [
   {
-    role: 'Auxiliar Administrativo (Controlador de Manutenção)',
+    role: 'Auxiliar Administrativo',
     company: 'EPOS - Empresa Portuguesa de Obras Subterrâneas',
     period: '05/2023 - 10/2023',
     description: [
-      'Recebimento e análise de pedidos de manutenção, definindo prioridades para a equipe técnica.',
-      'Elaboração de relatórios de parada e controle de equipamentos para apoiar a tomada de decisão.',
-      'Colaboração direta com equipes técnicas, fornecendo documentação e suporte ao fluxo de trabalho.',
+      'Gestão e priorização de demandas técnicas (backlog), garantindo a organização do fluxo de trabalho e cumprimento de prazos críticos.',
+      'Análise de dados e elaboração de relatórios estratégicos para apoiar a tomada de decisão da gestão e otimizar processos.',
+      'Comunicação assertiva e colaboração direta com equipes multidisciplinares para resolução ágil de problemas operacionais.',
     ],
   },
   {
@@ -20,9 +20,9 @@ const experiencesData = [
     company: 'Komaq Manutenção e Serviços',
     period: '01/2022 - 05/2022',
     description: [
-      'Diagnóstico e reforma de rompedores e cilindros hidráulicos, seguindo especificações técnicas.',
-      'Apoio direto à equipe de manutenção técnica em um ambiente colaborativo.',
-      'Organização e controle de peças e ferramentas para garantir a eficiência dos reparos.',
+      'Desenvolvimento de pensamento analítico e atenção aos detalhes através do diagnóstico e resolução de problemas técnicos complexos.',
+      'Atuação em ambiente colaborativo, focando na eficiência da equipe e na comunicação clara durante a execução de tarefas.',
+      'Organização rigorosa de recursos e ferramentas, implementando métodos para otimizar o tempo de execução dos reparos.',
     ],
   },
 ];
@@ -31,7 +31,7 @@ const Experience = () => {
   return (
     <Section id="experiencia">
       <motion.div className="text-center mb-20">
-        <motion.h2
+        <motion.h2 
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          Minha trajetória profissional e experiências adquiridas
+          Minha trajetória profissional e competências desenvolvidas
         </motion.p>
       </motion.div>
       <div className="relative max-w-4xl mx-auto px-4">
@@ -70,8 +70,7 @@ const Experience = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
-            {/* Ícone - Mobile: acima do card | Desktop: à esquerda */}
-            <motion.div
+            <motion.div 
               className="absolute left-1/2 md:left-0 -top-2 md:top-2 transform -translate-x-1/2 md:-translate-x-0 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-full border-4 border-neon-blue shadow-neon-blue z-20"
               whileHover={{ scale: 1.15, rotate: 360 }}
               transition={{ duration: 0.6 }}
@@ -89,7 +88,7 @@ const Experience = () => {
               <p className="text-base md:text-lg lg:text-xl text-secondary-text dark:text-dark-text mb-3 md:mb-4 font-medium">{exp.company}</p>
               <ul className="list-disc pl-5 md:pl-6 space-y-2 md:space-y-3 text-sm md:text-base text-secondary-text dark:text-dark-text">
                 {exp.description.map((desc, i) => (
-                  <motion.li
+                  <motion.li 
                     key={i}
                     className="leading-relaxed"
                     initial={{ opacity: 0, x: -20 }}
