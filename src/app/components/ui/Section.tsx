@@ -9,7 +9,7 @@ type SectionProps = {
   children: ReactNode;
 };
 
-const Section = ({ children, id, className = '' }: SectionProps): JSX.Element => {
+const Section = ({ children, id, className = '' }: SectionProps) => {
   return (
     <motion.section
       id={id}

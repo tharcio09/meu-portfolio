@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Section from "../ui/Section";
 import { toast } from "react-hot-toast";
-import type { ChangeEvent, FormEvent } from 'react';
+import type { ChangeEvent, FormEvent } from "react";
 
 type FormData = {
   name: string;
@@ -16,17 +16,23 @@ type FormData = {
 type FormErrors = {
   name?: string;
   email?: string;
-  message: string;
+  message?: string;
 };
 
-const Contact = (): JSX.Element => {
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState<FormErrors>({});
+const initialErrors: FormErrors = {};
+
+const Contact = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<FormErrors>(initialErrors);
   const [isSending, setIsSending] = useState(false);
 
-
   const validate = () => {
-    let tempErrors = {};
+    let tempErrors: FormErrors = {};
+
     if (!formData.name) tempErrors.name = "O nome é obrigatório.";
     if (!formData.email) {
       tempErrors.email = "O email é obrigatório.";
@@ -34,11 +40,14 @@ const Contact = (): JSX.Element => {
       tempErrors.email = "O email é inválido.";
     }
     if (!formData.message) tempErrors.message = "A mensagem é obrigatória.";
+
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -86,7 +95,6 @@ const Contact = (): JSX.Element => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
         staggerChildren: 0.2,
       },
     },
@@ -210,7 +218,7 @@ const Contact = (): JSX.Element => {
               name="message"
               id="message"
               placeholder="Deixe sua mensagem aqui..."
-              rows="6"
+              rows={6}
               value={formData.message}
               onChange={handleChange}
               required

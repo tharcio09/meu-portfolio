@@ -52,7 +52,7 @@ const projectsData: Project[] = [
   },
 ];
 
-const Projects = (): JSX.Element => {
+const Projects = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

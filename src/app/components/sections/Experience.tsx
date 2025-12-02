@@ -4,7 +4,14 @@ import { motion } from 'framer-motion';
 import { FaBriefcase } from 'react-icons/fa';
 import Section from '../ui/Section';
 
-const experiencesData = [
+type ExperienceItem = {
+  role: string;
+  company: string;
+  period: string;
+  description: string[];
+};
+
+const experiencesData: ExperienceItem[] = [
   {
     role: 'Auxiliar Administrativo',
     company: 'EPOS - Empresa Portuguesa de Obras Subterrâneas',

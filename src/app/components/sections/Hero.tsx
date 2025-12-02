@@ -5,7 +5,7 @@ import { HiArrowRight } from 'react-icons/hi';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import Section from '../ui/Section';
 
-const Hero = (): JSX.Element => {
+const Hero = () => {
   return (
     <Section id="home" className="flex flex-col justify-center min-h-screen">
       <div className="text-center space-y-8 max-w-4xl mx-auto z-10 px-4">

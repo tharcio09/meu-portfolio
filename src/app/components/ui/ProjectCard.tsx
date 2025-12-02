@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 type ProjectCardProps = {
   title: string;
@@ -11,7 +11,6 @@ type ProjectCardProps = {
   githubUrl: string;
   demoUrl?: string;
   tags: string[];
-
 };
 
 const cardVariants = {
@@ -22,12 +21,20 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
     },
   },
 };
 
-const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags, }: ProjectCardProps): JSX.Element => {
+
+
+const ProjectCard = ({
+  title,
+  description,
+  imageUrl,
+  githubUrl,
+  demoUrl,
+  tags,
+}: ProjectCardProps) => {
   return (
     <motion.div
       className="group bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl flex flex-col border border-neon-blue/10 dark:border-neon-blue/20 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
@@ -35,10 +42,10 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags, }
       whileHover={{ y: -12, scale: 1.02 }}
     >
       <div className="relative h-56 w-full overflow-hidden">
-        <Image 
-          src={imageUrl} 
+        <Image
+          src={imageUrl}
           alt={`Screenshot do projeto ${title}`}
-          fill={true} 
+          fill={true}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-110 transition-transform duration-500"
           loading="lazy"
@@ -53,10 +60,10 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags, }
         <p className="text-secondary-text dark:text-dark-text flex-grow mb-4 leading-relaxed text-sm md:text-base">
           {description}
         </p>
-        
+
         <div className="mt-4 flex flex-wrap gap-2 mb-6">
           {tags.map((tag, index) => (
-            <motion.span 
+            <motion.span
               key={tag}
               className="text-xs bg-neon-blue/5 dark:bg-neon-blue/10 text-neon-blue border border-neon-blue/20 px-3 py-1 rounded-full font-medium"
               initial={{ opacity: 0, scale: 0.8 }}
@@ -68,12 +75,11 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags, }
             </motion.span>
           ))}
         </div>
-        
+
         <div className="mt-auto flex gap-4 pt-4 border-t border-gray-200 dark:border-gray-700/50">
-          
-          <motion.a 
-            href={githubUrl} 
-            target="_blank" 
+          <motion.a
+            href={githubUrl}
+            target="_blank"
             rel="noopener noreferrer"
             aria-label={`Ver código do projeto ${title}`}
             className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold transition-all duration-300
@@ -86,9 +92,9 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags, }
             <span className="text-sm">Código</span>
           </motion.a>
           {demoUrl && (
-            <motion.a 
-              href={demoUrl} 
-              target="_blank" 
+            <motion.a
+              href={demoUrl}
+              target="_blank"
               rel="noopener noreferrer"
               aria-label={`Ver demonstração do projeto ${title}`}
               className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-white font-bold shadow-lg transition-all duration-300

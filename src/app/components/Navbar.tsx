@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 
 const MotionLink = motion(Link);
 
-const Navbar = (): JSX.Element => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
