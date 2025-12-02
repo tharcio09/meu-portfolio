@@ -88,7 +88,7 @@ Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **
 ### Core
 - **[Next.js 15.5.6](https://nextjs.org/)** — Framework React com SSR e SSG  
 - **[React 19.1.0](https://react.dev/)** — Biblioteca para interfaces reativas  
-- **[TypeScript](https://www.typescriptlang.org/)** — Tipagem estática para maior segurança e manutenção do código  
+- **[TypeScript 5.9.3](https://www.typescriptlang.org/)** — Tipagem estática para maior segurança e manutenção do código  
 - **[Tailwind CSS 3.4](https://tailwindcss.com/)** — Estilização moderna e rápida  
 
 ### Animações e Efeitos
