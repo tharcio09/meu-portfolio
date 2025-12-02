@@ -10,11 +10,9 @@ const ParticlesBackground = dynamic(
   }
 );
 
-// Importa o Hero (geralmente é leve e aparece primeiro)
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 
-// Importa seções pesadas de forma dinâmica para melhorar o LCP
 const Experience = dynamic(() => import('./components/sections/Experience'), { 
   loading: () => null 
 });

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tema e scroll */
+
 @layer base {
   * {
     @apply border-gray-200 dark:border-gray-800;
@@ -22,12 +22,11 @@
     scroll-behavior: smooth;
   }
 
-  /* Melhorar contraste e legibilidade */
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
   }
 
-  /* Scrollbar customizada */
+
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -46,7 +45,6 @@
   }
 }
 
-/* Utilitários customizados */
 @layer utilities {
   .glass {
     @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md;

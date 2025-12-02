@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -14,7 +13,7 @@ export const ThemeSwitcher = () => {
   }, []);
 
   if (!mounted) {
-    return null; 
+    return null;
   }
 
   return (

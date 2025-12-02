@@ -65,7 +65,6 @@ const Experience = () => {
         </motion.p>
       </motion.div>
       <div className="relative max-w-4xl mx-auto px-4">
-        {/* Timeline vertical - apenas no desktop */}
         <div className="hidden md:block absolute left-12 h-full w-0.5 bg-gradient-to-b from-neon-blue via-neon-purple to-neon-blue opacity-40"></div>
 
         {experiencesData.map((exp, index) => (
@@ -85,7 +84,6 @@ const Experience = () => {
               <FaBriefcase className="text-neon-blue text-lg md:text-xl" />
             </motion.div>
 
-            {/* Card de experiência */}
             <motion.div
               className="relative pt-8 md:pt-0 md:ml-8 p-5 md:p-8 rounded-2xl bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
               whileHover={{ y: -5, boxShadow: '0 10px 30px rgba(39, 215, 254, 0.2)' }}

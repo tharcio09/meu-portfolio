@@ -22,7 +22,6 @@ type Skill = {
 };
 
 const skills: Skill[] = [
-  // Stack Principal (Destaque Roxo)
   { icon: <SiJavascript />, name: 'JavaScript', featured: true },
   { icon: <SiReact />, name: 'React', featured: true },
   { icon: <SiNextdotjs />, name: 'Next.js', featured: true },
@@ -30,8 +29,6 @@ const skills: Skill[] = [
   { icon: <SiTailwindcss />, name: 'Tailwind CSS', featured: true },
   { icon: <SiPrisma />, name: 'Prisma', featured: true },
   { icon: <SiSupabase />, name: 'Supabase', featured: true },
-
-  // Ferramentas Complementares (Badges)
   { icon: <SiHtml5 />, name: 'HTML5', featured: false },
   { icon: <SiCss3 />, name: 'CSS3', featured: false },
   { icon: <SiFramer />, name: 'Motion', featured: false },
@@ -48,13 +45,11 @@ const skills: Skill[] = [
 ];
 
 const About = () => {
-  // Filtra as skills para renderizar separadamente
   const mainSkills = skills.filter(s => s.featured);
   const otherSkills = skills.filter(s => !s.featured);
 
   return (
     <Section id="sobre-mim">
-      {/* --- SEÇÃO SOBRE MIM --- */}
       <motion.div className="text-center mb-20">
         <motion.h2 
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
@@ -84,7 +79,6 @@ const About = () => {
       </motion.div>
 
       <div className="grid md:grid-cols-5 gap-12 items-center max-w-6xl mx-auto">
-        {/* FOTO DE PERFIL */}
         <motion.div
           className="md:col-span-2 relative w-64 h-64 mx-auto"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -113,7 +107,6 @@ const About = () => {
           </motion.div>
         </motion.div>
 
-        {/* TEXTO SOBRE MIM */}
         <motion.div 
           className="md:col-span-3 text-secondary-text dark:text-dark-text leading-relaxed space-y-4"
           initial={{ opacity: 0, x: 50 }}
@@ -133,9 +126,7 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* --- NOVA SEÇÃO DE FERRAMENTAS --- */}
       <div className="mt-24">
-        {/* Título Stack Principal */}
         <motion.div className="text-center mb-12">
           <motion.h3 
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
@@ -155,7 +146,6 @@ const About = () => {
           />
         </motion.div>
 
-        {/* 1. CARDS GRANDES */}
         <motion.div
           className="flex flex-wrap gap-4 md:gap-6 justify-center max-w-4xl mx-auto mb-16"
           initial="hidden"
@@ -184,7 +174,6 @@ const About = () => {
           ))}
         </motion.div>
 
-        {/* 2. SUBTÍTULO SECUNDÁRIO */}
         <motion.p 
           className="text-center text-secondary-text dark:text-dark-text mb-6 text-sm uppercase tracking-widest font-semibold opacity-70"
           initial={{ opacity: 0 }}
@@ -194,7 +183,6 @@ const About = () => {
           Outras Tecnologias & Ferramentas
         </motion.p>
 
-        {/* 3. PÍLULAS/BADGES  */}
         <motion.div
           className="flex flex-wrap gap-3 justify-center max-w-3xl mx-auto"
           initial="hidden"
@@ -227,7 +215,6 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* --- SEÇÃO FORMAÇÃO E CURSOS --- */}
       <div className="mt-24">
         <motion.div className="text-center mb-16">
           <motion.h3 
@@ -255,7 +242,6 @@ const About = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ staggerChildren: 0.2 }}
         >
-          {/* CARD 1: FACULDADE */}
           <motion.div
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-xl shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
             variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
@@ -282,7 +268,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* CARD 2: ROCKETSEAT */}
           <motion.div
             className="bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-xl shadow-xl border border-neon-blue/20 dark:border-neon-blue/30 p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
             variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}

@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -17,7 +18,7 @@ const ParticlesBackground = () => {
   }, []);
 
   const options = useMemo(() => {
-    const isDark = theme === 'dark';
+    const isDark = theme === "dark";
     return {
       background: {
         color: {
@@ -85,13 +86,13 @@ const ParticlesBackground = () => {
     return (
       <Particles
         id="tsparticles"
-        options={options}
+        options={options as any}
         className="fixed top-0 left-0 w-full h-full -z-10"
       />
     );
   }
 
-  return <></>;
+  return null;
 };
 
 export default ParticlesBackground;

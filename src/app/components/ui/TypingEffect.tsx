@@ -2,7 +2,12 @@
 
 import { useState, useEffect } from 'react';
 
-const TypingEffect = ({ text, speed = 150 }) => {
+type TypingEffectProps = {
+  text: string;
+  speed?: number;
+};
+
+const TypingEffect = ({ text, speed = 150 }: TypingEffectProps) => {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
