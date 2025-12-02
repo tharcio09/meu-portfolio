@@ -1,8 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { ReactNode } from 'react';
 
-const Section = ({ children, id, className = '' }) => {
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: ReactNode;
+};
+
+const Section = ({ children, id, className = '' }: SectionProps): JSX.Element => {
   return (
     <motion.section
       id={id}

@@ -5,12 +5,12 @@ import { HiArrowRight } from 'react-icons/hi';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 import Section from '../ui/Section';
 
-const Hero = () => {
+const Hero = (): JSX.Element => {
   return (
     <Section id="home" className="flex flex-col justify-center min-h-screen">
       <div className="text-center space-y-8 max-w-4xl mx-auto z-10 px-4">
         
-        {/* Intro pequena */}
+
         <motion.p
           className="text-lg md:text-xl text-secondary-text dark:text-cyan-200/80 font-medium tracking-wide uppercase"
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,6 @@ const Hero = () => {
           Olá, eu sou
         </motion.p>
 
-        {/* Nome Gigante com Gradiente */}
         <motion.h1
           className="text-6xl md:text-8xl font-extrabold tracking-tight"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -32,7 +31,7 @@ const Hero = () => {
           </span>
         </motion.h1>
 
-        {/* Cargo */}
+
         <motion.h2
           className="text-2xl md:text-4xl font-bold text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]"
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +41,6 @@ const Hero = () => {
           Desenvolvedor Full-Stack
         </motion.h2>
 
-        {/* Descrição */}
         <motion.p
           className="text-base md:text-xl text-secondary-text dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +77,6 @@ const Hero = () => {
           </a>
         </motion.div>
 
-        {/* Ícones Sociais */}
         <motion.div 
           className="flex justify-center gap-8 pt-8 text-gray-400"
           initial={{ opacity: 0 }}

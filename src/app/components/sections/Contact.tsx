@@ -1,35 +1,49 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
-import Section from '../ui/Section';
-import { toast } from 'react-hot-toast';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
+import Section from "../ui/Section";
+import { toast } from "react-hot-toast";
+import type { ChangeEvent, FormEvent } from 'react';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState({});
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+type FormErrors = {
+  name?: string;
+  email?: string;
+  message: string;
+};
+
+const Contact = (): JSX.Element => {
+  const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSending, setIsSending] = useState(false);
+
 
   const validate = () => {
     let tempErrors = {};
-    if (!formData.name) tempErrors.name = 'O nome é obrigatório.';
+    if (!formData.name) tempErrors.name = "O nome é obrigatório.";
     if (!formData.email) {
-      tempErrors.email = 'O email é obrigatório.';
+      tempErrors.email = "O email é obrigatório.";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      tempErrors.email = 'O email é inválido.';
+      tempErrors.email = "O email é inválido.";
     }
-    if (!formData.message) tempErrors.message = 'A mensagem é obrigatória.';
+    if (!formData.message) tempErrors.message = "A mensagem é obrigatória.";
     setErrors(tempErrors);
     return Object.keys(tempErrors).length === 0;
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validate() || isSending) {
       return;
@@ -50,16 +64,16 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       ),
       {
-        loading: 'Enviando sua mensagem...',
+        loading: "Enviando sua mensagem...",
         success: () => {
-          setFormData({ name: '', email: '', message: '' });
+          setFormData({ name: "", email: "", message: "" });
           setErrors({});
           setIsSending(false);
-          return 'Mensagem enviada com sucesso!';
+          return "Mensagem enviada com sucesso!";
         },
         error: () => {
           setIsSending(false);
-          return 'Falha ao enviar a mensagem. Tente novamente.';
+          return "Falha ao enviar a mensagem. Tente novamente.";
         },
       }
     );
@@ -72,7 +86,7 @@ const Contact = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeOut',
+        ease: "easeOut",
         staggerChildren: 0.2,
       },
     },
@@ -106,7 +120,7 @@ const Contact = () => {
     <Section id="contato">
       <div className="max-w-2xl mx-auto px-6">
         <motion.div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -142,7 +156,10 @@ const Contact = () => {
           noValidate
         >
           <motion.div variants={fieldVariants}>
-            <label htmlFor="name" className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2">
+            <label
+              htmlFor="name"
+              className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
+            >
               Seu Nome <span className="text-neon-blue">*</span>
             </label>
             <input
@@ -155,11 +172,16 @@ const Contact = () => {
               required
               className={inputClasses}
             />
-            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+            )}
           </motion.div>
 
           <motion.div variants={fieldVariants}>
-            <label htmlFor="email" className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
+            >
               Seu Email <span className="text-neon-blue">*</span>
             </label>
             <input
@@ -172,11 +194,16 @@ const Contact = () => {
               required
               className={inputClasses}
             />
-            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            )}
           </motion.div>
 
           <motion.div variants={fieldVariants}>
-            <label htmlFor="message" className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
+            >
               Sua Mensagem <span className="text-neon-blue">*</span>
             </label>
             <textarea
@@ -189,7 +216,9 @@ const Contact = () => {
               required
               className={`${inputClasses} resize-none`}
             ></textarea>
-            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            )}
           </motion.div>
 
           <motion.div className="text-center" variants={fieldVariants}>
@@ -198,7 +227,9 @@ const Contact = () => {
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={isSending}
-              aria-label={isSending ? 'Enviando mensagem...' : 'Enviar mensagem'}
+              aria-label={
+                isSending ? "Enviando mensagem..." : "Enviar mensagem"
+              }
               className="w-full py-4 px-8 rounded-xl text-white font-bold text-lg transition-all duration-300
                          bg-gradient-to-r from-cyan-500 via-purple-600 to-cyan-500 bg-[length:200%_auto]
                          hover:bg-right hover:shadow-[0_0_30px_rgba(6,182,212,0.7)]
@@ -212,7 +243,7 @@ const Contact = () => {
                   <span>Enviando...</span>
                 </>
               ) : (
-                'Enviar Mensagem'
+                "Enviar Mensagem"
               )}
             </motion.button>
           </motion.div>

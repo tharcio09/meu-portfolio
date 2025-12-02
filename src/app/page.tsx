@@ -2,7 +2,6 @@
 
 import dynamic from 'next/dynamic';
 
-// Carrega o fundo de partículas sem SSR (ótimo!)
 const ParticlesBackground = dynamic(
   () => import('./components/ParticlesBackground'),
   { 
@@ -33,10 +32,8 @@ export default function Home() {
     <>
       <ParticlesBackground />
       <div className="flex flex-col">
-        {/* Renderiza primeiro o conteúdo essencial */}
         <Hero />
         <About />
-        {/* Carrega o restante de forma leve e assíncrona */}
         <Experience />
         <Projects />
         <Contact />

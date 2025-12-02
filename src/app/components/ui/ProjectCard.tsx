@@ -4,6 +4,16 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
+type ProjectCardProps = {
+  title: string;
+  description: string;
+  imageUrl: string;
+  githubUrl: string;
+  demoUrl?: string;
+  tags: string[];
+
+};
+
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.9, y: 20 },
   visible: {
@@ -17,14 +27,13 @@ const cardVariants = {
   },
 };
 
-const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags }) => {
+const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags, }: ProjectCardProps): JSX.Element => {
   return (
     <motion.div
       className="group bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md rounded-2xl overflow-hidden shadow-xl flex flex-col border border-neon-blue/10 dark:border-neon-blue/20 hover:border-neon-blue/50 dark:hover:border-neon-blue/50 transition-all duration-300 ease-out"
       variants={cardVariants}
       whileHover={{ y: -12, scale: 1.02 }}
     >
-      {/* Imagem do Projeto */}
       <div className="relative h-56 w-full overflow-hidden">
         <Image 
           src={imageUrl} 
@@ -45,7 +54,6 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, demoUrl, tags })
           {description}
         </p>
         
-        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2 mb-6">
           {tags.map((tag, index) => (
             <motion.span 

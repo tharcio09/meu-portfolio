@@ -13,8 +13,15 @@ import {
 import { VscCode } from 'react-icons/vsc';
 import { LuAward } from 'react-icons/lu';
 import { FaUserGraduate } from 'react-icons/fa';
+import type { ReactNode } from 'react';
 
-const skills = [
+type Skill = {
+  icon: ReactNode;
+  name: string;
+  featured: boolean;
+};
+
+const skills: Skill[] = [
   // Stack Principal (Destaque Roxo)
   { icon: <SiJavascript />, name: 'JavaScript', featured: true },
   { icon: <SiReact />, name: 'React', featured: true },

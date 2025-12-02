@@ -5,12 +5,13 @@ import { useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { ThemeSwitcher } from './ThemeSwitcher';
+import type { NavLink } from '../../data/constants';
 import { navLinks } from '../../data/constants';
 import { motion } from 'framer-motion';
 
-const MotionLink = motion.create(Link);
+const MotionLink = motion(Link);
 
-const Navbar = () => {
+const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -31,7 +32,7 @@ const Navbar = () => {
 
         {/* Links principais */}
         <div className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
+          {navLinks.map((link: NavLink) => (
             <MotionLink
               key={link.href}
               href={link.href}

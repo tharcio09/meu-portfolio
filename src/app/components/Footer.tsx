@@ -3,7 +3,7 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer
       className="bg-light-card/90 dark:bg-dark-card/90 backdrop-blur-lg text-center py-10 border-t border-gray-200/30 dark:border-gray-800/30 transition-all duration-300"
