@@ -3,7 +3,7 @@
 # 💻 Tharcio Santos — Portfólio Profissional  
 ### Desenvolvedor Full-Stack | React • Next.js • TypeScript • Tailwind • Node.js  
 
-![Next.js](https://img.shields.io/badge/Next.js-15.5.6-black?style=for-the-badge&logo=next.js)
+![Next.js](https://img.shields.io/badge/Next.js-16.0.7-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
@@ -86,7 +86,7 @@ Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **
 ## 🛠️ Tecnologias Utilizadas
 
 ### Core
-- **[Next.js 15.5.6](https://nextjs.org/)** — Framework React com SSR e SSG  
+- **[Next.js 16.0.7](https://nextjs.org/)** — Framework React com SSR e SSG  
 - **[React 19.1.0](https://react.dev/)** — Biblioteca para interfaces reativas  
 - **[TypeScript 5.9.3](https://www.typescriptlang.org/)** — Tipagem estática para maior segurança e manutenção do código  
 - **[Tailwind CSS 3.4](https://tailwindcss.com/)** — Estilização moderna e rápida  
