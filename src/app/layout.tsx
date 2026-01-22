@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -9,8 +9,13 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  preload: true,
-  fallback: ["system-ui", "Arial"],
+  variable: "--font-inter",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
 });
 
 
@@ -84,7 +89,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${inter.className} bg-light-bg text-primary-text`}>
+      <body className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Toaster position="top-center" reverseOrder={false} />
           <div className="relative z-10">
