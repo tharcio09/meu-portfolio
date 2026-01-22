@@ -7,9 +7,6 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import type { NavLink } from '../../data/constants';
 import { navLinks } from '../../data/constants';
-import { motion } from 'framer-motion';
-
-const MotionLink = motion(Link);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,17 +30,15 @@ const Navbar = () => {
         {/* Links principais */}
         <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link: NavLink) => (
-            <MotionLink
+            <Link
               key={link.href}
               href={link.href}
-              className="text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              className="text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-transform duration-200 hover:scale-110 active:scale-95"
               aria-label={`Ir para a seção ${link.label}`}
               title={`Ir para a seção ${link.label}`}
             >
               {link.label}
-            </MotionLink>
+            </Link>
           ))}
         </div>
 
@@ -51,42 +46,36 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           <ThemeSwitcher />
 
-          <motion.a
+          <a
             href="https://github.com/tharcio09"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub de Tharcio Santos"
             title="GitHub de Tharcio Santos"
-            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
           >
             <FaGithub aria-hidden="true" />
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn de Tharcio Santos"
             title="LinkedIn de Tharcio Santos"
-            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
           >
             <FaLinkedin aria-hidden="true" />
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href="mailto:tharciosantos09@gmail.com"
             aria-label="Enviar e-mail para Tharcio Santos"
             title="Enviar e-mail para Tharcio Santos"
-            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
+            className="text-2xl text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
           >
             <FaEnvelope aria-hidden="true" />
-          </motion.a>
+          </a>
         </div>
 
         {/* Menu mobile */}
@@ -109,20 +98,18 @@ const Navbar = () => {
 
       {/* Menu mobile aberto */}
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col items-center space-y-4">
+        <div className="md:hidden mt-4 flex flex-col items-center space-y-4 animate-fade-down">
           {navLinks.map((link) => (
-            <MotionLink
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-colors text-lg"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+              className="text-neon-blue hover:text-neon-purple dark:text-neon-blue dark:hover:text-neon-purple transition-transform duration-200 hover:scale-110 active:scale-95 text-lg"
               aria-label={`Ir para a seção ${link.label}`}
               title={`Ir para a seção ${link.label}`}
             >
               {link.label}
-            </MotionLink>
+            </Link>
           ))}
         </div>
       )}
