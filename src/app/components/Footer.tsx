@@ -1,7 +1,6 @@
 'use client';
 
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
@@ -11,39 +10,33 @@ const Footer = () => {
     >
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex justify-center space-x-6 mb-6">
-          <motion.a
+          <a
             href="https://github.com/tharcio09"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub de Tharcio Santos"
-            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
+            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
           >
             <FaGithub />
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href="https://www.linkedin.com/in/tharcio-santos-dev/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn de Tharcio Santos"
-            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
+            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
           >
             <FaLinkedin />
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href="mailto:tharciosantos09@gmail.com"
             aria-label="Enviar e-mail para Tharcio Santos"
-            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-colors"
-            whileHover={{ scale: 1.2, y: -2 }}
-            whileTap={{ scale: 0.9 }}
+            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
           >
             <FaEnvelope />
-          </motion.a>
+          </a>
         </div>
 
         <p className="text-secondary-text dark:text-dark-text text-sm">
