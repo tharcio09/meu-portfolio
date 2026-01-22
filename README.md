@@ -7,7 +7,7 @@
 ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23-ff0055?style=for-the-badge&logo=framer)
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
 [![Deploy Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://tharcio-portfolio.vercel.app/)
 [![Status](https://img.shields.io/badge/Status-Online-success?style=for-the-badge)](https://tharcio-portfolio.vercel.app/)
@@ -25,7 +25,7 @@
 | Seção | Link |
 |-------|------|
 | 🧑‍💻 **Demo Online** | [tharcio-portfolio.vercel.app](https://tharcio-portfolio.vercel.app) |
-| 🧠 **Stack Principal** | Next.js • React • TypeScript • Tailwind • Framer Motion |
+| 🧠 **Stack Principal** | Next.js • React • TypeScript • Tailwind |
 | 💬 **Contato** | [tharciosantos09@gmail.com](mailto:tharciosantos09@gmail.com) |
 | 📂 **Repositório** | [github.com/tharcio09/tharcioport](https://github.com/tharcio09/tharcioport) |
 
@@ -45,12 +45,12 @@ Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **
 ### 🎨 Design e Visual
 - **Estilo Dark Futurista** com paleta neon (azul e roxo)
 - **Glassmorphism**: efeitos de vidro fosco em componentes
-- **Partículas Interativas** (tsparticles)
+
 - **Gradientes Neon** e brilhos dinâmicos
 - **Tema Claro/Escuro** com transições suaves
 
 ### 🎭 Animações e Interatividade
-- Animações de entrada com **Framer Motion**
+
 - **Scroll Reveal** e **Hover Effects**
 - **Typing Effect** no texto de boas-vindas
 - **Animações Sequenciais (Stagger)** em grids e listas
@@ -74,7 +74,7 @@ Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **
 ## ✅ Checklist de Recursos
 
 - [x] Tema dark/light com transição suave  
-- [x] Fundo animado com partículas  
+
 - [x] Efeito de digitação e animações de entrada  
 - [x] Formulário funcional via EmailJS  
 - [x] Deploy automatizado na Vercel  
@@ -91,9 +91,6 @@ Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **
 - **[TypeScript 5.9.3](https://www.typescriptlang.org/)** — Tipagem estática para maior segurança e manutenção do código  
 - **[Tailwind CSS 3.4](https://tailwindcss.com/)** — Estilização moderna e rápida  
 
-### Animações e Efeitos
-- **[Framer Motion 12.23](https://www.framer.com/motion/)** — Animações fluidas  
-- **[tsparticles 3.9](https://particles.js.org/)** — Fundo de partículas interativas  
 
 ### Utilitários
 - **[next-themes](https://github.com/pacocoursey/next-themes)** — Gerenciamento de tema  
@@ -200,7 +197,7 @@ Durante o desenvolvimento deste portfólio, aprofundei conhecimentos em:
 
 - Otimização de imagens e lazy loading no Next.js  
 - Controle de tema dinâmico com `next-themes`  
-- Uso avançado do Framer Motion para transições fluidas  
+
 - Boas práticas de acessibilidade e performance em React  
 - Migração gradual de um projeto Next.js de **JavaScript para TypeScript** (tipagem de props, estados e dados)  
 
