@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply bg-light-bg text-primary-text transition-colors duration-500;
+    @apply bg-light-bg text-primary-text transition-colors duration-500 bg-fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -22,39 +22,44 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
   }
 
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-light-bg dark:bg-dark-bg;
+    @apply bg-transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-neon-blue/30 dark:bg-neon-blue/50 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-neon-blue/50 dark:bg-neon-blue/70;
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-light-card/80 dark:bg-dark-card/80 backdrop-blur-md;
+    @apply bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-800;
+  }
+
+  .glass-card {
+    @apply bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800 hover:border-neon-blue/30 dark:hover:border-neon-blue/30 transition-colors duration-300;
   }
 
   .neon-glow {
-    box-shadow: 0 0 10px rgba(39, 215, 254, 0.5), 0 0 20px rgba(39, 215, 254, 0.3);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3), 0 0 20px rgba(56, 189, 248, 0.1);
   }
 
   .neon-glow-purple {
-    box-shadow: 0 0 10px rgba(167, 121, 233, 0.5), 0 0 20px rgba(167, 121, 233, 0.3);
+    box-shadow: 0 0 10px rgba(192, 132, 252, 0.3), 0 0 20px rgba(192, 132, 252, 0.1);
   }
 }
