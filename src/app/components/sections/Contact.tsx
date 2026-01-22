@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import Section from "../ui/Section";
 import { toast } from "react-hot-toast";
@@ -88,23 +87,6 @@ const Contact = () => {
     );
   };
 
-  const formVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const fieldVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
   const inputClasses = `
     w-full p-4 rounded-lg border-2 
     bg-light-bg/50 dark:bg-dark-bg/50 
@@ -127,43 +109,27 @@ const Contact = () => {
   return (
     <Section id="contato">
       <div className="max-w-2xl mx-auto px-6">
-        <motion.div className="text-center mb-16">
-          <motion.h2
+        <div className="text-center mb-16">
+          <h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             Entre em Contato
-          </motion.h2>
-          <motion.div
+          </h2>
+          <div
             className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-purple to-transparent rounded-full mx-auto mb-6 opacity-60"
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 0.6, scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           />
-          <motion.p
+          <p
             className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             Vamos trabalhar juntos? Envie uma mensagem!
-          </motion.p>
-        </motion.div>
-        <motion.form
+          </p>
+        </div>
+        <form
           onSubmit={handleSubmit}
           className="space-y-6 bg-light-card/80 dark:bg-dark-card/50 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-neon-blue/20 dark:border-neon-blue/30"
-          variants={formVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
           noValidate
         >
-          <motion.div variants={fieldVariants}>
+          <div>
             <label
               htmlFor="name"
               className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
@@ -183,9 +149,9 @@ const Contact = () => {
             {errors.name && (
               <p className="text-red-500 text-sm mt-1">{errors.name}</p>
             )}
-          </motion.div>
+          </div>
 
-          <motion.div variants={fieldVariants}>
+          <div>
             <label
               htmlFor="email"
               className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
@@ -205,9 +171,9 @@ const Contact = () => {
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">{errors.email}</p>
             )}
-          </motion.div>
+          </div>
 
-          <motion.div variants={fieldVariants}>
+          <div>
             <label
               htmlFor="message"
               className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
@@ -227,12 +193,10 @@ const Contact = () => {
             {errors.message && (
               <p className="text-red-500 text-sm mt-1">{errors.message}</p>
             )}
-          </motion.div>
+          </div>
 
-          <motion.div className="text-center" variants={fieldVariants}>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+          <div className="text-center">
+            <button
               type="submit"
               disabled={isSending}
               aria-label={
@@ -243,7 +207,8 @@ const Contact = () => {
                          hover:bg-right hover:shadow-[0_0_30px_rgba(6,182,212,0.7)]
                          shadow-[0_0_15px_rgba(6,182,212,0.4)]
                          disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none
-                         flex items-center justify-center gap-2"
+                         flex items-center justify-center gap-2
+                         hover:scale-[1.02] active:scale-[0.98]"
             >
               {isSending ? (
                 <>
@@ -253,9 +218,9 @@ const Contact = () => {
               ) : (
                 "Enviar Mensagem"
               )}
-            </motion.button>
-          </motion.div>
-        </motion.form>
+            </button>
+          </div>
+        </form>
       </div>
     </Section>
   );
