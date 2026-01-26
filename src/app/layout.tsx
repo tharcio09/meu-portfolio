@@ -20,31 +20,31 @@ const outfit = Outfit({
 
 
 export const metadata = {
-  title: "Tharcio Santos | Desenvolvedor Full-Stack",
+  title: "Tharcio Santos | Desenvolvimento Web",
   description:
-    "Portfólio profissional de Tharcio Santos, um desenvolvedor web Full-Stack especializado em React, Next.js, Node.js e Tailwind CSS.",
+    "Portfólio de Tharcio Santos, estudante de Análise e Desenvolvimento de Sistemas, focado em desenvolvimento web com React, Next.js e noções de backend com Node.js.",
   keywords: [
     "Tharcio Santos",
-    "Desenvolvedor Full-Stack",
+    "Desenvolvimento Web",
+    "Desenvolvedor Web",
+    "Estágio em Desenvolvimento",
     "React",
     "Next.js",
     "Node.js",
-    "Tailwind CSS",
     "JavaScript",
     "TypeScript",
+    "Tailwind CSS",
     "Prisma",
     "Supabase",
-    "Desenvolvedor Web",
     "Portfólio",
-    "Freelancer",
   ],
   authors: [{ name: "Tharcio Santos", url: "https://github.com/tharcio09" }],
   creator: "Tharcio Santos",
   publisher: "Vercel",
   openGraph: {
-    title: "Tharcio Santos | Desenvolvedor Full-Stack",
+    title: "Tharcio Santos | Desenvolvimento Web",
     description:
-      "Portfólio profissional de Tharcio Santos, um desenvolvedor web Full-Stack especializado em React, Next.js, Node.js e Tailwind CSS.",
+      "Portfólio de Tharcio Santos, estudante de ADS focado em desenvolvimento web, com projetos em React, Next.js e aprendizado contínuo em backend.",
     url: "https://tharcioport.vercel.app/",
     siteName: "Tharcio.dev",
     images: [
@@ -52,7 +52,7 @@ export const metadata = {
         url: "https://tharcioport.vercel.app/screenshot-portfolio.PNG",
         width: 1200,
         height: 630,
-        alt: "Tharcio Santos - Desenvolvedor Full-Stack",
+        alt: "Tharcio Santos - Desenvolvimento Web",
       },
     ],
     locale: "pt_BR",
@@ -60,10 +60,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tharcio Santos | Desenvolvedor Full-Stack",
+    title: "Tharcio Santos | Desenvolvimento Web",
     description:
-      "Portfólio profissional de Tharcio Santos, um desenvolvedor web Full-Stack especializado em React, Next.js, Node.js e Tailwind CSS.",
-    creator: "@tharcio_santos",
+      "Portfólio de Tharcio Santos, estudante de ADS focado em desenvolvimento web com React e Next.js.",
     images: ["https://tharcioport.vercel.app/screenshot-portfolio.PNG"],
   },
   manifest: "/manifest.json",
@@ -71,15 +70,12 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/icons/icon-192x192.png",
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: "/icons/icon-192x192.png",
-    },
   },
   alternates: {
     canonical: "https://tharcioport.vercel.app/",
   },
 };
+
 
 export const viewport = {
   width: "device-width",
