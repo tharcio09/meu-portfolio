@@ -12,7 +12,7 @@
 [![Deploy Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://tharcio-portfolio.vercel.app/)
 [![Status](https://img.shields.io/badge/Status-Online-success?style=for-the-badge)](https://tharcio-portfolio.vercel.app/)
 
-**Portfólio moderno e interativo desenvolvido com Next.js e TypeScript, com design dark futurista e elementos neon.**
+**Portfólio minimalista desenvolvido com Next.js e TypeScript, focado em clareza, projetos reais e fácil leitura para recrutadores.**
 
 [🌐 **Acesse o site ao vivo**](https://tharcio-portfolio.vercel.app/) • [📧 **Entre em contato**](mailto:tharciosantos09@gmail.com)
 
@@ -33,53 +33,46 @@
 
 ## 📖 Sobre o Projeto
 
-Este é o meu portfólio profissional, desenvolvido para apresentar minha trajetória, habilidades técnicas e projetos como **Desenvolvedor Full-Stack**.  
+Este é o meu portfólio profissional, desenvolvido para apresentar minha trajetória, habilidades técnicas e projetos como **Desenvolvedor Web em formação (React/Next.js)**.  
 
-O site combina um **design dark futurista com cores neon (azul e roxo)**, animações suaves e uma experiência totalmente responsiva.  
-Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **performance, UX, tipagem estática e impacto visual**.
+O site tem um visual **clean e responsivo**, com foco em conteúdo: quem sou, o que sei fazer, projetos reais e como entrar em contato.  
+O objetivo é facilitar a avaliação técnica de recrutadores, priorizando **clareza, organização e boas práticas**.
 
 ---
 
 ## ✨ Destaques e Recursos
 
 ### 🎨 Design e Visual
-- **Estilo Dark Futurista** com paleta neon (azul e roxo)
-- **Glassmorphism**: efeitos de vidro fosco em componentes
-
-- **Gradientes Neon** e brilhos dinâmicos
-- **Tema Claro/Escuro** com transições suaves
+- **Layout minimalista**, com foco em leitura e hierarquia tipográfica
+- Paleta simples: **1 cor principal (ciano)** + tons neutros em modo claro/escuro
+- Espaçamentos generosos e poucas informações por tela
 
 ### 🎭 Animações e Interatividade
 
-- **Scroll Reveal** e **Hover Effects**
-- **Typing Effect** no texto de boas-vindas
-- **Animações Sequenciais (Stagger)** em grids e listas
+- Animações sutis em hovers e interações importantes (botões, navegação)
+- Transição suave de tema claro/escuro
 
 ### 📱 Responsividade e Performance
 - Layout **100% responsivo**
-- **Lazy Loading** para imagens e componentes
-- **SEO otimizado** com metadados completos
-- **PWA Ready** e **build otimizado** para produção
+- Imagens otimizadas com `next/image`
+- **SEO básico** com metadados configurados
+- Pronto para deploy na **Vercel**
 
 ### 🛠️ Funcionalidades Principais
-- **Seção Hero** com CTA animado  
-- **Sobre Mim** com perfil e habilidades  
-- **Timeline Profissional** animada  
-- **Grid de Projetos Interativo**  
-- **Formulário de Contato funcional (EmailJS)**  
-- **Scroll suave** entre seções  
+- **Seção Hero** com apresentação direta e CTA para projetos  
+- **Sobre Mim** com resumo, stack e formação  
+- **Experiência Profissional** em cards simples e legíveis  
+- **Grid de Projetos** com links para GitHub e deploy  
+- **Contato** com links diretos para LinkedIn e email  
 
 ---
 
 ## ✅ Checklist de Recursos
 
 - [x] Tema dark/light com transição suave  
-
-- [x] Efeito de digitação e animações de entrada  
-- [x] Formulário funcional via EmailJS  
+- [x] Layout responsivo e focado em conteúdo  
 - [x] Deploy automatizado na Vercel  
-- [x] Performance otimizada e responsiva  
-- [x] Migração de JavaScript para **TypeScript** em componentes e dados principais  
+- [x] Componentes principais em **TypeScript**  
 
 ---
 
@@ -94,8 +87,6 @@ Ele reflete meu estilo como desenvolvedor — moderno, criativo e com foco em **
 
 ### Utilitários
 - **[next-themes](https://github.com/pacocoursey/next-themes)** — Gerenciamento de tema  
-- **[EmailJS](https://www.emailjs.com/)** — Envio de emails via formulário  
-- **[react-hot-toast](https://react-hot-toast.com/)** — Notificações  
 - **[react-icons](https://react-icons.github.io/react-icons/)** — Ícones SVG  
 - **[Vercel Analytics](https://vercel.com/analytics)** — Métricas de uso  
 
@@ -122,9 +113,6 @@ tharcioport/
 │ │ │ ├── ui/ # Componentes de UI
 │ │ │ │ ├── ProjectCard.tsx
 │ │ │ │ ├── Section.tsx
-│ │ │ │ ├── TypingEffect.tsx
-│ │ │ │ ├── AnimatedBackground.tsx
-│ │ │ │ ├── ParticlesBackground.tsx
 │ │ │ │ ├── ThemeProvider.tsx
 │ │ │ │ └── ThemeSwitcher.tsx
 │ │ ├── globals.css
@@ -147,7 +135,6 @@ tharcioport/
 ### Pré-requisitos
 - Node.js 18+  
 - npm ou yarn  
-- Conta no EmailJS (para o formulário)
 
 ### Instalação
 
@@ -156,14 +143,6 @@ git clone https://github.com/tharcio09/tharcioport.git
 cd tharcioport
 npm install
 ````
-
-Crie o arquivo `.env.local`:
-
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=seu_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=seu_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=sua_public_key
-```
 
 Execute o servidor:
 
