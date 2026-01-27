@@ -53,7 +53,7 @@ const projectsData: Project[] = [
 
 const Projects = () => {
   return (
-    <Section id="projetos" className="overflow-hidden">
+    <Section id="projetos">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight">
           Projetos
@@ -67,23 +67,10 @@ const Projects = () => {
         </p>
       </div>
 
-      <div className="relative w-full">
-        {/* Gradient Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-light-bg dark:from-dark-bg to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-light-bg dark:from-dark-bg to-transparent z-10 pointer-events-none" />
-
-        <div className="flex w-max gap-8 animate-scroll hover:[animation-play-state:paused] py-4">
-          {[...Array(3)].map((_, listIndex) => (
-            <div key={listIndex} className="flex gap-8">
-              {projectsData.map((project, index) => (
-                <ProjectCard
-                  key={`p-${listIndex}-${index}`}
-                  {...project}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
+      <div className="grid gap-8 md:grid-cols-2">
+        {projectsData.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
       </div>
     </Section>
   );
