@@ -31,27 +31,42 @@ const ProjectCard = ({
       "
     >
       {/* Image */}
-      <div className="relative h-40 w-full overflow-hidden">
-        <Image
-          src={imageUrl}
-          alt={`Preview do projeto ${title}`}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-      </div>
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Abrir repositório do projeto ${title} no GitHub`}
+      >
+        <div className="relative h-40 w-full overflow-hidden">
+          <Image
+            src={imageUrl}
+            alt={`Preview do projeto ${title}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+      </a>
 
       {/* Content */}
       <div className="p-5 flex flex-col h-full">
-        <h3
-          className="
-            text-xl font-heading font-bold mb-2 truncate
-            text-primary-text dark:text-light-text
-            transition-colors duration-300 group-hover:text-neon-blue
-          "
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir repositório do projeto ${title} no GitHub`}
+          className="block"
         >
-          {title}
-        </h3>
+          <h3
+            className="
+              text-xl font-heading font-bold mb-2 truncate
+              text-primary-text dark:text-light-text
+              transition-colors duration-300 group-hover:text-neon-blue
+            "
+          >
+            {title}
+          </h3>
+        </a>
 
         <p className="text-sm leading-relaxed text-secondary-text dark:text-dark-text line-clamp-2 mb-4">
           {description}
@@ -59,7 +74,7 @@ const ProjectCard = ({
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-5">
-          {tags.slice(0, 4).map((tag) => (
+          {tags.map((tag) => (
             <span
               key={tag}
               className="
@@ -72,11 +87,6 @@ const ProjectCard = ({
               {tag}
             </span>
           ))}
-          {tags.length > 4 && (
-            <span className="text-[10px] text-secondary-text px-1">
-              +{tags.length - 4}
-            </span>
-          )}
         </div>
 
         {/* Actions */}
