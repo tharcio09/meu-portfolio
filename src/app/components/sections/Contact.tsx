@@ -1,226 +1,63 @@
 "use client";
 
-import { useState } from "react";
-import emailjs from "emailjs-com";
 import Section from "../ui/Section";
-import { toast } from "react-hot-toast";
-import type { ChangeEvent, FormEvent } from "react";
-
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
-
-type FormErrors = {
-  name?: string;
-  email?: string;
-  message?: string;
-};
-
-const initialErrors: FormErrors = {};
 
 const Contact = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<FormErrors>(initialErrors);
-  const [isSending, setIsSending] = useState(false);
-
-  const validate = () => {
-    let tempErrors: FormErrors = {};
-
-    if (!formData.name) tempErrors.name = "O nome é obrigatório.";
-    if (!formData.email) {
-      tempErrors.email = "O email é obrigatório.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      tempErrors.email = "O email é inválido.";
-    }
-    if (!formData.message) tempErrors.message = "A mensagem é obrigatória.";
-
-    setErrors(tempErrors);
-    return Object.keys(tempErrors).length === 0;
-  };
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!validate() || isSending) {
-      return;
-    }
-    setIsSending(true);
-
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    toast.promise(
-      emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      ),
-      {
-        loading: "Enviando sua mensagem...",
-        success: () => {
-          setFormData({ name: "", email: "", message: "" });
-          setErrors({});
-          setIsSending(false);
-          return "Mensagem enviada com sucesso!";
-        },
-        error: () => {
-          setIsSending(false);
-          return "Falha ao enviar a mensagem. Tente novamente.";
-        },
-      }
-    );
-  };
-
-  const inputClasses = `
-    w-full p-4 rounded-lg border-2 
-    bg-light-bg/50 dark:bg-dark-bg/50 
-    text-primary-text dark:text-light-text 
-    border-gray-300 dark:border-gray-700 
-    placeholder-secondary-text dark:placeholder-dark-text
-    focus:outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue 
-    transition-all duration-300
-    
-    /* Corrige o fundo amarelo do navegador ao preencher automático */
-    [&:-webkit-autofill]:bg-transparent
-    [&:-webkit-autofill]:text-primary-text
-    [&:-webkit-autofill]:shadow-[0_0_0_100px_rgba(255,255,255,0.8)_inset]
-    dark:[&:-webkit-autofill]:shadow-[0_0_0_100px_rgba(17,24,39,0.8)_inset]
-    dark:[&:-webkit-autofill]:text-white
-    [&:-webkit-autofill]:transition-colors
-    [&:-webkit-autofill]:duration-5000
-  `;
-
   return (
     <Section id="contato">
-      <div className="max-w-2xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight"
-          >
+      <div className="max-w-xl mx-auto px-6">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight">
             Entre em Contato
           </h2>
-          <div
-            className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-purple to-transparent rounded-full mx-auto mb-6 opacity-60"
-          />
-          <p
-            className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed"
-          >
-            Vamos trabalhar juntos? Envie uma mensagem!
+          <p className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-xl mx-auto leading-relaxed">
+            Se você viu potencial nos meus projetos ou deseja conversar sobre uma
+            oportunidade, estou disponível pelos canais abaixo.
           </p>
         </div>
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6 bg-light-card/80 dark:bg-dark-card/50 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-neon-blue/20 dark:border-neon-blue/30"
-          noValidate
-        >
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
+
+        <div className="space-y-4 bg-light-card/80 dark:bg-dark-card/60 p-8 rounded-2xl border border-gray-200 dark:border-gray-800">
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+                LinkedIn
+              </p>
+              <p className="text-sm text-secondary-text dark:text-dark-text">
+                Ideal para conversar sobre vagas, networking e carreira.
+              </p>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/tharcio-santos-dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-semibold
+                         bg-cyan-500 hover:bg-cyan-600 text-white transition-colors duration-200"
             >
-              Seu Nome <span className="text-neon-blue">*</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Digite seu nome"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className={inputClasses}
-            />
-            {errors.name && (
-              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-            )}
+              Abrir LinkedIn
+            </a>
           </div>
 
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
-            >
-              Seu Email <span className="text-neon-blue">*</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="seu.email@exemplo.com"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className={inputClasses}
-            />
-            {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
-          </div>
+          <div className="h-px bg-gray-200 dark:bg-gray-800" />
 
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold text-primary-text dark:text-light-text mb-2"
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+                Email
+              </p>
+              <p className="text-sm text-secondary-text dark:text-dark-text">
+                Para mensagens mais detalhadas ou propostas formais.
+              </p>
+            </div>
+            <a
+              href="mailto:tharciosantos09@gmail.com"
+              className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-semibold
+                         border border-cyan-500 text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/10
+                         transition-colors duration-200"
             >
-              Sua Mensagem <span className="text-neon-blue">*</span>
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Deixe sua mensagem aqui..."
-              rows={6}
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className={`${inputClasses} resize-none`}
-            ></textarea>
-            {errors.message && (
-              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-            )}
+              Enviar Email
+            </a>
           </div>
-
-          <div className="text-center">
-            <button
-              type="submit"
-              disabled={isSending}
-              aria-label={
-                isSending ? "Enviando mensagem..." : "Enviar mensagem"
-              }
-              className="w-full py-4 px-8 rounded-xl text-white font-bold text-lg transition-all duration-300
-                         bg-gradient-to-r from-cyan-500 via-purple-600 to-cyan-500 bg-[length:200%_auto]
-                         hover:bg-right hover:shadow-[0_0_30px_rgba(6,182,212,0.7)]
-                         shadow-[0_0_15px_rgba(6,182,212,0.4)]
-                         disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none
-                         flex items-center justify-center gap-2
-                         hover:scale-[1.02] active:scale-[0.98]"
-            >
-              {isSending ? (
-                <>
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  <span>Enviando...</span>
-                </>
-              ) : (
-                "Enviar Mensagem"
-              )}
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </Section>
   );
