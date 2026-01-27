@@ -23,11 +23,11 @@ const ProjectCard = ({
   return (
     <div
       className="
-        group w-[350px] flex-shrink-0 overflow-hidden rounded-2xl
+        group w-full overflow-hidden rounded-2xl
         bg-light-card dark:bg-dark-card
         border border-gray-200 dark:border-gray-800
-        shadow-sm transition-all duration-300 ease-out
-        hover:-translate-y-2 hover:shadow-xl hover:border-neon-blue/40
+        shadow-sm transition-all duration-200 ease-out
+        hover:-translate-y-1 hover:shadow-md hover:border-cyan-500/40
       "
     >
       {/* Image */}
@@ -36,10 +36,9 @@ const ProjectCard = ({
           src={imageUrl}
           alt={`Preview do projeto ${title}`}
           fill
-          sizes="350px"
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       {/* Content */}
@@ -65,9 +64,9 @@ const ProjectCard = ({
               key={tag}
               className="
                 text-[10px] font-medium px-2 py-0.5 rounded-full
-                border border-neon-blue/20
-                bg-neon-blue/5 dark:bg-neon-blue/10
-                text-neon-blue
+                border border-cyan-500/20
+                bg-cyan-500/5 dark:bg-cyan-500/10
+                text-cyan-500
               "
             >
               {tag}
@@ -90,10 +89,9 @@ const ProjectCard = ({
             className="
               flex-1 flex items-center justify-center gap-2
               px-3 py-2 rounded-lg text-sm font-semibold
-              border border-cyan-500/50 text-cyan-500 dark:text-cyan-400
-              transition-all duration-300
-              hover:bg-cyan-500/10 hover:border-cyan-400
-              active:scale-95
+              border border-cyan-500/50 text-cyan-600 dark:text-cyan-400
+              transition-colors duration-200
+              hover:bg-cyan-500/10 hover:border-cyan-500
             "
           >
             <FaGithub className="text-lg" />
@@ -109,10 +107,8 @@ const ProjectCard = ({
               className="
                 flex-1 flex items-center justify-center gap-2
                 px-3 py-2 rounded-lg text-sm font-semibold text-white
-                shadow-md transition-all duration-300
-                bg-gradient-to-r from-cyan-500 via-purple-600 to-cyan-500 bg-[length:200%_auto]
-                hover:bg-right hover:shadow-[0_0_15px_rgba(6,182,212,0.5)]
-                active:scale-95
+                bg-cyan-500 hover:bg-cyan-600
+                shadow-sm transition-colors duration-200
               "
             >
               <FaExternalLinkAlt className="text-sm" />
