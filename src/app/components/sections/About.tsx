@@ -54,10 +54,9 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           {/* Column 1: Photo & Resume */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 mb-8 group">
-              <div className="absolute inset-0 bg-neon-blue/20 rounded-full blur-2xl group-hover:bg-neon-blue/30 transition-colors duration-500" />
-              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-neon-blue/20 group-hover:border-neon-blue/50 transition-colors duration-500 shadow-2xl">
+            <div className="flex flex-col items-center">
+            <div className="relative w-64 h-64 md:w-72 md:h-72 mb-8">
+              <div className="relative w-full h-full rounded-full overflow-hidden border border-gray-200 dark:border-gray-800 shadow-md">
                 <Image
                   src="/images/profile.png"
                   alt="Foto de Tharcio Santos"
@@ -73,18 +72,16 @@ const About = () => {
           {/* Column 2: Bio & Text */}
           <div className="text-center md:text-left space-y-6">
             <h3 className="text-3xl font-heading font-bold text-primary-text dark:text-light-text">
-              Olá, eu sou o{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">
-                Tharcio
-              </span>
+              Olá, eu sou o Tharcio
             </h3>
             <p className="text-lg text-secondary-text dark:text-gray-300 leading-relaxed">
               Sou estudante de{" "}
               <strong>Análise e Desenvolvimento de Sistemas</strong>, com foco
-              em desenvolvimento web. Atualmente estudo <strong>React</strong>,{" "}
-              <strong>Next.js</strong> e <strong>TypeScript</strong>, aplicando
-              esses conhecimentos em projetos pessoais e explorando conceitos de
-              frontend e backend com foco em aprendizado e prática.
+              em desenvolvimento web. Estudo e pratico{" "}
+              <strong>React</strong>, <strong>Next.js</strong> e{" "}
+              <strong>TypeScript</strong>, aplicando esses conhecimentos em
+              projetos pessoais para consolidar fundamentos de frontend e
+              explorar conceitos iniciais de backend.
             </p>
 
             <p className="text-lg text-secondary-text dark:text-gray-300 leading-relaxed">
@@ -93,37 +90,35 @@ const About = () => {
               com o time.
             </p>
 
-            <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-              <div className="flex items-center gap-3 px-4 py-2 bg-light-card dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-800">
-                <LuCode className="text-neon-blue text-xl" />
-                <span className="font-medium text-sm">Full-Stack Dev</span>
-              </div>
-              <div className="flex items-center gap-3 px-4 py-2 bg-light-card dark:bg-dark-card rounded-lg border border-gray-200 dark:border-gray-800">
-                <LuGraduationCap className="text-neon-purple text-xl" />
-                <span className="font-medium text-sm">Estudante ADS</span>
-              </div>
+            <div className="pt-4 flex flex-wrap gap-3 justify-center md:justify-start text-sm text-secondary-text dark:text-gray-300">
+              <span className="px-3 py-1 rounded-full bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800">
+                Estudante de ADS
+              </span>
+              <span className="px-3 py-1 rounded-full bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800">
+                Desenvolvimento Web
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Skills Section - Clean Icons */}
+        {/* Skills Section */}
         <div className="mb-24">
           <h3 className="text-center text-xl font-heading font-bold mb-10 text-primary-text dark:text-light-text">
             Stack Tecnológica & Ferramentas
           </h3>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+          <div className="flex flex-wrap justify-center gap-3">
             {skills.map((skill) => (
-              <div
+              <span
                 key={skill.name}
-                className="group flex flex-col items-center gap-3 transition-transform duration-300 hover:scale-110"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium
+                           bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800
+                           text-secondary-text dark:text-gray-300"
               >
-                <div className="text-4xl text-secondary-text dark:text-gray-500 group-hover:text-neon-blue transition-colors duration-300">
+                <span className="text-base text-secondary-text dark:text-gray-400">
                   {skill.icon}
-                </div>
-                <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0 text-neon-blue">
-                  {skill.name}
                 </span>
-              </div>
+                {skill.name}
+              </span>
             ))}
           </div>
         </div>
@@ -137,7 +132,7 @@ const About = () => {
               </div>
               <div>
                 <h4 className="font-bold text-lg text-primary-text dark:text-light-text">
-                  Análise e Desesenvolvimento de Sistemas
+                  Análise e Desenvolvimento de Sistemas
                 </h4>
                 <p className="text-sm text-secondary-text dark:text-gray-400">
                   Anhanguera • Em andamento
