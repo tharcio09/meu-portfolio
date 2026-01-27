@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
-import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,7 +86,6 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Toaster position="top-center" reverseOrder={false} />
           <div className="relative z-10">
             <Navbar />
             <main className="container mx-auto max-w-7xl">{children}</main>
