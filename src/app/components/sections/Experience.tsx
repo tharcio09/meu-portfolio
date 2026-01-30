@@ -16,9 +16,10 @@ const experiencesData: ExperienceItem[] = [
     company: 'EPOS - Empresa Portuguesa de Obras Subterrânea',
     period: '05/2023 - 10/2023',
     description: [
-      'Gestão e priorização de demandas técnicas (backlog), garantindo a organização do fluxo de trabalho e cumprimento de prazos críticos.',
-      'Análise de dados e elaboração de relatórios estratégicos para apoiar a tomada de decisão da gestão e otimizar processos.',
-      'Comunicação assertiva e colaboração direta com equipes multidisciplinares para resolução ágil de problemas operacionais.',
+      'Organização e priorização de demandas, seguindo critérios de urgência e impacto.',
+      'Acompanhamento de processos e prazos, garantindo fluxo de trabalho organizado.',
+      'Análise de informações e geração de relatórios para apoiar a tomada de decisões.',
+      'Comunicação constante com diferentes áreas para resolução de problemas.',
     ],
   },
   {
@@ -26,9 +27,9 @@ const experiencesData: ExperienceItem[] = [
     company: 'Komaq Manutenção e Serviços',
     period: '01/2022 - 05/2022',
     description: [
-      'Desenvolvimento de pensamento analítico e atenção aos detalhes através do diagnóstico e resolução de problemas técnicos complexos.',
-      'Atuação em ambiente colaborativo, focando na eficiência da equipe e na comunicação clara durante a execução de tarefas.',
-      'Organização rigorosa de recursos e ferramentas, implementando métodos para otimizar o tempo de execução dos reparos.',
+      'Diagnóstico e resolução de problemas técnicos, identificando causas e definindo soluções.',
+      'Organização de ferramentas e recursos para melhorar eficiência operacional.',
+      'Trabalho em equipe em ambiente técnico, seguindo procedimentos e padrões.',
     ],
   },
 ];
@@ -61,7 +62,7 @@ const Experience = () => {
                 </p>
               </div>
               <span className="inline-flex items-center gap-2 text-xs md:text-sm text-secondary-text dark:text-dark-text">
-                <FaBriefcase className="text-cyan-500" />
+                <FaBriefcase className="text-cyan-500" aria-hidden />
                 {exp.period}
               </span>
             </div>
