@@ -32,7 +32,7 @@ const ProjectCard = ({
     >
       {/* Image */}
       <a
-        href={githubUrl}
+        href={demoUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Abrir repositório do projeto ${title} no GitHub`}
@@ -51,7 +51,7 @@ const ProjectCard = ({
       {/* Content */}
       <div className="p-5 flex flex-col h-full">
         <a
-          href={githubUrl}
+          href={demoUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Abrir repositório do projeto ${title} no GitHub`}
@@ -92,7 +92,7 @@ const ProjectCard = ({
         {/* Actions */}
         <div className="mt-auto pt-3 flex gap-3 border-t border-gray-200 dark:border-gray-700/50">
           <a
-            href={githubUrl}
+            href={demoUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Ver código do projeto ${title}`}

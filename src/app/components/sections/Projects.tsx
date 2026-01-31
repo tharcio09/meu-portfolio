@@ -62,8 +62,8 @@ const Projects = () => {
         <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-purple to-transparent rounded-full mx-auto mb-6 opacity-60" />
 
         <p className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed">
-          Projetos desenvolvidos para praticar e consolidar meus conhecimentos em
-          desenvolvimento web
+          Projetos desenvolvidos para praticar e consolidar meus conhecimentos
+          em desenvolvimento web
         </p>
       </div>
 
