@@ -16,10 +16,10 @@ const experiencesData: ExperienceItem[] = [
     company: 'EPOS - Empresa Portuguesa de Obras Subterrânea',
     period: '05/2023 - 10/2023',
     description: [
-      'Organização e priorização de demandas, seguindo critérios de urgência e impacto.',
-      'Acompanhamento de processos e prazos, garantindo fluxo de trabalho organizado.',
-      'Análise de informações e geração de relatórios para apoiar a tomada de decisões.',
-      'Comunicação constante com diferentes áreas para resolução de problemas.',
+      'Recebimento e análise de solicitações de manutenção de equipamentos.',
+      'Elaboração de relatórios de parada e acompanhamento de processos de manutenção.',
+      'Organização e controle de registros e documentações técnicas.',
+      'Comunicação com equipes operacionais para acompanhamento de demandas e prazos.',
     ],
   },
   {
