@@ -1,6 +1,6 @@
 "use client";
 
-import { HiArrowRight } from "react-icons/hi";
+import { HiArrowRight, HiDocumentText } from "react-icons/hi";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import Section from "../ui/Section";
 
@@ -24,9 +24,7 @@ const Hero = () => {
           Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>, focado em
           desenvolvimento web com <strong className="text-cyan-400">React</strong>,{" "}
           <strong className="text-cyan-400">Next.js</strong> e{" "}
-          <strong>TypeScript</strong>. Busco minha{" "}
-          <strong>primeira oportunidade de estágio em desenvolvimento web</strong> para
-          aprender com uma equipe e contribuir em projetos reais.
+          <strong>TypeScript</strong>. Busco minha primeira oportunidade de estágio em tecnologia para aprender com uma equipe e contribuir em projetos reais.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
@@ -43,22 +41,36 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center gap-6 pt-6 text-gray-400 text-sm md:text-base">
+
           <a
             href="https://github.com/tharcio09"
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors"
           >
             <SiGithub className="text-xl" />
             <span>GitHub</span>
           </a>
+
           <a
             href="https://linkedin.com/in/tharcio-santos-dev"
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors"
           >
             <SiLinkedin className="text-xl" />
             <span>LinkedIn</span>
           </a>
+          <a
+            href="/curriculo-tharcio-santos.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors"
+          >
+            <HiDocumentText className="text-xl" />
+            <span>Currículo (PDF)</span>
+          </a>
+
         </div>
       </div>
     </Section>

@@ -56,13 +56,6 @@ export const metadata = {
     locale: "pt_BR",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Tharcio Santos | Desenvolvimento Web",
-    description:
-      "Portfólio de Tharcio Santos, estudante de ADS focado em desenvolvimento web com React e Next.js.",
-    images: ["https://tharcioport.vercel.app/screenshot-portfolio.PNG"],
-  },
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
