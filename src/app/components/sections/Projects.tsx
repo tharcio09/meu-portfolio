@@ -41,12 +41,12 @@ const projectsData: Project[] = [
     tags: ["Next.js", "React", "Tailwind CSS", "API REST"],
   },
   {
-    title: "Jogo da Velha com React",
+    title: "Aplicação Front-end: Autenticação JWT & Dashboard",
     description:
-      "Projeto desenvolvido para praticar fundamentos do React, como componentização, controle de estado com useState e lógica de eventos.",
-    imageUrl: "/images/jogo-da-velha.png",
-    githubUrl: "https://github.com/tharcio09/jogo-da-velha-react",
-    demoUrl: "https://jogo-da-velha-react-neon.vercel.app/",
+      "Uma Single Page Application (SPA) robusta e moderna, desenvolvida para demonstrar o consumo seguro de uma API RESTful.",
+    imageUrl: "/images/screenshot-api.PNG",
+    githubUrl: "https://github.com/tharcio09/frontend-api",
+    demoUrl: "https://frontend-api-weld.vercel.app/",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
   },
 ];
