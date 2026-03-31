@@ -44,11 +44,11 @@ export const metadata: Metadata = {
     title: "Tharcio Santos | Desenvolvimento Web",
     description:
       "Portfólio de Tharcio Santos, estudante de ADS focado em desenvolvimento web, com projetos em React, Next.js e aprendizado contínuo em backend.",
-    url: "https://tharcioport.vercel.app/",
+    url: "https://tharcio-portfolio.vercel.app/",
     siteName: "Tharcio.dev",
     images: [
       {
-        url: "https://tharcioport.vercel.app/screenshot-portfolio.PNG",
+        url: "https://tharcio-portfolio.vercel.app/screenshot-portfolio.PNG",
         width: 1200,
         height: 630,
         alt: "Tharcio Santos - Desenvolvimento Web",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     apple: "/icons/icon-192x192.png",
   },
   alternates: {
-    canonical: "https://tharcioport.vercel.app/",
+    canonical: "https://tharcio-portfolio.vercel.app/",
   },
 };
 
