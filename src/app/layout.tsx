@@ -1,4 +1,5 @@
 import { Inter, Outfit } from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -17,7 +18,7 @@ const outfit = Outfit({
 });
 
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tharcio Santos | Desenvolvimento Web",
   description:
     "Portfólio de Tharcio Santos, estudante de Análise e Desenvolvimento de Sistemas, focado em desenvolvimento web com React, Next.js e noções de backend com Node.js.",
@@ -73,7 +74,7 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}>
