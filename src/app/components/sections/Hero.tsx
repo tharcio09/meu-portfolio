@@ -1,5 +1,3 @@
-"use client";
-
 import { HiArrowRight, HiDocumentText } from "react-icons/hi";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import Section from "../ui/Section";

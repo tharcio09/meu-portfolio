@@ -1,5 +1,3 @@
-"use client";
-
 import ProjectCard from "../ui/ProjectCard";
 import Section from "../ui/Section";
 

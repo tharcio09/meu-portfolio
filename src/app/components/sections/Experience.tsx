@@ -1,5 +1,3 @@
-'use client';
-
 import { FaBriefcase } from 'react-icons/fa';
 import Section from '../ui/Section';
 

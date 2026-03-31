@@ -1,5 +1,3 @@
-"use client";
-
 import Section from "../ui/Section";
 
 const Contact = () => {
