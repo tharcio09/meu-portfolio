@@ -39,13 +39,13 @@ const projectsData: Project[] = [
     tags: ["Next.js", "React", "Tailwind CSS", "API REST"],
   },
   {
-    title: "Aplicação Front-end: Autenticação JWT & Dashboard",
+    title: "DevLinks: Plataforma de Perfil e Linktree",
     description:
-      "Uma Single Page Application (SPA) robusta e moderna, desenvolvida para demonstrar o consumo seguro de uma API RESTful.",
+      "Uma Single Page Application (SPA) Full-Stack desenvolvida para a criação e gerenciamento de páginas de links personalizadas (estilo Linktree).",
     imageUrl: "/images/screenshot-api.PNG",
     githubUrl: "https://github.com/tharcio09/frontend-api",
     demoUrl: "https://frontend-api-weld.vercel.app/",
-    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
+    tags: ["React", "Vite", "Tailwind CSS", "React Query", "React Hot Toast", "Cloudinary", "Cypress"],
   },
 ];
 
