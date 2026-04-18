@@ -14,10 +14,10 @@ const experiencesData: ExperienceItem[] = [
     company: 'EPOS - Empresa Portuguesa de Obras Subterrânea',
     period: '05/2023 - 10/2023',
     description: [
-      'Recebimento e análise de solicitações de manutenção de equipamentos.',
-      'Elaboração de relatórios de parada e acompanhamento de processos de manutenção.',
-      'Organização e controle de registros e documentações técnicas.',
-      'Comunicação com equipes operacionais para acompanhamento de demandas e prazos.',
+      'Atendimento e triagem de solicitações de manutenção, priorizando por urgência e impacto.',
+      'Elaboração de relatórios técnicos e registro de histórico de manutenções.',
+      'Organização e controle de documentação técnica.',
+      'Comunicação com equipes operacionais para alinhamento de demandas e prazos.',
     ],
   },
   {
@@ -25,8 +25,8 @@ const experiencesData: ExperienceItem[] = [
     company: 'Komaq Manutenção e Serviços',
     period: '01/2022 - 05/2022',
     description: [
-      'Diagnóstico e resolução de problemas técnicos, identificando causas e definindo soluções.',
-      'Organização de ferramentas e recursos para melhorar eficiência operacional.',
+      'Diagnóstico e resolução de problemas técnicos em equipamentos.',
+      'Análise da causa raiz antes de definir a intervenção.',
       'Trabalho em equipe em ambiente técnico, seguindo procedimentos e padrões.',
     ],
   },
@@ -37,11 +37,12 @@ const Experience = () => {
     <Section id="experiencia">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight">
-          Experiência Profissional
+          Trajetória &amp; Contexto
         </h2>
         <p className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed">
-          Atuei em funções administrativas e operacionais que fortaleceram minha
-          organização, análise e trabalho em equipe.
+          Antes da programação, atuei em funções técnicas e administrativas.
+          Essas experiências desenvolveram habilidades que trago para o desenvolvimento:
+          análise de situações, organização e comunicação com equipes.
         </p>
       </div>
       <div className="max-w-4xl mx-auto px-4 space-y-6">
