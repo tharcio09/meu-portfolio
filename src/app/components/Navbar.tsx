@@ -28,7 +28,9 @@ const Navbar = () => {
 
         {/* Links principais */}
         <div className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link: NavLink) => (
+          {navLinks
+            .filter((link) => link.href !== '#contato')
+            .map((link: NavLink) => (
             <Link
               key={link.href}
               href={link.href}
@@ -41,8 +43,15 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Tema */}
+        {/* CTA Contato + Tema */}
         <div className="hidden md:flex items-center space-x-4">
+          <Link
+            href="#contato"
+            className="px-4 py-1.5 rounded-full text-sm font-semibold border border-cyan-500 text-cyan-500 dark:text-cyan-400 hover:bg-cyan-500/10 transition-colors duration-200"
+            aria-label="Ir para a seção de contato"
+          >
+            Contato
+          </Link>
           <ThemeSwitcher />
         </div>
 
