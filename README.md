@@ -27,7 +27,7 @@
 | 🧑‍💻 **Demo Online** | [tharcio-portfolio.vercel.app](https://tharcio-portfolio.vercel.app) |
 | 🧠 **Stack Principal** | Next.js • React • TypeScript • Tailwind |
 | 💬 **Contato** | [tharciosantos09@gmail.com](mailto:tharciosantos09@gmail.com) |
-| 📂 **Repositório** | [github.com/tharcio09/tharcioport](https://github.com/tharcio09/tharcioport) |
+| 📂 **Repositório** | [github.com/tharcio09/tharcioport](https://github.com/tharcio09/meu-portfolio) |
 
 ---
 
