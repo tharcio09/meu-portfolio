@@ -33,7 +33,7 @@
 
 ## 📖 Sobre o Projeto
 
-Este é o meu portfólio profissional, desenvolvido para apresentar minha trajetória, habilidades técnicas e projetos como **Desenvolvedor Web em formação (React/Next.js)**.  
+Este é o meu portfólio profissional, desenvolvido para apresentar minha trajetória, habilidades técnicas e projetos como **Desenvolvedor Web** com foco em React, Next.js e Node.js.
 
 O site tem um visual **clean e responsivo**, com foco em conteúdo: quem sou, o que sei fazer, projetos reais e como entrar em contato.  
 O objetivo é facilitar a avaliação técnica de recrutadores, priorizando **clareza, organização e boas práticas**.
@@ -59,11 +59,11 @@ O objetivo é facilitar a avaliação técnica de recrutadores, priorizando **cl
 - Pronto para deploy na **Vercel**
 
 ### 🛠️ Funcionalidades Principais
-- **Seção Hero** com apresentação direta e CTA para projetos  
-- **Sobre Mim** com resumo, stack e formação  
-- **Experiência Profissional** em cards simples e legíveis  
-- **Grid de Projetos** com links para GitHub e deploy  
-- **Contato** com links diretos para LinkedIn e email  
+- **Seção Hero** com apresentação direta e dois CTAs: Ver Projetos e Baixar Currículo
+- **Sobre Mim** com resumo, stack (com hierarquia visual) e trajetória
+- **Trajetória & Contexto** com experiências anteriores e habilidades transferíveis
+- **Projetos** com HelpFlow em destaque (layout horizontal + bullets técnicos) e scroll reveal nas imagens
+- **Contato** com canais diretos para LinkedIn, e-mail e GitHub
 
 ---
 
@@ -166,7 +166,7 @@ npm start
 
 ![Screenshot do Portfólio](screenshot-portfolio.PNG)
 
-> *Design dark futurista com elementos neon e animações suaves.*
+> *Design clean com modo escuro/claro, paleta ciano e hierarquia visual focada em conversão.*
 
 ---
 
