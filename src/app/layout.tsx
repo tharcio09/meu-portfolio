@@ -19,14 +19,14 @@ const outfit = Outfit({
 
 
 export const metadata: Metadata = {
-  title: "Tharcio Santos | Desenvolvimento Web",
+  title: "Tharcio Santos | Fullstack Developer",
   description:
-    "Portfólio de Tharcio Santos, estudante de Análise e Desenvolvimento de Sistemas, focado em desenvolvimento web com React, Next.js e noções de backend com Node.js.",
+    "Portfólio de Tharcio Santos, desenvolvedor Fullstack com aplicações React, Next.js e Node.js em produção. Sistemas com autenticação, banco de dados relacional e deploy ativo.",
   keywords: [
     "Tharcio Santos",
-    "Desenvolvimento Web",
-    "Desenvolvedor Web",
-    "Estágio em Desenvolvimento",
+    "Fullstack Developer",
+    "Desenvolvedor Fullstack",
+    "Estágio Desenvolvimento Web",
     "React",
     "Next.js",
     "Node.js",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
   creator: "Tharcio Santos",
   publisher: "Vercel",
   openGraph: {
-    title: "Tharcio Santos | Desenvolvimento Web",
+    title: "Tharcio Santos | Fullstack Developer",
     description:
-      "Portfólio de Tharcio Santos, estudante de ADS focado em desenvolvimento web, com projetos em React, Next.js e aprendizado contínuo em backend.",
+      "Desenvolvedor Fullstack com projetos React, Next.js e Node.js em produção — autenticação, banco de dados relacional e deploy ativo no Vercel.",
     url: "https://tharcio-portfolio.vercel.app/",
     siteName: "Tharcio.dev",
     images: [
