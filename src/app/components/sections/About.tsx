@@ -73,19 +73,20 @@ const About = () => {
               Olá, eu sou o Tharcio
             </h3>
             <p className="text-lg text-secondary-text dark:text-gray-300 leading-relaxed">
-              Sou estudante de{" "}
-              <strong>Análise e Desenvolvimento de Sistemas</strong>, com foco
-              em desenvolvimento web. Estudo e pratico{" "}
-              <strong>React</strong>, <strong>Next.js</strong> e{" "}
-              <strong>TypeScript</strong>, aplicando esses conhecimentos em
-              projetos pessoais para consolidar fundamentos de frontend e
-              explorar conceitos iniciais de backend.
+              Desenvolvo aplicações web e venho construindo uma visão cada vez mais completa
+              do desenvolvimento, do banco de dados ao frontend.
             </p>
 
             <p className="text-lg text-secondary-text dark:text-gray-300 leading-relaxed">
-              Busco minha <strong>primeira oportunidade de estágio</strong> para
-              aprender com uma equipe real, evoluir tecnicamente e contribuir
-              com o time.
+              Projetos como o{" "}
+              <strong>HelpFlow</strong> — com autenticação, sistema de tickets e banco
+              relacional — mostram na prática o que venho estudando e aplicando.
+            </p>
+
+            <p className="text-lg text-secondary-text dark:text-gray-300 leading-relaxed">
+              Tenho clareza do que ainda preciso aprender e busco minha{" "}
+              <strong>primeira oportunidade</strong> para evoluir em um ambiente real,
+              contribuindo com dedicação e vontade de aprender.
             </p>
 
             <div className="pt-4 flex flex-wrap gap-3 justify-center md:justify-start text-sm text-secondary-text dark:text-gray-300">
@@ -108,11 +109,15 @@ const About = () => {
             {skills.map((skill) => (
               <span
                 key={skill.name}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium
-                           bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800
-                           text-secondary-text dark:text-gray-300"
+                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium transition-colors
+                  ${
+                    skill.featured
+                      ? "bg-cyan-500/10 dark:bg-cyan-500/15 border border-cyan-500/40 text-cyan-600 dark:text-cyan-300"
+                      : "bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800 text-secondary-text dark:text-gray-400"
+                  }`
+                }
               >
-                <span className="text-base text-secondary-text dark:text-gray-400">
+                <span className="text-base">
                   {skill.icon}
                 </span>
                 {skill.name}
