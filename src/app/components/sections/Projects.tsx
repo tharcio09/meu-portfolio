@@ -36,7 +36,7 @@ const projectsData: Project[] = [
     title: "DevLinks: Plataforma de Perfil e Linktree",
     description:
       "Plataforma fullstack para criação e gerenciamento de páginas de links personalizadas (estilo Linktree). Upload de imagens via Cloudinary, estado sincronizado com React Query e testes end-to-end com Cypress — aplicação completa com frontend e backend integrados.",
-    imageUrl: "/images/screenshot-api.png",
+    imageUrl: "/images/screenshot-devlinks.png",
     githubUrl: "https://github.com/tharcio09/frontend-api",
     demoUrl: "https://frontend-api-weld.vercel.app/",
     tags: ["React", "Vite", "Tailwind CSS", "React Query", "Cloudinary", "Cypress"],
