@@ -50,6 +50,15 @@ const projectsData: Project[] = [
     demoUrl: "https://lista-mercado-sage.vercel.app/",
     tags: ["React", "Vite", "PWA", "Tailwind CSS", "Local Storage"],
   },
+  {
+    title: "Crypto Dashboard ",
+    description:
+      "Dashboard simples para visualizar dados de criptomoedas, construído com Next.js, React e Tailwind CSS, consumindo a API da CoinGecko.",
+    imageUrl: "/images/screenshot-crypto.png",
+    githubUrl: "https://github.com/tharcio09/crypto-dashboard",
+    demoUrl: "https://crypto-dashboard-five-sandy.vercel.app/",
+    tags: ["Next.js", "React", "Tailwind CSS", "CoinGecko API"],
+  },
 ];
 
 const Projects = () => {
