@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="relative z-10">
             <Navbar />
             <main className="container mx-auto max-w-7xl">{children}</main>
