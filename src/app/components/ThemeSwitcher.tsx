@@ -19,13 +19,13 @@ export const ThemeSwitcher = () => {
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className="p-2 rounded-full transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-dark-card"
+      className="rounded-md p-2 text-secondary-text transition-colors hover:bg-gray-100 hover:text-cyan-700 dark:text-gray-300 dark:hover:bg-zinc-900 dark:hover:text-cyan-300"
       aria-label="Alternar tema"
     >
       {theme === 'dark' ? (
-        <FaSun className="text-neon-blue h-5 w-5" />
+        <FaSun className="h-4 w-4" />
       ) : (
-        <FaMoon className="text-neon-purple h-5 w-5" />
+        <FaMoon className="h-4 w-4" />
       )}
     </button>
   );

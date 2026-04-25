@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   * {
     @apply border-gray-200 dark:border-gray-800;
@@ -31,7 +30,6 @@
     @apply font-heading font-bold;
   }
 
-
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -43,23 +41,5 @@
 
   ::-webkit-scrollbar-thumb {
     @apply bg-gray-300 dark:bg-gray-700 rounded-full hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors;
-  }
-}
-
-@layer utilities {
-  .glass {
-    @apply bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border border-gray-200 dark:border-gray-800;
-  }
-
-  .glass-card {
-    @apply bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800 hover:border-neon-blue/30 dark:hover:border-neon-blue/30 transition-colors duration-300;
-  }
-
-  .neon-glow {
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.3), 0 0 20px rgba(56, 189, 248, 0.1);
-  }
-
-  .neon-glow-purple {
-    box-shadow: 0 0 10px rgba(192, 132, 252, 0.3), 0 0 20px rgba(192, 132, 252, 0.1);
   }
 }

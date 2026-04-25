@@ -1,116 +1,65 @@
 import { HiArrowRight, HiDocumentText } from "react-icons/hi";
-import { SiGithub, SiLinkedin } from "react-icons/si";
 import Section from "../ui/Section";
+
+const proofItems = [
+  "4 projetos com deploy ativo",
+  "React, Next.js, TypeScript e Node.js",
+  "Autenticação, banco relacional, APIs e PWA",
+];
 
 const Hero = () => {
   return (
-    <Section id="home" className="flex flex-col justify-center min-h-screen">
-      <div className="text-center space-y-8 max-w-4xl mx-auto z-10 px-4">
-
-        {/* Tagline / Identidade */}
-        <p className="text-sm md:text-base text-secondary-text dark:text-cyan-200/80 tracking-widest uppercase">
-          Fullstack Developer · React · Next.js · Node.js
-        </p>
-
-        {/* Nome */}
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight">
-          <span className="text-primary-text dark:text-light-text">Tharcio Santos</span>
-        </h1>
-
-        {/* Headline principal */}
-        <h2 className="text-xl md:text-2xl font-semibold text-cyan-400">
-          Construindo aplicações web — do backend ao frontend.
-        </h2>
-
-        {/* Bio orientada a valor */}
-        <div className="space-y-3 text-base md:text-lg text-secondary-text dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          <p>
-            Desenvolvo aplicações com{" "}
-            <strong className="text-cyan-400">React</strong>,{" "}
-            <strong className="text-cyan-400">Next.js</strong> e{" "}
-            <strong className="text-cyan-400">Node.js</strong>, trabalhando com autenticação,
-            banco de dados relacional e deploy.
+    <Section
+      id="home"
+      spacing="hero"
+      className="border-b border-gray-200/80 dark:border-gray-800"
+    >
+      <div className="mx-auto max-w-5xl">
+        <div className="max-w-3xl">
+          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
+            Desenvolvedor Fullstack em início de carreira
           </p>
-          <p>
-            Antes da programação, tive experiência prática com diagnóstico e resolução de
-            problemas, o que fortaleceu minha forma de pensar:{" "}
-            <strong>entender bem o problema antes de implementar a solução.</strong>
+          <h1 className="mt-4 text-5xl font-extrabold tracking-normal text-primary-text dark:text-light-text md:text-7xl">
+            Tharcio Santos
+          </h1>
+          <h2 className="mt-5 max-w-2xl text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl">
+            Construindo aplicações web do backend ao frontend.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-secondary-text dark:text-gray-300">
+            Desenvolvo projetos com React, Next.js e Node.js, conectando interface,
+            autenticação, banco relacional e deploy em produção. Busco minha primeira
+            oportunidade para contribuir com aplicações reais, aprendendo rápido e
+            entregando com organização, clareza e boa execução.
           </p>
         </div>
 
-        {/* Bloco de credibilidade */}
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs md:text-sm text-secondary-text dark:text-gray-400 font-medium">
-          <span className="flex items-center gap-1.5">
-            <span className="text-cyan-400">✦</span> 4 projetos com deploy ativo
-          </span>
-          <span className="hidden sm:block text-gray-600 dark:text-gray-700">|</span>
-          <span className="flex items-center gap-1.5">
-            <span className="text-cyan-400">✦</span> Testes automatizados com Cypress
-          </span>
-          <span className="hidden sm:block text-gray-600 dark:text-gray-700">|</span>
-          <span className="flex items-center gap-1.5">
-            <span className="text-cyan-400">✦</span> Auth + BD real em produção
-          </span>
-        </div>
-
-        {/* CTAs — hierarquia: 2 botões de peso visual igual */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href="#projetos"
-            className="group px-8 py-3 w-full sm:w-auto rounded-full text-white font-semibold text-base
-                       bg-cyan-500 hover:bg-cyan-600
-                       transition-colors duration-200
-                       flex items-center justify-center gap-2"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-primary-text px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
           >
-            Ver Projetos
-            <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
+            Ver projetos
+            <HiArrowRight className="text-base" />
           </a>
-
           <a
             href="/curriculo-tharcio-santos.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-3 w-full sm:w-auto rounded-full font-semibold text-base
-                       border border-cyan-500 text-cyan-500 dark:text-cyan-400
-                       hover:bg-cyan-500/10
-                       transition-colors duration-200
-                       flex items-center justify-center gap-2"
+            className="inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 px-5 py-3 text-sm font-semibold text-primary-text transition-colors hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300"
           >
-            <HiDocumentText className="text-lg" />
-            Baixar Currículo
+            <HiDocumentText className="text-base" />
+            Baixar currículo
           </a>
         </div>
 
-        {/* Links terciários */}
-        <div className="flex justify-center gap-6 pt-2 text-gray-400 text-sm md:text-base">
-          <a
-            href="https://github.com/tharcio09"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors"
-          >
-            <SiGithub className="text-xl" />
-            <span>GitHub</span>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/tharcio-santos-dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors"
-          >
-            <SiLinkedin className="text-xl" />
-            <span>LinkedIn</span>
-          </a>
-
-          <a
-            href="#contato"
-            className="inline-flex items-center gap-2 hover:text-cyan-400 transition-colors"
-          >
-            <span>Contato</span>
-          </a>
-        </div>
-
+        <dl className="mt-12 grid gap-4 border-t border-gray-200 pt-6 text-sm text-secondary-text dark:border-gray-800 dark:text-gray-400 md:grid-cols-3">
+          {proofItems.map((item) => (
+            <div key={item}>
+              <dt className="sr-only">Destaque</dt>
+              <dd>{item}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </Section>
   );

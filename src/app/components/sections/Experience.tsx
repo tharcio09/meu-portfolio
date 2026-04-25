@@ -1,79 +1,56 @@
-import { FaBriefcase } from 'react-icons/fa';
 import Section from '../ui/Section';
 
-type ExperienceItem = {
-  role: string;
-  company: string;
-  period: string;
-  description: string[];
-};
-
-const experiencesData: ExperienceItem[] = [
+const transferableSkills = [
   {
-    role: 'Auxiliar Administrativo',
-    company: 'EPOS - Empresa Portuguesa de Obras Subterrânea',
-    period: '05/2023 - 10/2023',
-    description: [
-      'Atendimento e triagem de solicitações de manutenção, priorizando por urgência e impacto.',
-      'Elaboração de relatórios técnicos e registro de histórico de manutenções.',
-      'Organização e controle de documentação técnica.',
-      'Comunicação com equipes operacionais para alinhamento de demandas e prazos.',
-    ],
+    title: 'Análise de problemas',
+    description:
+      'Experiência prévia com diagnóstico, priorização e entendimento da causa antes da solução.',
   },
   {
-    role: 'Auxiliar Mecânico',
-    company: 'Komaq Manutenção e Serviços',
-    period: '01/2022 - 05/2022',
-    description: [
-      'Diagnóstico e resolução de problemas técnicos em equipamentos.',
-      'Análise da causa raiz antes de definir a intervenção.',
-      'Trabalho em equipe em ambiente técnico, seguindo procedimentos e padrões.',
-    ],
+    title: 'Organização e documentação',
+    description:
+      'Vivência com registro de informações, relatórios técnicos e acompanhamento de demandas.',
+  },
+  {
+    title: 'Comunicação com equipes',
+    description:
+      'Contato com áreas operacionais, alinhamento de prazos e clareza na troca de informações.',
   },
 ];
 
 const Experience = () => {
   return (
-    <Section id="experiencia">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight">
-          Trajetória &amp; Contexto
-        </h2>
-        <p className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed">
-          Antes da programação, atuei em funções técnicas e administrativas.
-          Essas experiências desenvolveram habilidades que trago para o desenvolvimento:
-          análise de situações, organização e comunicação com equipes.
-        </p>
-      </div>
-      <div className="max-w-4xl mx-auto px-4 space-y-6">
-        {experiencesData.map((exp) => (
-          <div
-            key={exp.company}
-            className="rounded-2xl bg-light-card dark:bg-dark-card border border-gray-200 dark:border-gray-800 p-6 md:p-7"
-          >
-            <div className="flex items-start justify-between gap-4 mb-3">
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-primary-text dark:text-light-text">
-                  {exp.role}
-                </h3>
-                <p className="text-sm md:text-base text-secondary-text dark:text-dark-text">
-                  {exp.company}
-                </p>
-              </div>
-              <span className="inline-flex items-center gap-2 text-xs md:text-sm text-secondary-text dark:text-dark-text">
-                <FaBriefcase className="text-cyan-500" aria-hidden />
-                {exp.period}
-              </span>
-            </div>
-            <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-secondary-text dark:text-dark-text">
-              {exp.description.map((desc) => (
-                <li key={desc} className="leading-relaxed">
-                  {desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <Section id="experiencia" spacing="compact">
+      <div className="mx-auto max-w-5xl">
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
+            Trajetória
+          </p>
+          <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
+            Experiências anteriores que fortalecem minha forma de desenvolver.
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
+            Antes da programação, atuei em funções técnicas e administrativas. Esse contexto
+            reforçou habilidades úteis para desenvolvimento: entender o problema, organizar
+            informações e comunicar decisões com clareza.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {transferableSkills.map((skill) => (
+            <article
+              key={skill.title}
+              className="rounded-lg border border-gray-200 p-5 dark:border-gray-800"
+            >
+              <h3 className="font-bold text-primary-text dark:text-light-text">
+                {skill.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-gray-400">
+                {skill.description}
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </Section>
   );
