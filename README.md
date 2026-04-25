@@ -70,8 +70,19 @@ meu-portfolio/
 ├── src/
 │   ├── app/
 │   │   ├── components/
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── ThemeProvider.tsx
+│   │   │   ├── ThemeSwitcher.tsx
 │   │   │   ├── sections/
+│   │   │   │   ├── About.tsx
+│   │   │   │   ├── Contact.tsx
+│   │   │   │   ├── Experience.tsx
+│   │   │   │   ├── Hero.tsx
+│   │   │   │   └── Projects.tsx
 │   │   │   └── ui/
+│   │   │       ├── ProjectCard.tsx
+│   │   │       └── Section.tsx
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── not-found.tsx
