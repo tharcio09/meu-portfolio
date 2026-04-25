@@ -51,7 +51,7 @@ const projectsData: Project[] = [
     tags: ["React", "Vite", "PWA", "Tailwind CSS", "Local Storage"],
   },
   {
-    title: "Crypto Dashboard ",
+    title: "Crypto Dashboard",
     description:
       "Dashboard simples para visualizar dados de criptomoedas, construído com Next.js, React e Tailwind CSS, consumindo a API da CoinGecko.",
     imageUrl: "/images/screenshot-crypto.png",
@@ -68,25 +68,23 @@ const Projects = () => {
   return (
     <Section id="projetos">
       <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary-text dark:text-light-text tracking-tight">
+        <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
+          Projetos em destaque
+        </p>
+        <h2 className="mt-3 text-4xl md:text-5xl font-bold text-primary-text dark:text-light-text tracking-normal">
           Projetos
         </h2>
-
-        <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-neon-purple to-transparent rounded-full mx-auto mb-6 opacity-60" />
-
-        <p className="text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed">
-          Aplicações com deploy ativo — problema real, stack moderna, código no GitHub.
+        <p className="mt-4 text-base md:text-lg text-secondary-text dark:text-dark-text max-w-2xl mx-auto leading-relaxed">
+          Aplicações com deploy ativo, código público e decisões técnicas visíveis.
         </p>
       </div>
 
-      {/* Projeto principal — layout horizontal */}
       {featuredProject && (
         <div className="mb-8">
           <ProjectCard {...featuredProject} />
         </div>
       )}
 
-      {/* Demais projetos — grid 2 colunas */}
       <div className="grid gap-8 md:grid-cols-2">
         {otherProjects.map((project) => (
           <ProjectCard key={project.title} {...project} />
