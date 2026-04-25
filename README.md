@@ -35,6 +35,12 @@ A versão atual segue uma proposta mais minimalista e profissional, com foco em:
 
 ---
 
+## Preview
+
+![Preview do portfólio](./screenshot-portfolio.PNG)
+
+---
+
 ## Tecnologias
 
 ### Core
@@ -136,7 +142,6 @@ O projeto está hospedado na Vercel:
 
 ## Próximos Passos
 
-- Atualizar o screenshot principal após o redesign.
 - Revisar descrições dos projetos conforme novas funcionalidades forem adicionadas.
 - Adicionar métricas reais quando houver dados de uso, testes ou evolução dos projetos.
 - Manter o README sincronizado com mudanças de layout, stack e deploy.
@@ -151,4 +156,3 @@ O projeto está hospedado na Vercel:
 - [GitHub](https://github.com/tharcio09)
 - [Email](mailto:tharciosantos09@gmail.com)
 - [Portfólio](https://tharcio-portfolio.vercel.app/)
-
