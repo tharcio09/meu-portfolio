@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer
-      className="bg-light-card/90 dark:bg-dark-card/90 backdrop-blur-lg text-center py-10 border-t border-gray-200/30 dark:border-gray-800/30 transition-all duration-300"
+      className="border-t border-gray-200/80 py-8 text-center transition-colors dark:border-gray-800"
       role="contentinfo"
     >
       <div className="container mx-auto max-w-7xl px-6">
@@ -15,7 +15,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub de Tharcio Santos"
-            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
+            className="text-xl text-secondary-text transition-colors hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300"
           >
             <FaGithub />
           </a>
@@ -25,7 +25,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn de Tharcio Santos"
-            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
+            className="text-xl text-secondary-text transition-colors hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300"
           >
             <FaLinkedin />
           </a>
@@ -33,7 +33,7 @@ const Footer = () => {
           <a
             href="mailto:tharciosantos09@gmail.com"
             aria-label="Enviar e-mail para Tharcio Santos"
-            className="text-2xl text-neon-blue dark:text-neon-blue hover:text-neon-purple dark:hover:text-neon-purple transition-transform duration-200 hover:scale-125 hover:-translate-y-0.5 active:scale-90"
+            className="text-xl text-secondary-text transition-colors hover:text-cyan-700 dark:text-gray-400 dark:hover:text-cyan-300"
           >
             <FaEnvelope />
           </a>
