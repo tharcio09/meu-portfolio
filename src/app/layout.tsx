@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 const inter = Inter({
@@ -16,7 +17,6 @@ const outfit = Outfit({
   display: "swap",
   variable: "--font-outfit",
 });
-
 
 export const metadata: Metadata = {
   title: "Tharcio Santos | Fullstack Developer",
@@ -57,6 +57,13 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tharcio Santos | Fullstack Developer",
+    description:
+      "Desenvolvedor Fullstack com projetos React, Next.js e Node.js em produção.",
+    images: ["https://tharcio-portfolio.vercel.app/screenshot-portfolio.PNG"],
+  },
   manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
@@ -68,21 +75,27 @@ export const metadata: Metadata = {
   },
 };
 
-
 export const viewport = {
   width: "device-width",
   initialScale: 1,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}>
+      <body
+        className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}
+      >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <div className="relative z-10">
             <Navbar />
             <main className="container mx-auto max-w-7xl">{children}</main>
             <Footer />
+            <BackToTop />
           </div>
         </ThemeProvider>
       </body>
