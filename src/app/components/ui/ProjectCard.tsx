@@ -111,14 +111,14 @@ const ProjectCard = ({
   }
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-gray-800 dark:bg-zinc-950">
-      <div className="relative h-44 border-b border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-zinc-900">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1 dark:border-gray-800 dark:bg-zinc-950">
+      <div className="relative h-44 overflow-hidden border-b border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-zinc-900">
         <Image
           src={imageUrl}
           alt={`Preview do projeto ${title}`}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          className="object-contain p-2 transition-transform duration-500 group-hover:scale-[1.04]"
         />
       </div>
 
