@@ -1,24 +1,32 @@
 import Section from '../ui/Section';
 
-const transferableSkills = [
+type PreviousRole = {
+  period: string;
+  role: string;
+  org: string;
+  summary: string;
+};
+
+const previousRoles: PreviousRole[] = [
   {
-    title: 'Análise de problemas',
-    description:
-      'Experiência prévia com diagnóstico, priorização e entendimento da causa antes da solução.',
+    period: "Mai/2023 – Out/2023",
+    role: "Auxiliar Administrativo ",
+    org: "EPOS",
+    summary:
+      "Organização de demandas internas e documentação de processos operacionais.",
   },
   {
-    title: 'Organização e documentação',
-    description:
-      'Vivência com registro de informações, relatórios técnicos e acompanhamento de demandas.',
-  },
-  {
-    title: 'Comunicação com equipes',
-    description:
-      'Contato com áreas operacionais, alinhamento de prazos e clareza na troca de informações.',
+    period: "Jan/2022 – Mai/2022",
+    role: "Auxiliar Mecânico ",
+    org: "Komaq",
+    summary:
+      "Diagnóstico técnico de equipamentos com foco em análise de causa raiz.",
   },
 ];
 
 const Experience = () => {
+  if (previousRoles.length === 0) return null;
+
   return (
     <Section id="experiencia" spacing="compact">
       <div className="mx-auto max-w-5xl">
@@ -27,27 +35,35 @@ const Experience = () => {
             Trajetória
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
-            Experiências anteriores que fortalecem minha forma de desenvolver.
+            De onde vim.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
-            Antes da programação, atuei em funções técnicas e administrativas. Esse contexto
-            reforçou habilidades úteis para desenvolvimento: entender o problema, organizar
-            informações e comunicar decisões com clareza.
+            Antes da programação, atuei em outras áreas. Estou em transição de carreira
+            e buscando minha primeira oportunidade em desenvolvimento — os projetos
+            abaixo mostram o que venho construindo nesse caminho.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {transferableSkills.map((skill) => (
+        <div className="mt-10 space-y-3">
+          {previousRoles.map((item) => (
             <article
-              key={skill.title}
-              className="rounded-lg border border-gray-200 p-5 dark:border-gray-800"
+              key={item.role}
+              className="flex flex-col gap-1 rounded-lg border border-gray-200 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-gray-800"
             >
-              <h3 className="font-bold text-primary-text dark:text-light-text">
-                {skill.title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-gray-400">
-                {skill.description}
-              </p>
+              <div>
+                <h3 className="font-semibold text-primary-text dark:text-light-text">
+                  {item.role}
+                  <span className="ml-2 font-normal text-cyan-700 dark:text-cyan-400">
+                    · {item.org}
+                  </span>
+                </h3>
+                <p className="mt-1 text-sm text-secondary-text dark:text-gray-400">
+                  {item.summary}
+                </p>
+              </div>
+              <span className="shrink-0 text-xs tabular-nums text-secondary-text dark:text-gray-500">
+                {item.period}
+              </span>
             </article>
           ))}
         </div>
