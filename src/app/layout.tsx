@@ -1,10 +1,17 @@
 import { Inter, Outfit } from "next/font/google";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 import { ThemeProvider } from "./components/ThemeProvider";
+
+const siteUrl = "https://tharcio-portfolio.vercel.app";
+const siteName = "Tharcio.dev";
+const siteTitle = "Tharcio Santos | Desenvolvedor Fullstack";
+const siteDescription =
+  "Portfólio de Tharcio Santos, desenvolvedor fullstack em formação com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,14 +26,20 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Tharcio Santos | Fullstack Developer",
-  description:
-    "Portfólio de Tharcio Santos, desenvolvedor Fullstack com aplicações React, Next.js e Node.js em produção. Sistemas com autenticação, banco de dados relacional e deploy ativo.",
+  metadataBase: new URL(siteUrl),
+  applicationName: siteName,
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
   keywords: [
     "Tharcio Santos",
-    "Fullstack Developer",
     "Desenvolvedor Fullstack",
+    "Desenvolvedor Web",
+    "Desenvolvedor Júnior",
     "Estágio Desenvolvimento Web",
+    "Portfolio Desenvolvedor",
     "React",
     "Next.js",
     "Node.js",
@@ -35,23 +48,25 @@ export const metadata: Metadata = {
     "Tailwind CSS",
     "Prisma",
     "Supabase",
-    "Portfólio",
   ],
   authors: [{ name: "Tharcio Santos", url: "https://github.com/tharcio09" }],
   creator: "Tharcio Santos",
-  publisher: "Vercel",
+  publisher: "Tharcio Santos",
+  category: "portfolio",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Tharcio Santos | Fullstack Developer",
-    description:
-      "Desenvolvedor Fullstack com projetos React, Next.js e Node.js em produção — autenticação, banco de dados relacional e deploy ativo no Vercel.",
-    url: "https://tharcio-portfolio.vercel.app/",
-    siteName: "Tharcio.dev",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName,
     images: [
       {
-        url: "https://tharcio-portfolio.vercel.app/screenshot-portfolio.PNG",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Tharcio Santos - Desenvolvimento Web",
+        alt: "Portfólio de Tharcio Santos, desenvolvedor fullstack",
       },
     ],
     locale: "pt_BR",
@@ -59,41 +74,58 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tharcio Santos | Fullstack Developer",
-    description:
-      "Desenvolvedor Fullstack com projetos React, Next.js e Node.js em produção.",
-    images: ["https://tharcio-portfolio.vercel.app/screenshot-portfolio.PNG"],
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/opengraph-image"],
   },
-  manifest: "/manifest.json",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/icons/icon-192x192.png",
   },
-  alternates: {
-    canonical: "https://tharcio-portfolio.vercel.app/",
+  manifest: "/manifest.json",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+  ],
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${outfit.variable} font-sans bg-light-bg text-primary-text`}
+        className={`${inter.variable} ${outfit.variable} min-h-screen bg-light-bg font-sans text-primary-text antialiased dark:bg-dark-bg dark:text-light-text`}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <div className="relative z-10">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="relative z-10 flex min-h-screen flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-7xl">{children}</main>
+            <main className="container mx-auto max-w-7xl flex-1">{children}</main>
             <Footer />
             <BackToTop />
           </div>

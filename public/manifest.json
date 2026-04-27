@@ -1,11 +1,11 @@
 {
-  "name": "Tharcio Santos | Desenvolvedor Web",
+  "name": "Tharcio Santos | Desenvolvedor Fullstack",
   "short_name": "Tharcio.dev",
-  "description": "Portfólio de Tharcio Santos, um desenvolvedor focado em construir aplicações web modernas.",
+  "description": "Portfólio de Tharcio Santos, desenvolvedor fullstack em formação com projetos React, Next.js e Node.js em produção.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1a2e",
-  "theme_color": "#1a1a2e",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
