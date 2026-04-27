@@ -10,14 +10,14 @@ type PreviousRole = {
 const previousRoles: PreviousRole[] = [
   {
     period: "Mai/2023 – Out/2023",
-    role: "Auxiliar Administrativo ",
+    role: "Auxiliar Administrativo",
     org: "EPOS",
     summary:
       "Organização de demandas internas e documentação de processos operacionais.",
   },
   {
     period: "Jan/2022 – Mai/2022",
-    role: "Auxiliar Mecânico ",
+    role: "Auxiliar Mecânico",
     org: "Komaq",
     summary:
       "Diagnóstico técnico de equipamentos com foco em análise de causa raiz.",
@@ -39,8 +39,8 @@ const Experience = () => {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
             Antes da programação, atuei em outras áreas. Estou em transição de carreira
-            e buscando minha primeira oportunidade em desenvolvimento — os projetos
-            abaixo mostram o que venho construindo nesse caminho.
+            e buscando evoluir em desenvolvimento web — os projetos apresentados mostram
+            o que venho construindo nesse caminho.
           </p>
         </div>
 

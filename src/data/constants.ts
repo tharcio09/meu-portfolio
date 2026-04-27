@@ -4,8 +4,8 @@ export type NavLink = {
   cta?: boolean;
 };
 
-
 export const navLinks: NavLink[] = [
+  { href: '#entregas', label: 'Entregas' },
   { href: '#projetos', label: 'Projetos' },
   { href: '#sobre-mim', label: 'Sobre' },
   { href: '#experiencia', label: 'Trajetória' },

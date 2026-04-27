@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { HiMail, HiCheck, HiDuplicate } from "react-icons/hi";
+import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from "react-icons/hi";
 import Section from "../ui/Section";
 
 const EMAIL = "tharciosantos09@gmail.com";
@@ -17,7 +17,7 @@ const staticLinks = [
   },
   {
     label: "GitHub",
-    description: "Ver código, projetos e histórico de estudos.",
+    description: "Ver código, projetos publicados e evolução técnica.",
     href: "https://github.com/tharcio09",
     icon: <SiGithub />,
     action: "Abrir",
@@ -33,7 +33,6 @@ const Contact = () => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // fallback para browsers sem suporte à Clipboard API
       window.location.href = `mailto:${EMAIL}`;
     }
   };
@@ -51,17 +50,22 @@ const Contact = () => {
               Contato
             </p>
             <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
-              Vamos conversar?
+              Quer falar sobre uma oportunidade?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
-              Disponível para estágio ou oportunidade júnior em desenvolvimento
-              web/fullstack.
+              Estou disponível para estágio ou vaga júnior em desenvolvimento web/fullstack. Posso contribuir com frontend, integrações, APIs e manutenção de produtos reais.
             </p>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-text px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
+            >
+              Enviar email
+              <HiArrowRight className="text-base" />
+            </a>
           </div>
 
-          <div className="divide-y divide-gray-200 rounded-lg border border-gray-200 dark:divide-gray-800 dark:border-gray-800">
-            {/* Email com botão copiar */}
-            <div className="flex items-center justify-between gap-4 p-5">
+          <div className="divide-y divide-gray-200 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:divide-gray-800 dark:border-gray-800 dark:bg-zinc-950">
+            <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
               <span className="flex items-center gap-4">
                 <span className="text-xl text-cyan-700 dark:text-cyan-300">
                   <HiMail />
@@ -70,7 +74,7 @@ const Contact = () => {
                   <span className="block font-semibold text-primary-text dark:text-light-text">
                     Email
                   </span>
-                  <span className="mt-1 block text-sm text-secondary-text dark:text-gray-400">
+                  <span className="mt-1 block break-all text-sm text-secondary-text dark:text-gray-400">
                     {EMAIL}
                   </span>
                 </span>
@@ -102,14 +106,13 @@ const Contact = () => {
 
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center text-sm font-semibold text-cyan-700 dark:text-cyan-300 hover:underline"
+                  className="inline-flex items-center text-sm font-semibold text-cyan-700 hover:underline dark:text-cyan-300"
                 >
                   Abrir
                 </a>
               </div>
             </div>
 
-            {/* Links estáticos */}
             {staticLinks.map((link) => (
               <a
                 key={link.label}

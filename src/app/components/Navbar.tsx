@@ -8,7 +8,7 @@ import type { NavLink } from '../../data/constants';
 import { navLinks } from '../../data/constants';
 import { useActiveSection } from '../hooks/useScrollReveal';
 
-const sectionIds = ['home', 'projetos', 'sobre-mim', 'experiencia', 'contato'];
+const sectionIds = ['home', 'entregas', 'projetos', 'sobre-mim', 'experiencia', 'contato'];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,16 +27,21 @@ const Navbar = () => {
       role="navigation"
       aria-label="Navegação principal"
     >
-      <div className="container mx-auto max-w-7xl flex justify-between items-center">
+      <div className="container mx-auto flex max-w-7xl items-center justify-between">
         <Link
           href="/"
-          className="text-lg font-bold tracking-normal text-primary-text transition-colors hover:text-cyan-700 dark:text-light-text dark:hover:text-cyan-300"
+          className="group inline-flex items-center gap-2 text-lg font-bold tracking-normal text-primary-text transition-colors hover:text-cyan-700 dark:text-light-text dark:hover:text-cyan-300"
           aria-label="Voltar para o início"
         >
-          Tharcio.dev
+          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary-text text-sm font-extrabold text-white transition-colors group-hover:bg-cyan-700 dark:bg-light-text dark:text-dark-bg dark:group-hover:bg-cyan-300">
+            T
+          </span>
+          <span>
+            Tharcio<span className="text-cyan-700 dark:text-cyan-300">.dev</span>
+          </span>
         </Link>
 
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden items-center space-x-6 md:flex">
           {mainLinks.map((link: NavLink) => {
             const active = isActive(link.href);
             return (
@@ -61,7 +66,7 @@ const Navbar = () => {
           })}
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden items-center space-x-4 md:flex">
           {ctaLink && (
             <Link
               href={ctaLink.href}
@@ -77,7 +82,7 @@ const Navbar = () => {
           <ThemeSwitcher />
         </div>
 
-        <div className="md:hidden flex items-center gap-4">
+        <div className="flex items-center gap-4 md:hidden">
           <ThemeSwitcher />
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -95,7 +100,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col items-center space-y-4 animate-fade-down pb-2">
+        <div className="mt-4 flex flex-col items-center space-y-4 pb-2 animate-fade-down md:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.href}

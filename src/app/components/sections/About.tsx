@@ -61,16 +61,13 @@ const About = () => {
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
             <p>
-              Desenvolvo aplicações web e venho construindo uma visão completa do fluxo:
-              interface, regra de negócio, banco de dados e deploy.
+              Venho construindo aplicações web completas para praticar o ciclo real de desenvolvimento: interface, regra de negócio, autenticação, banco de dados e publicação em produção.
             </p>
             <p>
-              Projetos como HelpFlow, DevLinks, Lista de Mercado e Crypto Dashboard mostram
-              minha prática com autenticação, CRUD, APIs, PWA, testes e interfaces responsivas.
+              Meus projetos mostram experiência prática com CRUD, APIs, PWA, testes, responsividade e integrações modernas usando React, Next.js, TypeScript, Prisma e Supabase.
             </p>
             <p>
-              Busco uma primeira oportunidade para evoluir em ambiente real e contribuir com
-              dedicação, organização e vontade genuína de aprender.
+              Busco contribuir em times que valorizem organização, aprendizado contínuo e entrega consistente. Gosto de entender o problema antes de escrever código e transformar isso em interfaces claras.
             </p>
           </div>
 
