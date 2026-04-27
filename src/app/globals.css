@@ -7,8 +7,12 @@
     @apply border-gray-200 dark:border-gray-800;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-light-bg text-primary-text transition-colors duration-500 bg-fixed;
+    @apply bg-light-bg text-primary-text bg-fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -17,8 +21,32 @@
     @apply bg-dark-bg text-light-text;
   }
 
-  html {
-    scroll-behavior: smooth;
+  body,
+  nav,
+  section,
+  article,
+  footer,
+  button,
+  a,
+  span,
+  div {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    transition-duration: 420ms;
+    transition-timing-function: ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body,
+    nav,
+    section,
+    article,
+    footer,
+    button,
+    a,
+    span,
+    div {
+      transition-duration: 620ms;
+    }
   }
 
   h1,
