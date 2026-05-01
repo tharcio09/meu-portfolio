@@ -36,18 +36,12 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    body,
-    nav,
-    section,
-    article,
-    footer,
-    button,
-    a,
-    span,
-    div {
-      transition-duration: 620ms;
-    }
+  *, *::before, *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
   }
+}
 
   h1,
   h2,
