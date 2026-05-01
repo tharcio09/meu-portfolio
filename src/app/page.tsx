@@ -15,7 +15,7 @@ export default function Home() {
       <About />
       <Experience />
       <Contact />
-      <Analytics/>
+      <Analytics />
     </div>
   );
 }

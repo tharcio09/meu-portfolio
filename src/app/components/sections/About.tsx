@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Section from "../ui/Section";
+import Image from 'next/image';
+import Section from '../ui/Section';
 import {
   SiFigma,
   SiGit,
@@ -12,9 +12,9 @@ import {
   SiSupabase,
   SiTailwindcss,
   SiTypescript,
-} from "react-icons/si";
-import { LuAward, LuGraduationCap } from "react-icons/lu";
-import type { ReactNode } from "react";
+} from 'react-icons/si';
+import { LuAward, LuGraduationCap } from 'react-icons/lu';
+import type { ReactNode } from 'react';
 
 type Skill = {
   icon: ReactNode;
@@ -23,17 +23,17 @@ type Skill = {
 };
 
 const skills: Skill[] = [
-  { icon: <SiJavascript />, name: "JavaScript", featured: true },
-  { icon: <SiTypescript />, name: "TypeScript", featured: true },
-  { icon: <SiReact />, name: "React", featured: true },
-  { icon: <SiNextdotjs />, name: "Next.js", featured: true },
-  { icon: <SiTailwindcss />, name: "Tailwind CSS", featured: true },
-  { icon: <SiNodedotjs />, name: "Node.js", featured: true },
-  { icon: <SiPrisma />, name: "Prisma" },
-  { icon: <SiSupabase />, name: "Supabase" },
-  { icon: <SiGit />, name: "Git" },
-  { icon: <SiGithub />, name: "GitHub" },
-  { icon: <SiFigma />, name: "Figma" },
+  { icon: <SiJavascript />, name: 'JavaScript', featured: true },
+  { icon: <SiTypescript />, name: 'TypeScript', featured: true },
+  { icon: <SiReact />, name: 'React', featured: true },
+  { icon: <SiNextdotjs />, name: 'Next.js', featured: true },
+  { icon: <SiTailwindcss />, name: 'Tailwind CSS', featured: true },
+  { icon: <SiNodedotjs />, name: 'Node.js', featured: true },
+  { icon: <SiPrisma />, name: 'Prisma' },
+  { icon: <SiSupabase />, name: 'Supabase' },
+  { icon: <SiGit />, name: 'Git' },
+  { icon: <SiGithub />, name: 'GitHub' },
+  { icon: <SiFigma />, name: 'Figma' },
 ];
 
 const About = () => {
@@ -53,21 +53,24 @@ const About = () => {
         </div>
 
         <div>
-          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
-            Sobre
-          </p>
+          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">Sobre</p>
           <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
             Desenvolvedor em formação, com foco em produto funcional.
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
             <p>
-              Venho construindo aplicações web completas para praticar o ciclo real de desenvolvimento: interface, regra de negócio, autenticação, banco de dados e publicação em produção.
+              Venho construindo aplicações web completas para praticar o ciclo real de
+              desenvolvimento: interface, regra de negócio, autenticação, banco de dados e
+              publicação em produção.
             </p>
             <p>
-              Meus projetos mostram experiência prática com CRUD, APIs, PWA, testes, responsividade e integrações modernas usando React, Next.js, TypeScript, Prisma e Supabase.
+              Meus projetos mostram experiência prática com CRUD, APIs, PWA, testes, responsividade
+              e integrações modernas usando React, Next.js, TypeScript, Prisma e Supabase.
             </p>
             <p>
-              Busco contribuir em times que valorizem organização, aprendizado contínuo e entrega consistente. Gosto de entender o problema antes de escrever código e transformar isso em interfaces claras.
+              Busco contribuir em times que valorizem organização, aprendizado contínuo e entrega
+              consistente. Gosto de entender o problema antes de escrever código e transformar isso
+              em interfaces claras.
             </p>
           </div>
 
@@ -81,8 +84,8 @@ const About = () => {
                   key={skill.name}
                   className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium ${
                     skill.featured
-                      ? "border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300"
-                      : "border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400"
+                      ? 'border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300'
+                      : 'border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400'
                   }`}
                 >
                   <span className="text-sm">{skill.icon}</span>
@@ -104,9 +107,7 @@ const About = () => {
             </div>
             <div className="rounded-lg border border-gray-200 p-5 dark:border-gray-800">
               <LuAward className="text-xl text-cyan-700 dark:text-cyan-300" />
-              <h4 className="mt-3 font-bold text-primary-text dark:text-light-text">
-                NLW Connect
-              </h4>
+              <h4 className="mt-3 font-bold text-primary-text dark:text-light-text">NLW Connect</h4>
               <p className="mt-1 text-sm text-secondary-text dark:text-gray-400">
                 Rocketseat · Concluído
               </p>

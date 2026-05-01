@@ -26,12 +26,12 @@ A versão atual segue uma proposta mais minimalista e profissional, com foco em:
 
 ## Projetos em Destaque
 
-| Projeto | Descrição | Stack | Links |
-| --- | --- | --- | --- |
-| HelpFlow | Sistema de help desk com autenticação, CRUD de tickets, controle de acesso, banco relacional e deploy em produção. | Next.js, React, TypeScript, Prisma, Supabase, NextAuth | [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharcio09/helpflow) |
-| DevLinks | Plataforma para criação e gerenciamento de páginas de links personalizadas, com upload de imagens e testes end-to-end. | React, Vite, Tailwind CSS, React Query, Cloudinary, Cypress | [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharcio09/frontend-api) |
-| Lista de Mercado | PWA de lista de compras com funcionamento offline, persistência local e compartilhamento pelo WhatsApp. | React, Vite, PWA, Tailwind CSS, Local Storage | [Demo](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharcio09/lista-mercado) |
-| Crypto Dashboard | Dashboard para visualizar dados de criptomoedas consumindo a API da CoinGecko. | Next.js, React, Tailwind CSS, CoinGecko API | [Demo](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharcio09/crypto-dashboard) |
+| Projeto          | Descrição                                                                                                              | Stack                                                       | Links                                                                                                             |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| HelpFlow         | Sistema de help desk com autenticação, CRUD de tickets, controle de acesso, banco relacional e deploy em produção.     | Next.js, React, TypeScript, Prisma, Supabase, NextAuth      | [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharcio09/helpflow)                            |
+| DevLinks         | Plataforma para criação e gerenciamento de páginas de links personalizadas, com upload de imagens e testes end-to-end. | React, Vite, Tailwind CSS, React Query, Cloudinary, Cypress | [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharcio09/frontend-api)               |
+| Lista de Mercado | PWA de lista de compras com funcionamento offline, persistência local e compartilhamento pelo WhatsApp.                | React, Vite, PWA, Tailwind CSS, Local Storage               | [Demo](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharcio09/lista-mercado)             |
+| Crypto Dashboard | Dashboard para visualizar dados de criptomoedas consumindo a API da CoinGecko.                                         | Next.js, React, Tailwind CSS, CoinGecko API                 | [Demo](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharcio09/crypto-dashboard) |
 
 ---
 

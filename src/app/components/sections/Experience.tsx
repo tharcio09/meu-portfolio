@@ -9,18 +9,16 @@ type PreviousRole = {
 
 const previousRoles: PreviousRole[] = [
   {
-    period: "Mai/2023 – Out/2023",
-    role: "Auxiliar Administrativo",
-    org: "EPOS",
-    summary:
-      "Organização de demandas internas e documentação de processos operacionais.",
+    period: 'Mai/2023 – Out/2023',
+    role: 'Auxiliar Administrativo',
+    org: 'EPOS',
+    summary: 'Organização de demandas internas e documentação de processos operacionais.',
   },
   {
-    period: "Jan/2022 – Mai/2022",
-    role: "Auxiliar Mecânico",
-    org: "Komaq",
-    summary:
-      "Diagnóstico técnico de equipamentos com foco em análise de causa raiz.",
+    period: 'Jan/2022 – Mai/2022',
+    role: 'Auxiliar Mecânico',
+    org: 'Komaq',
+    summary: 'Diagnóstico técnico de equipamentos com foco em análise de causa raiz.',
   },
 ];
 
@@ -31,16 +29,14 @@ const Experience = () => {
     <Section id="experiencia" spacing="compact">
       <div className="mx-auto max-w-5xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
-            Trajetória
-          </p>
+          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">Trajetória</p>
           <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
             De onde vim.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
-            Antes da programação, atuei em outras áreas. Estou em transição de carreira
-            e buscando evoluir em desenvolvimento web — os projetos apresentados mostram
-            o que venho construindo nesse caminho.
+            Antes da programação, atuei em outras áreas. Estou em transição de carreira e buscando
+            evoluir em desenvolvimento web — os projetos apresentados mostram o que venho
+            construindo nesse caminho.
           </p>
         </div>
 

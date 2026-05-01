@@ -24,11 +24,7 @@ export const ThemeSwitcher = () => {
       aria-label="Alternar tema"
     >
       <span className="block transition-transform duration-200 ease-out group-hover:rotate-12">
-        {isDark ? (
-          <FaSun className="h-4 w-4" />
-        ) : (
-          <FaMoon className="h-4 w-4" />
-        )}
+        {isDark ? <FaSun className="h-4 w-4" /> : <FaMoon className="h-4 w-4" />}
       </span>
     </button>
   );

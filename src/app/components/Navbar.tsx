@@ -49,9 +49,10 @@ const Navbar = () => {
                 key={link.href}
                 href={link.href}
                 className={`relative text-sm font-medium transition-colors
-                  ${active
-                    ? 'text-cyan-700 dark:text-cyan-300'
-                    : 'text-secondary-text hover:text-cyan-700 dark:text-gray-300 dark:hover:text-cyan-300'
+                  ${
+                    active
+                      ? 'text-cyan-700 dark:text-cyan-300'
+                      : 'text-secondary-text hover:text-cyan-700 dark:text-gray-300 dark:hover:text-cyan-300'
                   }`}
               >
                 {link.label}
@@ -71,9 +72,10 @@ const Navbar = () => {
             <Link
               href={ctaLink.href}
               className={`rounded-md border px-4 py-2 text-sm font-semibold transition-colors
-                ${isActive(ctaLink.href)
-                  ? 'border-cyan-600 text-cyan-700 dark:border-cyan-400 dark:text-cyan-300'
-                  : 'border-gray-300 text-primary-text hover:border-cyan-700 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300'
+                ${
+                  isActive(ctaLink.href)
+                    ? 'border-cyan-600 text-cyan-700 dark:border-cyan-400 dark:text-cyan-300'
+                    : 'border-gray-300 text-primary-text hover:border-cyan-700 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300'
                 }`}
             >
               {ctaLink.label}
@@ -107,9 +109,10 @@ const Navbar = () => {
               href={link.href}
               onClick={() => setIsOpen(false)}
               className={`text-base font-medium transition-colors
-                ${isActive(link.href)
-                  ? 'text-cyan-700 dark:text-cyan-300'
-                  : 'text-secondary-text hover:text-cyan-700 dark:text-gray-300 dark:hover:text-cyan-300'
+                ${
+                  isActive(link.href)
+                    ? 'text-cyan-700 dark:text-cyan-300'
+                    : 'text-secondary-text hover:text-cyan-700 dark:text-gray-300 dark:hover:text-cyan-300'
                 }`}
             >
               {link.label}

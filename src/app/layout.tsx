@@ -1,28 +1,28 @@
-import { Inter, Outfit } from "next/font/google";
-import type { Metadata, Viewport } from "next";
-import type { ReactNode } from "react";
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import BackToTop from "./components/BackToTop";
-import { ThemeProvider } from "./components/ThemeProvider";
+import { Inter, Outfit } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
+import './globals.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import BackToTop from './components/BackToTop';
+import { ThemeProvider } from './components/ThemeProvider';
 
-const siteUrl = "https://tharcio-portfolio.vercel.app";
-const siteName = "Tharcio.dev";
-const siteTitle = "Tharcio Santos | Desenvolvedor Fullstack";
+const siteUrl = 'https://tharcio-portfolio.vercel.app';
+const siteName = 'Tharcio.dev';
+const siteTitle = 'Tharcio Santos | Desenvolvedor Fullstack';
 const siteDescription =
-  "Portfólio de Tharcio Santos, desenvolvedor fullstack em formação com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.";
+  'Portfólio de Tharcio Santos, desenvolvedor fullstack em formação com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
 
 const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 const outfit = Outfit({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-outfit",
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
 });
 
 export const metadata: Metadata = {
@@ -34,49 +34,49 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
-    "Tharcio Santos",
-    "Desenvolvedor Fullstack",
-    "Desenvolvedor Web",
-    "Desenvolvedor Júnior",
-    "Estágio Desenvolvimento Web",
-    "Portfolio Desenvolvedor",
-    "React",
-    "Next.js",
-    "Node.js",
-    "JavaScript",
-    "TypeScript",
-    "Tailwind CSS",
-    "Prisma",
-    "Supabase",
+    'Tharcio Santos',
+    'Desenvolvedor Fullstack',
+    'Desenvolvedor Web',
+    'Desenvolvedor Júnior',
+    'Estágio Desenvolvimento Web',
+    'Portfolio Desenvolvedor',
+    'React',
+    'Next.js',
+    'Node.js',
+    'JavaScript',
+    'TypeScript',
+    'Tailwind CSS',
+    'Prisma',
+    'Supabase',
   ],
-  authors: [{ name: "Tharcio Santos", url: "https://github.com/tharcio09" }],
-  creator: "Tharcio Santos",
-  publisher: "Tharcio Santos",
-  category: "portfolio",
+  authors: [{ name: 'Tharcio Santos', url: 'https://github.com/tharcio09' }],
+  creator: 'Tharcio Santos',
+  publisher: 'Tharcio Santos',
+  category: 'portfolio',
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: "/",
+    url: '/',
     siteName,
     images: [
       {
-        url: "/opengraph-image",
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: "Portfólio de Tharcio Santos, desenvolvedor fullstack",
+        alt: 'Portfólio de Tharcio Santos, desenvolvedor fullstack',
       },
     ],
-    locale: "pt_BR",
-    type: "website",
+    locale: 'pt_BR',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: siteTitle,
     description: siteDescription,
-    images: ["/opengraph-image"],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
@@ -84,17 +84,17 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/icons/icon-192x192.png",
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/icons/icon-192x192.png',
   },
-  manifest: "/manifest.json",
+  manifest: '/manifest.json',
   formatDetection: {
     email: false,
     address: false,
@@ -103,20 +103,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  width: "device-width",
+  width: 'device-width',
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+    { media: '(prefers-color-scheme: light)', color: '#f8fafc' },
+    { media: '(prefers-color-scheme: dark)', color: '#09090b' },
   ],
-  colorScheme: "light dark",
+  colorScheme: 'light dark',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body

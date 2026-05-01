@@ -1,15 +1,15 @@
 'use client';
 
-import Image from "next/image";
-import { HiArrowRight, HiDocumentText } from "react-icons/hi";
-import { LuDatabase, LuServer, LuShieldCheck } from "react-icons/lu";
-import Section from "../ui/Section";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
+import Image from 'next/image';
+import { HiArrowRight, HiDocumentText } from 'react-icons/hi';
+import { LuDatabase, LuServer, LuShieldCheck } from 'react-icons/lu';
+import Section from '../ui/Section';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 const proofItems = [
-  "4 projetos com deploy ativo",
-  "React, Next.js, TypeScript e Node.js",
-  "Autenticação, banco relacional, APIs e PWA",
+  '4 projetos com deploy ativo',
+  'React, Next.js, TypeScript e Node.js',
+  'Autenticação, banco relacional, APIs e PWA',
 ];
 
 const Hero = () => {
@@ -37,7 +37,7 @@ const Hero = () => {
             className={`inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-700
               dark:border-cyan-900 dark:bg-cyan-950/40 dark:text-cyan-300
               transition-[opacity,transform] duration-300
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}`}
           >
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-500 opacity-60" />
@@ -49,7 +49,7 @@ const Hero = () => {
           <h1
             className={`mt-5 text-5xl font-extrabold tracking-tight text-primary-text dark:text-light-text md:text-7xl
               transition-[opacity,transform] duration-700 delay-150
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             Tharcio Santos
           </h1>
@@ -57,9 +57,9 @@ const Hero = () => {
           <h2
             className={`mt-5 max-w-2xl text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl
               transition-[opacity,transform] duration-700 delay-200
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Desenvolvedor fullstack em formação, criando aplicações web{" "}
+            Desenvolvedor fullstack em formação, criando aplicações web{' '}
             <span className="relative whitespace-nowrap">
               <span
                 aria-hidden="true"
@@ -72,17 +72,17 @@ const Hero = () => {
           <p
             className={`mt-6 max-w-2xl text-lg leading-relaxed text-secondary-text dark:text-gray-300
               transition-[opacity,transform] duration-700 delay-300
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Desenvolvo aplicações com React, Next.js e Node.js, integrando interface,
-            autenticação, banco de dados e deploy. Meu foco é transformar requisitos
-            em produtos funcionais, responsivos e fáceis de evoluir.
+            Desenvolvo aplicações com React, Next.js e Node.js, integrando interface, autenticação,
+            banco de dados e deploy. Meu foco é transformar requisitos em produtos funcionais,
+            responsivos e fáceis de evoluir.
           </p>
 
           <div
             className={`mt-8 flex flex-col gap-3 sm:flex-row
               transition-[opacity,transform] duration-700 delay-[400ms]
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             <a
               href="#projetos"
@@ -105,7 +105,7 @@ const Hero = () => {
           <p
             className={`mt-3 text-sm text-secondary-text dark:text-gray-400
               transition-[opacity,transform] duration-700 delay-[450ms]
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             Todos com código público, deploy ativo e decisões técnicas visíveis.
           </p>
@@ -113,7 +113,7 @@ const Hero = () => {
           <dl
             className={`mt-12 grid gap-4 border-t border-gray-200 pt-6 text-sm text-secondary-text dark:border-gray-800 dark:text-gray-400 md:grid-cols-3
               transition-[opacity,transform] duration-700 delay-500
-              ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             {proofItems.map((item) => (
               <div key={item} className="flex items-center gap-2">
@@ -130,7 +130,7 @@ const Hero = () => {
 
         <div
           className={`relative transition-[opacity,transform] duration-700 delay-300
-            ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+            ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
           <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-zinc-950">
             <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-gray-800">
@@ -180,5 +180,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-

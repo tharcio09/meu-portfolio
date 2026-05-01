@@ -1,26 +1,26 @@
 'use client';
 
-import { useState } from "react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from "react-icons/hi";
-import Section from "../ui/Section";
+import { useState } from 'react';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from 'react-icons/hi';
+import Section from '../ui/Section';
 
-const EMAIL = "tharciosantos09@gmail.com";
+const EMAIL = 'tharciosantos09@gmail.com';
 
 const staticLinks = [
   {
-    label: "LinkedIn",
-    description: "Conversar sobre vagas, networking e carreira.",
-    href: "https://www.linkedin.com/in/tharcio-santos-dev/",
+    label: 'LinkedIn',
+    description: 'Conversar sobre vagas, networking e carreira.',
+    href: 'https://www.linkedin.com/in/tharcio-santos-dev/',
     icon: <SiLinkedin />,
-    action: "Abrir",
+    action: 'Abrir',
   },
   {
-    label: "GitHub",
-    description: "Ver código, projetos publicados e evolução técnica.",
-    href: "https://github.com/tharcio09",
+    label: 'GitHub',
+    description: 'Ver código, projetos publicados e evolução técnica.',
+    href: 'https://github.com/tharcio09',
     icon: <SiGithub />,
-    action: "Abrir",
+    action: 'Abrir',
   },
 ];
 
@@ -46,14 +46,13 @@ const Contact = () => {
       <div className="mx-auto max-w-5xl">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
           <div>
-            <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
-              Contato
-            </p>
+            <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">Contato</p>
             <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
               Quer falar sobre uma oportunidade?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
-              Estou disponível para estágio ou vaga júnior em desenvolvimento web/fullstack. Posso contribuir com frontend, integrações, APIs e manutenção de produtos reais.
+              Estou disponível para estágio ou vaga júnior em desenvolvimento web/fullstack. Posso
+              contribuir com frontend, integrações, APIs e manutenção de produtos reais.
             </p>
             <a
               href={`mailto:${EMAIL}`}
@@ -83,12 +82,12 @@ const Contact = () => {
               <div className="flex shrink-0 gap-2">
                 <button
                   onClick={handleCopyEmail}
-                  aria-label={copied ? "Email copiado" : "Copiar email"}
+                  aria-label={copied ? 'Email copiado' : 'Copiar email'}
                   className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-semibold transition-all duration-200
                     ${
                       copied
-                        ? "border-green-300 bg-green-50 text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400"
-                        : "border-gray-300 text-secondary-text hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-gray-400 dark:hover:border-cyan-400 dark:hover:text-cyan-300"
+                        ? 'border-green-300 bg-green-50 text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
+                        : 'border-gray-300 text-secondary-text hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-gray-400 dark:hover:border-cyan-400 dark:hover:text-cyan-300'
                     }`}
                 >
                   {copied ? (
@@ -122,9 +121,7 @@ const Contact = () => {
                 className="flex items-center justify-between gap-4 p-5 transition-colors hover:bg-gray-50 dark:hover:bg-zinc-900"
               >
                 <span className="flex items-center gap-4">
-                  <span className="text-xl text-cyan-700 dark:text-cyan-300">
-                    {link.icon}
-                  </span>
+                  <span className="text-xl text-cyan-700 dark:text-cyan-300">{link.icon}</span>
                   <span>
                     <span className="block font-semibold text-primary-text dark:text-light-text">
                       {link.label}

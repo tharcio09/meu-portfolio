@@ -1,40 +1,43 @@
-import { LuCode, LuDatabase, LuRocket } from "react-icons/lu";
-import Section from "../ui/Section";
+import { LuCode, LuDatabase, LuRocket } from 'react-icons/lu';
+import Section from '../ui/Section';
 
 const capabilities = [
   {
     icon: <LuCode />,
-    title: "Frontend responsivo",
+    title: 'Frontend responsivo',
     description:
-      "Interfaces com React, Next.js e Tailwind CSS, pensadas para clareza, navegação fluida e boa experiência em desktop e mobile.",
+      'Interfaces com React, Next.js e Tailwind CSS, pensadas para clareza, navegação fluida e boa experiência em desktop e mobile.',
   },
   {
     icon: <LuDatabase />,
-    title: "APIs, autenticação e dados",
+    title: 'APIs, autenticação e dados',
     description:
-      "Fluxos completos com login, CRUD, regras de negócio, Prisma, Supabase e integração entre frontend e backend.",
+      'Fluxos completos com login, CRUD, regras de negócio, Prisma, Supabase e integração entre frontend e backend.',
   },
   {
     icon: <LuRocket />,
-    title: "Deploy e produto no ar",
+    title: 'Deploy e produto no ar',
     description:
-      "Projetos publicados, com código público, decisões técnicas documentadas e foco em entregar algo utilizável de ponta a ponta.",
+      'Projetos publicados, com código público, decisões técnicas documentadas e foco em entregar algo utilizável de ponta a ponta.',
   },
 ];
 
 const Capabilities = () => {
   return (
-    <Section id="entregas" spacing="compact" className="border-b border-gray-200/80 dark:border-gray-800">
+    <Section
+      id="entregas"
+      spacing="compact"
+      className="border-b border-gray-200/80 dark:border-gray-800"
+    >
       <div className="mx-auto max-w-5xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">
-            O que eu entrego
-          </p>
+          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">O que eu entrego</p>
           <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
             Aplicações que saem do código e chegam ao usuário.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
-            Meu foco é construir features completas: da interface ao banco, com deploy ativo e atenção aos detalhes que tornam o projeto utilizável.
+            Meu foco é construir features completas: da interface ao banco, com deploy ativo e
+            atenção aos detalhes que tornam o projeto utilizável.
           </p>
         </div>
 
@@ -62,4 +65,3 @@ const Capabilities = () => {
 };
 
 export default Capabilities;
-
