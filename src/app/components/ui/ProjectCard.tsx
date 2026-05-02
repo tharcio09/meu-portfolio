@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { buttonVariants } from './Button';
+import { cn } from '@/lib/utils';
 
 type CasePoint = {
   label: string;
@@ -125,7 +127,7 @@ const ProjectCard = ({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 px-4 py-2.5 text-sm font-semibold text-primary-text transition-colors hover:border-cyan-700 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300"
+              className={cn(buttonVariants({ variant: 'outline' }))}
             >
               <FaGithub className="text-base" />
               Código
@@ -135,7 +137,7 @@ const ProjectCard = ({
                 href={demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-primary-text px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
+                className={cn(buttonVariants({ variant: 'primary' }))}
               >
                 <FaExternalLinkAlt className="text-sm" />
                 {demoLabel ?? 'Demo'}
@@ -196,7 +198,7 @@ const ProjectCard = ({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-md border border-gray-300 px-4 py-2.5 text-sm font-semibold text-primary-text transition-colors hover:border-cyan-700 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300"
+            className={cn(buttonVariants({ variant: 'outline' }), 'flex-1')}
           >
             <FaGithub className="text-base" />
             Código
@@ -206,7 +208,7 @@ const ProjectCard = ({
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-md bg-primary-text px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
+              className={cn(buttonVariants({ variant: 'primary' }), 'flex-1')}
             >
               <FaExternalLinkAlt className="text-sm" />
               Demo

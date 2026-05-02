@@ -1,5 +1,7 @@
 'use client';
 
+import { buttonVariants } from '../ui/Button';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { HiArrowRight, HiDocumentText } from 'react-icons/hi';
 import { LuDatabase, LuServer, LuShieldCheck } from 'react-icons/lu';
@@ -86,7 +88,7 @@ const Hero = () => {
           >
             <a
               href="#projetos"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-primary-text px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
+              className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
             >
               Ver projetos
               <HiArrowRight className="text-base" />
@@ -95,11 +97,12 @@ const Hero = () => {
               href="/curriculo-tharcio-santos.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-gray-300 px-5 py-3 text-sm font-semibold text-primary-text transition-colors hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300"
+              className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
             >
               <HiDocumentText className="text-base" />
               Baixar currículo
             </a>
+
           </div>
 
           <p
