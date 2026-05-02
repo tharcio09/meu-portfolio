@@ -1,28 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from 'react-icons/hi';
 import Section from '../ui/Section';
+import { EMAIL, redesSociais } from '@/data/constants';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-const EMAIL = 'tharciosantos09@gmail.com';
 
-const staticLinks = [
-  {
-    label: 'LinkedIn',
-    description: 'Conversar sobre vagas, networking e carreira.',
-    href: 'https://www.linkedin.com/in/tharcio-santos-dev/',
-    icon: <SiLinkedin />,
-    action: 'Abrir',
-  },
-  {
-    label: 'GitHub',
-    description: 'Ver código, projetos publicados e evolução técnica.',
-    href: 'https://github.com/tharcio09',
-    icon: <SiGithub />,
-    action: 'Abrir',
-  },
-];
+const icones: Record<string, React.ReactNode> = {
+  LinkedIn: <SiLinkedin />,
+  GitHub: <SiGithub />,
+};
+
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -84,10 +73,9 @@ const Contact = () => {
                   onClick={handleCopyEmail}
                   aria-label={copied ? 'Email copiado' : 'Copiar email'}
                   className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-semibold transition-all duration-200
-                    ${
-                      copied
-                        ? 'border-green-300 bg-green-50 text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
-                        : 'border-gray-300 text-secondary-text hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-gray-400 dark:hover:border-cyan-400 dark:hover:text-cyan-300'
+                    ${copied
+                      ? 'border-green-300 bg-green-50 text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
+                      : 'border-gray-300 text-secondary-text hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-gray-400 dark:hover:border-cyan-400 dark:hover:text-cyan-300'
                     }`}
                 >
                   {copied ? (
@@ -112,7 +100,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {staticLinks.map((link) => (
+            {redesSociais.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
@@ -121,7 +109,7 @@ const Contact = () => {
                 className="flex items-center justify-between gap-4 p-5 transition-colors hover:bg-gray-50 dark:hover:bg-zinc-900"
               >
                 <span className="flex items-center gap-4">
-                  <span className="text-xl text-cyan-700 dark:text-cyan-300">{link.icon}</span>
+                  <span className="text-xl text-cyan-700 dark:text-cyan-300">{icones[link.label]}</span>
                   <span>
                     <span className="block font-semibold text-primary-text dark:text-light-text">
                       {link.label}
