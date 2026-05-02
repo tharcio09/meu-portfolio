@@ -34,22 +34,30 @@ Mais do que uma vitrine, este repositório reúne práticas que venho estudando 
 ## Projetos em Destaque
 
 ### HelpFlow
+
 Sistema de help desk com autenticação, CRUD de tickets, controle de acesso, banco relacional e deploy em produção.
+
 - **Stack:** Next.js, React, TypeScript, Prisma, Supabase, NextAuth
 - **Links:** [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharcio09/helpflow)
 
 ### DevLinks
+
 Plataforma para criação e gerenciamento de páginas de links personalizadas, com upload de imagens e testes end-to-end.
+
 - **Stack:** React, Vite, Tailwind CSS, React Query, Cloudinary, Cypress
 - **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharcio09/frontend-api)
 
 ### Lista de Mercado
+
 PWA de lista de compras com funcionamento offline, persistência local e compartilhamento pelo WhatsApp.
+
 - **Stack:** React, Vite, PWA, Tailwind CSS, Local Storage
 - **Links:** [Demo](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharcio09/lista-mercado)
 
 ### Crypto Dashboard
+
 Dashboard para visualizar dados de criptomoedas consumindo a API da CoinGecko.
+
 - **Stack:** Next.js, React, Tailwind CSS, CoinGecko API
 - **Links:** [Demo](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharcio09/crypto-dashboard)
 
@@ -58,17 +66,20 @@ Dashboard para visualizar dados de criptomoedas consumindo a API da CoinGecko.
 ## Tecnologias
 
 ### Core
+
 - [Next.js](https://nextjs.org/) 15.3 — App Router, SSR, Image Optimization, OG images
 - [React](https://react.dev/) 19.1
 - [TypeScript](https://www.typescriptlang.org/) 5.7
 - [Tailwind CSS](https://tailwindcss.com/) 3.4
 
 ### Bibliotecas de UI
+
 - `class-variance-authority`, `clsx` e `tailwind-merge` — composição de variantes, classes reutilizáveis e resolução de conflitos do Tailwind.
 - `next-themes` — suporte a tema claro, escuro e sistema.
 - `react-icons` — pacote de ícones SVG.
 
 ### Qualidade e Testes
+
 - **Vitest** e **Testing Library** — O projeto possui testes unitários configurados focando no comportamento do usuário (como simulação de interações assíncronas), validando que a interface responda corretamente aos eventos esperados.
 - **ESLint** e **Prettier** — Padronização estática e formatação do código.
 - **GitHub Actions** — Pipeline de Integração Contínua (CI) que valida o código contra regras estáticas e falhas de teste.
@@ -87,6 +98,7 @@ Durante o desenvolvimento deste portfólio, adotei algumas decisões arquitetura
 ---
 
 ## Estrutura de Pastas (Resumo)
+
 ```txt
 meu-portfolio/
 ├── .github/workflows/       # Pipeline de Integração Contínua (CI)
@@ -105,10 +117,12 @@ meu-portfolio/
 ## Como Executar
 
 ### Pré-requisitos
+
 - Node.js 18+
 - npm
 
 ### Instalação
+
 ```bash
 git clone https://github.com/tharcio09/meu-portfolio.git
 cd meu-portfolio
@@ -117,22 +131,23 @@ npm install
 
 ### Scripts Disponíveis
 
-| Script | Descrição |
-|--------|-----------|
-| `npm run dev` | Inicia o servidor local de desenvolvimento. |
-| `npm run build` | Compila a versão otimizada da aplicação para produção. |
-| `npm start` | Inicia o servidor com o build gerado. |
-| `npm run lint` | Analisa e lista os problemas de padronização com ESLint. |
-| `npm run lint:fix` | Tenta corrigir os problemas de linting automaticamente. |
-| `npm run format` | Formata o código do projeto forçadamente via Prettier. |
+| Script                 | Descrição                                                                          |
+| ---------------------- | ---------------------------------------------------------------------------------- |
+| `npm run dev`          | Inicia o servidor local de desenvolvimento.                                        |
+| `npm run build`        | Compila a versão otimizada da aplicação para produção.                             |
+| `npm start`            | Inicia o servidor com o build gerado.                                              |
+| `npm run lint`         | Analisa e lista os problemas de padronização com ESLint.                           |
+| `npm run lint:fix`     | Tenta corrigir os problemas de linting automaticamente.                            |
+| `npm run format`       | Formata o código do projeto forçadamente via Prettier.                             |
 | `npm run format:check` | Confirma se todos os arquivos estão formatados corretamente (usado pela pipeline). |
-| `npm test` | Executa os testes do Vitest no modo watch. |
-| `npm run test:run` | Executa a suíte de testes apenas uma vez (ideal para CI). |
-| `npm run test:watch` | Atalho explícito para executar os testes em modo interativo. |
+| `npm test`             | Executa os testes do Vitest no modo watch.                                         |
+| `npm run test:run`     | Executa a suíte de testes apenas uma vez (ideal para CI).                          |
+| `npm run test:watch`   | Atalho explícito para executar os testes em modo interativo.                       |
 
 ---
 
 ## Próximos Passos (Evolução)
+
 - Ampliar a cobertura de testes para outros componentes atômicos.
 - Adicionar Cypress ou Playwright para criação de testes End-to-End (E2E).
 - Adicionar hooks de pre-commit com Husky para reforçar lint, formatação e testes antes dos commits.
@@ -142,6 +157,7 @@ npm install
 ## Autor
 
 **Tharcio Santos**
+
 - [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/)
 - [GitHub](https://github.com/tharcio09)
 - [Email](mailto:tharciosantos09@gmail.com)
