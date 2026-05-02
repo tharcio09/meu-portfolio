@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { buttonVariants } from './components/ui/Button';
+import { cn } from '@/lib/utils';
 
 export default function NotFound() {
   return (
@@ -12,7 +14,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="mt-6 rounded-md bg-primary-text px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
+        className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-6')}
       >
         Voltar para a home
       </Link>

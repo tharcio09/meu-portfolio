@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from 'react-icons/hi';
 import Section from '../ui/Section';
 import { EMAIL, redesSociais } from '@/data/constants';
+import { Button, buttonVariants } from '../ui/Button';
+import { cn } from '@/lib/utils';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 const icones: Record<string, React.ReactNode> = {
@@ -43,7 +45,7 @@ const Contact = () => {
             </p>
             <a
               href={`mailto:${EMAIL}`}
-              className="mt-6 inline-flex items-center gap-2 rounded-md bg-primary-text px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200"
+              className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-6')}
             >
               Enviar email
               <HiArrowRight className="text-base" />
@@ -67,15 +69,16 @@ const Contact = () => {
               </span>
 
               <div className="flex shrink-0 gap-2">
-                <button
+                <Button
                   onClick={handleCopyEmail}
                   aria-label={copied ? 'Email copiado' : 'Copiar email'}
-                  className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-semibold transition-all duration-200
-                    ${
-                      copied
-                        ? 'border-green-300 bg-green-50 text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
-                        : 'border-gray-300 text-secondary-text hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-gray-400 dark:hover:border-cyan-400 dark:hover:text-cyan-300'
-                    }`}
+                  variant="outline"
+                  size="sm"
+                  className={cn(
+                    'h-8 px-3 text-xs gap-1.5',
+                    copied &&
+                      'border-green-300 bg-green-50 text-green-700 hover:border-green-300 hover:bg-green-50 hover:text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400 dark:hover:border-green-800 dark:hover:bg-green-950/30'
+                  )}
                 >
                   {copied ? (
                     <>
@@ -88,7 +91,7 @@ const Contact = () => {
                       Copiar
                     </>
                   )}
-                </button>
+                </Button>
 
                 <a
                   href={`mailto:${EMAIL}`}

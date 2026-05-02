@@ -7,6 +7,8 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 import type { NavLink } from '../../data/constants';
 import { navLinks } from '../../data/constants';
 import { useActiveSection } from '../hooks/useScrollReveal';
+import { buttonVariants } from './ui/Button';
+import { cn } from '@/lib/utils';
 
 const sectionIds = ['home', 'entregas', 'projetos', 'sobre-mim', 'experiencia', 'contato'];
 
@@ -71,12 +73,11 @@ const Navbar = () => {
           {ctaLink && (
             <Link
               href={ctaLink.href}
-              className={`rounded-md border px-4 py-2 text-sm font-semibold transition-colors
-                ${
-                  isActive(ctaLink.href)
-                    ? 'border-cyan-600 text-cyan-700 dark:border-cyan-400 dark:text-cyan-300'
-                    : 'border-gray-300 text-primary-text hover:border-cyan-700 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300'
-                }`}
+              className={cn(
+                buttonVariants({ variant: 'outline' }),
+                isActive(ctaLink.href) &&
+                  'border-cyan-600 text-cyan-700 dark:border-cyan-400 dark:text-cyan-300'
+              )}
             >
               {ctaLink.label}
             </Link>
