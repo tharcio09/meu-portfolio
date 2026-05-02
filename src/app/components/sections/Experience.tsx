@@ -1,7 +1,6 @@
 import Section from '../ui/Section';
 import { experienciasAnteriores } from '@/data/experience';
 
-
 const Experience = () => {
   if (experienciasAnteriores.length === 0) return null;
 

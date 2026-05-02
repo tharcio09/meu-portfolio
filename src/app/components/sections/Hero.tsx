@@ -86,10 +86,7 @@ const Hero = () => {
               transition-[opacity,transform] duration-700 delay-[400ms]
               ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            <a
-              href="#projetos"
-              className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
-            >
+            <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
               Ver projetos
               <HiArrowRight className="text-base" />
             </a>
@@ -102,7 +99,6 @@ const Hero = () => {
               <HiDocumentText className="text-base" />
               Baixar currículo
             </a>
-
           </div>
 
           <p

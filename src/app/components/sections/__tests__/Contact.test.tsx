@@ -31,5 +31,3 @@ describe('Contact', () => {
     expect(await screen.findByText('Copiado')).toBeInTheDocument();
   });
 });
-
-

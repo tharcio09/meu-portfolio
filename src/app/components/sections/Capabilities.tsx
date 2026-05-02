@@ -1,8 +1,6 @@
 import Section from '../ui/Section';
 import { capacidades } from '@/data/capabilities';
 
-
-
 const Capabilities = () => {
   return (
     <Section

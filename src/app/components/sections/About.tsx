@@ -49,10 +49,11 @@ const About = () => {
               {skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium ${skill.featured
-                    ? 'border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300'
-                    : 'border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400'
-                    }`}
+                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium ${
+                    skill.featured
+                      ? 'border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300'
+                      : 'border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400'
+                  }`}
                 >
                   <span className="text-sm">{skill.icon}</span>
                   {skill.name}

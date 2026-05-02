@@ -144,16 +144,16 @@ npm install
 
 ### Scripts Disponíveis
 
-| Script | Descrição |
-|---|---|
-| `npm run dev` | Servidor de desenvolvimento |
-| `npm run build` | Build de produção |
-| `npm start` | Inicia o servidor de produção |
-| `npm run lint` | Verifica problemas com ESLint |
-| `npm run lint:fix` | Corrige problemas automaticamente |
-| `npm run format` | Formata o código com Prettier |
-| `npm run format:check` | Verifica formatação sem alterar |
-| `npm test` | Executa os testes com Vitest |
+| Script                 | Descrição                         |
+| ---------------------- | --------------------------------- |
+| `npm run dev`          | Servidor de desenvolvimento       |
+| `npm run build`        | Build de produção                 |
+| `npm start`            | Inicia o servidor de produção     |
+| `npm run lint`         | Verifica problemas com ESLint     |
+| `npm run lint:fix`     | Corrige problemas automaticamente |
+| `npm run format`       | Formata o código com Prettier     |
+| `npm run format:check` | Verifica formatação sem alterar   |
+| `npm test`             | Executa os testes com Vitest      |
 
 ---
 
