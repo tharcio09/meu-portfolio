@@ -45,16 +45,22 @@ A versão atual segue uma proposta mais minimalista e profissional, com foco em:
 
 ### Core
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Next.js](https://nextjs.org/) 15.3 — App Router, SSR, Image Optimization, OG images
+- [React](https://react.dev/) 19.1
+- [TypeScript](https://www.typescriptlang.org/) 5.7
+- [Tailwind CSS](https://tailwindcss.com/) 3.4
 
-### Ferramentas e bibliotecas
+### Bibliotecas
 
-- [next-themes](https://github.com/pacocoursey/next-themes)
-- [react-icons](https://react-icons.github.io/react-icons/)
-- [Vercel Analytics](https://vercel.com/analytics)
+- [next-themes](https://github.com/pacocoursey/next-themes) — tema claro/escuro/sistema
+- [react-icons](https://react-icons.github.io/react-icons/) — ícones (HeroIcons, Lucide, Simple Icons)
+- [Vercel Analytics](https://vercel.com/analytics) — rastreamento de pageviews
+
+### Qualidade e Testes
+
+- [ESLint](https://eslint.org/) com `eslint-config-next` — análise estática de código
+- [Prettier](https://prettier.io/) — formatação automática
+- [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/) — testes unitários
 
 ---
 
@@ -66,16 +72,19 @@ meu-portfolio/
 │   ├── icons/
 │   ├── images/
 │   ├── curriculo-tharcio-santos.pdf
-│   └── manifest.json
+│   ├── manifest.json
+│   └── robots.txt
 ├── src/
 │   ├── app/
 │   │   ├── components/
+│   │   │   ├── BackToTop.tsx
 │   │   │   ├── Footer.tsx
 │   │   │   ├── Navbar.tsx
 │   │   │   ├── ThemeProvider.tsx
 │   │   │   ├── ThemeSwitcher.tsx
 │   │   │   ├── sections/
 │   │   │   │   ├── About.tsx
+│   │   │   │   ├── Capabilities.tsx
 │   │   │   │   ├── Contact.tsx
 │   │   │   │   ├── Experience.tsx
 │   │   │   │   ├── Hero.tsx
@@ -83,16 +92,27 @@ meu-portfolio/
 │   │   │   └── ui/
 │   │   │       ├── ProjectCard.tsx
 │   │   │       └── Section.tsx
+│   │   ├── hooks/
+│   │   │   └── useScrollReveal.ts
+│   │   ├── error.tsx
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   ├── not-found.tsx
-│   │   └── page.tsx
+│   │   ├── opengraph-image.tsx
+│   │   ├── page.tsx
+│   │   └── sitemap.ts
 │   └── data/
-│       └── constants.ts
+│       ├── about.tsx
+│       ├── capabilities.tsx
+│       ├── constants.ts
+│       ├── experience.ts
+│       └── projects.ts
+├── eslint.config.mjs
 ├── next.config.mjs
 ├── package.json
 ├── tailwind.config.js
-└── tsconfig.json
+├── tsconfig.json
+└── vitest.config.ts
 ```
 
 ---
@@ -122,24 +142,18 @@ cd meu-portfolio
 npm install
 ```
 
-### Desenvolvimento
+### Scripts Disponíveis
 
-```bash
-npm run dev
-```
-
-Acesse:
-
-```txt
-http://localhost:3000
-```
-
-### Build de Produção
-
-```bash
-npm run build
-npm start
-```
+| Script | Descrição |
+|---|---|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm start` | Inicia o servidor de produção |
+| `npm run lint` | Verifica problemas com ESLint |
+| `npm run lint:fix` | Corrige problemas automaticamente |
+| `npm run format` | Formata o código com Prettier |
+| `npm run format:check` | Verifica formatação sem alterar |
+| `npm test` | Executa os testes com Vitest |
 
 ---
 
