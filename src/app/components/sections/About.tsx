@@ -1,40 +1,7 @@
 import Image from 'next/image';
 import Section from '../ui/Section';
-import {
-  SiFigma,
-  SiGit,
-  SiGithub,
-  SiJavascript,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPrisma,
-  SiReact,
-  SiSupabase,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si';
 import { LuAward, LuGraduationCap } from 'react-icons/lu';
-import type { ReactNode } from 'react';
-
-type Skill = {
-  icon: ReactNode;
-  name: string;
-  featured?: boolean;
-};
-
-const skills: Skill[] = [
-  { icon: <SiJavascript />, name: 'JavaScript', featured: true },
-  { icon: <SiTypescript />, name: 'TypeScript', featured: true },
-  { icon: <SiReact />, name: 'React', featured: true },
-  { icon: <SiNextdotjs />, name: 'Next.js', featured: true },
-  { icon: <SiTailwindcss />, name: 'Tailwind CSS', featured: true },
-  { icon: <SiNodedotjs />, name: 'Node.js', featured: true },
-  { icon: <SiPrisma />, name: 'Prisma' },
-  { icon: <SiSupabase />, name: 'Supabase' },
-  { icon: <SiGit />, name: 'Git' },
-  { icon: <SiGithub />, name: 'GitHub' },
-  { icon: <SiFigma />, name: 'Figma' },
-];
+import { skills } from '@/data/about';
 
 const About = () => {
   return (
@@ -82,11 +49,10 @@ const About = () => {
               {skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium ${
-                    skill.featured
-                      ? 'border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300'
-                      : 'border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400'
-                  }`}
+                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium ${skill.featured
+                    ? 'border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300'
+                    : 'border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400'
+                    }`}
                 >
                   <span className="text-sm">{skill.icon}</span>
                   {skill.name}
