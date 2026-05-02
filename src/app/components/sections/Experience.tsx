@@ -1,29 +1,9 @@
 import Section from '../ui/Section';
+import { experienciasAnteriores } from '@/data/experience';
 
-type PreviousRole = {
-  period: string;
-  role: string;
-  org: string;
-  summary: string;
-};
-
-const previousRoles: PreviousRole[] = [
-  {
-    period: 'Mai/2023 – Out/2023',
-    role: 'Auxiliar Administrativo',
-    org: 'EPOS',
-    summary: 'Organização de demandas internas e documentação de processos operacionais.',
-  },
-  {
-    period: 'Jan/2022 – Mai/2022',
-    role: 'Auxiliar Mecânico',
-    org: 'Komaq',
-    summary: 'Diagnóstico técnico de equipamentos com foco em análise de causa raiz.',
-  },
-];
 
 const Experience = () => {
-  if (previousRoles.length === 0) return null;
+  if (experienciasAnteriores.length === 0) return null;
 
   return (
     <Section id="experiencia" spacing="compact">
@@ -41,7 +21,7 @@ const Experience = () => {
         </div>
 
         <div className="mt-10 space-y-3">
-          {previousRoles.map((item) => (
+          {experienciasAnteriores.map((item) => (
             <article
               key={item.role}
               className="flex flex-col gap-1 rounded-lg border border-gray-200 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-gray-800"
