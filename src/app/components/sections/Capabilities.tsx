@@ -1,26 +1,7 @@
-import { LuCode, LuDatabase, LuRocket } from 'react-icons/lu';
 import Section from '../ui/Section';
+import { capacidades } from '@/data/capabilities';
 
-const capabilities = [
-  {
-    icon: <LuCode />,
-    title: 'Frontend responsivo',
-    description:
-      'Interfaces com React, Next.js e Tailwind CSS, pensadas para clareza, navegação fluida e boa experiência em desktop e mobile.',
-  },
-  {
-    icon: <LuDatabase />,
-    title: 'APIs, autenticação e dados',
-    description:
-      'Fluxos completos com login, CRUD, regras de negócio, Prisma, Supabase e integração entre frontend e backend.',
-  },
-  {
-    icon: <LuRocket />,
-    title: 'Deploy e produto no ar',
-    description:
-      'Projetos publicados, com código público, decisões técnicas documentadas e foco em entregar algo utilizável de ponta a ponta.',
-  },
-];
+
 
 const Capabilities = () => {
   return (
@@ -42,7 +23,7 @@ const Capabilities = () => {
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {capabilities.map((item) => (
+          {capacidades.map((item) => (
             <article
               key={item.title}
               className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-zinc-950"
