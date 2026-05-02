@@ -21,11 +21,7 @@ export default function Error({ error, reset }: ErrorProps) {
       <p className="max-w-md text-center text-secondary-text dark:text-gray-400">
         Ocorreu um problema ao carregar esta página. Tente novamente.
       </p>
-      <Button
-        onClick={reset}
-        variant="primary"
-        size="lg"
-      >
+      <Button onClick={reset} variant="primary" size="lg">
         Tentar novamente
       </Button>
     </div>
