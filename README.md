@@ -6,6 +6,8 @@ Desenvolvedor fullstack com projetos React, Next.js, TypeScript e Node.js em pro
 
 [Acessar portfólio](https://tharcio-portfolio.vercel.app) · [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/) · [Email](mailto:tharciosantos09@gmail.com)
 
+![Screenshot do portfólio de Tharcio Santos](./screenshot-portfolio.PNG)
+
 </div>
 
 ---

@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/icons/icon-192x192.png',
+    apple: '/icons/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
   formatDetection: {
