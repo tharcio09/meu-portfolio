@@ -11,7 +11,7 @@ const siteUrl = 'https://tharcio-portfolio.vercel.app';
 const siteName = 'Tharcio.dev';
 const siteTitle = 'Tharcio Santos | Desenvolvedor Fullstack';
 const siteDescription =
-  'Portfólio de Tharcio Santos, desenvolvedor fullstack em formação com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
+  'Portfólio de Tharcio Santos, desenvolvedor fullstack com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -106,8 +106,8 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f8fafc' },
-    { media: '(prefers-color-scheme: dark)', color: '#09090b' },
+    { media: '(prefers-color-scheme: light)', color: '#f0f4ff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0d1117' },
   ],
   colorScheme: 'light dark',
 };
