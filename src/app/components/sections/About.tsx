@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import Section from '../ui/Section';
-import { LuAward, LuGraduationCap } from 'react-icons/lu';
+import { LuAward, LuGraduationCap, LuBookOpen } from 'react-icons/lu';
 import { skills } from '@/data/about';
+import { learningItems } from '@/data/learning';
 
 const About = () => {
   return (
     <Section id="sobre-mim" spacing="compact">
       <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-[0.75fr_1.25fr] md:items-start">
         <div>
-          <div className="relative aspect-square max-w-64 overflow-hidden rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-zinc-900">
+          <div className="relative aspect-square max-w-64 overflow-hidden rounded-xl border border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-card shadow-sm">
             <Image
               src="/images/profile.png"
               alt="Foto de Tharcio Santos"
@@ -20,39 +21,35 @@ const About = () => {
         </div>
 
         <div>
-          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">Sobre</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
-            Desenvolvedor em formação, com foco em produto funcional.
+          <p className="text-sm font-medium text-accent dark:text-accent-light">Sobre</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-4xl">
+            Fullstack com projetos reais publicados.
           </h2>
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
             <p>
-              Venho construindo aplicações web completas para praticar o ciclo real de
-              desenvolvimento: interface, regra de negócio, autenticação, banco de dados e
-              publicação em produção.
+              Construo aplicações web completas — da interface ao banco de dados, com autenticação,
+              deploy e código público. Cada projeto que apresento aqui foi desenvolvido do zero com
+              decisões técnicas conscientes e produto funcionando no ar.
             </p>
             <p>
-              Meus projetos mostram experiência prática com CRUD, APIs, PWA, testes, responsividade
-              e integrações modernas usando React, Next.js, TypeScript, Prisma e Supabase.
-            </p>
-            <p>
-              Busco contribuir em times que valorizem organização, aprendizado contínuo e entrega
-              consistente. Gosto de entender o problema antes de escrever código e transformar isso
-              em interfaces claras.
+              Minha experiência em ambientes operacionais antes da programação me ensinou a
+              diagnosticar problemas antes de propor soluções — uma mentalidade que aplico
+              diretamente no desenvolvimento: entender o problema, planejar, então codar.
             </p>
           </div>
 
           <div className="mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-normal text-primary-text dark:text-light-text">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
               Stack e ferramentas
             </h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium ${
+                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium transition-all duration-200 hover:scale-105 ${
                     skill.featured
-                      ? 'border-cyan-200 bg-cyan-50 text-cyan-800 dark:border-cyan-900 dark:bg-cyan-950/30 dark:text-cyan-300'
-                      : 'border-gray-200 text-secondary-text dark:border-gray-800 dark:text-gray-400'
+                      ? 'border-accent-border bg-accent-subtle text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light'
+                      : 'border-border-light text-secondary-text dark:border-border-dark dark:text-dark-text'
                   }`}
                 >
                   <span className="text-sm">{skill.icon}</span>
@@ -62,29 +59,54 @@ const About = () => {
             </div>
           </div>
 
+          <div className="mt-8">
+            <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
+              <LuBookOpen className="text-accent dark:text-accent-light" />
+              Atualmente aprendendo
+            </h3>
+            <div className="mt-3 flex flex-col gap-2">
+              {learningItems.map((item) => (
+                <div
+                  key={item.name}
+                  className="flex items-start gap-3 rounded-lg border border-border-light bg-light-surface/60 p-3 dark:border-border-dark dark:bg-dark-surface/60"
+                >
+                  <span className="text-lg leading-none mt-0.5">{item.icon}</span>
+                  <div>
+                    <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+                      {item.name}
+                    </p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <div className="rounded-lg border border-gray-200 p-5 dark:border-gray-800">
-              <LuGraduationCap className="text-xl text-cyan-700 dark:text-cyan-300" />
+            <div className="rounded-lg border border-border-light p-5 dark:border-border-dark">
+              <LuGraduationCap className="text-xl text-accent dark:text-accent-light" />
               <h4 className="mt-3 font-bold text-primary-text dark:text-light-text">
                 Análise e Desenvolvimento de Sistemas
               </h4>
-              <p className="mt-1 text-sm text-secondary-text dark:text-gray-400">
+              <p className="mt-1 text-sm text-secondary-text dark:text-dark-text">
                 Anhanguera · Em andamento
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 p-5 dark:border-gray-800">
-              <LuAward className="text-xl text-cyan-700 dark:text-cyan-300" />
+            <div className="rounded-lg border border-border-light p-5 dark:border-border-dark">
+              <LuAward className="text-xl text-accent dark:text-accent-light" />
               <h4 className="mt-3 font-bold text-primary-text dark:text-light-text">NLW Connect</h4>
-              <p className="mt-1 text-sm text-secondary-text dark:text-gray-400">
+              <p className="mt-1 text-sm text-secondary-text dark:text-dark-text">
                 Rocketseat · Concluído
               </p>
               <a
                 href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-flex text-sm font-semibold text-cyan-700 hover:underline dark:text-cyan-300"
+                className="mt-2 inline-flex text-sm font-semibold text-accent hover:underline dark:text-accent-light"
               >
-                Ver credencial
+                Ver credencial →
               </a>
             </div>
           </div>
