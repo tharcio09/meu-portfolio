@@ -20,7 +20,7 @@ export const ThemeSwitcher = () => {
   return (
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      className="group rounded-md p-2 text-secondary-text transition-[background-color,color,transform] duration-200 ease-out hover:scale-105 hover:bg-gray-100 hover:text-cyan-700 active:scale-95 dark:text-gray-300 dark:hover:bg-zinc-900 dark:hover:text-cyan-300"
+      className="group rounded-md p-2 text-secondary-text transition-[background-color,color,transform] duration-200 ease-out hover:scale-105 hover:bg-accent-subtle hover:text-accent active:scale-95 dark:text-dark-text dark:hover:bg-accent-subtle-dark dark:hover:text-accent-light"
       aria-label="Alternar tema"
     >
       <span className="block transition-transform duration-200 ease-out group-hover:rotate-12">
