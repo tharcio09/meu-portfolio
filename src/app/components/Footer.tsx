@@ -1,5 +1,3 @@
-'use client';
-
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
