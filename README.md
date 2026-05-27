@@ -1,8 +1,8 @@
 <div align="center">
 
-# Tharcio Santos - Portfólio
+# Tharcio Santos — Portfólio
 
-Desenvolvedor Full Stack em formação, focado em criar aplicações web reais com React, Next.js, TypeScript e Node.js.
+Desenvolvedor fullstack com projetos React, Next.js, TypeScript e Node.js em produção.
 
 [Acessar portfólio](https://tharcio-portfolio.vercel.app) · [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/) · [Email](mailto:tharciosantos09@gmail.com)
 
@@ -12,22 +12,22 @@ Desenvolvedor Full Stack em formação, focado em criar aplicações web reais c
 
 ## Sobre
 
-Este é meu portfólio pessoal, desenvolvido para apresentar meus projetos, minha stack e minha trajetória de transição para o desenvolvimento web. A versão atual segue uma proposta minimalista e profissional, com foco em navegação simples, organização de código e apresentação clara das tecnologias utilizadas.
+Portfólio pessoal desenvolvido para apresentar projetos, stack técnica e trajetória profissional. O projeto segue uma proposta visual moderna com paleta indigo, suporte a tema claro/escuro, barra de progresso de scroll e animações de entrada — tudo construído com atenção à qualidade de código, acessibilidade e experiência do usuário.
 
 ---
 
 ## O que este projeto demonstra
 
-Mais do que uma vitrine, este repositório reúne práticas que venho estudando e aplicando em front-end e engenharia de software:
+Mais do que uma vitrine, este repositório reúne práticas aplicadas em front-end e engenharia de software:
 
-- **Arquitetura Moderna:** Construção com Next.js 15 (App Router).
-- **Componentização:** Criação de componentes UI reutilizáveis com React e TypeScript.
-- **Separação de Responsabilidades:** Isolamento dos dados da interface (uso da pasta `src/data`).
-- **Componentes com variantes:** Composição de estilos reutilizáveis e resolução de conflitos de classes com Tailwind.
-- **Acessibilidade e Responsividade:** Navegação suportada por teclado, states visuais de foco e layout mobile-first com Tailwind CSS.
-- **SEO Técnico:** Geração dinâmica de sitemap, robots.txt e tags Open Graph.
-- **Integração Contínua (CI):** Automação com GitHub Actions para validação de testes e lint em cada push.
-- **Qualidade de Software:** Testes unitários comportamentais com Vitest e Testing Library.
+- **Arquitetura Moderna:** Construção com Next.js 15 (App Router), separando dados, componentes e lógica de forma clara.
+- **Sistema de Design próprio:** Paleta de cores customizada no Tailwind com tokens semânticos (`accent`, `border-light`, `dark-card`), animações e keyframes definidos no `tailwind.config.js`.
+- **Componentização:** Componentes UI reutilizáveis com React e TypeScript — `Button`, `ProjectCard`, `Section` e outros.
+- **Separação de Responsabilidades:** Conteúdo isolado na pasta `src/data`, permitindo atualizar textos e projetos sem tocar no JSX.
+- **Acessibilidade e Responsividade:** Navegação por teclado, `aria-label`, foco visível e layout mobile-first com menu backdrop e bloqueio de scroll.
+- **SEO Técnico:** Sitemap dinâmico, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
+- **Integração Contínua (CI):** GitHub Actions validando lint, formatação Prettier e testes em cada push.
+- **Qualidade de Código:** Testes unitários com Vitest e Testing Library, ESLint, Prettier e Husky com lint-staged para formatação automática no pre-commit.
 
 ---
 
@@ -35,30 +35,30 @@ Mais do que uma vitrine, este repositório reúne práticas que venho estudando 
 
 ### HelpFlow
 
-Sistema de help desk com autenticação, CRUD de tickets, controle de acesso, banco relacional e deploy em produção.
+Sistema de help desk fullstack com autenticação por sessão, CRUD de tickets, controle de acesso por perfil, banco relacional e deploy em produção.
 
 - **Stack:** Next.js, React, TypeScript, Prisma, Supabase, NextAuth
 - **Links:** [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharcio09/helpflow)
 
 ### DevLinks
 
-Plataforma para criação e gerenciamento de páginas de links personalizadas, com upload de imagens e testes end-to-end.
+Plataforma para criar páginas de links personalizadas, com upload de imagens via Cloudinary, estado sincronizado com React Query e testes end-to-end com Cypress.
 
-- **Stack:** React, Vite, Tailwind CSS, React Query, Cloudinary, Cypress
+- **Stack:** React, Vite, TypeScript, Tailwind CSS, React Query, Cloudinary, Cypress
 - **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharcio09/frontend-api)
 
 ### Lista de Mercado
 
-PWA de lista de compras com funcionamento offline, persistência local e compartilhamento pelo WhatsApp.
+PWA de lista de compras com funcionamento 100% offline após instalação, persistência via Local Storage e compartilhamento pelo WhatsApp.
 
-- **Stack:** React, Vite, PWA, Tailwind CSS, Local Storage
+- **Stack:** React, Vite, TypeScript, PWA, Tailwind CSS, Local Storage
 - **Links:** [Demo](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharcio09/lista-mercado)
 
 ### Crypto Dashboard
 
-Dashboard para visualizar dados de criptomoedas consumindo a API da CoinGecko.
+Dashboard para visualizar preços e variações de criptomoedas em tempo real consumindo a API pública da CoinGecko.
 
-- **Stack:** Next.js, React, Tailwind CSS, CoinGecko API
+- **Stack:** Next.js, React, TypeScript, Tailwind CSS, CoinGecko API
 - **Links:** [Demo](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharcio09/crypto-dashboard)
 
 ---
@@ -74,42 +74,49 @@ Dashboard para visualizar dados de criptomoedas consumindo a API da CoinGecko.
 
 ### Bibliotecas de UI
 
-- `class-variance-authority`, `clsx` e `tailwind-merge` — composição de variantes, classes reutilizáveis e resolução de conflitos do Tailwind.
+- `class-variance-authority`, `clsx` e `tailwind-merge` — composição de variantes e resolução de conflitos de classes.
 - `next-themes` — suporte a tema claro, escuro e sistema.
-- `react-icons` — pacote de ícones SVG.
+- `react-icons` — ícones SVG.
 
 ### Qualidade e Testes
 
-- **Vitest** e **Testing Library** — O projeto possui testes unitários configurados focando no comportamento do usuário (como simulação de interações assíncronas), validando que a interface responda corretamente aos eventos esperados.
-- **ESLint** e **Prettier** — Padronização estática e formatação do código.
-- **GitHub Actions** — Pipeline de Integração Contínua (CI) que valida o código contra regras estáticas e falhas de teste.
+- **Vitest** e **Testing Library** — testes unitários comportamentais com simulação de interações assíncronas.
+- **ESLint** e **Prettier** — padronização estática e formatação do código.
+- **Husky** e **lint-staged** — formatação automática via Prettier no pre-commit.
+- **GitHub Actions** — pipeline de CI que valida lint, formatação e testes em cada push.
 
 ---
 
 ## Decisões Técnicas
 
-Durante o desenvolvimento deste portfólio, adotei algumas decisões arquiteturais focando na clareza e manutenção do código:
+- **Tokens de design no Tailwind:** Em vez de usar as cores padrão do Tailwind, defini tokens semânticos (`accent`, `dark-bg`, `border-light`, etc.) no `tailwind.config.js`. Isso centraliza a identidade visual e torna a manutenção mais simples — mudar a paleta inteira requer alterar poucos valores.
 
-- **Separação de Dados e Interface:** Extraí as informações estruturais (como lista de projetos e habilidades) para a pasta `src/data`. Isso permite atualizar o conteúdo do site sem necessidade de tocar ou quebrar o JSX visual.
-- **Sistema de Componentes:** Adotei a biblioteca `cva` com `tailwind-merge` para os componentes base (como os botões). Isso centralizou a regra de estilos, permitindo criar variantes e focar em acessibilidade sem duplicar grandes strings CSS pelo código.
-- **Testes Comportamentais:** Nos testes configurados com Vitest, utilizo `userEvent` em vez do disparo comum de eventos, para simular a interação o mais próximo possível da realidade do navegador, aguardando as alterações dinâmicas no DOM de forma assíncrona.
-- **Deploy e CI:** O projeto é hospedado na Vercel para tirar proveito do ecossistema de compilação do Next.js. O GitHub Actions funciona como uma camada de validação em pushes e pull requests, ajudando a identificar falhas de lint, formatação e testes antes da publicação ou integração de novas alterações.
+- **Separação de Dados e Interface:** As informações estruturais (projetos, habilidades, experiências) vivem em `src/data`, desacopladas do JSX. O conteúdo pode ser atualizado sem risco de quebrar componentes.
+
+- **Sistema de Componentes com CVA:** O componente `Button` usa `class-variance-authority` com `tailwind-merge`, centralizando variantes e resolvendo conflitos de classes sem duplicar strings CSS.
+
+- **Testes Comportamentais:** Os testes usam `userEvent` em vez de disparo direto de eventos, simulando interações reais do usuário e aguardando mudanças assíncronas no DOM.
+
+- **Deploy e CI:** Hospedado na Vercel com GitHub Actions como camada de validação — lint, formatação e testes rodam a cada push, garantindo que nada quebrado chegue à produção.
+
+- **Pre-commit automático:** Husky + lint-staged executam o Prettier apenas nos arquivos staged antes de cada commit, eliminando inconsistências de formatação sem overhead manual.
 
 ---
 
-## Estrutura de Pastas (Resumo)
+## Estrutura de Pastas
 
 ```txt
 meu-portfolio/
-├── .github/workflows/       # Pipeline de Integração Contínua (CI)
-├── public/                  # Assets públicos (imagens, pdf, metadados)
+├── .github/workflows/       # Pipeline de CI (GitHub Actions)
+├── .husky/                  # Hooks de pre-commit
+├── public/                  # Assets estáticos (imagens, ícones, PDF, manifest)
 ├── src/
-│   ├── app/                 # App Router (Páginas e rotas de erro)
-│   │   ├── components/      # Componentes UI reutilizáveis (Sections e Atômicos)
-│   │   └── hooks/           # Lógicas customizadas do React
-│   ├── data/                # Dicionário estático de dados e constantes
-│   └── lib/                 # Funções utilitárias auxiliares
-└── vitest.setup.ts          # Configurações globais dos testes do Vitest
+│   ├── app/                 # App Router — páginas, layout e rotas de erro
+│   │   ├── components/      # Componentes reutilizáveis (sections e UI atômicos)
+│   │   └── hooks/           # Hooks customizados do React
+│   ├── data/                # Dados estáticos e constantes (projetos, skills, etc.)
+│   └── lib/                 # Funções utilitárias
+└── vitest.setup.ts          # Configuração global dos testes
 ```
 
 ---
@@ -131,26 +138,18 @@ npm install
 
 ### Scripts Disponíveis
 
-| Script                 | Descrição                                                                          |
-| ---------------------- | ---------------------------------------------------------------------------------- |
-| `npm run dev`          | Inicia o servidor local de desenvolvimento.                                        |
-| `npm run build`        | Compila a versão otimizada da aplicação para produção.                             |
-| `npm start`            | Inicia o servidor com o build gerado.                                              |
-| `npm run lint`         | Analisa e lista os problemas de padronização com ESLint.                           |
-| `npm run lint:fix`     | Tenta corrigir os problemas de linting automaticamente.                            |
-| `npm run format`       | Formata o código do projeto forçadamente via Prettier.                             |
-| `npm run format:check` | Confirma se todos os arquivos estão formatados corretamente (usado pela pipeline). |
-| `npm test`             | Executa os testes do Vitest no modo watch.                                         |
-| `npm run test:run`     | Executa a suíte de testes apenas uma vez (ideal para CI).                          |
-| `npm run test:watch`   | Atalho explícito para executar os testes em modo interativo.                       |
-
----
-
-## Próximos Passos (Evolução)
-
-- Ampliar a cobertura de testes para outros componentes atômicos.
-- Adicionar Cypress ou Playwright para criação de testes End-to-End (E2E).
-- Adicionar hooks de pre-commit com Husky para reforçar lint, formatação e testes antes dos commits.
+| Script                 | Descrição                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------- |
+| `npm run dev`          | Inicia o servidor local de desenvolvimento.                                      |
+| `npm run build`        | Compila a versão otimizada para produção.                                        |
+| `npm start`            | Inicia o servidor com o build gerado.                                            |
+| `npm run lint`         | Lista problemas de padronização com ESLint.                                      |
+| `npm run lint:fix`     | Corrige problemas de lint automaticamente.                                       |
+| `npm run format`       | Formata todos os arquivos via Prettier.                                          |
+| `npm run format:check` | Verifica se todos os arquivos estão formatados corretamente (usado na pipeline). |
+| `npm test`             | Executa os testes no modo watch.                                                 |
+| `npm run test:run`     | Executa a suíte de testes uma única vez (ideal para CI).                         |
+| `npm run test:watch`   | Executa os testes em modo interativo.                                            |
 
 ---
 
