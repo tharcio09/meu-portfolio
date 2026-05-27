@@ -12,7 +12,8 @@
     "format:check": "prettier . --check",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "prepare": "husky"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
@@ -39,12 +40,17 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "^15.5.15",
     "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
     "jsdom": "^29.1.1",
+    "lint-staged": "^17.0.5",
     "postcss": "^8.5.6",
     "prettier": "^3.8.3",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.7.0",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.1.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,json,md,yml,yaml}": "prettier --write"
   }
 }
