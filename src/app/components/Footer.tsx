@@ -40,8 +40,7 @@ const Footer = () => {
         </div>
 
         <p className="text-sm text-secondary-text dark:text-dark-text">
-          Feito com{' '}
-          <span className="text-accent dark:text-accent-light font-medium">Next.js</span>
+          Feito com <span className="text-accent dark:text-accent-light font-medium">Next.js</span>
           {' · '}
           <a
             href="https://github.com/tharcio09/meu-portfolio"
@@ -60,4 +59,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

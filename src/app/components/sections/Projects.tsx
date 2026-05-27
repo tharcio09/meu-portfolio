@@ -11,7 +11,9 @@ const Projects = () => {
   return (
     <Section id="projetos">
       <div className="mb-16 text-center">
-        <p className="text-sm font-medium text-accent dark:text-accent-light">Projetos em destaque</p>
+        <p className="text-sm font-medium text-accent dark:text-accent-light">
+          Projetos em destaque
+        </p>
         <h2 className="mt-3 text-4xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-5xl">
           Projetos com produto no ar
         </h2>
@@ -46,4 +48,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

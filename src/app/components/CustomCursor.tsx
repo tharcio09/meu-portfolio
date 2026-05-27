@@ -24,7 +24,9 @@ const CustomCursor = () => {
       setIsVisible(true);
 
       const target = e.target as HTMLElement;
-      const clickable = target.closest('a, button, [role="button"], input, label, select, textarea');
+      const clickable = target.closest(
+        'a, button, [role="button"], input, label, select, textarea'
+      );
       setIsPointer(!!clickable);
     };
 
@@ -80,4 +82,3 @@ const CustomCursor = () => {
 };
 
 export default CustomCursor;
-

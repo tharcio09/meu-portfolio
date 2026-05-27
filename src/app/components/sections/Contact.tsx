@@ -77,7 +77,7 @@ const Contact = () => {
                   className={cn(
                     'h-8 px-3 text-xs gap-1.5',
                     copied &&
-                    'border-green-300 bg-green-50 text-green-700 hover:border-green-300 hover:bg-green-50 hover:text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
+                      'border-green-300 bg-green-50 text-green-700 hover:border-green-300 hover:bg-green-50 hover:text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
                   )}
                 >
                   {copied ? (

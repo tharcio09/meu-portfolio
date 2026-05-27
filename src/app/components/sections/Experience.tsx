@@ -22,7 +22,10 @@ const Experience = () => {
         {/* Timeline vertical compacta */}
         <div className="mt-8 relative">
           {/* Linha vertical */}
-          <div className="absolute left-3 top-2 bottom-2 w-px bg-border-light dark:bg-border-dark" aria-hidden="true" />
+          <div
+            className="absolute left-3 top-2 bottom-2 w-px bg-border-light dark:bg-border-dark"
+            aria-hidden="true"
+          />
 
           <div className="space-y-6 pl-10">
             {experienciasAnteriores.map((item) => (

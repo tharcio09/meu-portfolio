@@ -39,8 +39,13 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   if (featured) {
     return (
-      <article className="grid overflow-hidden rounded-xl border border-border-light bg-white shadow-sm hover:shadow-md dark:border-border-dark dark:bg-dark-card lg:grid-cols-[0.95fr_1.05fr]"
-        style={{ transitionProperty: 'box-shadow', transitionDuration: '300ms', transitionTimingFunction: 'ease' }}
+      <article
+        className="grid overflow-hidden rounded-xl border border-border-light bg-white shadow-sm hover:shadow-md dark:border-border-dark dark:bg-dark-card lg:grid-cols-[0.95fr_1.05fr]"
+        style={{
+          transitionProperty: 'box-shadow',
+          transitionDuration: '300ms',
+          transitionTimingFunction: 'ease',
+        }}
       >
         <div className="relative min-h-72 border-b border-border-light bg-light-surface p-4 dark:border-border-dark dark:bg-dark-surface lg:border-b-0 lg:border-r">
           {/* Barra de browser falsa */}
@@ -155,7 +160,11 @@ const ProjectCard = ({
   return (
     <article
       className="group flex h-full flex-col overflow-hidden rounded-xl border border-border-light bg-white shadow-sm hover:-translate-y-1 hover:shadow-md hover:border-accent-border dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-border-dark"
-      style={{ transitionProperty: 'transform, box-shadow, border-color', transitionDuration: '300ms', transitionTimingFunction: 'ease' }}
+      style={{
+        transitionProperty: 'transform, box-shadow, border-color',
+        transitionDuration: '300ms',
+        transitionTimingFunction: 'ease',
+      }}
     >
       <div className="relative h-48 overflow-hidden border-b border-border-light bg-light-surface p-3 dark:border-border-dark dark:bg-dark-surface">
         <div className="absolute left-3 right-3 top-3 z-10 flex h-7 items-center gap-1.5 rounded-t-md border border-b-0 border-border-light bg-white px-2 dark:border-border-dark dark:bg-dark-card">

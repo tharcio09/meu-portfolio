@@ -45,7 +45,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
@@ -65,7 +64,9 @@
   }
 
   :root {
-    transition: background-color 300ms ease, color 300ms ease;
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
   }
 
   h1,
@@ -96,7 +97,6 @@
 }
 
 @layer utilities {
-
   /* Stagger animations para listas de cards */
   .stagger-1 {
     animation-delay: 0ms;

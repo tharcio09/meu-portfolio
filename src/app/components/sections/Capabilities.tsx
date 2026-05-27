@@ -25,7 +25,11 @@ const Capabilities = () => {
             <article
               key={item.title}
               className="group rounded-xl border border-border-light bg-white p-6 shadow-sm hover:shadow-md hover:border-accent-border hover:-translate-y-1 dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-border-dark"
-              style={{ transitionProperty: 'transform, box-shadow, border-color', transitionDuration: '300ms', transitionTimingFunction: 'ease' }}
+              style={{
+                transitionProperty: 'transform, box-shadow, border-color',
+                transitionDuration: '300ms',
+                transitionTimingFunction: 'ease',
+              }}
             >
               <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light transition-transform duration-200 group-hover:scale-110">
                 {item.icon}
