@@ -46,7 +46,7 @@ const Footer = () => {
             href="https://github.com/tharcio09/meu-portfolio"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent hover:underline dark:text-accent-light"
+            className="text-accent underline decoration-accent/40 hover:decoration-accent dark:text-accent-light dark:decoration-accent-light/40 dark:hover:decoration-accent-light"
           >
             Ver código
           </a>

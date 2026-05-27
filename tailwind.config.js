@@ -32,8 +32,8 @@ module.exports = {
 
         /* Accent — Indigo */
         accent: {
-          DEFAULT: '#6366f1',
-          hover: '#4f46e5',
+          DEFAULT: '#4f46e5',
+          hover: '#4338ca',
           light: '#818cf8',
           'light-hover': '#a5b4fc',
           subtle: '#eef2ff',
