@@ -8,39 +8,47 @@ const Experience = () => {
     <Section id="experiencia" spacing="compact">
       <div className="mx-auto max-w-5xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-cyan-700 dark:text-cyan-300">Trajetória</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-normal text-primary-text dark:text-light-text md:text-4xl">
-            De onde vim.
+          <p className="text-sm font-medium text-accent dark:text-accent-light">Trajetória</p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-4xl">
+            Antes do código
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-gray-300">
-            Antes da programação, atuei em outras áreas. Estou em transição de carreira e buscando
-            evoluir em desenvolvimento web — os projetos apresentados mostram o que venho
-            construindo nesse caminho.
+          <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
+            Trabalhei em ambientes operacionais antes de migrar para desenvolvimento. Essa
+            experiência me ensinou a diagnosticar problemas com método e a comunicar decisões com
+            clareza — competências que uso todo dia no trabalho com código.
           </p>
         </div>
 
-        <div className="mt-10 space-y-3">
-          {experienciasAnteriores.map((item) => (
-            <article
-              key={item.role}
-              className="flex flex-col gap-1 rounded-lg border border-gray-200 p-5 sm:flex-row sm:items-center sm:justify-between dark:border-gray-800"
-            >
-              <div>
-                <h3 className="font-semibold text-primary-text dark:text-light-text">
-                  {item.role}
-                  <span className="ml-2 font-normal text-cyan-700 dark:text-cyan-400">
-                    · {item.org}
+        {/* Timeline vertical compacta */}
+        <div className="mt-8 relative">
+          {/* Linha vertical */}
+          <div className="absolute left-3 top-2 bottom-2 w-px bg-border-light dark:bg-border-dark" aria-hidden="true" />
+
+          <div className="space-y-6 pl-10">
+            {experienciasAnteriores.map((item) => (
+              <article key={item.role} className="relative">
+                {/* Ponto na timeline */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-[1.85rem] top-1.5 h-2.5 w-2.5 rounded-full border-2 border-accent bg-white dark:bg-dark-bg"
+                />
+                <div className="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:gap-3">
+                  <h3 className="font-semibold text-primary-text dark:text-light-text">
+                    {item.role}
+                    <span className="ml-2 font-normal text-accent dark:text-accent-light">
+                      · {item.org}
+                    </span>
+                  </h3>
+                  <span className="shrink-0 text-xs tabular-nums text-secondary-text dark:text-dark-text">
+                    {item.period}
                   </span>
-                </h3>
-                <p className="mt-1 text-sm text-secondary-text dark:text-gray-400">
+                </div>
+                <p className="mt-1 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
                   {item.summary}
                 </p>
-              </div>
-              <span className="shrink-0 text-xs tabular-nums text-secondary-text dark:text-gray-500">
-                {item.period}
-              </span>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </Section>
