@@ -36,9 +36,9 @@ export const projects: Project[] = [
       },
     ],
     highlights: [
-      'Autenticação por sessão com controle de acesso',
-      'CRUD completo de tickets com status e prioridade',
-      'Banco relacional, deploy ativo e interface responsiva',
+      'Autenticação por sessão com NextAuth e controle de acesso por perfil',
+      'CRUD completo de tickets com status, prioridade e histórico',
+      'Banco relacional (Supabase + Prisma), deploy ativo e interface responsiva',
     ],
     badge: 'Auth + banco + deploy',
     imageUrl: '/images/helpflow-screenshot.png',
@@ -49,33 +49,90 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'DevLinks: Perfil e Linktree',
+    title: 'DevLinks — Perfil e Linktree',
     description:
-      'Plataforma fullstack para criar páginas de links personalizadas, com upload de imagens, estado sincronizado e testes end-to-end.',
-    outcome: 'Perfil editável + upload + testes',
+      'Plataforma fullstack para criar páginas de links personalizadas, com upload de imagens via Cloudinary, estado sincronizado com React Query e cobertura de testes end-to-end com Cypress.',
+    casePoints: [
+      {
+        label: 'Problema',
+        value: 'Centralizar links de redes sociais e portfólio em uma única página editável.',
+      },
+      {
+        label: 'Solução',
+        value: 'Perfil editável em tempo real com upload de avatar e persistência de estado.',
+      },
+      {
+        label: 'Diferencial',
+        value: 'Testes E2E com Cypress cobrindo fluxo completo de edição e navegação.',
+      },
+    ],
+    highlights: [
+      'Upload de imagem via Cloudinary com preview instantâneo',
+      'Testes end-to-end com Cypress — diferencial técnico para vaga júnior',
+      'React Query para sincronização de estado entre servidor e cliente',
+    ],
+    outcome: 'Edição em tempo real + upload + testes E2E',
     imageUrl: '/images/screenshot-devlinks.png',
     githubUrl: 'https://github.com/tharcio09/frontend-api',
     demoUrl: 'https://frontend-api-weld.vercel.app/',
-    tags: ['React', 'Vite', 'Tailwind CSS', 'React Query', 'Cloudinary', 'Cypress'],
+    tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'React Query', 'Cloudinary', 'Cypress'],
   },
   {
     title: 'Lista de Mercado — PWA',
     description:
-      'Aplicativo de lista de compras mobile-first que funciona offline, salva no dispositivo e compartilha pelo WhatsApp.',
-    outcome: 'Offline + local storage + compartilhamento',
+      'Aplicativo de lista de compras mobile-first que funciona completamente offline, salva dados no dispositivo via Local Storage e compartilha pelo WhatsApp com um clique.',
+    casePoints: [
+      {
+        label: 'Problema',
+        value: 'Precisar de internet para acessar uma lista de compras simples.',
+      },
+      {
+        label: 'Solução',
+        value: 'PWA que instala como app nativo, funciona offline e persiste dados localmente.',
+      },
+      {
+        label: 'Entrega',
+        value: 'Compartilhamento via WhatsApp e deploy ativo na Vercel.',
+      },
+    ],
+    highlights: [
+      'Funciona 100% offline após instalação (Service Worker + Cache API)',
+      'Instalável como app nativo em Android e iOS',
+      'Compartilhamento da lista via WhatsApp com formatação automática',
+    ],
+    outcome: 'Offline + instalável + compartilhamento',
     imageUrl: '/images/lista-mercado-screenshot.png',
     githubUrl: 'https://github.com/tharcio09/lista-mercado',
     demoUrl: 'https://lista-mercado-sage.vercel.app/',
-    tags: ['React', 'Vite', 'PWA', 'Tailwind CSS', 'Local Storage'],
+    tags: ['React', 'Vite', 'TypeScript', 'PWA', 'Tailwind CSS', 'Local Storage'],
   },
   {
     title: 'Crypto Dashboard',
     description:
-      'Dashboard para acompanhar dados de criptomoedas em tempo real, consumindo a API da CoinGecko com interface responsiva.',
-    outcome: 'Dashboard + API externa + dados em tempo real',
+      'Dashboard para acompanhar preços e variações de criptomoedas em tempo real, consumindo a API pública da CoinGecko com atualização automática e interface responsiva.',
+    casePoints: [
+      {
+        label: 'Problema',
+        value: 'Acompanhar dados de cripto sem precisar acessar múltiplas plataformas.',
+      },
+      {
+        label: 'Solução',
+        value: 'Dashboard unificado com dados em tempo real via CoinGecko API.',
+      },
+      {
+        label: 'Entrega',
+        value: 'Interface responsiva com atualização automática e deploy ativo.',
+      },
+    ],
+    highlights: [
+      'Integração com API externa (CoinGecko) com atualização periódica',
+      'Dashboard com dados em tempo real e interface responsiva',
+      'Gerenciamento de estado de loading e error boundaries',
+    ],
+    outcome: 'API externa + dados em tempo real + responsivo',
     imageUrl: '/images/screenshot-crypto.png',
     githubUrl: 'https://github.com/tharcio09/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
-    tags: ['Next.js', 'React', 'Tailwind CSS', 'CoinGecko API'],
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'CoinGecko API'],
   },
 ];

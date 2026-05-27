@@ -5,9 +5,9 @@ export type NavLink = {
 };
 
 export const navLinks: NavLink[] = [
-  { href: '#entregas', label: 'Entregas' },
   { href: '#projetos', label: 'Projetos' },
   { href: '#sobre-mim', label: 'Sobre' },
+  { href: '#habilidades', label: 'Habilidades' },
   { href: '#experiencia', label: 'Trajetória' },
   { href: '#contato', label: 'Contato', cta: true },
 ];
@@ -19,12 +19,12 @@ export const redesSociais = [
     label: 'LinkedIn',
     description: 'Conversar sobre vagas, networking e carreira.',
     href: 'https://www.linkedin.com/in/tharcio-santos-dev/',
-    action: 'Abrir',
+    action: 'Ver perfil',
   },
   {
     label: 'GitHub',
     description: 'Ver código, projetos publicados e evolução técnica.',
     href: 'https://github.com/tharcio09',
-    action: 'Abrir',
+    action: 'Ver repositórios',
   },
 ];
