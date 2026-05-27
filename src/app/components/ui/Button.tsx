@@ -3,16 +3,16 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold transition-all duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-offset-dark-bg',
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-semibold transition-all duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-offset-dark-bg',
   {
     variants: {
       variant: {
         primary:
-          'bg-primary-text text-white hover:bg-slate-700 dark:bg-light-text dark:text-dark-bg dark:hover:bg-gray-200 shadow-sm',
+          'bg-accent text-white hover:bg-accent-hover dark:bg-accent-light dark:text-dark-bg dark:hover:bg-accent-light-hover shadow-sm shadow-accent/20 dark:shadow-none',
         outline:
-          'border border-gray-300 bg-transparent text-primary-text hover:border-cyan-600 hover:text-cyan-700 dark:border-gray-700 dark:text-light-text dark:hover:border-cyan-300 dark:hover:text-cyan-300 shadow-sm',
+          'border border-gray-300 bg-transparent text-primary-text hover:border-accent hover:text-accent dark:border-gray-700 dark:text-light-text dark:hover:border-accent-light dark:hover:text-accent-light shadow-sm',
         ghost:
-          'text-secondary-text hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-zinc-800 dark:hover:text-light-text',
+          'text-secondary-text hover:bg-accent-subtle dark:text-dark-text dark:hover:bg-accent-subtle-dark dark:hover:text-light-text',
       },
       size: {
         default: 'h-10 px-4 py-2.5',

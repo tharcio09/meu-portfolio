@@ -1,10 +1,17 @@
+/* @property precisa ser top-level — não pode ficar dentro de @layer */
+@property --scroll-progress {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   * {
-    @apply border-gray-200 dark:border-gray-800;
+    @apply border-border-light dark:border-border-dark;
   }
 
   html {
@@ -12,37 +19,53 @@
   }
 
   body {
-    @apply bg-light-bg text-primary-text bg-fixed;
+    @apply bg-light-bg text-primary-text;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
   }
 
-  .dark body {
-    @apply bg-dark-bg text-light-text;
+  @keyframes scroll-progress {
+    to {
+      --scroll-progress: 100%;
+    }
   }
 
-  body,
-  nav,
-  section,
-  article,
-  footer,
-  button,
-  a,
-  span,
-  div {
-    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
-    transition-duration: 420ms;
-    transition-timing-function: ease-out;
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 3px;
+    width: var(--scroll-progress, 0%);
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-      animation-duration: 0.01ms;
-      animation-iteration-count: 1;
-      transition-duration: 0.01ms;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
     }
+  }
+
+  /* Transição de tema — apenas propriedades de cor, sem afetar transform/opacity */
+  *,
+  *::before,
+  *::after {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+  }
+
+  :root {
+    transition: background-color 300ms ease, color 300ms ease;
   }
 
   h1,
@@ -64,6 +87,30 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 dark:bg-gray-700 rounded-full hover:bg-gray-400 dark:hover:bg-gray-600 transition-colors;
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+}
+
+@layer utilities {
+
+  /* Stagger animations para listas de cards */
+  .stagger-1 {
+    animation-delay: 0ms;
+  }
+
+  .stagger-2 {
+    animation-delay: 100ms;
+  }
+
+  .stagger-3 {
+    animation-delay: 200ms;
+  }
+
+  .stagger-4 {
+    animation-delay: 300ms;
   }
 }
