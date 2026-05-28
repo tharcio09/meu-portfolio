@@ -47,7 +47,7 @@ Sistema de help desk fullstack com autenticação por sessão, CRUD de tickets, 
 Plataforma para criar páginas de links personalizadas, com upload de imagens via Cloudinary, estado sincronizado com React Query e testes end-to-end com Cypress.
 
 - **Stack:** React, Vite, TypeScript, Tailwind CSS, React Query, Cloudinary, Cypress
-- **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharciosantos/frontend-api)
+- **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharciosantos/devlinks-web) · [API](https://github.com/tharciosantos/devlinks-api)
 
 ### Lista de Mercado
 
