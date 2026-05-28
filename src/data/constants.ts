@@ -24,7 +24,7 @@ export const redesSociais = [
   {
     label: 'GitHub',
     description: 'Ver código, projetos publicados e evolução técnica.',
-    href: 'https://github.com/tharcio09',
+    href: 'https://github.com/tharciosantos',
     action: 'Ver repositórios',
   },
 ];
