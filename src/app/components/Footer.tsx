@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex justify-center space-x-6 mb-5">
           <a
-            href="https://github.com/tharcio09"
+            href="https://github.com/tharciosantos"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub de Tharcio Santos"
@@ -41,7 +41,7 @@ const Footer = () => {
           Feito com <span className="text-accent dark:text-accent-light font-medium">Next.js</span>
           {' · '}
           <a
-            href="https://github.com/tharcio09/meu-portfolio"
+            href="https://github.com/tharciosantos/meu-portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="text-accent underline decoration-accent/40 hover:decoration-accent dark:text-accent-light dark:decoration-accent-light/40 dark:hover:decoration-accent-light"
