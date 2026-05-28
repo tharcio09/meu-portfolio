@@ -40,28 +40,28 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em front-e
 Sistema de help desk fullstack com autenticação por sessão, CRUD de tickets, controle de acesso por perfil, banco relacional e deploy em produção.
 
 - **Stack:** Next.js, React, TypeScript, Prisma, Supabase, NextAuth
-- **Links:** [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharcio09/helpflow)
+- **Links:** [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
 
 ### DevLinks
 
 Plataforma para criar páginas de links personalizadas, com upload de imagens via Cloudinary, estado sincronizado com React Query e testes end-to-end com Cypress.
 
 - **Stack:** React, Vite, TypeScript, Tailwind CSS, React Query, Cloudinary, Cypress
-- **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharcio09/frontend-api)
+- **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharciosantos/frontend-api)
 
 ### Lista de Mercado
 
 PWA de lista de compras com funcionamento 100% offline após instalação, persistência via Local Storage e compartilhamento pelo WhatsApp.
 
 - **Stack:** React, Vite, TypeScript, PWA, Tailwind CSS, Local Storage
-- **Links:** [Demo](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharcio09/lista-mercado)
+- **Links:** [Demo](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharciosantos/lista-mercado)
 
 ### Crypto Dashboard
 
 Dashboard para visualizar preços e variações de criptomoedas em tempo real consumindo a API pública da CoinGecko.
 
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, CoinGecko API
-- **Links:** [Demo](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharcio09/crypto-dashboard)
+- **Links:** [Demo](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharciosantos/crypto-dashboard)
 
 ---
 
@@ -133,7 +133,7 @@ meu-portfolio/
 ### Instalação
 
 ```bash
-git clone https://github.com/tharcio09/meu-portfolio.git
+git clone https://github.com/tharciosantos/meu-portfolio.git
 cd meu-portfolio
 npm install
 ```
@@ -160,6 +160,6 @@ npm install
 **Tharcio Santos**
 
 - [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/)
-- [GitHub](https://github.com/tharcio09)
+- [GitHub](https://github.com/tharciosantos)
 - [Email](mailto:tharciosantos09@gmail.com)
 - [Portfólio](https://tharcio-portfolio.vercel.app/)
