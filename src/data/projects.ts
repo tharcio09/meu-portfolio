@@ -73,7 +73,7 @@ export const projects: Project[] = [
     ],
     outcome: 'Edição em tempo real + upload + testes E2E',
     imageUrl: '/images/screenshot-devlinks.png',
-    githubUrl: 'https://github.com/tharcio09/frontend-api',
+    githubUrl: 'https://github.com/tharciosantos/devlinks-web',
     demoUrl: 'https://frontend-api-weld.vercel.app/',
     tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'React Query', 'Cloudinary', 'Cypress'],
   },

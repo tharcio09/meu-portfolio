@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     'Prisma',
     'Supabase',
   ],
-  authors: [{ name: 'Tharcio Santos', url: 'https://github.com/tharcio09' }],
+  authors: [{ name: 'Tharcio Santos', url: 'https://github.com/tharciosantos' }],
   creator: 'Tharcio Santos',
   publisher: 'Tharcio Santos',
   category: 'portfolio',
