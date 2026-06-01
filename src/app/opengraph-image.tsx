@@ -59,7 +59,7 @@ export default function OpenGraphImage() {
             fontWeight: 700,
           }}
         >
-          Disponível para estágio ou vaga júnior
+          Disponível para oportunidade júnior
         </div>
       </div>
 
@@ -71,17 +71,19 @@ export default function OpenGraphImage() {
           Tharcio Santos
         </div>
         <div style={{ maxWidth: 950, color: '#d4d4d8', fontSize: 34, lineHeight: 1.28 }}>
-          Desenvolvedor fullstack em formação criando aplicações web reais com autenticação, banco
-          de dados, APIs e deploy ativo.
+          Desenvolvedor fullstack com stack completa em produção.
+        </div>
+        <div style={{ maxWidth: 950, color: '#d4d4d8', fontSize: 30, lineHeight: 1.28 }}>
+          Aplicações com interface, autenticação, banco de dados, APIs e deploy ativo.
         </div>
       </div>
 
       <div style={{ display: 'flex', gap: '16px', color: '#a1a1aa', fontSize: 24 }}>
-        <span>HelpFlow em produção</span>
+        <span>Projetos com deploy ativo</span>
         <span>·</span>
         <span>Código público</span>
         <span>·</span>
-        <span>Projetos com deploy ativo</span>
+        <span>Decisões técnicas visíveis</span>
       </div>
     </div>,
     size
