@@ -10,7 +10,7 @@ export type Project = {
   highlights?: string[];
   badge?: string;
   outcome?: string;
-  technicalDifferential?: string;
+  technicalHighlight?: string;
   casePoints?: {
     label: string;
     value: string;
@@ -21,15 +21,15 @@ export const projects: Project[] = [
   {
     title: 'HelpFlow — Sistema de Help Desk',
     description:
-      'Sistema fullstack para organizar chamados internos com login, painel de gestão, status, prioridade e banco relacional. O projeto cobre o fluxo completo: interface, regra de negócio, autenticação, persistência e deploy.',
+      'Sistema fullstack para organizar chamados internos com login, painel de gestão, status, prioridade e banco relacional.',
     casePoints: [
       {
         label: 'Problema',
-        value: 'Registrar e priorizar solicitações internas sem perder histórico.',
+        value: 'Registrar, priorizar e acompanhar solicitações internas sem perder histórico.',
       },
       {
         label: 'Solução',
-        value: 'Painel autenticado com CRUD de tickets, status e prioridade.',
+        value: 'Painel autenticado com CRUD de tickets, status, prioridade e histórico.',
       },
       {
         label: 'Entrega',
@@ -39,10 +39,10 @@ export const projects: Project[] = [
     highlights: [
       'Autenticação por sessão com NextAuth e controle de acesso por perfil',
       'CRUD completo de tickets com status, prioridade e histórico',
-      'Banco relacional (Supabase + Prisma), deploy ativo e interface responsiva',
+      'Banco relacional com Supabase + Prisma e interface responsiva',
     ],
-    technicalDifferential:
-      'Diferencial técnico: autenticação com controle de acesso, CRUD de chamados e persistência em banco relacional.',
+    technicalHighlight:
+      'Usei autenticação com controle de acesso e persistência relacional para cobrir o fluxo completo de gestão de chamados.',
     badge: 'Auth + banco + deploy',
     imageUrl: '/images/helpflow-screenshot.png',
     githubUrl: 'https://github.com/tharciosantos/helpflow',
@@ -54,28 +54,19 @@ export const projects: Project[] = [
   {
     title: 'DevLinks — Perfil e Linktree',
     description:
-      'Plataforma fullstack para criar páginas de links personalizadas, com upload de imagens via Cloudinary, estado sincronizado com React Query e cobertura de testes end-to-end com Cypress.',
+      'Plataforma para criar páginas de links personalizadas, com perfil editável, upload de imagem e estado sincronizado.',
     casePoints: [
       {
         label: 'Problema',
-        value: 'Centralizar links de redes sociais e portfólio em uma única página editável.',
+        value: 'Centralizar links de redes sociais e portfólio em uma página editável.',
       },
       {
         label: 'Solução',
-        value: 'Perfil editável em tempo real com upload de avatar e persistência de estado.',
-      },
-      {
-        label: 'Diferencial',
-        value: 'Testes E2E com Cypress cobrindo fluxo completo de edição e navegação.',
+        value: 'Perfil personalizável com avatar, links dinâmicos e persistência de estado.',
       },
     ],
-    highlights: [
-      'Upload de imagem via Cloudinary com preview instantâneo',
-      'Testes end-to-end com Cypress — diferencial técnico para vaga júnior',
-      'React Query para sincronização de estado entre servidor e cliente',
-    ],
-    technicalDifferential:
-      'Diferencial técnico: upload de imagem, estado sincronizado com React Query e testes E2E cobrindo o fluxo principal.',
+    technicalHighlight:
+      'Upload via Cloudinary, sincronização com React Query e testes E2E do fluxo principal.',
     outcome: 'Edição em tempo real + upload + testes E2E',
     imageUrl: '/images/screenshot-devlinks.png',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
@@ -85,28 +76,20 @@ export const projects: Project[] = [
   {
     title: 'Lista de Mercado — PWA',
     description:
-      'Aplicativo de lista de compras mobile-first que funciona completamente offline, salva dados no dispositivo via Local Storage e compartilha pelo WhatsApp com um clique.',
+      'Aplicativo mobile-first para lista de compras, com uso offline, persistência local e compartilhamento pelo WhatsApp.',
     casePoints: [
       {
         label: 'Problema',
-        value: 'Precisar de internet para acessar uma lista de compras simples.',
+        value: 'Acessar e atualizar uma lista de compras mesmo sem internet.',
       },
       {
         label: 'Solução',
-        value: 'PWA que instala como app nativo, funciona offline e persiste dados localmente.',
-      },
-      {
-        label: 'Entrega',
-        value: 'Compartilhamento via WhatsApp e deploy ativo na Vercel.',
+        value:
+          'Aplicação instalável que salva dados no dispositivo e permite compartilhar a lista.',
       },
     ],
-    highlights: [
-      'Funciona 100% offline após instalação (Service Worker + Cache API)',
-      'Instalável como app nativo em Android e iOS',
-      'Compartilhamento da lista via WhatsApp com formatação automática',
-    ],
-    technicalDifferential:
-      'Diferencial técnico: funcionamento offline, persistência local e experiência mobile-first como PWA instalável.',
+    technicalHighlight:
+      'PWA instalável com funcionamento offline, Local Storage e experiência otimizada para celular.',
     outcome: 'Offline + instalável + compartilhamento',
     imageUrl: '/images/lista-mercado-screenshot.png',
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
@@ -116,28 +99,19 @@ export const projects: Project[] = [
   {
     title: 'Crypto Dashboard',
     description:
-      'Dashboard para acompanhar preços e variações de criptomoedas em tempo real, consumindo a API pública da CoinGecko com atualização automática e interface responsiva.',
+      'Dashboard responsivo para acompanhar preços e variações de criptomoedas usando a API pública da CoinGecko.',
     casePoints: [
       {
         label: 'Problema',
-        value: 'Acompanhar dados de cripto sem precisar acessar múltiplas plataformas.',
+        value: 'Consultar dados de cripto sem alternar entre múltiplas plataformas.',
       },
       {
         label: 'Solução',
-        value: 'Dashboard unificado com dados em tempo real via CoinGecko API.',
-      },
-      {
-        label: 'Entrega',
-        value: 'Interface responsiva com atualização automática e deploy ativo.',
+        value: 'Interface unificada com dados atualizados via CoinGecko API.',
       },
     ],
-    highlights: [
-      'Integração com API externa (CoinGecko) com atualização periódica',
-      'Dashboard com dados em tempo real e interface responsiva',
-      'Gerenciamento de estado de loading e error boundaries',
-    ],
-    technicalDifferential:
-      'Diferencial técnico: consumo de API externa, estados de loading/erro e atualização de dados em interface responsiva.',
+    technicalHighlight:
+      'Consumo de API externa com estados de loading, erro e atualização de dados na interface.',
     outcome: 'API externa + dados em tempo real + responsivo',
     imageUrl: '/images/screenshot-crypto.png',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
