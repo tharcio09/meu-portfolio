@@ -21,6 +21,7 @@ type ProjectCardProps = {
   badge?: string;
   casePoints?: CasePoint[];
   outcome?: string;
+  technicalDifferential?: string;
 };
 
 const ProjectCard = ({
@@ -36,6 +37,7 @@ const ProjectCard = ({
   badge,
   casePoints,
   outcome,
+  technicalDifferential,
 }: ProjectCardProps) => {
   if (featured) {
     return (
@@ -88,6 +90,14 @@ const ProjectCard = ({
             <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
               {description}
             </p>
+            {technicalDifferential && (
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                <span className="font-semibold text-accent dark:text-accent-light">
+                  Diferencial técnico:
+                </span>{' '}
+                {technicalDifferential.replace('Diferencial técnico: ', '')}
+              </p>
+            )}
           </div>
 
           {casePoints && casePoints.length > 0 && (
@@ -196,6 +206,14 @@ const ProjectCard = ({
         <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
           {description}
         </p>
+        {technicalDifferential && (
+          <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+            <span className="font-semibold text-accent dark:text-accent-light">
+              Diferencial técnico:
+            </span>{' '}
+            {technicalDifferential.replace('Diferencial técnico: ', '')}
+          </p>
+        )}
 
         {casePoints && casePoints.length > 0 && (
           <div className="mt-4 space-y-2">

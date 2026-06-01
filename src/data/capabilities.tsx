@@ -12,18 +12,18 @@ export const capacidades: Capacidade[] = [
     icon: <LuCode />,
     title: 'Frontend responsivo',
     description:
-      'Interfaces com React, Next.js e Tailwind CSS, pensadas para clareza, navegação fluida e boa experiência em desktop e mobile.',
+      'Interfaces com React, Next.js e Tailwind CSS, com atenção a responsividade, clareza visual e navegação simples.',
   },
   {
     icon: <LuDatabase />,
-    title: 'APIs, autenticação e dados',
+    title: 'Autenticação, dados e APIs',
     description:
-      'Fluxos completos com login, CRUD, regras de negócio, Prisma, Supabase e integração entre frontend e backend.',
+      'Implementação de fluxos com login, CRUD, banco de dados, Prisma, Supabase e integração entre frontend e backend.',
   },
   {
     icon: <LuRocket />,
-    title: 'Deploy e produto no ar',
+    title: 'Deploy e evolução do produto',
     description:
-      'Projetos publicados, com código público, decisões técnicas documentadas e foco em entregar algo utilizável de ponta a ponta.',
+      'Publicação de projetos, documentação de decisões técnicas e melhoria contínua a partir de uso real e revisão do código.',
   },
 ];

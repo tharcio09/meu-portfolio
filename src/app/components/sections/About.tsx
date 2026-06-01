@@ -23,18 +23,18 @@ const About = () => {
         <div>
           <p className="text-sm font-medium text-accent dark:text-accent-light">Sobre</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-4xl">
-            Fullstack com projetos reais publicados.
+            Evolução prática através de projetos publicados.
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
             <p>
-              Construo aplicações web completas — da interface ao banco de dados, com autenticação,
-              deploy e código público. Cada projeto que apresento aqui foi desenvolvido do zero com
-              decisões técnicas conscientes e produto funcionando no ar.
+              Venho desenvolvendo projetos próprios para praticar o ciclo completo de uma aplicação
+              web: entender o problema, construir a interface, integrar dados, implementar
+              autenticação quando necessário e publicar em produção.
             </p>
             <p>
-              Minha experiência em ambientes operacionais antes da programação me ensinou a
-              diagnosticar problemas antes de propor soluções — uma mentalidade que aplico
-              diretamente no desenvolvimento: entender o problema, planejar, então codar.
+              Minha experiência anterior em ambientes operacionais reforçou uma forma de trabalho
+              que levo para o desenvolvimento: observar o contexto, organizar informações,
+              diagnosticar causas e comunicar decisões com clareza.
             </p>
           </div>
 

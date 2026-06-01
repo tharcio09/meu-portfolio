@@ -10,12 +10,13 @@ const Experience = () => {
         <div className="max-w-2xl">
           <p className="text-sm font-medium text-accent dark:text-accent-light">Trajetória</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-4xl">
-            Antes do código
+            Experiência aplicada ao desenvolvimento
           </h2>
           <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
-            Trabalhei em ambientes operacionais antes de migrar para desenvolvimento. Essa
-            experiência me ensinou a diagnosticar problemas com método e a comunicar decisões com
-            clareza — competências que uso todo dia no trabalho com código.
+            Antes da programação, atuei em funções operacionais e administrativas que exigiam
+            organização, manutenção de processos, diagnóstico de problemas e comunicação com
+            diferentes pessoas. Hoje aplico essas habilidades ao desenvolvimento: entender o
+            cenário, investigar causas, registrar decisões e construir soluções com clareza.
           </p>
         </div>
 

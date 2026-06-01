@@ -10,13 +10,16 @@ const Capabilities = () => {
     >
       <div className="mx-auto max-w-5xl">
         <div className="max-w-2xl">
-          <p className="text-sm font-medium text-accent dark:text-accent-light">O que eu entrego</p>
+          <p className="text-sm font-medium text-accent dark:text-accent-light">
+            Competências aplicadas nos projetos
+          </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-4xl">
-            Aplicações que saem do código e chegam ao usuário.
+            Funcionalidades completas, do frontend ao deploy.
           </h2>
           <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
-            Meu foco é construir features completas: da interface ao banco, com deploy ativo e
-            atenção aos detalhes que tornam o projeto utilizável de verdade.
+            Tenho focado em construir funcionalidades completas: interfaces responsivas, integração
+            com dados, autenticação, consumo de APIs, persistência e deploy. Abaixo estão as áreas
+            que mais aparecem nos meus projetos.
           </p>
         </div>
 

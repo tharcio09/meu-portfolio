@@ -6,7 +6,7 @@ import { LuDatabase, LuServer, LuShieldCheck } from 'react-icons/lu';
 import Section from '../ui/Section';
 
 const proofItems = [
-  '4 projetos com deploy ativo',
+  'Projetos publicados',
   'React, Next.js, TypeScript e Node.js',
   'Auth, banco relacional, APIs e PWA',
 ];
@@ -40,20 +40,20 @@ const Hero = () => {
           </h1>
 
           <h2 className="mt-5 max-w-2xl animate-fade-up text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl [animation-delay:100ms]">
-            Desenvolvedor fullstack com{' '}
+            Desenvolvedor Fullstack Júnior com{' '}
             <span className="relative whitespace-nowrap">
               <span
                 aria-hidden="true"
                 className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-accent to-violet-500 dark:from-accent-light dark:to-violet-400 animate-scale-x-in"
               />
-              <span className="relative">stack completa em produção.</span>
+              <span className="relative">projetos reais em produção.</span>
             </span>
           </h2>
 
           <p className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-secondary-text dark:text-dark-text [animation-delay:200ms]">
-            Desenvolvo aplicações com React, Next.js e Node.js, integrando interface, autenticação,
-            banco de dados e deploy. Foco em transformar requisitos em produtos funcionais,
-            responsivos e fáceis de evoluir.
+            Construo aplicações web com React, Next.js e Node.js, conectando interface,
+            autenticação, banco de dados, APIs e deploy. Meus projetos mostram prática em fluxos
+            completos, código público e produto funcionando no ar.
           </p>
 
           <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row [animation-delay:300ms]">
@@ -73,7 +73,7 @@ const Hero = () => {
           </div>
 
           <p className="mt-3 animate-fade-up text-sm text-secondary-text dark:text-dark-text [animation-delay:350ms]">
-            Todos com código público, deploy ativo e decisões técnicas visíveis.
+            Projetos publicados, código público e decisões técnicas documentadas.
           </p>
 
           <dl className="mt-10 flex animate-fade-up flex-wrap gap-x-6 gap-y-2 border-t border-border-light pt-6 text-sm text-secondary-text dark:border-border-dark dark:text-dark-text [animation-delay:400ms]">

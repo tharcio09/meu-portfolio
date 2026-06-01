@@ -11,13 +11,13 @@ export const experienciasAnteriores: ExperienciaAnterior[] = [
     role: 'Auxiliar Administrativo',
     org: 'EPOS',
     summary:
-      'Organização de demandas internas, documentação de processos e comunicação entre equipes — habilidades que aplico na organização do meu código e comunicação em times.',
+      'Organização de demandas internas, documentação de processos e comunicação entre equipes — prática que reforçou minha atenção a registro, clareza e fluxo de trabalho.',
   },
   {
     period: 'Jan/2022 – Mai/2022',
     role: 'Auxiliar Mecânico',
     org: 'Komaq',
     summary:
-      'Diagnóstico técnico de equipamentos com foco em análise de causa raiz — uma mentalidade que levo para debugar problemas em software antes de escrever código.',
+      'Diagnóstico técnico de equipamentos e análise de causa raiz — experiência que contribui para investigar problemas com método antes de propor soluções.',
   },
 ];

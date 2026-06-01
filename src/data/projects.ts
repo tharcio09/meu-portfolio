@@ -10,6 +10,7 @@ export type Project = {
   highlights?: string[];
   badge?: string;
   outcome?: string;
+  technicalDifferential?: string;
   casePoints?: {
     label: string;
     value: string;
@@ -40,6 +41,8 @@ export const projects: Project[] = [
       'CRUD completo de tickets com status, prioridade e histórico',
       'Banco relacional (Supabase + Prisma), deploy ativo e interface responsiva',
     ],
+    technicalDifferential:
+      'Diferencial técnico: autenticação com controle de acesso, CRUD de chamados e persistência em banco relacional.',
     badge: 'Auth + banco + deploy',
     imageUrl: '/images/helpflow-screenshot.png',
     githubUrl: 'https://github.com/tharciosantos/helpflow',
@@ -71,6 +74,8 @@ export const projects: Project[] = [
       'Testes end-to-end com Cypress — diferencial técnico para vaga júnior',
       'React Query para sincronização de estado entre servidor e cliente',
     ],
+    technicalDifferential:
+      'Diferencial técnico: upload de imagem, estado sincronizado com React Query e testes E2E cobrindo o fluxo principal.',
     outcome: 'Edição em tempo real + upload + testes E2E',
     imageUrl: '/images/screenshot-devlinks.png',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
@@ -100,6 +105,8 @@ export const projects: Project[] = [
       'Instalável como app nativo em Android e iOS',
       'Compartilhamento da lista via WhatsApp com formatação automática',
     ],
+    technicalDifferential:
+      'Diferencial técnico: funcionamento offline, persistência local e experiência mobile-first como PWA instalável.',
     outcome: 'Offline + instalável + compartilhamento',
     imageUrl: '/images/lista-mercado-screenshot.png',
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
@@ -129,6 +136,8 @@ export const projects: Project[] = [
       'Dashboard com dados em tempo real e interface responsiva',
       'Gerenciamento de estado de loading e error boundaries',
     ],
+    technicalDifferential:
+      'Diferencial técnico: consumo de API externa, estados de loading/erro e atualização de dados em interface responsiva.',
     outcome: 'API externa + dados em tempo real + responsivo',
     imageUrl: '/images/screenshot-crypto.png',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',

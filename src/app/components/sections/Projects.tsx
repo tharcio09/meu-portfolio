@@ -15,11 +15,12 @@ const Projects = () => {
           Projetos em destaque
         </p>
         <h2 className="mt-3 text-4xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-5xl">
-          Projetos com produto no ar
+          Projetos que demonstram prática fullstack
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
-          Aplicações publicadas, com código público e decisões técnicas claras para mostrar como
-          penso, construo e entrego.
+          Aplicações publicadas com foco em fluxos reais: autenticação, persistência de dados, APIs,
+          responsividade, testes e deploy. Cada projeto mostra uma parte diferente da minha evolução
+          técnica.
         </p>
       </div>
 
