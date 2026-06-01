@@ -12,6 +12,16 @@ const siteName = 'Tharcio.dev';
 const siteTitle = 'Tharcio Santos | Desenvolvedor Fullstack';
 const siteDescription =
   'Portfólio de Tharcio Santos, desenvolvedor fullstack com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
+const githubUrl = 'https://github.com/tharciosantos';
+const linkedinUrl = 'https://www.linkedin.com/in/tharcio-santos-dev/';
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Tharcio Santos',
+  url: siteUrl,
+  sameAs: [githubUrl, linkedinUrl],
+};
 
 const inter = Inter({
   subsets: ['latin'],
@@ -49,7 +59,7 @@ export const metadata: Metadata = {
     'Prisma',
     'Supabase',
   ],
-  authors: [{ name: 'Tharcio Santos', url: 'https://github.com/tharciosantos' }],
+  authors: [{ name: 'Tharcio Santos', url: githubUrl }],
   creator: 'Tharcio Santos',
   publisher: 'Tharcio Santos',
   category: 'portfolio',
@@ -90,9 +100,13 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
     shortcut: '/favicon.ico',
-    apple: '/icons/apple-touch-icon.png',
+    apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   manifest: '/manifest.json',
   formatDetection: {
@@ -115,6 +129,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${outfit.variable} min-h-screen bg-light-bg font-sans text-primary-text antialiased dark:bg-dark-bg dark:text-light-text`}
       >

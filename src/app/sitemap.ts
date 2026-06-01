@@ -1,12 +1,13 @@
 import type { MetadataRoute } from 'next';
 
+const siteUrl = 'https://tharcio-portfolio.vercel.app';
+const lastPortfolioUpdate = '2026-05-28';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://tharcio-portfolio.vercel.app',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
+      url: siteUrl,
+      lastModified: lastPortfolioUpdate,
     },
   ];
 }
