@@ -2,7 +2,6 @@ import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import { HiArrowRight, HiDocumentText } from 'react-icons/hi';
-import { LuDatabase, LuServer, LuShieldCheck } from 'react-icons/lu';
 import Section from '../ui/Section';
 
 const proofItems = [
@@ -59,7 +58,7 @@ const Hero = () => {
           <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row [animation-delay:300ms]">
             <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
               Ver projetos
-              <HiArrowRight className="text-base" />
+              <HiArrowRight className="text-base" aria-hidden="true" />
             </a>
             <a
               href="/curriculo-tharcio-santos.pdf"
@@ -67,7 +66,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
             >
-              <HiDocumentText className="text-base" />
+              <HiDocumentText className="text-base" aria-hidden="true" />
               Baixar currículo
             </a>
           </div>
@@ -101,8 +100,13 @@ const Hero = () => {
                   HelpFlow
                 </h3>
               </div>
-              <span className="rounded-md bg-accent-subtle px-2.5 py-1 text-xs font-semibold text-accent dark:bg-accent-subtle-dark dark:text-accent-light">
-                🟢 Em produção
+              {/* Badge de status sem emoji — indicador CSS puro */}
+              <span className="inline-flex items-center gap-1.5 rounded-md bg-accent-subtle px-2.5 py-1 text-xs font-semibold text-accent dark:bg-accent-subtle-dark dark:text-accent-light">
+                <span
+                  aria-hidden="true"
+                  className="h-1.5 w-1.5 rounded-full bg-green-500 dark:bg-green-400"
+                />
+                Em produção
               </span>
             </div>
 
@@ -118,17 +122,23 @@ const Hero = () => {
             </div>
 
             <div className="grid gap-3 border-t border-border-light p-4 text-sm dark:border-border-dark sm:grid-cols-3">
-              <div className="flex items-center gap-2 text-secondary-text dark:text-dark-text">
-                <LuShieldCheck className="text-accent dark:text-accent-light" />
-                Auth
+              <div className="text-secondary-text dark:text-dark-text">
+                <span className="block text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
+                  Auth
+                </span>
+                NextAuth
               </div>
-              <div className="flex items-center gap-2 text-secondary-text dark:text-dark-text">
-                <LuDatabase className="text-accent dark:text-accent-light" />
-                Banco
+              <div className="text-secondary-text dark:text-dark-text">
+                <span className="block text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
+                  Banco
+                </span>
+                Supabase + Prisma
               </div>
-              <div className="flex items-center gap-2 text-secondary-text dark:text-dark-text">
-                <LuServer className="text-accent dark:text-accent-light" />
-                Deploy
+              <div className="text-secondary-text dark:text-dark-text">
+                <span className="block text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
+                  Deploy
+                </span>
+                Vercel
               </div>
             </div>
           </div>
