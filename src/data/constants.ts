@@ -4,6 +4,19 @@ export type NavLink = {
   cta?: boolean;
 };
 
+export type SocialLink = {
+  label: string;
+  description: string;
+  href: string;
+  action: string;
+};
+
+export const EMAIL = 'tharciosantos09@gmail.com';
+
+/** URLs base exportadas para evitar duplicação entre Footer e Contact */
+export const GITHUB_URL = 'https://github.com/tharciosantos';
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
+
 export const navLinks: NavLink[] = [
   { href: '#projetos', label: 'Projetos' },
   { href: '#sobre-mim', label: 'Sobre' },
@@ -12,19 +25,17 @@ export const navLinks: NavLink[] = [
   { href: '#contato', label: 'Contato', cta: true },
 ];
 
-export const EMAIL = 'tharciosantos09@gmail.com';
-
-export const redesSociais = [
+export const redesSociais: SocialLink[] = [
   {
     label: 'LinkedIn',
     description: 'Conversar sobre vagas, networking e carreira.',
-    href: 'https://www.linkedin.com/in/tharcio-santos-dev/',
+    href: LINKEDIN_URL,
     action: 'Ver perfil',
   },
   {
     label: 'GitHub',
     description: 'Ver código, projetos publicados e evolução técnica.',
-    href: 'https://github.com/tharciosantos',
+    href: GITHUB_URL,
     action: 'Ver repositórios',
   },
 ];
