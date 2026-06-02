@@ -1,5 +1,17 @@
 import Section from '../ui/Section';
+import { LuCode, LuDatabase, LuRocket } from 'react-icons/lu';
+import type { ReactNode } from 'react';
 import { capacidades } from '@/data/capabilities';
+
+/**
+ * Map local de iconName → componente de ícone Lucide.
+ * Mantém a renderização de JSX no componente e os dados limpos em capabilities.ts.
+ */
+const CAPABILITY_ICON_MAP: Record<string, ReactNode> = {
+  LuCode: <LuCode aria-hidden="true" />,
+  LuDatabase: <LuDatabase aria-hidden="true" />,
+  LuRocket: <LuRocket aria-hidden="true" />,
+};
 
 const Capabilities = () => {
   return (
@@ -35,7 +47,7 @@ const Capabilities = () => {
               }}
             >
               <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light transition-transform duration-200 group-hover:scale-110">
-                {item.icon}
+                {CAPABILITY_ICON_MAP[item.iconName]}
               </div>
               <h3 className="mt-4 text-lg font-bold text-primary-text dark:text-light-text">
                 {item.title}
