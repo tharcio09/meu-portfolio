@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { GITHUB_URL, LINKEDIN_URL, EMAIL } from '@/data/constants';
 
 const Footer = () => {
   return (
@@ -9,31 +10,31 @@ const Footer = () => {
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex justify-center space-x-6 mb-5">
           <a
-            href="https://github.com/tharciosantos"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub de Tharcio Santos"
             className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
           >
-            <FaGithub />
+            <FaGithub aria-hidden="true" />
           </a>
 
           <a
-            href="https://www.linkedin.com/in/tharcio-santos-dev/"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn de Tharcio Santos"
             className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
           >
-            <FaLinkedin />
+            <FaLinkedin aria-hidden="true" />
           </a>
 
           <a
-            href="mailto:tharciosantos09@gmail.com"
+            href={`mailto:${EMAIL}`}
             aria-label="Enviar e-mail para Tharcio Santos"
             className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
           >
-            <FaEnvelope />
+            <FaEnvelope aria-hidden="true" />
           </a>
         </div>
 
@@ -41,7 +42,7 @@ const Footer = () => {
           Feito com <span className="text-accent dark:text-accent-light font-medium">Next.js</span>
           {' · '}
           <a
-            href="https://github.com/tharciosantos/meu-portfolio"
+            href={`${GITHUB_URL}/meu-portfolio`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-accent underline decoration-accent/40 hover:decoration-accent dark:text-accent-light dark:decoration-accent-light/40 dark:hover:decoration-accent-light"

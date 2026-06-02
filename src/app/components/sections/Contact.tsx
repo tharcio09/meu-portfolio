@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import type { ReactNode } from 'react';
 import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from 'react-icons/hi';
 import Section from '../ui/Section';
 import { EMAIL, redesSociais } from '@/data/constants';
@@ -8,9 +9,9 @@ import { Button, buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
-const icones: Record<string, React.ReactNode> = {
-  LinkedIn: <SiLinkedin />,
-  GitHub: <SiGithub />,
+const icones: Record<string, ReactNode> = {
+  LinkedIn: <SiLinkedin aria-hidden="true" />,
+  GitHub: <SiGithub aria-hidden="true" />,
 };
 
 const Contact = () => {
@@ -48,14 +49,17 @@ const Contact = () => {
               className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-6')}
             >
               Entrar em contato
-              <HiArrowRight className="text-base" />
+              <HiArrowRight className="text-base" aria-hidden="true" />
             </a>
           </div>
 
           <div className="divide-y divide-border-light overflow-hidden rounded-xl border border-border-light bg-white shadow-sm dark:divide-border-dark dark:border-border-dark dark:bg-dark-card">
             <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
               <span className="flex items-center gap-4">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light">
+                <span
+                  aria-hidden="true"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light"
+                >
                   <HiMail />
                 </span>
                 <span>
@@ -82,12 +86,12 @@ const Contact = () => {
                 >
                   {copied ? (
                     <>
-                      <HiCheck className="text-sm" />
+                      <HiCheck className="text-sm" aria-hidden="true" />
                       Copiado
                     </>
                   ) : (
                     <>
-                      <HiDuplicate className="text-sm" />
+                      <HiDuplicate className="text-sm" aria-hidden="true" />
                       Copiar
                     </>
                   )}
@@ -111,7 +115,10 @@ const Contact = () => {
                 className="flex items-center justify-between gap-4 p-5 transition-colors hover:bg-light-surface dark:hover:bg-dark-surface"
               >
                 <span className="flex items-center gap-4">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light">
+                  <span
+                    aria-hidden="true"
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light"
+                  >
                     {icones[link.label]}
                   </span>
                   <span>
