@@ -6,9 +6,14 @@ on:
   pull_request:
     branches: ['main']
 
+# Princípio do menor privilégio — apenas leitura por padrão
+permissions:
+  contents: read
+
 jobs:
-  build-and-test:
-    name: Build, Lint and Test
+  # Job 1: Qualidade de código (rápido — falha cedo em PRs)
+  quality:
+    name: Quality Checks
     runs-on: ubuntu-latest
 
     steps:
@@ -30,8 +35,40 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
+      - name: TypeScript Type Check
+        run: npx tsc --noEmit
+
+  # Job 2: Testes e build (corre em paralelo com quality, depende de instalação)
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    # Aguarda quality para não desperdiçar minutos de build se houver erros de lint/tipos
+    needs: quality
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
       - name: Run Unit Tests (Vitest)
         run: npm run test:run
+
+      - name: Cache Next.js Build
+        uses: actions/cache@v4
+        with:
+          path: |
+            .next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
       - name: Verify Build
         run: npm run build
