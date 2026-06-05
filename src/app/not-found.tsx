@@ -1,6 +1,15 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { buttonVariants } from './components/ui/Button';
 import { cn } from '@/lib/utils';
+
+export const metadata: Metadata = {
+  title: 'Página não encontrada | Tharcio Santos',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
