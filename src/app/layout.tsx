@@ -18,9 +18,33 @@ const linkedinUrl = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': `${siteUrl}/#person`,
   name: 'Tharcio Santos',
   url: siteUrl,
+  jobTitle: 'Desenvolvedor Full Stack Júnior',
+  description:
+    'Desenvolvedor Full Stack Júnior com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.',
+  email: 'tharciosantos09@gmail.com',
+  image: `${siteUrl}/images/profile.png`,
   sameAs: [githubUrl, linkedinUrl],
+};
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: 'Portfólio de Tharcio Santos',
+  author: { '@id': `${siteUrl}/#person` },
+};
+
+const profilePageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${siteUrl}/#profilepage`,
+  url: siteUrl,
+  name: 'Tharcio Santos | Desenvolvedor Full Stack',
+  mainEntity: { '@id': `${siteUrl}/#person` },
 };
 
 const inter = Inter({
@@ -64,12 +88,12 @@ export const metadata: Metadata = {
   publisher: 'Tharcio Santos',
   category: 'portfolio',
   alternates: {
-    canonical: '/',
+    canonical: siteUrl,
   },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: '/',
+    url: siteUrl,
     siteName,
     images: [
       {
@@ -98,6 +122,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
       'max-video-preview': -1,
     },
+  },
+  verification: {
+    google: 'e4de6438b9a53e05',
   },
   icons: {
     icon: [
@@ -132,7 +159,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([personJsonLd, websiteJsonLd, profilePageJsonLd]),
+          }}
         />
       </head>
       <body
