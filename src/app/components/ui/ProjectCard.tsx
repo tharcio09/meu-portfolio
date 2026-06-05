@@ -12,6 +12,7 @@ type ProjectCardProps = {
   title: string;
   description: string;
   imageUrl: string;
+  imageAlt?: string;
   githubUrl: string;
   demoUrl?: string;
   demoLabel?: string;
@@ -28,6 +29,7 @@ const ProjectCard = ({
   title,
   description,
   imageUrl,
+  imageAlt,
   githubUrl,
   demoUrl,
   demoLabel,
@@ -62,7 +64,7 @@ const ProjectCard = ({
           <div className="relative mt-8 h-full min-h-64 overflow-hidden rounded-b-md border border-border-light bg-white dark:border-border-dark dark:bg-dark-card">
             <Image
               src={imageUrl}
-              alt={`Preview do projeto ${title}`}
+              alt={imageAlt ?? `Screenshot do projeto ${title}`}
               fill
               sizes="(max-width: 1024px) 100vw, 48vw"
               className="object-contain p-3"
@@ -185,7 +187,7 @@ const ProjectCard = ({
         <div className="relative mt-7 h-[calc(100%-1.75rem)] overflow-hidden rounded-b-md border border-border-light bg-white dark:border-border-dark dark:bg-dark-card">
           <Image
             src={imageUrl}
-            alt={`Preview do projeto ${title}`}
+            alt={imageAlt ?? `Screenshot do projeto ${title}`}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"

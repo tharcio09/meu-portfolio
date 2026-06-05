@@ -2,6 +2,7 @@ export type Project = {
   title: string;
   description: string;
   imageUrl: string;
+  imageAlt?: string;
   githubUrl: string;
   demoUrl?: string;
   demoLabel?: string;
@@ -45,6 +46,8 @@ export const projects: Project[] = [
       'Usei autenticação com controle de acesso e persistência relacional para cobrir o fluxo completo de gestão de chamados.',
     badge: 'Auth + banco + deploy',
     imageUrl: '/images/helpflow-screenshot.png',
+    imageAlt:
+      'Interface do HelpFlow mostrando painel de gestão de chamados com lista de tickets, status e prioridade',
     githubUrl: 'https://github.com/tharciosantos/helpflow',
     demoUrl: 'https://helpflow.vercel.app/',
     demoLabel: 'Acessar demo completa',
@@ -69,6 +72,8 @@ export const projects: Project[] = [
       'Upload via Cloudinary, sincronização com React Query e testes E2E do fluxo principal.',
     outcome: 'Edição em tempo real + upload + testes E2E',
     imageUrl: '/images/screenshot-devlinks.png',
+    imageAlt:
+      'Interface do DevLinks exibindo página de perfil com links personalizados e avatar do usuário',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
     demoUrl: 'https://frontend-api-weld.vercel.app/',
     tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'React Query', 'Cloudinary', 'Cypress'],
@@ -92,6 +97,8 @@ export const projects: Project[] = [
       'PWA instalável com funcionamento offline, Local Storage e experiência otimizada para celular.',
     outcome: 'Offline + instalável + compartilhamento',
     imageUrl: '/images/lista-mercado-screenshot.png',
+    imageAlt:
+      'Interface mobile-first do aplicativo Lista de Mercado com itens de compras e opção de compartilhamento',
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
     demoUrl: 'https://lista-mercado-sage.vercel.app/',
     tags: ['React', 'Vite', 'TypeScript', 'PWA', 'Tailwind CSS', 'Local Storage'],
@@ -114,6 +121,8 @@ export const projects: Project[] = [
       'Consumo de API externa com estados de loading, erro e atualização de dados na interface.',
     outcome: 'API externa + dados em tempo real + responsivo',
     imageUrl: '/images/screenshot-crypto.png',
+    imageAlt:
+      'Dashboard de criptomoedas exibindo tabela de preços e variações em tempo real via CoinGecko API',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'CoinGecko API'],
