@@ -16,7 +16,6 @@ const githubUrl = 'https://github.com/tharciosantos';
 const linkedinUrl = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 
 const personJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'Person',
   '@id': `${siteUrl}/#person`,
   name: 'Tharcio Santos',
@@ -24,13 +23,21 @@ const personJsonLd = {
   jobTitle: 'Desenvolvedor Full Stack Júnior',
   description:
     'Desenvolvedor Full Stack Júnior com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.',
-  email: 'tharciosantos09@gmail.com',
   image: `${siteUrl}/images/profile.png`,
   sameAs: [githubUrl, linkedinUrl],
+  knowsAbout: [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Node.js',
+    'Prisma',
+    'Supabase',
+    'Tailwind CSS',
+    'PostgreSQL',
+  ],
 };
 
 const websiteJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': `${siteUrl}/#website`,
   url: siteUrl,
@@ -39,13 +46,19 @@ const websiteJsonLd = {
 };
 
 const profilePageJsonLd = {
-  '@context': 'https://schema.org',
   '@type': 'ProfilePage',
   '@id': `${siteUrl}/#profilepage`,
   url: siteUrl,
   name: 'Tharcio Santos | Desenvolvedor Full Stack',
   mainEntity: { '@id': `${siteUrl}/#person` },
 };
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [personJsonLd, websiteJsonLd, profilePageJsonLd],
+};
+
+// ─── FONTES ─────────────────────────────────────────────────────────────────
 
 const inter = Inter({
   subsets: ['latin'],
@@ -160,7 +173,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([personJsonLd, websiteJsonLd, profilePageJsonLd]),
+            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
           }}
         />
       </head>
