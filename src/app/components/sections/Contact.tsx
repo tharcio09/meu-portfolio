@@ -1,13 +1,11 @@
-'use client';
-
-import { useState } from 'react';
 import type { ReactNode } from 'react';
-import { HiMail, HiCheck, HiDuplicate, HiArrowRight } from 'react-icons/hi';
+import { HiMail, HiArrowRight } from 'react-icons/hi';
 import Section from '../ui/Section';
 import { EMAIL, redesSociais } from '@/data/constants';
-import { Button, buttonVariants } from '../ui/Button';
+import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { CopyEmailButton } from '../ui/CopyEmailButton';
 
 const icones: Record<string, ReactNode> = {
   LinkedIn: <SiLinkedin aria-hidden="true" />,
@@ -15,18 +13,6 @@ const icones: Record<string, ReactNode> = {
 };
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2500);
-    } catch {
-      window.location.href = `mailto:${EMAIL}`;
-    }
-  };
-
   return (
     <Section
       id="contato"
@@ -73,29 +59,7 @@ const Contact = () => {
               </span>
 
               <div className="flex shrink-0 gap-2">
-                <Button
-                  onClick={handleCopyEmail}
-                  aria-label={copied ? 'Email copiado' : 'Copiar email'}
-                  variant="outline"
-                  size="sm"
-                  className={cn(
-                    'h-8 px-3 text-xs gap-1.5',
-                    copied &&
-                      'border-green-300 bg-green-50 text-green-700 hover:border-green-300 hover:bg-green-50 hover:text-green-700 dark:border-green-800 dark:bg-green-950/30 dark:text-green-400'
-                  )}
-                >
-                  {copied ? (
-                    <>
-                      <HiCheck className="text-sm" aria-hidden="true" />
-                      Copiado
-                    </>
-                  ) : (
-                    <>
-                      <HiDuplicate className="text-sm" aria-hidden="true" />
-                      Copiar
-                    </>
-                  )}
-                </Button>
+                <CopyEmailButton />
 
                 <a
                   href={`mailto:${EMAIL}`}

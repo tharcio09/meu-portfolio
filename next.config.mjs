@@ -2,6 +2,7 @@
 const nextConfig = {
   experimental: {
     optimizeCss: false,
+    optimizePackageImports: ['react-icons'],
   },
 
   compiler: {
