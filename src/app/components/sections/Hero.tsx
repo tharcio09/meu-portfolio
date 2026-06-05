@@ -26,7 +26,8 @@ const Hero = () => {
 
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div>
-          <div className="animate-fade-down inline-flex items-center gap-2 rounded-full border border-accent-border bg-accent-subtle px-3 py-1 text-xs font-semibold text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light">
+          {/* Badge — sem animate-fade-down para não atrasar LCP */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-accent-border bg-accent-subtle px-3 py-1 text-xs font-semibold text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light">
             <span className="relative flex h-2 w-2" aria-hidden="true">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-accent dark:bg-accent-light" />
@@ -34,11 +35,13 @@ const Hero = () => {
             Disponível para oportunidade júnior
           </div>
 
-          <h1 className="mt-6 animate-fade-up text-5xl font-extrabold tracking-tight text-primary-text dark:text-light-text md:text-7xl">
+          {/* H1 — sem animate-fade-up: renderiza imediatamente */}
+          <h1 className="mt-6 text-5xl font-extrabold tracking-tight text-primary-text dark:text-light-text md:text-7xl">
             Tharcio Santos
           </h1>
 
-          <h2 className="mt-5 max-w-2xl animate-fade-up text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl [animation-delay:100ms]">
+          {/* H2 — sem animate-fade-up nem animation-delay */}
+          <h2 className="mt-5 max-w-2xl text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl">
             Desenvolvedor Fullstack Júnior com{' '}
             <span className="relative whitespace-nowrap">
               <span
@@ -49,13 +52,15 @@ const Hero = () => {
             </span>
           </h2>
 
-          <p className="mt-6 max-w-xl animate-fade-up text-lg leading-relaxed text-secondary-text dark:text-dark-text [animation-delay:200ms]">
+          {/* Parágrafo LCP — sem animate-fade-up nem animation-delay:200ms */}
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-secondary-text dark:text-dark-text">
             Construo aplicações web com React, Next.js e Node.js, conectando interface,
             autenticação, banco de dados, APIs e deploy. Meus projetos mostram prática em fluxos
             completos, código público e produto funcionando no ar.
           </p>
 
-          <div className="mt-8 flex animate-fade-up flex-col gap-3 sm:flex-row [animation-delay:300ms]">
+          {/* Botões — sem animate-fade-up nem animation-delay:300ms */}
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
               Ver projetos
               <HiArrowRight className="text-base" aria-hidden="true" />
@@ -71,11 +76,13 @@ const Hero = () => {
             </a>
           </div>
 
-          <p className="mt-3 animate-fade-up text-sm text-secondary-text dark:text-dark-text [animation-delay:350ms]">
+          {/* Texto de prova — sem animate-fade-up nem animation-delay:350ms */}
+          <p className="mt-3 text-sm text-secondary-text dark:text-dark-text">
             Projetos publicados, código público e decisões técnicas documentadas.
           </p>
 
-          <dl className="mt-10 flex animate-fade-up flex-wrap gap-x-6 gap-y-2 border-t border-border-light pt-6 text-sm text-secondary-text dark:border-border-dark dark:text-dark-text [animation-delay:400ms]">
+          {/* Lista de prova — sem animate-fade-up nem animation-delay:400ms */}
+          <dl className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-border-light pt-6 text-sm text-secondary-text dark:border-border-dark dark:text-dark-text">
             {proofItems.map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <span
@@ -89,6 +96,7 @@ const Hero = () => {
           </dl>
         </div>
 
+        {/* Card do projeto — mantém animate-fade-up: no mobile fica abaixo da dobra */}
         <div className="relative animate-fade-up [animation-delay:200ms]">
           <div className="overflow-hidden rounded-xl border border-border-light bg-white shadow-lg shadow-accent/5 dark:border-border-dark dark:bg-dark-card dark:shadow-black/20">
             <div className="flex items-center justify-between border-b border-border-light px-4 py-3 dark:border-border-dark">
