@@ -1,15 +1,14 @@
 import type { ReactNode } from 'react';
-import { HiMail, HiArrowRight } from 'react-icons/hi';
 import Section from '../ui/Section';
 import { EMAIL, redesSociais } from '@/data/constants';
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
 import { CopyEmailButton } from '../ui/CopyEmailButton';
+import { ArrowRightIcon, GithubIcon, LinkedinIcon, MailIcon } from '../ui/Icons';
 
 const icones: Record<string, ReactNode> = {
-  LinkedIn: <SiLinkedin aria-hidden="true" />,
-  GitHub: <SiGithub aria-hidden="true" />,
+  LinkedIn: <LinkedinIcon className="h-5 w-5" />,
+  GitHub: <GithubIcon className="h-5 w-5" />,
 };
 
 const Contact = () => {
@@ -35,7 +34,7 @@ const Contact = () => {
               className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-6')}
             >
               Entrar em contato
-              <HiArrowRight className="text-base" aria-hidden="true" />
+              <ArrowRightIcon className="h-4 w-4" />
             </a>
           </div>
 
@@ -46,7 +45,7 @@ const Contact = () => {
                   aria-hidden="true"
                   className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle text-xl text-accent dark:bg-accent-subtle-dark dark:text-accent-light"
                 >
-                  <HiMail />
+                  <MailIcon className="h-5 w-5" />
                 </span>
                 <span>
                   <span className="block font-semibold text-primary-text dark:text-light-text">

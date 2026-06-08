@@ -1,8 +1,8 @@
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { HiArrowRight, HiDocumentText } from 'react-icons/hi';
 import Section from '../ui/Section';
+import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
 
 const proofItems = [
   'Projetos publicados',
@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
               Ver projetos
-              <HiArrowRight className="text-base" aria-hidden="true" />
+              <ArrowRightIcon className="h-4 w-4" />
             </a>
             <a
               href="/curriculo-tharcio-santos.pdf"
@@ -71,7 +71,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
             >
-              <HiDocumentText className="text-base" aria-hidden="true" />
+              <DocumentIcon className="h-4 w-4" />
               Baixar currículo
             </a>
           </div>

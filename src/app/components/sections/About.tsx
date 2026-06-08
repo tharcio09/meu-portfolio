@@ -1,38 +1,26 @@
 import Image from 'next/image';
 import Section from '../ui/Section';
-import {
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiPrisma,
-  SiSupabase,
-  SiGit,
-  SiGithub,
-  SiFigma,
-} from 'react-icons/si';
 import type { ReactNode } from 'react';
 import { skills } from '@/data/about';
 import { learningItems } from '@/data/learning';
+import { GithubIcon, TechBadgeIcon } from '../ui/Icons';
 
 /**
  * Map local de iconName → componente de ícone.
  * Mantém a renderização de JSX no componente e os dados limpos em about.ts.
  */
 const SKILL_ICON_MAP: Record<string, ReactNode> = {
-  SiJavascript: <SiJavascript aria-hidden="true" />,
-  SiTypescript: <SiTypescript aria-hidden="true" />,
-  SiReact: <SiReact aria-hidden="true" />,
-  SiNextdotjs: <SiNextdotjs aria-hidden="true" />,
-  SiTailwindcss: <SiTailwindcss aria-hidden="true" />,
-  SiNodedotjs: <SiNodedotjs aria-hidden="true" />,
-  SiPrisma: <SiPrisma aria-hidden="true" />,
-  SiSupabase: <SiSupabase aria-hidden="true" />,
-  SiGit: <SiGit aria-hidden="true" />,
-  SiGithub: <SiGithub aria-hidden="true" />,
-  SiFigma: <SiFigma aria-hidden="true" />,
+  SiJavascript: <TechBadgeIcon label="JS" />,
+  SiTypescript: <TechBadgeIcon label="TS" />,
+  SiReact: <TechBadgeIcon label="R" />,
+  SiNextdotjs: <TechBadgeIcon label="N" />,
+  SiTailwindcss: <TechBadgeIcon label="TW" />,
+  SiNodedotjs: <TechBadgeIcon label="ND" />,
+  SiPrisma: <TechBadgeIcon label="PR" />,
+  SiSupabase: <TechBadgeIcon label="SB" />,
+  SiGit: <TechBadgeIcon label="GT" />,
+  SiGithub: <GithubIcon className="h-4 w-4" />,
+  SiFigma: <TechBadgeIcon label="FG" />,
 };
 
 const About = () => {

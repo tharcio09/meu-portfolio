@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { HiCheck, HiDuplicate } from 'react-icons/hi';
 import { Button } from './Button';
 import { cn } from '@/lib/utils';
 import { EMAIL } from '@/data/constants';
+import { CheckIcon, CopyIcon } from './Icons';
 
 export const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
@@ -33,12 +33,12 @@ export const CopyEmailButton = () => {
     >
       {copied ? (
         <>
-          <HiCheck className="text-sm" aria-hidden="true" />
+          <CheckIcon className="h-3.5 w-3.5" />
           Copiado
         </>
       ) : (
         <>
-          <HiDuplicate className="text-sm" aria-hidden="true" />
+          <CopyIcon className="h-3.5 w-3.5" />
           Copiar
         </>
       )}

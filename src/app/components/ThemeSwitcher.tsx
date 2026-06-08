@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { MoonIcon, SunIcon } from './ui/Icons';
 
 export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
@@ -24,7 +24,7 @@ export const ThemeSwitcher = () => {
       aria-label="Alternar tema"
     >
       <span className="block transition-transform duration-200 ease-out group-hover:rotate-12">
-        {isDark ? <FaSun className="h-4 w-4" /> : <FaMoon className="h-4 w-4" />}
+        {isDark ? <SunIcon className="h-4 w-4" /> : <MoonIcon className="h-4 w-4" />}
       </span>
     </button>
   );

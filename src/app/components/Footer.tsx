@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { GITHUB_URL, LINKEDIN_URL, EMAIL } from '@/data/constants';
+import { GithubIcon, LinkedinIcon, MailIcon } from './ui/Icons';
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
             aria-label="GitHub de Tharcio Santos"
             className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
           >
-            <FaGithub aria-hidden="true" />
+            <GithubIcon className="h-5 w-5" />
           </a>
 
           <a
@@ -26,7 +26,7 @@ const Footer = () => {
             aria-label="LinkedIn de Tharcio Santos"
             className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
           >
-            <FaLinkedin aria-hidden="true" />
+            <LinkedinIcon className="h-5 w-5" />
           </a>
 
           <a
@@ -34,7 +34,7 @@ const Footer = () => {
             aria-label="Enviar e-mail para Tharcio Santos"
             className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
           >
-            <FaEnvelope aria-hidden="true" />
+            <MailIcon className="h-5 w-5" />
           </a>
         </div>
 

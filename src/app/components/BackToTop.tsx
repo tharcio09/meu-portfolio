@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { HiArrowUp } from 'react-icons/hi';
+import { ArrowUpIcon } from './ui/Icons';
 
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
@@ -28,7 +28,7 @@ const BackToTop = () => {
         dark:border-border-dark dark:bg-dark-card dark:text-dark-text dark:hover:border-accent-light dark:hover:text-accent-light
         ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
     >
-      <HiArrowUp className="h-4 w-4" />
+      <ArrowUpIcon className="h-4 w-4" />
     </button>
   );
 };

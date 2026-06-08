@@ -1,7 +1,7 @@
 /**
  * Dados das competências técnicas.
  * iconName corresponde a um identificador usado em About.tsx para selecionar
- * o ícone correto do react-icons — mantendo JSX fora da camada de dados.
+ * o ícone correto — mantendo JSX fora da camada de dados.
  */
 export type Skill = {
   iconName: string;

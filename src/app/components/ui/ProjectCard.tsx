@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { buttonVariants } from './Button';
 import { cn } from '@/lib/utils';
+import { ExternalLinkIcon, GithubIcon } from './Icons';
 
 type CasePoint = {
   label: string;
@@ -149,7 +149,7 @@ const ProjectCard = ({
               rel="noopener noreferrer"
               className={cn(buttonVariants({ variant: 'outline' }))}
             >
-              <FaGithub className="text-base" />
+              <GithubIcon className="h-4 w-4" />
               Código
             </a>
             {demoUrl && (
@@ -159,7 +159,7 @@ const ProjectCard = ({
                 rel="noopener noreferrer"
                 className={cn(buttonVariants({ variant: 'primary' }))}
               >
-                <FaExternalLinkAlt className="text-sm" />
+                <ExternalLinkIcon className="h-3.5 w-3.5" />
                 {demoLabel ?? 'Demo'}
               </a>
             )}
@@ -250,7 +250,7 @@ const ProjectCard = ({
             rel="noopener noreferrer"
             className={cn(buttonVariants({ variant: 'outline' }), 'flex-1')}
           >
-            <FaGithub className="text-base" />
+            <GithubIcon className="h-4 w-4" />
             Código
           </a>
           {demoUrl && (
@@ -260,7 +260,7 @@ const ProjectCard = ({
               rel="noopener noreferrer"
               className={cn(buttonVariants({ variant: 'primary' }), 'flex-1')}
             >
-              <FaExternalLinkAlt className="text-sm" />
+              <ExternalLinkIcon className="h-3.5 w-3.5" />
               Demo
             </a>
           )}
