@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    optimizeCss: false,
-    optimizePackageImports: ['react-icons'],
+    optimizeCss: true,
   },
 
   compiler: {

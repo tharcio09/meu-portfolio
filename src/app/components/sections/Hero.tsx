@@ -96,8 +96,7 @@ const Hero = () => {
           </dl>
         </div>
 
-        {/* Card do projeto — mantém animate-fade-up: no mobile fica abaixo da dobra */}
-        <div className="relative animate-fade-up [animation-delay:200ms]">
+        <div className="relative">
           <div className="overflow-hidden rounded-xl border border-border-light bg-white shadow-lg shadow-accent/5 dark:border-border-dark dark:bg-dark-card dark:shadow-black/20">
             <div className="flex items-center justify-between border-b border-border-light px-4 py-3 dark:border-border-dark">
               <div>
@@ -125,7 +124,6 @@ const Hero = () => {
                 fill
                 sizes="(max-width: 1024px) 100vw, 48vw"
                 className="object-contain p-3"
-                priority
               />
             </div>
 
