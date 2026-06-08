@@ -14,7 +14,7 @@ Desenvolvedor fullstack com projetos React, Next.js, TypeScript e Node.js em pro
 
 ## Sobre
 
-Portfólio pessoal desenvolvido para apresentar projetos, stack técnica e trajetória profissional. O projeto segue uma proposta visual moderna com paleta indigo, suporte a tema claro/escuro, barra de progresso de scroll e animações de entrada — tudo construído com atenção à qualidade de código, acessibilidade e experiência do usuário.
+Portfólio pessoal desenvolvido para apresentar projetos, stack técnica e trajetória profissional. O projeto segue uma proposta visual moderna com paleta indigo, suporte a tema claro/escuro, componentes server-first e interações pontuais — tudo construído com atenção à qualidade de código, acessibilidade, performance e experiência do usuário.
 
 ---
 
@@ -27,6 +27,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em front-e
 - **Componentização:** Componentes UI reutilizáveis com React e TypeScript — `Button`, `ProjectCard`, `Section` e outros.
 - **Separação de Responsabilidades:** Conteúdo isolado na pasta `src/data`, permitindo atualizar textos e projetos sem tocar no JSX.
 - **Acessibilidade e Responsividade:** Navegação por teclado, `aria-label`, foco visível e layout mobile-first com menu backdrop e bloqueio de scroll.
+- **Performance no carregamento inicial:** Navbar server-rendered com ilha client apenas para o menu mobile, ícones SVG locais, CSS crítico otimizado e Analytics carregado de forma dinâmica.
 - **SEO Técnico:** Sitemap dinâmico, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração Contínua (CI):** GitHub Actions validando lint, formatação Prettier e testes em cada push.
 - **Qualidade de Código:** Testes unitários com Vitest e Testing Library, ESLint, Prettier e Husky com lint-staged para formatação automática no pre-commit.
@@ -69,7 +70,7 @@ Dashboard para visualizar preços e variações de criptomoedas em tempo real co
 
 ### Core
 
-- [Next.js](https://nextjs.org/) 15.3 — App Router, SSR, Image Optimization, OG images
+- [Next.js](https://nextjs.org/) 15 — App Router, SSR, Image Optimization, OG images
 - [React](https://react.dev/) 19.1
 - [TypeScript](https://www.typescriptlang.org/) 5.7
 - [Tailwind CSS](https://tailwindcss.com/) 3.4
@@ -78,7 +79,8 @@ Dashboard para visualizar preços e variações de criptomoedas em tempo real co
 
 - `class-variance-authority`, `clsx` e `tailwind-merge` — composição de variantes e resolução de conflitos de classes.
 - `next-themes` — suporte a tema claro, escuro e sistema.
-- `react-icons` — ícones SVG.
+- Ícones SVG locais — ícones reutilizáveis sem dependência externa de biblioteca de ícones.
+- `@vercel/analytics` — métricas de uso carregadas dinamicamente para reduzir impacto no carregamento inicial.
 
 ### Qualidade e Testes
 
@@ -97,6 +99,14 @@ Dashboard para visualizar preços e variações de criptomoedas em tempo real co
 
 - **Sistema de Componentes com CVA:** O componente `Button` usa `class-variance-authority` com `tailwind-merge`, centralizando variantes e resolvendo conflitos de classes sem duplicar strings CSS.
 
+- **Client Islands para Interatividade:** A navegação principal é renderizada como Server Component, enquanto apenas o menu mobile e o alternador de tema hidratam no cliente. Isso preserva a experiência interativa sem transformar todo o layout em JavaScript inicial.
+
+- **Ícones SVG locais:** Os ícones usados na interface vivem em `src/app/components/ui/Icons.tsx`, reduzindo dependências e evitando carregar uma biblioteca inteira de ícones no bundle da página.
+
+- **CSS crítico otimizado:** O build usa `optimizeCss` com `critters`, ajudando o navegador a renderizar o conteúdo inicial com menos bloqueio por CSS externo.
+
+- **Analytics dinâmico:** O Analytics da Vercel é isolado em um componente client carregado dinamicamente, mantendo métricas ativas sem entrar no caminho crítico de renderização.
+
 - **Testes Comportamentais:** Os testes usam `userEvent` em vez de disparo direto de eventos, simulando interações reais do usuário e aguardando mudanças assíncronas no DOM.
 
 - **Deploy e CI:** Hospedado na Vercel com GitHub Actions como camada de validação — lint, formatação e testes rodam a cada push, garantindo que nada quebrado chegue à produção.
@@ -114,7 +124,7 @@ meu-portfolio/
 ├── public/                  # Assets estáticos (imagens, ícones, PDF, manifest)
 ├── src/
 │   ├── app/                 # App Router — páginas, layout e rotas de erro
-│   │   ├── components/      # Componentes reutilizáveis (sections e UI atômicos)
+│   │   ├── components/      # Componentes reutilizáveis, client islands, sections e UI
 │   │   └── hooks/           # Hooks customizados do React
 │   ├── data/                # Dados estáticos e constantes (projetos, skills, etc.)
 │   └── lib/                 # Funções utilitárias
