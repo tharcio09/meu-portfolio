@@ -42,7 +42,7 @@ const Hero = () => {
 
           {/* H2 — sem animate-fade-up nem animation-delay */}
           <h2 className="mt-5 max-w-2xl text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl">
-            Desenvolvedor Fullstack Júnior com{' '}
+            Desenvolvedor Full Stack Júnior com{' '}
             <span className="relative whitespace-nowrap">
               <span
                 aria-hidden="true"

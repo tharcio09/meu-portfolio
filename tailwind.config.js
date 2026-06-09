@@ -22,7 +22,7 @@ module.exports = {
 
         /* Texto */
         'light-text': '#e2e8f0',
-        'dark-text': '#94a3b8',
+        'dark-text': '#a8b4c7',
         'primary-text': '#0f172a',
         'secondary-text': '#475569',
 
