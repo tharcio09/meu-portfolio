@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: 'HelpFlow — Sistema de Help Desk',
     description:
-      'Sistema fullstack para organizar chamados internos com login, painel de gestão, status, prioridade e banco relacional.',
+      'Sistema full stack para organizar chamados internos com login, painel de gestão, status, prioridade e banco relacional.',
     casePoints: [
       {
         label: 'Problema',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     imageAlt:
       'Interface do DevLinks exibindo página de perfil com links personalizados e avatar do usuário',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
-    demoUrl: 'https://frontend-api-weld.vercel.app/',
+    demoUrl: 'https://devlinks-web-api.vercel.app/',
     tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'React Query', 'Cloudinary', 'Cypress'],
   },
   {

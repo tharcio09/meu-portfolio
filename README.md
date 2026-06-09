@@ -2,7 +2,7 @@
 
 # Tharcio Santos — Portfólio
 
-Desenvolvedor fullstack com projetos React, Next.js, TypeScript e Node.js em produção.
+Desenvolvedor full stack com projetos React, Next.js, TypeScript e Node.js em produção.
 
 [Acessar portfólio](https://tharcio-portfolio.vercel.app) · [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/) · [Email](mailto:tharciosantos09@gmail.com)
 
@@ -38,7 +38,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em front-e
 
 ### HelpFlow
 
-Sistema de help desk fullstack com autenticação por sessão, CRUD de tickets, controle de acesso por perfil, banco relacional e deploy em produção.
+Sistema de help desk full stack com autenticação por sessão, CRUD de tickets, controle de acesso por perfil, banco relacional e deploy em produção.
 
 - **Stack:** Next.js, React, TypeScript, Prisma, Supabase, NextAuth
 - **Links:** [Demo](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
@@ -48,7 +48,7 @@ Sistema de help desk fullstack com autenticação por sessão, CRUD de tickets, 
 Plataforma para criar páginas de links personalizadas, com upload de imagens via Cloudinary, estado sincronizado com React Query e testes end-to-end com Cypress.
 
 - **Stack:** React, Vite, TypeScript, Tailwind CSS, React Query, Cloudinary, Cypress
-- **Links:** [Demo](https://frontend-api-weld.vercel.app/) · [Código](https://github.com/tharciosantos/devlinks-web) · [API](https://github.com/tharciosantos/devlinks-api)
+- **Links:** [Demo](https://devlinks-web-api.vercel.app/) · [Código](https://github.com/tharciosantos/devlinks-web) · [API](https://github.com/tharciosantos/devlinks-api)
 
 ### Lista de Mercado
 

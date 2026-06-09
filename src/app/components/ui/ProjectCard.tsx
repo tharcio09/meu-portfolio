@@ -18,6 +18,8 @@ type ProjectCardProps = {
   demoLabel?: string;
   tags: string[];
   featured?: boolean;
+  /** Oculta a coluna de imagem no layout featured (ex.: preview já exibido no hero). */
+  hideImage?: boolean;
   highlights?: string[];
   badge?: string;
   casePoints?: CasePoint[];
@@ -35,6 +37,7 @@ const ProjectCard = ({
   demoLabel,
   tags,
   featured = false,
+  hideImage = false,
   highlights,
   badge,
   casePoints,
@@ -44,36 +47,40 @@ const ProjectCard = ({
   if (featured) {
     return (
       <article
-        className="grid overflow-hidden rounded-xl border border-border-light bg-white shadow-sm hover:shadow-md dark:border-border-dark dark:bg-dark-card lg:grid-cols-[0.95fr_1.05fr]"
+        className={cn(
+          'overflow-hidden rounded-xl border border-border-light bg-white shadow-sm hover:shadow-md dark:border-border-dark dark:bg-dark-card',
+          !hideImage && 'grid lg:grid-cols-[0.95fr_1.05fr]'
+        )}
         style={{
           transitionProperty: 'box-shadow',
           transitionDuration: '300ms',
           transitionTimingFunction: 'ease',
         }}
       >
-        <div className="relative min-h-72 border-b border-border-light bg-light-surface p-4 dark:border-border-dark dark:bg-dark-surface lg:border-b-0 lg:border-r">
-          {/* Barra de browser falsa */}
-          <div className="absolute left-4 right-4 top-4 z-10 flex h-8 items-center gap-2 rounded-t-md border border-b-0 border-border-light bg-white px-3 dark:border-border-dark dark:bg-dark-card">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-            <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-            <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-            <span className="ml-2 truncate text-xs text-secondary-text dark:text-dark-text">
-              helpflow.vercel.app
-            </span>
+        {!hideImage && (
+          <div className="relative min-h-72 border-b border-border-light bg-light-surface p-4 dark:border-border-dark dark:bg-dark-surface lg:border-b-0 lg:border-r">
+            <div className="absolute left-4 right-4 top-4 z-10 flex h-8 items-center gap-2 rounded-t-md border border-b-0 border-border-light bg-white px-3 dark:border-border-dark dark:bg-dark-card">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+              <span className="ml-2 truncate text-xs text-secondary-text dark:text-dark-text">
+                helpflow.vercel.app
+              </span>
+            </div>
+            <div className="relative mt-8 h-full min-h-64 overflow-hidden rounded-b-md border border-border-light bg-white dark:border-border-dark dark:bg-dark-card">
+              <Image
+                src={imageUrl}
+                alt={imageAlt ?? `Screenshot do projeto ${title}`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 48vw"
+                className="object-contain p-3"
+                quality={82}
+              />
+            </div>
           </div>
-          <div className="relative mt-8 h-full min-h-64 overflow-hidden rounded-b-md border border-border-light bg-white dark:border-border-dark dark:bg-dark-card">
-            <Image
-              src={imageUrl}
-              alt={imageAlt ?? `Screenshot do projeto ${title}`}
-              fill
-              sizes="(max-width: 1024px) 100vw, 48vw"
-              className="object-contain p-3"
-              quality={82}
-            />
-          </div>
-        </div>
+        )}
 
-        <div className="flex flex-col gap-5 p-6 md:p-8">
+        <div className="flex flex-col gap-4 p-4 md:gap-5 md:p-6 lg:p-8">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-md bg-gray-100 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:bg-dark-surface dark:text-dark-text">
               Projeto principal
@@ -121,7 +128,7 @@ const ProjectCard = ({
           )}
 
           {highlights && highlights.length > 0 && (
-            <ul className="space-y-2 text-sm text-secondary-text dark:text-dark-text">
+            <ul className="hidden space-y-2 text-sm text-secondary-text dark:text-dark-text md:block">
               {highlights.map((item) => (
                 <li key={item} className="flex gap-2">
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent dark:bg-accent-light" />
@@ -224,9 +231,7 @@ const ProjectCard = ({
                 <span className="font-semibold text-accent dark:text-accent-light shrink-0">
                   {point.label}:
                 </span>
-                <span className="text-secondary-text dark:text-dark-text line-clamp-1">
-                  {point.value}
-                </span>
+                <span className="text-secondary-text dark:text-dark-text">{point.value}</span>
               </div>
             ))}
           </div>

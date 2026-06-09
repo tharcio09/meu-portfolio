@@ -15,7 +15,7 @@ const Projects = () => {
           Projetos em destaque
         </p>
         <h2 className="mt-3 text-4xl font-bold tracking-tight text-primary-text dark:text-light-text md:text-5xl">
-          Projetos que demonstram prática fullstack
+          Projetos que demonstram prática full stack
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
           Aplicações publicadas com foco em fluxos reais: autenticação, persistência de dados, APIs,
@@ -26,7 +26,7 @@ const Projects = () => {
 
       {featuredProject && (
         <div className="mb-10">
-          <ProjectCard {...featuredProject} />
+          <ProjectCard {...featuredProject} hideImage />
         </div>
       )}
 
