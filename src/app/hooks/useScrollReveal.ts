@@ -2,13 +2,30 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useScrollReveal(threshold = 0.12) {
-  const ref = useRef<HTMLElement | null>(null);
+export function useScrollReveal<T extends HTMLElement = HTMLElement>(threshold = 0.12) {
+  const ref = useRef<T | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setVisible(true);
+      return;
+    }
+
+    const revealIfInView = () => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * (1 - threshold) && rect.bottom >= 0) {
+        setVisible(true);
+        return true;
+      }
+
+      return false;
+    };
+
+    if (revealIfInView()) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -21,7 +38,14 @@ export function useScrollReveal(threshold = 0.12) {
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    window.addEventListener('scroll', revealIfInView, { passive: true });
+    window.addEventListener('resize', revealIfInView);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', revealIfInView);
+      window.removeEventListener('resize', revealIfInView);
+    };
   }, [threshold]);
 
   return { ref, visible };

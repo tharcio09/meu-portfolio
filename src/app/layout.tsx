@@ -9,9 +9,9 @@ import { ThemeProvider } from './components/ThemeProvider';
 
 const siteUrl = 'https://tharcio-portfolio.vercel.app';
 const siteName = 'Tharcio.dev';
-const siteTitle = 'Tharcio Santos | Desenvolvedor Fullstack';
+const siteTitle = 'Tharcio Santos | Desenvolvedor Full Stack';
 const siteDescription =
-  'Portfólio de Tharcio Santos, desenvolvedor fullstack com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
+  'Portfólio de Tharcio Santos, desenvolvedor full stack com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
 const githubUrl = 'https://github.com/tharciosantos';
 const linkedinUrl = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     'Tharcio Santos',
-    'Desenvolvedor Fullstack',
+    'Desenvolvedor Full Stack',
     'Desenvolvedor Web',
     'Desenvolvedor Júnior',
     'Estágio Desenvolvimento Web',
@@ -113,7 +113,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Portfólio de Tharcio Santos, desenvolvedor fullstack',
+        alt: 'Portfólio de Tharcio Santos, desenvolvedor full stack',
       },
     ],
     locale: 'pt_BR',
@@ -186,9 +186,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
+          <a href="#conteudo-principal" className="skip-link">
+            Pular para o conteúdo
+          </a>
           <div className="relative z-10 flex min-h-screen flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-7xl flex-1">{children}</main>
+            <main id="conteudo-principal" className="container mx-auto max-w-7xl flex-1">
+              {children}
+            </main>
             <Footer />
             <BackToTop />
           </div>

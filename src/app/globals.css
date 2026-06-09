@@ -70,6 +70,12 @@
 }
 
 @layer utilities {
+  .skip-link {
+    @apply absolute left-4 -top-16 z-[100] rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-white shadow-md;
+    @apply transition-[top] duration-200 ease-out;
+    @apply focus:top-4 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-dark-bg;
+  }
+
   /* Stagger animations para listas de cards */
   .stagger-1 {
     animation-delay: 0ms;
