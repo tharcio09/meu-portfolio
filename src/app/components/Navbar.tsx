@@ -1,14 +1,31 @@
+'use client';
+
 import Link from 'next/link';
 import type { NavLink } from '../../data/constants';
-import { navLinks } from '../../data/constants';
+import { navLinks, SECTION_IDS } from '../../data/constants';
 import { buttonVariants } from './ui/Button';
 import { cn } from '@/lib/utils';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { MobileNav } from './MobileNav';
+import { useActiveSection } from '@/app/hooks/useScrollReveal';
+
+const sectionIdFromHref = (href: string) => (href.startsWith('#') ? href.slice(1) : '');
+
+const navLinkClass = (isActive: boolean) =>
+  cn(
+    'relative text-sm font-medium transition-colors',
+    isActive
+      ? 'font-semibold text-accent dark:text-accent-light'
+      : 'text-secondary-text hover:text-accent dark:text-dark-text dark:hover:text-accent-light',
+    isActive &&
+      'after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-accent dark:after:bg-accent-light'
+  );
 
 const Navbar = () => {
+  const activeSection = useActiveSection(SECTION_IDS);
   const mainLinks = navLinks.filter((link) => link.cta !== true);
   const ctaLink = navLinks.find((link) => link.cta === true);
+  const isCtaActive = ctaLink ? activeSection === sectionIdFromHref(ctaLink.href) : false;
 
   return (
     <nav
@@ -31,20 +48,32 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden items-center space-x-6 md:flex">
-          {mainLinks.map((link: NavLink) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="relative text-sm font-medium text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {mainLinks.map((link: NavLink) => {
+            const isActive = activeSection === sectionIdFromHref(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={navLinkClass(isActive)}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         <div className="hidden items-center space-x-4 md:flex">
           {ctaLink && (
-            <Link href={ctaLink.href} className={cn(buttonVariants({ variant: 'outline' }))}>
+            <Link
+              href={ctaLink.href}
+              className={cn(
+                buttonVariants({ variant: 'outline' }),
+                isCtaActive &&
+                  'border-accent text-accent dark:border-accent-light dark:text-accent-light'
+              )}
+              aria-current={isCtaActive ? 'page' : undefined}
+            >
               {ctaLink.label}
             </Link>
           )}
@@ -53,7 +82,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4 md:hidden">
           <ThemeSwitcher />
-          <MobileNav links={navLinks} />
+          <MobileNav links={navLinks} activeSection={activeSection} />
         </div>
       </div>
     </nav>

@@ -25,6 +25,15 @@ export const navLinks: NavLink[] = [
   { href: '#contato', label: 'Contato', cta: true },
 ];
 
+/** IDs estáveis para scroll spy — manter sincronizado com os hrefs de navLinks. */
+export const SECTION_IDS = [
+  'projetos',
+  'sobre-mim',
+  'habilidades',
+  'experiencia',
+  'contato',
+] as const;
+
 export const redesSociais: SocialLink[] = [
   {
     label: 'LinkedIn',
