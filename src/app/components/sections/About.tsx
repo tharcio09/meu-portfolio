@@ -1,27 +1,5 @@
 import Image from 'next/image';
 import Section from '../ui/Section';
-import type { ReactNode } from 'react';
-import { skills } from '@/data/about';
-import { learningItems } from '@/data/learning';
-import { GithubIcon, TechBadgeIcon } from '../ui/Icons';
-
-/**
- * Map local de iconName → componente de ícone.
- * Mantém a renderização de JSX no componente e os dados limpos em about.ts.
- */
-const SKILL_ICON_MAP: Record<string, ReactNode> = {
-  SiJavascript: <TechBadgeIcon label="JS" />,
-  SiTypescript: <TechBadgeIcon label="TS" />,
-  SiReact: <TechBadgeIcon label="R" />,
-  SiNextdotjs: <TechBadgeIcon label="N" />,
-  SiTailwindcss: <TechBadgeIcon label="TW" />,
-  SiNodedotjs: <TechBadgeIcon label="ND" />,
-  SiPrisma: <TechBadgeIcon label="PR" />,
-  SiSupabase: <TechBadgeIcon label="SB" />,
-  SiGit: <TechBadgeIcon label="GT" />,
-  SiGithub: <GithubIcon className="h-4 w-4" />,
-  SiFigma: <TechBadgeIcon label="FG" />,
-};
 
 const About = () => {
   return (
@@ -55,51 +33,6 @@ const About = () => {
               que levo para o desenvolvimento: observar o contexto, organizar informações,
               diagnosticar causas e comunicar decisões com clareza.
             </p>
-          </div>
-
-          <div className="mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
-              Stack e ferramentas
-            </h3>
-            <div className="mt-4 flex flex-wrap gap-2" role="list" aria-label="Tecnologias">
-              {skills.map((skill) => (
-                <span
-                  key={skill.name}
-                  role="listitem"
-                  className={`inline-flex items-center gap-2 rounded-md border px-2.5 py-1.5 text-xs font-medium transition-all duration-200 hover:scale-105 ${
-                    skill.featured
-                      ? 'border-accent-border bg-accent-subtle text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light'
-                      : 'border-border-light text-secondary-text dark:border-border-dark dark:text-dark-text'
-                  }`}
-                >
-                  <span className="text-sm" aria-hidden="true">
-                    {SKILL_ICON_MAP[skill.iconName]}
-                  </span>
-                  {skill.name}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
-              Atualmente aprendendo
-            </h3>
-            <div className="mt-3 flex flex-col gap-2">
-              {learningItems.map((item) => (
-                <div
-                  key={item.name}
-                  className="rounded-lg border border-border-light bg-light-surface/60 p-3 dark:border-border-dark dark:bg-dark-surface/60"
-                >
-                  <p className="text-sm font-semibold text-primary-text dark:text-light-text">
-                    {item.name}
-                  </p>
-                  <p className="mt-0.5 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
