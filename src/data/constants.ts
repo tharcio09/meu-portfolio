@@ -19,19 +19,18 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 
 export const navLinks: NavLink[] = [
   { href: '#projetos', label: 'Projetos' },
-  { href: '#sobre-mim', label: 'Sobre' },
-  { href: '#habilidades', label: 'Habilidades' },
   { href: '#processo', label: 'Processo' },
-  { href: '#experiencia', label: 'Trajetória' },
+  { href: '#habilidades', label: 'Habilidades' },
+  { href: '#sobre-mim', label: 'Sobre' },
   { href: '#contato', label: 'Contato', cta: true },
 ];
 
 /** IDs estáveis para scroll spy — manter sincronizado com os hrefs de navLinks. */
 export const SECTION_IDS = [
   'projetos',
-  'sobre-mim',
-  'habilidades',
   'processo',
+  'habilidades',
+  'sobre-mim',
   'experiencia',
   'contato',
 ] as const;

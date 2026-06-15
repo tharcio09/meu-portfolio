@@ -29,17 +29,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className="sticky top-0 z-50 border-b border-border-light bg-light-bg/95 p-4 backdrop-blur-md transition-colors dark:border-border-dark dark:bg-dark-bg/95"
+      className="sticky top-0 z-50 border-b border-border-light bg-light-bg/95 px-6 py-3 backdrop-blur-md transition-colors dark:border-border-dark dark:bg-dark-bg/95"
       role="navigation"
       aria-label="Navegação principal"
     >
-      <div className="container mx-auto flex max-w-7xl items-center justify-between">
+      <div className="mx-auto flex max-w-6xl items-center justify-between">
         <Link
           href="/"
-          className="group inline-flex items-center gap-2 text-lg font-bold tracking-tight text-primary-text transition-colors hover:text-accent dark:text-light-text dark:hover:text-accent-light"
+          className="group inline-flex items-center gap-2 text-base font-bold tracking-[-0.02em] text-primary-text transition-colors hover:text-accent dark:text-light-text dark:hover:text-accent-light"
           aria-label="Voltar para o início"
         >
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-accent text-sm font-extrabold text-white transition-colors group-hover:bg-accent-hover dark:bg-accent-light dark:text-dark-bg dark:group-hover:bg-accent-light-hover">
+          <span className="inline-flex h-7 w-7 items-center justify-center border border-accent bg-accent text-xs font-extrabold text-white transition-colors group-hover:bg-accent-hover dark:border-accent-light dark:bg-accent-light dark:text-dark-bg dark:group-hover:bg-accent-light-hover">
             T
           </span>
           <span>
@@ -47,7 +47,7 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <div className="hidden items-center space-x-6 md:flex">
+        <div className="hidden items-center gap-5 md:flex">
           {mainLinks.map((link: NavLink) => {
             const isActive = activeSection === sectionIdFromHref(link.href);
             return (

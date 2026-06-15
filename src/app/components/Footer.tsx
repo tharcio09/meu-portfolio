@@ -4,11 +4,32 @@ import { GithubIcon, LinkedinIcon, MailIcon } from './ui/Icons';
 const Footer = () => {
   return (
     <footer
-      className="border-t border-border-light py-10 text-center transition-colors dark:border-border-dark"
+      className="border-t border-border-light py-8 transition-colors dark:border-border-dark"
       role="contentinfo"
     >
-      <div className="container mx-auto max-w-7xl px-6">
-        <div className="flex justify-center space-x-6 mb-5">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p className="font-semibold text-primary-text dark:text-light-text">
+            Tharcio Santos — Desenvolvedor Fullstack Júnior
+          </p>
+          <p className="mt-2 text-sm text-secondary-text dark:text-dark-text">
+            Projetos reais, aprendizado contínuo e construção de sistemas web.
+          </p>
+          <p className="mt-4 text-xs text-secondary-text dark:text-dark-text">
+            © {new Date().getFullYear()} Tharcio Santos
+            {' · '}
+            <a
+              href={`${GITHUB_URL}/meu-portfolio`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-accent hover:underline dark:text-accent-light"
+            >
+              Ver código
+            </a>
+          </p>
+        </div>
+
+        <div className="flex gap-5">
           <a
             href={GITHUB_URL}
             target="_blank"
@@ -37,21 +58,6 @@ const Footer = () => {
             <MailIcon className="h-5 w-5" />
           </a>
         </div>
-
-        <p className="text-sm text-secondary-text dark:text-dark-text">
-          Feito com <span className="text-accent dark:text-accent-light font-medium">Next.js</span>
-          {' · '}
-          <a
-            href={`${GITHUB_URL}/meu-portfolio`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent underline decoration-accent/40 hover:decoration-accent dark:text-accent-light dark:decoration-accent-light/40 dark:hover:decoration-accent-light"
-          >
-            Ver código
-          </a>
-          {' · '}
-          <span>© {new Date().getFullYear()} Tharcio Santos</span>
-        </p>
       </div>
     </footer>
   );
