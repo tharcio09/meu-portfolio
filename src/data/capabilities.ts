@@ -1,31 +1,30 @@
-/**
- * Dados das capacidades/competências aplicadas.
- * iconName corresponde a um identificador usado em Capabilities.tsx para selecionar
- * o ícone Lucide correto — mantendo JSX fora da camada de dados.
- */
-export type Capacidade = {
-  iconName: string;
+export type Capability = {
   title: string;
   description: string;
+  technologies: string[];
+  usedIn: string[];
 };
 
-export const capacidades: Capacidade[] = [
+export const capabilities: Capability[] = [
   {
-    iconName: 'LuCode',
-    title: 'Frontend responsivo',
+    title: 'Interface',
+    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     description:
-      'Interfaces com React, Next.js e Tailwind CSS, com atenção a responsividade, clareza visual e navegação simples.',
+      'Construção de interfaces responsivas, componentes reutilizáveis e páginas organizadas para aplicações web.',
+    usedIn: ['HelpFlow', 'ManutFlow', 'Portfólio', 'Crypto Dashboard'],
   },
   {
-    iconName: 'LuDatabase',
-    title: 'Autenticação, dados e APIs',
+    title: 'Backend e dados',
+    technologies: ['Node.js', 'APIs REST', 'Prisma', 'Supabase', 'PostgreSQL'],
     description:
-      'Implementação de fluxos com login, CRUD, banco de dados, Prisma, Supabase e integração entre frontend e backend.',
+      'Criação de fluxos com autenticação, persistência de dados, regras de negócio e integração com banco relacional.',
+    usedIn: ['HelpFlow', 'ManutFlow', 'DevLinks'],
   },
   {
-    iconName: 'LuRocket',
-    title: 'Deploy e evolução do produto',
+    title: 'Qualidade e entrega',
+    technologies: ['Git', 'GitHub', 'Cypress', 'Vercel', 'SEO', 'Testes manuais'],
     description:
-      'Publicação de projetos, documentação de decisões técnicas e melhoria contínua a partir de uso real e revisão do código.',
+      'Organização do fluxo de desenvolvimento, versionamento, validação de funcionalidades, deploy e melhoria de visibilidade do projeto.',
+    usedIn: ['DevLinks', 'Portfólio', 'HelpFlow'],
   },
 ];
