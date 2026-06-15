@@ -12,6 +12,26 @@ beforeEach(() => {
 });
 
 describe('Contact', () => {
+  it('deve apresentar a nova chamada e os canais de contato', () => {
+    render(<Contact />);
+
+    expect(
+      screen.getByRole('heading', { name: 'Vamos conversar sobre uma oportunidade.' })
+    ).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /LinkedIn/i })).toHaveAttribute(
+      'href',
+      'https://www.linkedin.com/in/tharcio-santos-dev/'
+    );
+    expect(screen.getByRole('link', { name: /GitHub/i })).toHaveAttribute(
+      'href',
+      'https://github.com/tharciosantos'
+    );
+    expect(screen.getByRole('link', { name: /Currículo/i })).toHaveAttribute(
+      'href',
+      '/curriculo-tharcio-santos.pdf'
+    );
+  });
+
   it('deve renderizar o botão de copiar email', () => {
     render(<Contact />);
     expect(screen.getByRole('button', { name: /copiar email/i })).toBeInTheDocument();
