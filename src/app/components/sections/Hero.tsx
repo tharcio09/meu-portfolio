@@ -1,13 +1,12 @@
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 import Section from '../ui/Section';
 import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
 
-const proofItems = [
-  'Projetos publicados',
-  'React, Next.js, TypeScript e Node.js',
-  'Auth, banco relacional, APIs e PWA',
+const profileDetails = [
+  { label: 'Foco', value: 'Frontend, backend e fullstack' },
+  { label: 'Formação', value: 'ADS · Anhanguera' },
+  { label: 'Entrega', value: 'Projetos públicos e em produção' },
 ];
 
 const Hero = () => {
@@ -19,50 +18,39 @@ const Hero = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10
-          bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(79,70,229,0.10),transparent)]
-          dark:bg-[radial-gradient(ellipse_80%_60%_at_50%_-15%,rgba(99,102,241,0.14),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(79,70,229,0.07),transparent_42%)] dark:bg-[linear-gradient(135deg,rgba(45,212,191,0.07),transparent_42%)]"
       />
 
-      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
         <div>
-          {/* Badge — sem animate-fade-down para não atrasar LCP */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-accent-border bg-accent-subtle px-3 py-1 text-xs font-semibold text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light">
-            <span className="relative flex h-2 w-2" aria-hidden="true">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent dark:bg-accent-light" />
-            </span>
-            Disponível para oportunidade júnior
+          <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
+            <span className="h-px w-10 bg-accent dark:bg-teal-300" aria-hidden="true" />
+            Portfólio · Desenvolvimento web
           </div>
 
-          {/* H1 — sem animate-fade-up: renderiza imediatamente */}
-          <h1 className="mt-6 text-5xl font-extrabold tracking-tight text-primary-text dark:text-light-text md:text-7xl">
-            Tharcio Santos
+          <h1 className="mt-7 max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[5rem]">
+            Construo aplicações web com clareza, dados e evolução contínua.
           </h1>
 
-          {/* H2 — sem animate-fade-up nem animation-delay */}
-          <h2 className="mt-5 max-w-2xl text-2xl font-semibold leading-tight text-primary-text dark:text-light-text md:text-3xl">
-            Desenvolvedor Full Stack Júnior com{' '}
-            <span className="relative whitespace-nowrap">
-              <span
-                aria-hidden="true"
-                className="absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-gradient-to-r from-accent to-violet-500 dark:from-accent-light dark:to-violet-400 animate-scale-x-in"
-              />
-              <span className="relative">projetos reais em produção.</span>
-            </span>
-          </h2>
+          <div className="mt-7 grid gap-5 border-l-2 border-accent pl-5 dark:border-teal-300 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent dark:text-teal-300">
+              Tharcio Santos
+            </p>
+            <div>
+              <h2 className="text-xl font-semibold text-primary-text dark:text-light-text md:text-2xl">
+                Desenvolvedor Fullstack Júnior
+              </h2>
+              <p className="mt-3 max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
+                Gosto de entender como as pessoas trabalham antes de transformar um problema em
+                software. Hoje construo aplicações com interface, autenticação, banco de dados, APIs
+                e deploy, enquanto busco minha primeira oportunidade em estágio ou posição júnior.
+              </p>
+            </div>
+          </div>
 
-          {/* Parágrafo LCP — sem animate-fade-up nem animation-delay:200ms */}
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-secondary-text dark:text-dark-text">
-            Construo aplicações web com React, Next.js e Node.js, conectando interface,
-            autenticação, banco de dados, APIs e deploy. Meus projetos mostram prática em fluxos
-            completos, código público e produto funcionando no ar.
-          </p>
-
-          {/* Botões — sem animate-fade-up nem animation-delay:300ms */}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
-              Ver projetos
+              Explorar projetos
               <ArrowRightIcon className="h-4 w-4" />
             </a>
             <a
@@ -75,86 +63,39 @@ const Hero = () => {
               Baixar currículo
             </a>
           </div>
+        </div>
 
-          {/* Texto de prova — sem animate-fade-up nem animation-delay:350ms */}
-          <p className="mt-3 text-sm text-secondary-text dark:text-dark-text">
-            Projetos publicados, código público e decisões técnicas documentadas.
-          </p>
+        <aside
+          aria-label="Resumo profissional"
+          className="border-t-2 border-primary-text bg-white/65 p-6 shadow-sm backdrop-blur-sm dark:border-teal-300 dark:bg-dark-card/70"
+        >
+          <div className="flex items-center justify-between gap-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
+              Perfil em resumo
+            </p>
+            <span className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+              Disponível
+            </span>
+          </div>
 
-          {/* Lista de prova — sem animate-fade-up nem animation-delay:400ms */}
-          <dl className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-border-light pt-6 text-sm text-secondary-text dark:border-border-dark dark:text-dark-text">
-            {proofItems.map((item) => (
-              <div key={item} className="flex items-center gap-2">
-                <span
-                  aria-hidden="true"
-                  className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent dark:bg-accent-light"
-                />
-                <dt className="sr-only">Destaque</dt>
-                <dd>{item}</dd>
+          <dl className="mt-6 divide-y divide-border-light border-y border-border-light dark:divide-border-dark dark:border-border-dark">
+            {profileDetails.map((item) => (
+              <div key={item.label} className="grid grid-cols-[5.5rem_1fr] gap-4 py-4">
+                <dt className="text-xs font-semibold uppercase tracking-wider text-secondary-text dark:text-dark-text">
+                  {item.label}
+                </dt>
+                <dd className="text-sm font-medium leading-relaxed text-primary-text dark:text-light-text">
+                  {item.value}
+                </dd>
               </div>
             ))}
           </dl>
-        </div>
 
-        <div className="relative">
-          <div className="overflow-hidden rounded-xl border border-border-light bg-white shadow-lg shadow-accent/5 dark:border-border-dark dark:bg-dark-card dark:shadow-black/20">
-            <div className="flex items-center justify-between border-b border-border-light px-4 py-3 dark:border-border-dark">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
-                  Projeto principal
-                </p>
-                <h3 className="mt-1 text-base font-bold text-primary-text dark:text-light-text">
-                  HelpFlow
-                </h3>
-              </div>
-              {/* Badge de status sem emoji — indicador CSS puro */}
-              <span className="inline-flex items-center gap-1.5 rounded-md bg-accent-subtle px-2.5 py-1 text-xs font-semibold text-accent dark:bg-accent-subtle-dark dark:text-accent-light">
-                <span
-                  aria-hidden="true"
-                  className="h-1.5 w-1.5 rounded-full bg-green-500 dark:bg-green-400"
-                />
-                Em produção
-              </span>
-            </div>
-
-            <div className="relative aspect-[16/10] bg-light-surface dark:bg-dark-surface">
-              <Image
-                src="/images/helpflow-screenshot.png"
-                alt="Preview do HelpFlow, sistema de help desk desenvolvido por Tharcio Santos"
-                fill
-                sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-contain p-3"
-              />
-            </div>
-
-            <div className="grid gap-3 border-t border-border-light p-4 text-sm dark:border-border-dark sm:grid-cols-3">
-              <div className="text-secondary-text dark:text-dark-text">
-                <span className="block text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
-                  Auth
-                </span>
-                NextAuth
-              </div>
-              <div className="text-secondary-text dark:text-dark-text">
-                <span className="block text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
-                  Banco
-                </span>
-                Supabase + Prisma
-              </div>
-              <div className="text-secondary-text dark:text-dark-text">
-                <span className="block text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
-                  Deploy
-                </span>
-                Vercel
-              </div>
-            </div>
-          </div>
-
-          {/* Glow decorativo atrás do card */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-4 -z-10 rounded-2xl bg-accent/5 blur-2xl dark:bg-accent/10"
-          />
-        </div>
+          <p className="mt-5 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+            Interesse em sistemas internos, produtos web e aplicações que organizam processos reais.
+          </p>
+        </aside>
       </div>
     </Section>
   );

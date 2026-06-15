@@ -3,14 +3,15 @@ import type { ReactNode } from 'react';
 type SectionProps = {
   id?: string;
   className?: string;
-  spacing?: 'default' | 'compact' | 'hero';
+  spacing?: 'default' | 'compact' | 'hero' | 'editorial';
   children: ReactNode;
 };
 
 const spacingClasses = {
   default: 'py-16 md:py-24',
   compact: 'py-14 md:py-20',
-  hero: 'pt-20 pb-14 md:pt-28 md:pb-16',
+  hero: 'pt-16 pb-10 md:pt-20 md:pb-12',
+  editorial: 'py-12 md:py-16',
 };
 
 const Section = ({ children, id, className = '', spacing = 'default' }: SectionProps) => {

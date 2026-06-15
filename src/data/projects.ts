@@ -1,15 +1,15 @@
 export type Project = {
   title: string;
+  shortTitle: string;
   description: string;
-  imageUrl: string;
+  imageUrl?: string;
   imageAlt?: string;
   githubUrl: string;
   demoUrl?: string;
   demoLabel?: string;
   tags: string[];
-  featured?: boolean;
+  kind: 'featured' | 'building' | 'secondary';
   highlights?: string[];
-  badge?: string;
   outcome?: string;
   technicalHighlight?: string;
   casePoints?: {
@@ -21,110 +21,103 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: 'HelpFlow — Sistema de Help Desk',
+    shortTitle: 'HelpFlow',
     description:
-      'Sistema full stack para organizar chamados internos com login, painel de gestão, status, prioridade e banco relacional.',
+      'Sistema fullstack para abertura, acompanhamento e gerenciamento de chamados internos.',
     casePoints: [
       {
         label: 'Problema',
-        value: 'Registrar, priorizar e acompanhar solicitações internas sem perder histórico.',
+        value: 'Organizar solicitações, responsáveis, prioridades e histórico de atendimento.',
       },
       {
         label: 'Solução',
-        value: 'Painel autenticado com CRUD de tickets, status, prioridade e histórico.',
+        value: 'Painel autenticado com criação e gerenciamento de chamados, status e prioridade.',
       },
       {
         label: 'Entrega',
-        value: 'Deploy na Vercel, Supabase com Prisma e código público.',
+        value: 'Aplicação em produção com persistência relacional e código público.',
       },
     ],
     highlights: [
-      'Autenticação por sessão com NextAuth e controle de acesso por perfil',
-      'CRUD completo de tickets com status, prioridade e histórico',
-      'Banco relacional com Supabase + Prisma e interface responsiva',
+      'Autenticação com NextAuth',
+      'CRUD de chamados e dashboard',
+      'Supabase, PostgreSQL e Prisma',
     ],
     technicalHighlight:
-      'Usei autenticação com controle de acesso e persistência relacional para cobrir o fluxo completo de gestão de chamados.',
-    badge: 'Auth + banco + deploy',
+      'Um fluxo completo de produto: autenticação, regras de negócio, banco relacional, interface e deploy.',
     imageUrl: '/images/helpflow-screenshot.png',
     imageAlt:
       'Interface do HelpFlow mostrando painel de gestão de chamados com lista de tickets, status e prioridade',
     githubUrl: 'https://github.com/tharciosantos/helpflow',
     demoUrl: 'https://helpflow.vercel.app/',
-    demoLabel: 'Acessar demo completa',
+    demoLabel: 'Acessar aplicação',
     tags: ['Next.js', 'React', 'TypeScript', 'Prisma', 'Supabase', 'NextAuth'],
-    featured: true,
+    kind: 'featured',
+  },
+  {
+    title: 'ManutFlow — Controle de Manutenção',
+    shortTitle: 'ManutFlow',
+    description:
+      'Sistema em desenvolvimento para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico.',
+    casePoints: [
+      {
+        label: 'Estado atual',
+        value: 'Dashboard inicial, rotas e cadastro/listagem de equipamentos.',
+      },
+      {
+        label: 'Base técnica',
+        value: 'Supabase com PostgreSQL, RLS habilitado e API de health check.',
+      },
+      {
+        label: 'Evolução',
+        value: 'Estrutura para ordens de serviço, autenticação e crescimento por domínio.',
+      },
+    ],
+    highlights: ['Construção incremental', 'Organização por domínio', 'Banco no Supabase'],
+    githubUrl: 'https://github.com/tharciosantos/manutflow',
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'],
+    kind: 'building',
   },
   {
     title: 'DevLinks — Perfil e Linktree',
+    shortTitle: 'DevLinks',
     description:
-      'Plataforma para criar páginas de links personalizadas, com perfil editável, upload de imagem e estado sincronizado.',
-    casePoints: [
-      {
-        label: 'Problema',
-        value: 'Centralizar links de redes sociais e portfólio em uma página editável.',
-      },
-      {
-        label: 'Solução',
-        value: 'Perfil personalizável com avatar, links dinâmicos e persistência de estado.',
-      },
-    ],
-    technicalHighlight:
-      'Upload via Cloudinary, sincronização com React Query e testes E2E do fluxo principal.',
-    outcome: 'Edição em tempo real + upload + testes E2E',
+      'Perfil personalizável com avatar, links dinâmicos, upload de imagem e estado sincronizado.',
+    technicalHighlight: 'Cloudinary, React Query e testes E2E com Cypress.',
+    outcome: 'Upload + estado sincronizado + E2E',
     imageUrl: '/images/screenshot-devlinks.png',
-    imageAlt:
-      'Interface do DevLinks exibindo página de perfil com links personalizados e avatar do usuário',
+    imageAlt: 'Interface do DevLinks exibindo página de perfil com links personalizados',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
     demoUrl: 'https://devlinks-web-api.vercel.app/',
-    tags: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'React Query', 'Cloudinary', 'Cypress'],
+    tags: ['React', 'React Query', 'Cloudinary', 'Cypress'],
+    kind: 'secondary',
   },
   {
     title: 'Lista de Mercado — PWA',
+    shortTitle: 'Lista de Mercado',
     description:
-      'Aplicativo mobile-first para lista de compras, com uso offline, persistência local e compartilhamento pelo WhatsApp.',
-    casePoints: [
-      {
-        label: 'Problema',
-        value: 'Acessar e atualizar uma lista de compras mesmo sem internet.',
-      },
-      {
-        label: 'Solução',
-        value:
-          'Aplicação instalável que salva dados no dispositivo e permite compartilhar a lista.',
-      },
-    ],
-    technicalHighlight:
-      'PWA instalável com funcionamento offline, Local Storage e experiência otimizada para celular.',
-    outcome: 'Offline + instalável + compartilhamento',
+      'PWA mobile-first para organizar compras com funcionamento offline e compartilhamento.',
+    technicalHighlight: 'Uso offline, organização por setores e compartilhamento via WhatsApp.',
+    outcome: 'Offline + instalável + compartilhável',
     imageUrl: '/images/lista-mercado-screenshot.png',
-    imageAlt:
-      'Interface mobile-first do aplicativo Lista de Mercado com itens de compras e opção de compartilhamento',
+    imageAlt: 'Interface mobile da Lista de Mercado com itens de compras',
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
     demoUrl: 'https://lista-mercado-sage.vercel.app/',
-    tags: ['React', 'Vite', 'TypeScript', 'PWA', 'Tailwind CSS', 'Local Storage'],
+    tags: ['React', 'Vite', 'PWA', 'Tailwind CSS'],
+    kind: 'secondary',
   },
   {
     title: 'Crypto Dashboard',
+    shortTitle: 'Crypto Dashboard',
     description:
-      'Dashboard responsivo para acompanhar preços e variações de criptomoedas usando a API pública da CoinGecko.',
-    casePoints: [
-      {
-        label: 'Problema',
-        value: 'Consultar dados de cripto sem alternar entre múltiplas plataformas.',
-      },
-      {
-        label: 'Solução',
-        value: 'Interface unificada com dados atualizados via CoinGecko API.',
-      },
-    ],
-    technicalHighlight:
-      'Consumo de API externa com estados de loading, erro e atualização de dados na interface.',
-    outcome: 'API externa + dados em tempo real + responsivo',
+      'Dashboard para consulta de criptomoedas com busca, detalhes e tratamento de estados.',
+    technicalHighlight: 'SSR, API externa, rotas dinâmicas e estados de loading/erro.',
+    outcome: 'SSR + API externa + rotas dinâmicas',
     imageUrl: '/images/screenshot-crypto.png',
-    imageAlt:
-      'Dashboard de criptomoedas exibindo tabela de preços e variações em tempo real via CoinGecko API',
+    imageAlt: 'Dashboard de criptomoedas exibindo preços e variações',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
-    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'CoinGecko API'],
+    tags: ['Next.js', 'React', 'TypeScript', 'API externa'],
+    kind: 'secondary',
   },
 ];

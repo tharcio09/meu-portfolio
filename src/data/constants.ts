@@ -21,6 +21,7 @@ export const navLinks: NavLink[] = [
   { href: '#projetos', label: 'Projetos' },
   { href: '#sobre-mim', label: 'Sobre' },
   { href: '#habilidades', label: 'Habilidades' },
+  { href: '#processo', label: 'Processo' },
   { href: '#experiencia', label: 'Trajetória' },
   { href: '#contato', label: 'Contato', cta: true },
 ];
@@ -30,6 +31,7 @@ export const SECTION_IDS = [
   'projetos',
   'sobre-mim',
   'habilidades',
+  'processo',
   'experiencia',
   'contato',
 ] as const;
