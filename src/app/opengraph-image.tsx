@@ -29,7 +29,7 @@ export default function OpenGraphImage() {
           position: 'absolute',
           inset: 0,
           background:
-            'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99, 102, 241, 0.18), transparent)',
+            'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(15, 118, 110, 0.18), transparent)',
         }}
       />
 
@@ -57,8 +57,8 @@ export default function OpenGraphImage() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              borderRadius: 12,
-              background: '#4f46e5',
+              borderRadius: 0,
+              background: '#0f766e',
               color: '#ffffff',
               fontSize: 28,
               fontWeight: 900,
@@ -67,14 +67,14 @@ export default function OpenGraphImage() {
             T
           </div>
           <span>
-            Tharcio<span style={{ color: '#818cf8' }}>.dev</span>
+            Tharcio<span style={{ color: '#2dd4bf' }}>.dev</span>
           </span>
         </div>
         <div
           style={{
-            border: '1px solid rgba(129, 140, 248, 0.45)',
+            border: '1px solid rgba(45, 212, 191, 0.45)',
             borderRadius: 999,
-            color: '#818cf8',
+            color: '#2dd4bf',
             padding: '10px 18px',
             fontSize: 22,
             fontWeight: 700,
@@ -92,7 +92,7 @@ export default function OpenGraphImage() {
           position: 'relative',
         }}
       >
-        <div style={{ color: '#818cf8', fontSize: 28, fontWeight: 700 }}>
+        <div style={{ color: '#2dd4bf', fontSize: 28, fontWeight: 700 }}>
           React · Next.js · Node.js · TypeScript
         </div>
         <div style={{ maxWidth: 900, fontSize: 78, lineHeight: 1.02, fontWeight: 900 }}>
