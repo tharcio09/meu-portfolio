@@ -20,7 +20,9 @@ const EvidenceStrip = () => {
             key={item.index}
             className="grid grid-cols-[2rem_1fr] gap-3 py-4 sm:px-5 first:pl-0 last:pr-0"
           >
-            <dt className="text-xs font-semibold text-accent dark:text-teal-300">{item.index}</dt>
+            <dt className="text-xs font-semibold text-accent dark:text-accent-light">
+              {item.index}
+            </dt>
             <dd>
               <p className="text-sm font-semibold text-primary-text dark:text-light-text">
                 {item.title}

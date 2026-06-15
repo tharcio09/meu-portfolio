@@ -18,13 +18,13 @@ export default function Home() {
         <Projects />
       </ScrollReveal>
       <ScrollReveal>
-        <About />
+        <Process />
       </ScrollReveal>
       <ScrollReveal>
         <Capabilities />
       </ScrollReveal>
       <ScrollReveal>
-        <Process />
+        <About />
       </ScrollReveal>
       <ScrollReveal>
         <Experience />

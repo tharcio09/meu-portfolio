@@ -13,33 +13,33 @@ module.exports = {
       },
       colors: {
         /* Backgrounds */
-        'dark-bg': '#0d1117',
-        'dark-card': '#161b22',
-        'dark-surface': '#1c2333',
-        'light-bg': '#f0f4ff',
+        'dark-bg': '#0b1114',
+        'dark-card': '#111a1e',
+        'dark-surface': '#172329',
+        'light-bg': '#f5f7f6',
         'light-card': '#ffffff',
-        'light-surface': '#eef2ff',
+        'light-surface': '#edf3f1',
 
         /* Texto */
-        'light-text': '#e2e8f0',
-        'dark-text': '#a8b4c7',
-        'primary-text': '#0f172a',
-        'secondary-text': '#475569',
+        'light-text': '#edf6f3',
+        'dark-text': '#9fb2ae',
+        'primary-text': '#12201f',
+        'secondary-text': '#52615f',
 
         /* Bordas */
-        'border-light': '#e2e8f0',
-        'border-dark': '#21262d',
+        'border-light': '#dce5e2',
+        'border-dark': '#263438',
 
-        /* Accent — Indigo */
+        /* Accent — teal */
         accent: {
-          DEFAULT: '#4f46e5',
-          hover: '#4338ca',
-          light: '#818cf8',
-          'light-hover': '#a5b4fc',
-          subtle: '#eef2ff',
-          'subtle-dark': 'rgba(99,102,241,0.15)',
-          border: '#c7d2fe',
-          'border-dark': '#3730a3',
+          DEFAULT: '#0f766e',
+          hover: '#115e59',
+          light: '#5eead4',
+          'light-hover': '#99f6e4',
+          subtle: '#e6f4f1',
+          'subtle-dark': 'rgba(45,212,191,0.12)',
+          border: '#99d5cb',
+          'border-dark': '#1f766e',
         },
       },
       keyframes: {

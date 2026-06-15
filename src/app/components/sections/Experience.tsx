@@ -9,7 +9,7 @@ const Experience = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 border-b border-border-light pb-8 dark:border-border-dark md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>
-            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
               <span className="h-px w-10 bg-current" aria-hidden="true" />
               Trajetória
             </div>
@@ -35,7 +35,7 @@ const Experience = () => {
                   key={skill}
                   className="grid min-h-16 grid-cols-[1.75rem_1fr] items-center gap-2 border-b border-border-light py-3 text-sm text-secondary-text dark:border-border-dark dark:text-dark-text odd:pr-3 even:border-l even:pl-3"
                 >
-                  <span className="font-mono text-[10px] font-semibold text-accent dark:text-teal-300">
+                  <span className="font-mono text-[10px] font-semibold text-accent dark:text-accent-light">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   {skill}
@@ -54,7 +54,7 @@ const Experience = () => {
                   key={`${item.role}-${item.org}`}
                   className="grid gap-3 border-b border-border-light py-5 dark:border-border-dark sm:grid-cols-[2.5rem_1fr_auto] sm:gap-5"
                 >
-                  <span className="font-mono text-xs font-semibold text-accent dark:text-teal-300">
+                  <span className="font-mono text-xs font-semibold text-accent dark:text-accent-light">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>

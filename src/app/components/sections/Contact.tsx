@@ -23,7 +23,7 @@ const Contact = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
-            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
               <span className="h-px w-10 bg-current" aria-hidden="true" />
               Contato
             </div>

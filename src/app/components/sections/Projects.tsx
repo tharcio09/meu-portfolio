@@ -20,7 +20,7 @@ const Projects = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-6 border-b border-border-light pb-8 dark:border-border-dark md:grid-cols-[0.75fr_1.25fr] md:items-end">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
               Trabalho selecionado
             </p>
             <h2 className="mt-4 text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
@@ -59,7 +59,7 @@ const Projects = () => {
             </div>
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
                 Case principal · 01
               </p>
               <h3 className="mt-4 text-4xl font-bold tracking-[-0.03em] text-primary-text dark:text-light-text">
@@ -76,7 +76,7 @@ const Projects = () => {
                       key={point.label}
                       className="grid gap-2 py-4 sm:grid-cols-[5.5rem_1fr] sm:gap-5"
                     >
-                      <dt className="text-xs font-semibold uppercase tracking-wider text-accent dark:text-teal-300">
+                      <dt className="text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
                         {point.label}
                       </dt>
                       <dd className="text-sm leading-relaxed text-secondary-text dark:text-dark-text">
@@ -200,7 +200,7 @@ const Projects = () => {
         <div className="pt-10">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
                 Outros projetos
               </p>
               <h3 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">

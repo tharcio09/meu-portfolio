@@ -11,7 +11,7 @@ const About = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
           <div>
-            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
               <span className="h-px w-10 bg-current" aria-hidden="true" />
               Sobre mim
             </div>
@@ -62,7 +62,7 @@ const About = () => {
 
             <div className="mt-8 grid border-y border-border-light dark:border-border-dark md:grid-cols-[1.25fr_0.75fr] md:divide-x md:divide-border-light dark:md:divide-border-dark">
               <article className="py-6 md:pr-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-teal-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
                   Formação
                 </p>
                 <h3 className="mt-3 text-xl font-bold text-primary-text dark:text-light-text">
@@ -97,7 +97,7 @@ const About = () => {
               </article>
 
               <article className="border-t border-border-light py-6 dark:border-border-dark md:border-t-0 md:pl-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-teal-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
                   Certificação
                 </p>
                 <h3 className="mt-3 text-xl font-bold text-primary-text dark:text-light-text">
@@ -110,7 +110,7 @@ const About = () => {
                   href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex text-sm font-semibold text-accent hover:underline dark:text-teal-300"
+                  className="mt-4 inline-flex text-sm font-semibold text-accent hover:underline dark:text-accent-light"
                 >
                   Ver credencial →
                 </a>

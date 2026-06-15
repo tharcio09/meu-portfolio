@@ -56,7 +56,7 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
         className={cn(
           'relative z-[60] inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-colors',
           isOpen
-            ? 'border-accent bg-primary-text text-white shadow-lg shadow-slate-900/20 ring-2 ring-white/80 hover:bg-accent dark:border-accent-light dark:bg-light-text dark:text-dark-bg dark:ring-accent-light/30 dark:hover:bg-accent-light'
+            ? 'border-accent bg-accent text-white shadow-lg shadow-accent/20 ring-2 ring-accent-border hover:bg-accent-hover dark:border-accent-light dark:bg-accent-light dark:text-dark-bg dark:ring-accent-light/30 dark:hover:bg-accent-light-hover'
             : 'border-transparent text-primary-text hover:bg-light-surface hover:text-accent dark:text-light-text dark:hover:bg-dark-surface dark:hover:text-accent-light'
         )}
       >

@@ -11,7 +11,7 @@ const Capabilities = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-5 border-b border-border-light pb-6 dark:border-border-dark md:grid-cols-[0.75fr_1.25fr] md:items-end md:pb-8">
           <div>
-            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-teal-300">
+            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
               <span className="h-px w-10 bg-current" aria-hidden="true" />
               Competências
             </div>
@@ -32,7 +32,7 @@ const Capabilities = () => {
               className="py-5 md:py-6 lg:px-7 lg:py-7 lg:first:pl-0 lg:last:pr-0"
             >
               <div className="flex items-center justify-between gap-4">
-                <p className="font-mono text-xs font-semibold text-accent dark:text-teal-300">
+                <p className="font-mono text-xs font-semibold text-accent dark:text-accent-light">
                   {String(index + 1).padStart(2, '0')}
                 </p>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary-text dark:text-dark-text">

@@ -6,7 +6,7 @@ import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
 const profileDetails = [
   { label: 'Foco', value: 'Frontend, backend e fullstack' },
   { label: 'Formação', value: 'ADS · Anhanguera' },
-  { label: 'Entrega', value: 'Projetos públicos e em produção' },
+  { label: 'Entrega', value: 'Projetos publicados e em evolução' },
 ];
 
 const Hero = () => {
@@ -18,13 +18,13 @@ const Hero = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(79,70,229,0.07),transparent_42%)] dark:bg-[linear-gradient(135deg,rgba(45,212,191,0.07),transparent_42%)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(135deg,rgba(15,118,110,0.08),transparent_42%)] dark:bg-[linear-gradient(135deg,rgba(45,212,191,0.07),transparent_42%)]"
       />
 
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
         <div>
           <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
-            <span className="h-px w-10 bg-accent dark:bg-teal-300" aria-hidden="true" />
+            <span className="h-px w-10 bg-accent dark:bg-accent-light" aria-hidden="true" />
             Portfólio · Desenvolvimento web
           </div>
 
@@ -32,8 +32,8 @@ const Hero = () => {
             Construo aplicações web com clareza, dados e evolução contínua.
           </h1>
 
-          <div className="mt-7 grid gap-5 border-l-2 border-accent pl-5 dark:border-teal-300 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent dark:text-teal-300">
+          <div className="mt-7 grid gap-5 border-l-2 border-accent pl-5 dark:border-accent-light sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
               Tharcio Santos
             </p>
             <div>
@@ -67,7 +67,7 @@ const Hero = () => {
 
         <aside
           aria-label="Resumo profissional"
-          className="border-t-2 border-primary-text bg-white/65 p-6 shadow-sm backdrop-blur-sm dark:border-teal-300 dark:bg-dark-card/70"
+          className="border-t-2 border-accent bg-white/65 p-6 shadow-sm backdrop-blur-sm dark:border-accent-light dark:bg-dark-card/70"
         >
           <div className="flex items-center justify-between gap-4">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
