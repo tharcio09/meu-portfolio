@@ -5,6 +5,16 @@ export type ExperienciaAnterior = {
   summary: string;
 };
 
+export const trajectorySkills = [
+  'Organização',
+  'Atenção a processos',
+  'Comunicação entre áreas',
+  'Análise de problemas',
+  'Registro de informações',
+  'Responsabilidade com prazos',
+  'Rotinas operacionais',
+] as const;
+
 export const experienciasAnteriores: ExperienciaAnterior[] = [
   {
     period: 'Mai/2023 – Out/2023',
@@ -18,6 +28,6 @@ export const experienciasAnteriores: ExperienciaAnterior[] = [
     role: 'Auxiliar Mecânico',
     org: 'Komaq',
     summary:
-      'Diagnóstico técnico de equipamentos e análise de causa raiz — experiência que contribui para investigar problemas com método antes de propor soluções.',
+      'Diagnóstico técnico de equipamentos e análise de causa raiz — experiência que contribui para investigar problemas com método antes de buscar soluções.',
   },
 ];
