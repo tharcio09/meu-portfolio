@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { NavLink } from '../../data/constants';
 import { buttonVariants } from './ui/Button';
 import { cn } from '@/lib/utils';
@@ -13,20 +13,33 @@ type MobileNavProps = {
 };
 
 const sectionIdFromHref = (href: string) => (href.startsWith('#') ? href.slice(1) : '');
+const MOBILE_MENU_ID = 'mobile-navigation-menu';
 
 export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const triggerButtonRef = useRef<HTMLButtonElement | null>(null);
+  const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const closeTimeoutRef = useRef<number | null>(null);
 
   const handleClose = useCallback(() => {
     setIsClosing(true);
-    window.setTimeout(() => {
+    if (closeTimeoutRef.current) window.clearTimeout(closeTimeoutRef.current);
+
+    closeTimeoutRef.current = window.setTimeout(() => {
       setIsOpen(false);
       setIsClosing(false);
+      triggerButtonRef.current?.focus({ preventScroll: true });
+      closeTimeoutRef.current = null;
     }, 200);
   }, []);
 
   const handleOpen = () => {
+    if (closeTimeoutRef.current) {
+      window.clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+
     setIsOpen(true);
     setIsClosing(false);
   };
@@ -47,12 +60,30 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      firstLinkRef.current?.focus({ preventScroll: true });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [isOpen]);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) window.clearTimeout(closeTimeoutRef.current);
+    };
+  }, []);
+
   return (
     <>
       <button
+        ref={triggerButtonRef}
         onClick={isOpen ? handleClose : handleOpen}
         aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
         aria-expanded={isOpen}
+        aria-controls={MOBILE_MENU_ID}
         className={cn(
           'relative z-[60] inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-colors',
           isOpen
@@ -77,6 +108,7 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
 
       {isOpen && (
         <div
+          id={MOBILE_MENU_ID}
           className="fixed left-0 right-0 top-16 z-50 border-b border-border-light bg-light-card shadow-lg shadow-slate-900/10 dark:border-border-dark dark:bg-dark-bg dark:shadow-black/30 md:hidden"
           style={{
             opacity: isClosing ? 0 : 1,
@@ -87,10 +119,12 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
           <div className="mx-auto flex max-w-sm flex-col items-stretch gap-2 px-6 py-5">
             {links.map((link) => {
               const isActive = activeSection === sectionIdFromHref(link.href);
+              const isFirstLink = link.href === links[0]?.href;
 
               return (
                 <Link
                   key={link.href}
+                  ref={isFirstLink ? firstLinkRef : undefined}
                   href={link.href}
                   onClick={handleClose}
                   className={
@@ -103,7 +137,7 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
                             : 'text-secondary-text hover:border-border-light hover:bg-light-surface hover:text-accent dark:text-dark-text dark:hover:border-border-dark dark:hover:bg-dark-surface dark:hover:text-accent-light'
                         )
                   }
-                  aria-current={isActive ? 'page' : undefined}
+                  aria-current={isActive ? 'location' : undefined}
                 >
                   {link.label}
                 </Link>
