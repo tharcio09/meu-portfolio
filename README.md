@@ -196,6 +196,23 @@ npm run dev
 
 ---
 
+## Checklist Antes de Abrir PR
+
+Antes de abrir um PR ou fazer merge, rode as validações locais:
+
+```bash
+npm run format:check
+npm run lint
+npx tsc --noEmit
+npm run test:run
+npm run build
+npm audit --audit-level=moderate
+```
+
+Não use `npm audit fix --force` sem revisão, pois o npm pode sugerir mudanças incompatíveis com a stack atual.
+
+---
+
 ## Autor
 
 **Tharcio Santos**
