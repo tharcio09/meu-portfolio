@@ -55,7 +55,9 @@ describe('conteúdo principal do redesign', () => {
   it('renderiza o Footer editorial e preserva os links profissionais', () => {
     render(<Footer />);
 
-    expect(screen.getByText('Tharcio Santos — Desenvolvedor Fullstack Júnior')).toBeInTheDocument();
+    expect(
+      screen.getByText('Tharcio Santos — Desenvolvedor Full Stack Júnior')
+    ).toBeInTheDocument();
     expect(
       screen.getByText('Projetos reais, aprendizado contínuo e construção de sistemas web.')
     ).toBeInTheDocument();
