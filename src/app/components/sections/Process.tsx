@@ -37,7 +37,7 @@ const Process = () => {
           {processSteps.map((step, index) => (
             <li
               key={step}
-              className="grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70"
+              className={`grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70${index === processSteps.length - 1 && processSteps.length % 2 !== 0 ? ' sm:col-span-2' : ''}`}
             >
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
                 step/{String(index + 1).padStart(2, '0')}

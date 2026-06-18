@@ -6,8 +6,6 @@ import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
 
-const formatVisibleText = (text: string) => text.replace(/fullstack/gi, 'full stack');
-
 const Projects = () => {
   const featuredProject = projects.find((project) => project.kind === 'featured');
   const buildingProject = projects.find((project) => project.kind === 'building');
@@ -68,7 +66,7 @@ const Projects = () => {
                 {featuredProject.shortTitle}
               </h3>
               <p className="mt-4 text-lg leading-relaxed text-secondary-text dark:text-dark-text">
-                {formatVisibleText(featuredProject.description)}
+                {featuredProject.description}
               </p>
 
               {featuredProject.casePoints && (
@@ -144,7 +142,7 @@ const Projects = () => {
                 {buildingProject.shortTitle}
               </h3>
               <p className="mt-4 text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
-                {formatVisibleText(buildingProject.description)}
+                {buildingProject.description}
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {buildingProject.tags.map((tag) => (
