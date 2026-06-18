@@ -85,7 +85,7 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
         aria-expanded={isOpen}
         aria-controls={MOBILE_MENU_ID}
         className={cn(
-          'relative z-[60] inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-colors',
+          'relative z-[60] inline-flex h-10 w-10 items-center justify-center border transition-colors',
           isOpen
             ? 'border-accent bg-accent text-white shadow-lg shadow-accent/20 ring-2 ring-accent-border hover:bg-accent-hover dark:border-accent-light dark:bg-accent-light dark:text-dark-bg dark:ring-accent-light/30 dark:hover:bg-accent-light-hover'
             : 'border-transparent text-primary-text hover:bg-light-surface hover:text-accent dark:text-light-text dark:hover:bg-dark-surface dark:hover:text-accent-light'
@@ -131,7 +131,7 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
                     link.cta
                       ? cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-2 w-full')
                       : cn(
-                          'w-full rounded-lg border border-transparent px-4 py-3 text-center text-base font-medium transition-colors',
+                          'w-full border border-transparent px-4 py-3 text-center text-base font-medium transition-colors',
                           isActive
                             ? 'border border-accent-border bg-accent-subtle font-semibold text-accent shadow-sm dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light'
                             : 'text-secondary-text hover:border-border-light hover:bg-light-surface hover:text-accent dark:text-dark-text dark:hover:border-border-dark dark:hover:bg-dark-surface dark:hover:text-accent-light'

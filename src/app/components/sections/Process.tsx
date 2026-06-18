@@ -19,7 +19,7 @@ const Process = () => {
     >
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
         <div>
-          <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
+          <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
             <span className="h-px w-10 bg-current" aria-hidden="true" />
             Processo
           </div>
@@ -33,16 +33,20 @@ const Process = () => {
           </p>
         </div>
 
-        <ol className="grid border-t border-border-light dark:border-border-dark sm:grid-cols-2">
+        <ol className="grid gap-3 sm:grid-cols-2">
           {processSteps.map((step, index) => (
             <li
               key={step}
-              className="grid min-h-20 grid-cols-[2.5rem_1fr] items-center gap-3 border-b border-border-light py-5 dark:border-border-dark sm:px-5 sm:odd:border-r"
+              className={`grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70${index === processSteps.length - 1 && processSteps.length % 2 !== 0 ? ' sm:col-span-2' : ''}`}
             >
-              <span className="font-mono text-xs font-semibold text-accent dark:text-accent-light">
-                {String(index + 1).padStart(2, '0')}
+              <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
+                step/{String(index + 1).padStart(2, '0')}
               </span>
               <p className="text-sm font-semibold text-primary-text dark:text-light-text">{step}</p>
+              <span
+                className="h-2 w-2 rounded-full bg-accent dark:bg-accent-light"
+                aria-hidden="true"
+              />
             </li>
           ))}
         </ol>

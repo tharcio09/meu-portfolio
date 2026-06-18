@@ -9,7 +9,7 @@ const Experience = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 border-b border-border-light pb-8 dark:border-border-dark md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>
-            <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
+            <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
               <span className="h-px w-10 bg-current" aria-hidden="true" />
               Trajetória
             </div>
@@ -26,17 +26,17 @@ const Experience = () => {
 
         <div className="grid gap-10 pt-9 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-text dark:text-light-text">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary-text dark:text-light-text">
               Base que levo para tecnologia
             </h3>
-            <ul className="mt-4 grid grid-cols-2 border-t border-border-light dark:border-border-dark">
+            <ul className="mt-4 grid grid-cols-2 gap-3">
               {trajectorySkills.map((skill, index) => (
                 <li
                   key={skill}
-                  className="grid min-h-16 grid-cols-[1.75rem_1fr] items-center gap-2 border-b border-border-light py-3 text-sm text-secondary-text dark:border-border-dark dark:text-dark-text odd:pr-3 even:border-l even:pl-3"
+                  className={`flex min-h-16 flex-col gap-2 border border-border-light bg-white/70 p-3 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card/70 dark:text-dark-text${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
                 >
-                  <span className="font-mono text-[10px] font-semibold text-accent dark:text-accent-light">
-                    {String(index + 1).padStart(2, '0')}
+                  <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-accent dark:text-accent-light">
+                    base/{String(index + 1).padStart(2, '0')}
                   </span>
                   {skill}
                 </li>
@@ -45,17 +45,17 @@ const Experience = () => {
           </div>
 
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-text dark:text-light-text">
+            <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary-text dark:text-light-text">
               Experiências anteriores
             </h3>
-            <div className="mt-4 border-t border-border-light dark:border-border-dark">
+            <div className="mt-4 grid gap-3">
               {experienciasAnteriores.map((item, index) => (
                 <article
                   key={`${item.role}-${item.org}`}
-                  className="grid gap-3 border-b border-border-light py-5 dark:border-border-dark sm:grid-cols-[2.5rem_1fr_auto] sm:gap-5"
+                  className="grid gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:grid-cols-[4.5rem_1fr_auto] sm:gap-5"
                 >
-                  <span className="font-mono text-xs font-semibold text-accent dark:text-accent-light">
-                    {String(index + 1).padStart(2, '0')}
+                  <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
+                    role/{String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
                     <h4 className="font-semibold text-primary-text dark:text-light-text">

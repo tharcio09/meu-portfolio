@@ -14,17 +14,23 @@ const EvidenceStrip = () => {
       <h2 id="evidencias-title" className="sr-only">
         Evidências técnicas
       </h2>
-      <dl className="mx-auto grid max-w-6xl divide-y divide-border-light dark:divide-border-dark sm:grid-cols-2 sm:divide-x sm:divide-y-0 xl:grid-cols-4">
+      <dl className="mx-auto grid max-w-6xl gap-3 py-4 sm:grid-cols-2 xl:grid-cols-4">
         {evidenceItems.map((item) => (
           <div
             key={item.index}
-            className="grid grid-cols-[2rem_1fr] gap-3 py-4 sm:px-5 first:pl-0 last:pr-0"
+            className="border border-border-light bg-white/55 p-3 dark:border-border-dark dark:bg-dark-card/55"
           >
-            <dt className="text-xs font-semibold text-accent dark:text-accent-light">
-              {item.index}
+            <dt className="flex items-center justify-between gap-3">
+              <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
+                metric/{item.index}
+              </span>
+              <span
+                className="h-2 w-2 rounded-full bg-accent dark:bg-accent-light"
+                aria-hidden="true"
+              />
             </dt>
-            <dd>
-              <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+            <dd className="mt-2">
+              <p className="text-sm font-semibold leading-snug text-primary-text dark:text-light-text">
                 {item.title}
               </p>
               <p className="mt-1 text-xs leading-relaxed text-secondary-text dark:text-dark-text">

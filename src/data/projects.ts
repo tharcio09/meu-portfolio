@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: 'HelpFlow — Sistema de Help Desk',
     shortTitle: 'HelpFlow',
     description:
-      'Sistema fullstack para abertura, acompanhamento e gerenciamento de chamados internos.',
+      'Sistema full stack para abertura, acompanhamento e gerenciamento de chamados internos.',
     casePoints: [
       {
         label: 'Problema',
