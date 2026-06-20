@@ -2,6 +2,7 @@ import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
+import Counter from '../ui/Counter';
 
 const profileDetails = [
   { label: 'Foco', value: 'Frontend, backend e Full Stack' },
@@ -25,16 +26,16 @@ const Hero = () => {
 
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
         <div>
-          <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
+          <div className="stagger-1 animate-fade-up opacity-0 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
             <span className="h-px w-10 bg-accent dark:bg-accent-light" aria-hidden="true" />
             Portfólio · Desenvolvimento web
           </div>
 
-          <h1 className="mt-7 max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
+          <h1 className="stagger-2 animate-fade-up opacity-0 mt-7 max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
             Construo aplicações web com clareza, dados e evolução contínua.
           </h1>
 
-          <div className="mt-7 grid gap-5 border-l-2 border-accent pl-5 dark:border-accent-light sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8">
+          <div className="stagger-3 animate-fade-up opacity-0 mt-7 grid gap-5 border-l-2 border-accent pl-5 dark:border-accent-light sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
               Tharcio Santos
             </p>
@@ -50,7 +51,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="stagger-4 animate-fade-up opacity-0 mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
               Explorar projetos
               <ArrowRightIcon className="h-4 w-4" />
@@ -124,18 +125,8 @@ const Hero = () => {
           </div>
 
           <div className="mt-3 grid grid-cols-2 gap-2.5 sm:mt-4 sm:gap-3">
-            <div className="border border-border-light p-2.5 dark:border-border-dark sm:p-3">
-              <p className="font-mono text-xl font-bold text-accent dark:text-accent-light">05</p>
-              <p className="mt-1 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
-                projetos com código público
-              </p>
-            </div>
-            <div className="border border-border-light p-2.5 dark:border-border-dark sm:p-3">
-              <p className="font-mono text-xl font-bold text-accent dark:text-accent-light">01</p>
-              <p className="mt-1 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
-                produto principal em produção
-              </p>
-            </div>
+            <Counter target={5} label="projetos com código público" />
+            <Counter target={1} label="produto principal em produção" />
           </div>
 
           <p className="mt-3 border-l-2 border-accent pl-3 text-sm leading-relaxed text-secondary-text dark:border-accent-light dark:text-dark-text sm:mt-4">

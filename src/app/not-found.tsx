@@ -18,7 +18,7 @@ export default function NotFound() {
       <h2 className="mt-4 text-2xl font-bold text-primary-text dark:text-light-text">
         Página não encontrada
       </h2>
-      <p className="mt-2 max-w-md text-secondary-text dark:text-gray-400">
+      <p className="mt-2 max-w-md text-secondary-text dark:text-dark-text">
         A página que você está procurando não existe ou foi movida.
       </p>
       <Link href="/" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'mt-6')}>
