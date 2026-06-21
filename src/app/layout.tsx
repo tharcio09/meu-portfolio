@@ -11,7 +11,7 @@ const siteUrl = 'https://tharcio-portfolio.vercel.app';
 const siteName = 'Tharcio.dev';
 const siteTitle = 'Tharcio Santos | Desenvolvedor Full Stack';
 const siteDescription =
-  'Portfólio de Tharcio Santos, desenvolvedor full stack com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.';
+  'Portfólio de Tharcio Santos, desenvolvedor full stack júnior com projetos React, Next.js, Node.js, APIs e banco de dados.';
 const githubUrl = 'https://github.com/tharciosantos';
 const linkedinUrl = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 
