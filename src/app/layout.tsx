@@ -138,6 +138,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'e4de6438b9a53e05',
+    other: {
+      'msvalidate.01': 'A2F86C71345CC471E5F8AA5578E27914',
+    },
   },
   icons: {
     icon: [
