@@ -6,7 +6,7 @@ export function useCountUp<T extends HTMLElement = HTMLDivElement>(
   target: number,
   duration = 1200
 ) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target);
   const [started, setStarted] = useState(false);
   const ref = useRef<T | null>(null);
 
