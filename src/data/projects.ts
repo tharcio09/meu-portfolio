@@ -58,11 +58,11 @@ export const projects: Project[] = [
     title: 'ManutFlow — Controle de Manutenção',
     shortTitle: 'ManutFlow',
     description:
-      'Sistema em desenvolvimento para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico.',
+      'Sistema em desenvolvimento para registrar equipamentos, gerenciar ordens de manutenção e acompanhar prioridade e status de cada atendimento.',
     casePoints: [
       {
         label: 'Estado atual',
-        value: 'Dashboard inicial, rotas e cadastro/listagem de equipamentos.',
+        value: 'Dashboard com rotas, cadastro e listagem de equipamentos.',
       },
       {
         label: 'Base técnica',
@@ -70,7 +70,7 @@ export const projects: Project[] = [
       },
       {
         label: 'Evolução',
-        value: 'Estrutura para ordens de serviço, autenticação e crescimento por domínio.',
+        value: 'Evolução planejada: autenticação, responsáveis e domínios independentes.',
       },
     ],
     highlights: ['Construção incremental', 'Organização por domínio', 'Banco no Supabase'],
@@ -82,9 +82,10 @@ export const projects: Project[] = [
     title: 'DevLinks — Perfil e Linktree',
     shortTitle: 'DevLinks',
     description:
-      'Perfil personalizável com avatar, links dinâmicos, upload de imagem e estado sincronizado.',
-    technicalHighlight: 'Cloudinary, React Query e testes E2E com Cypress.',
-    outcome: 'Upload + estado sincronizado + E2E',
+      'Página de perfil com links personalizados, upload de avatar e dados sincronizados entre cliente e servidor.',
+    technicalHighlight:
+      'Upload de imagem via Cloudinary, cache e invalidação com React Query, e testes end-to-end com Cypress no fluxo principal.',
+    outcome: 'Upload · sincronização · testes E2E',
     imageUrl: '/images/screenshot-devlinks.png',
     imageAlt: 'Interface do DevLinks exibindo página de perfil com links personalizados',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
@@ -96,9 +97,10 @@ export const projects: Project[] = [
     title: 'Lista de Mercado — PWA',
     shortTitle: 'Lista de Mercado',
     description:
-      'PWA mobile-first para organizar compras com funcionamento offline e compartilhamento.',
-    technicalHighlight: 'Uso offline, organização por setores e compartilhamento via WhatsApp.',
-    outcome: 'Offline + instalável + compartilhável',
+      'Aplicação mobile para organizar compras por setores, funcionar sem internet e compartilhar a lista via WhatsApp.',
+    technicalHighlight:
+      'PWA com service worker para uso offline, persistência local e compartilhamento da lista via WhatsApp.',
+    outcome: 'PWA · offline-first · compartilhamento',
     imageUrl: '/images/lista-mercado-screenshot.png',
     imageAlt: 'Interface mobile da Lista de Mercado com itens de compras',
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
@@ -110,9 +112,10 @@ export const projects: Project[] = [
     title: 'Crypto Dashboard',
     shortTitle: 'Crypto Dashboard',
     description:
-      'Dashboard para consulta de criptomoedas com busca, detalhes e tratamento de estados.',
-    technicalHighlight: 'SSR, API externa, rotas dinâmicas e estados de loading/erro.',
-    outcome: 'SSR + API externa + rotas dinâmicas',
+      'Consulta de preços e variações de criptomoedas com busca, páginas de detalhe e tratamento de estados de carregamento e erro.',
+    technicalHighlight:
+      'Consumo de API externa com SSR, rotas dinâmicas e gerenciamento de estados assíncronos — loading, erro e exibição de dados.',
+    outcome: 'API externa · SSR · estados assíncronos',
     imageUrl: '/images/screenshot-crypto.png',
     imageAlt: 'Dashboard de criptomoedas exibindo preços e variações',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
