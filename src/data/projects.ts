@@ -39,9 +39,9 @@ export const projects: Project[] = [
       },
     ],
     highlights: [
-      'Autenticação com NextAuth',
-      'CRUD de chamados e dashboard',
-      'Supabase, PostgreSQL e Prisma',
+      'Autenticação com NextAuth e roles CLIENT/AGENT',
+      'CRUD completo com validação Zod e rate limiting',
+      'Testes Vitest e Cypress E2E',
     ],
     technicalHighlight:
       'Um fluxo completo de produto: autenticação, regras de negócio, banco relacional, interface e deploy.',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/tharciosantos/helpflow',
     demoUrl: 'https://helpflow.vercel.app/',
     demoLabel: 'Acessar aplicação',
-    tags: ['Next.js', 'React', 'TypeScript', 'Prisma', 'Supabase', 'NextAuth'],
+    tags: ['Next.js', 'React', 'JavaScript', 'Prisma', 'Supabase', 'NextAuth'],
     kind: 'featured',
   },
   {
@@ -114,13 +114,13 @@ export const projects: Project[] = [
     description:
       'Consulta de preços e variações de criptomoedas com busca, páginas de detalhe e tratamento de estados de carregamento e erro.',
     technicalHighlight:
-      'Consumo de API externa com SSR, rotas dinâmicas e gerenciamento de estados assíncronos — loading, erro e exibição de dados.',
-    outcome: 'API externa · SSR · estados assíncronos',
+      'Consumo de API externa com rotas dinâmicas, busca client-side e estados assíncronos — loading, erro e exibição de dados.',
+    outcome: 'API externa · rotas dinâmicas · estados assíncronos',
     imageUrl: '/images/screenshot-crypto.png',
     imageAlt: 'Dashboard de criptomoedas exibindo preços e variações',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
-    tags: ['Next.js', 'React', 'TypeScript', 'API externa'],
+    tags: ['Next.js', 'React', 'API externa'],
     kind: 'secondary',
   },
 ];
