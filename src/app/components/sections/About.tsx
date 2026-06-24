@@ -72,7 +72,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-[1.25fr_0.75fr]">
+            <div className="mt-8">
               <article className="border border-border-light bg-white/70 p-4 dark:border-border-dark dark:bg-dark-card/70 md:p-5">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
                   Formação
@@ -106,26 +106,6 @@ const About = () => {
                     </dd>
                   </div>
                 </dl>
-              </article>
-
-              <article className="border border-border-light bg-white/70 p-4 dark:border-border-dark dark:bg-dark-card/70 md:p-5">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
-                  Certificação
-                </p>
-                <h3 className="mt-3 text-xl font-bold text-primary-text dark:text-light-text">
-                  NLW Connect
-                </h3>
-                <p className="mt-1 text-sm text-secondary-text dark:text-dark-text">
-                  Rocketseat · Concluído
-                </p>
-                <a
-                  href="https://app.rocketseat.com.br/certificates/861a62ff-782a-4bec-9f04-df3def1002cb"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex text-sm font-semibold text-accent hover:underline dark:text-accent-light"
-                >
-                  Ver credencial →
-                </a>
               </article>
             </div>
           </div>
