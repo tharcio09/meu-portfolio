@@ -82,7 +82,7 @@ PWA mobile-first para organizar compras, com funcionamento offline, persistênci
 
 #### Crypto Dashboard
 
-Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, SSR e tratamento de estados ao consumir a API da CoinGecko.
+Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderização client-side e tratamento de estados ao consumir a API da CoinGecko.
 
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, CoinGecko API
 - **Links:** [Aplicação](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharciosantos/crypto-dashboard)

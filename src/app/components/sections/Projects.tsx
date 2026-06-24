@@ -208,8 +208,8 @@ const Projects = () => {
               </h3>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-              Uma seleção compacta de aplicações que exploram upload, testes, PWA, SSR e consumo de
-              APIs.
+              Uma seleção compacta de aplicações que exploram upload, testes, PWA, estados
+              assíncronos e consumo de APIs.
             </p>
           </div>
 
