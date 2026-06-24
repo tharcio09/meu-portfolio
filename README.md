@@ -14,7 +14,7 @@ Portfólio pessoal focado em aplicações web, projetos reais, processo de desen
 
 ## Sobre
 
-Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor fullstack júnior. O portfólio reúne aplicações publicadas, um produto em construção, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
+Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack Júnior. O portfólio reúne aplicações publicadas, um produto em construção, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
 
 A interface segue uma direção editorial de produto: hierarquia visual clara, leitura rápida, conteúdo organizado por evidências e uma paleta baseada em grafite, teal/ciano e superfícies neutras. Dark e light mode compartilham os mesmos tokens semânticos, com contraste, foco visível e estados interativos consistentes.
 
@@ -52,14 +52,14 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 
 ### Case principal — HelpFlow
 
-Sistema de help desk fullstack para abertura, acompanhamento e gerenciamento de chamados internos, com autenticação por sessão, controle de acesso, banco relacional e aplicação publicada.
+Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de chamados internos, com autenticação por sessão, controle de acesso, banco relacional e aplicação publicada.
 
-- **Stack:** Next.js, React, JavaScript, Prisma, Supabase, NextAuth
+- **Stack:** Next.js, React, JavaScript, Prisma, Supabase, PostgreSQL, NextAuth, Zod, Vitest, Cypress
 - **Links:** [Aplicação](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
 
 ### Produto em construção — ManutFlow
 
-Sistema em desenvolvimento para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. A implementação atual inclui dashboard inicial, rotas e cadastro/listagem de equipamentos.
+Sistema em desenvolvimento para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. A implementação atual inclui cadastro e gestão de equipamentos, ordens de serviço com controle de status, filtros, busca textual e dashboard com indicadores.
 
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL
 - **Link:** [Acompanhar no GitHub](https://github.com/tharciosantos/manutflow)
@@ -70,14 +70,14 @@ Sistema em desenvolvimento para controle de equipamentos, ordens de manutenção
 
 Perfil personalizável com avatar, links dinâmicos, upload via Cloudinary, estado sincronizado com React Query e testes end-to-end com Cypress.
 
-- **Stack:** React, Vite, TypeScript, Tailwind CSS, React Query, Cloudinary, Cypress
+- **Stack:** React, Vite, JavaScript, Tailwind CSS, React Query, Cloudinary, Cypress, GitHub Actions
 - **Links:** [Aplicação](https://devlinks-web-api.vercel.app/) · [Código](https://github.com/tharciosantos/devlinks-web) · [API](https://github.com/tharciosantos/devlinks-api)
 
 #### Lista de Mercado
 
 PWA mobile-first para organizar compras, com funcionamento offline, persistência local e compartilhamento pelo WhatsApp.
 
-- **Stack:** React, Vite, TypeScript, PWA, Tailwind CSS, Local Storage
+- **Stack:** React, Vite, PWA, Tailwind CSS, Local Storage
 - **Links:** [Aplicação](https://lista-mercado-sage.vercel.app/) · [Código](https://github.com/tharciosantos/lista-mercado)
 
 #### Crypto Dashboard
@@ -96,7 +96,7 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 3. **Projetos:** HelpFlow, ManutFlow e projetos secundários.
 4. **Processo:** fluxo incremental de estudo e desenvolvimento.
 5. **Habilidades aplicadas:** interface, backend e dados, qualidade e entrega.
-6. **Sobre:** formação, objetivo profissional e certificação.
+6. **Sobre:** formação, objetivo profissional e contexto profissional.
 7. **Trajetória:** conexão entre experiências anteriores e desenvolvimento de software.
 8. **Contato:** email, LinkedIn, GitHub e currículo.
 
