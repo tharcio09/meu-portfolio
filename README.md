@@ -54,7 +54,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 
 Sistema de help desk fullstack para abertura, acompanhamento e gerenciamento de chamados internos, com autenticação por sessão, controle de acesso, banco relacional e aplicação publicada.
 
-- **Stack:** Next.js, React, TypeScript, Prisma, Supabase, NextAuth
+- **Stack:** Next.js, React, JavaScript, Prisma, Supabase, NextAuth
 - **Links:** [Aplicação](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
 
 ### Produto em construção — ManutFlow
@@ -84,7 +84,7 @@ PWA mobile-first para organizar compras, com funcionamento offline, persistênci
 
 Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderização client-side e tratamento de estados ao consumir a API da CoinGecko.
 
-- **Stack:** Next.js, React, TypeScript, Tailwind CSS, CoinGecko API
+- **Stack:** Next.js, React, CoinGecko API
 - **Links:** [Aplicação](https://crypto-dashboard-five-sandy.vercel.app/) · [Código](https://github.com/tharciosantos/crypto-dashboard)
 
 ---
