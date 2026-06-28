@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import type { NavLink } from '../../data/constants';
 import { navLinks, SECTION_IDS } from '../../data/constants';
 import { buttonVariants } from './ui/Button';
@@ -27,9 +28,23 @@ const Navbar = () => {
   const ctaLink = navLinks.find((link) => link.cta === true);
   const isCtaActive = ctaLink ? activeSection === sectionIdFromHref(ctaLink.href) : false;
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <nav
-      className="sticky top-0 z-50 border-b border-border-light bg-light-bg/95 px-6 py-3 backdrop-blur-md transition-colors dark:border-border-dark dark:bg-dark-bg/95"
+      className={cn(
+        'sticky top-0 z-50 border-b px-6 py-3 backdrop-blur-md transition-all duration-300',
+        scrolled
+          ? 'border-border-light/50 bg-light-bg/80 shadow-[0_1px_3px_rgba(0,0,0,0.06)] dark:border-border-dark/50 dark:bg-dark-bg/80 dark:shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
+          : 'border-border-light/0 bg-light-bg/95 dark:border-border-dark/0 dark:bg-dark-bg/95'
+      )}
       role="navigation"
       aria-label="Navegação principal"
     >
