@@ -66,6 +66,10 @@ module.exports = {
           '0%': { opacity: '0', transform: 'translateY(16px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'reveal-up': {
+          '0%': { clipPath: 'inset(0 0 96% 0)' },
+          '100%': { clipPath: 'inset(0 0 0% 0)' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.8s ease-out forwards',
@@ -74,6 +78,7 @@ module.exports = {
         'scale-x-in': 'scale-x-in 0.6s ease-out 0.5s both',
         ping: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
         'stagger-in': 'stagger-in 0.5s ease-out forwards',
+        'reveal-up': 'reveal-up 0.44s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       backdropBlur: {
         xs: '2px',
