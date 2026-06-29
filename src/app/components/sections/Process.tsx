@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
+import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 
 const processSteps = [
@@ -11,6 +15,32 @@ const processSteps = [
 ];
 
 const Process = () => {
+  const ref = useRef<HTMLOListElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.12 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section
       id="processo"
@@ -33,11 +63,19 @@ const Process = () => {
           </p>
         </div>
 
-        <ol className="grid gap-3 sm:grid-cols-2">
+        <ol ref={ref} className="grid gap-3 sm:grid-cols-2">
           {processSteps.map((step, index) => (
             <li
               key={step}
-              className={`grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70${index === processSteps.length - 1 && processSteps.length % 2 !== 0 ? ' sm:col-span-2' : ''}`}
+              className={cn(
+                'grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70',
+                'motion-safe:transition motion-safe:duration-600 motion-safe:ease-out',
+                visible ? 'motion-safe:opacity-100' : 'motion-safe:opacity-0',
+                index === processSteps.length - 1 &&
+                  processSteps.length % 2 !== 0 &&
+                  'sm:col-span-2'
+              )}
+              style={{ transitionDelay: visible ? `${index * 70}ms` : '0ms' }}
             >
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
                 step/{String(index + 1).padStart(2, '0')}
