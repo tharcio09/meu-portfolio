@@ -40,7 +40,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Componentização:** componentes reutilizáveis com React e TypeScript, como `Button`, `ProjectCard` e `Section`.
 - **Conteúdo organizado:** projetos, habilidades, experiências e constantes vivem parcialmente em `src/data`; copies específicas de apresentação permanecem próximas das respectivas seções.
 - **Acessibilidade e responsividade:** navegação por teclado, foco visível, atributos ARIA, menu mobile e layouts adaptados para diferentes larguras.
-- **Interatividade controlada:** Navbar como Client Component para scroll spy, menu mobile e alternância de tema, sem animações pesadas.
+- **Interatividade controlada:** Navbar como Client Component para scroll spy, menu mobile e alternância de tema. Animações de entrada com IntersectionObserver e CSS transitions, sem dependências externas.
 - **Performance:** imagens otimizadas, ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
