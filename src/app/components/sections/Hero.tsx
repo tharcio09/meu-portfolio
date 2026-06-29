@@ -31,9 +31,11 @@ const Hero = () => {
             Portfólio · Desenvolvimento web
           </div>
 
-          <h1 className="stagger-2 animate-fade-up opacity-0 mt-7 max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
-            Construo aplicações web com clareza, dados e evolução contínua.
-          </h1>
+          <div className="stagger-2 mt-7 max-w-4xl overflow-hidden">
+            <h1 className="animate-reveal-up text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
+              Construo aplicações web com clareza, dados e evolução contínua.
+            </h1>
+          </div>
 
           <div className="stagger-3 animate-fade-up opacity-0 mt-7 grid gap-5 border-l-2 border-accent pl-5 dark:border-accent-light sm:grid-cols-[auto_1fr] sm:items-start sm:gap-8">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
