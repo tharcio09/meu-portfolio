@@ -61,8 +61,9 @@ const Capabilities = () => {
               key={item.title}
               className={cn(
                 'flex min-h-full flex-col border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:p-4 md:p-5',
-                'motion-safe:transition motion-safe:duration-600 motion-safe:ease-out',
-                visible ? 'motion-safe:opacity-100' : 'motion-safe:opacity-0'
+                'transition-[opacity,border-color,box-shadow,transform] duration-300 ease-out',
+                'hover:-translate-y-0.5 hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
+                visible ? 'opacity-100' : 'opacity-0'
               )}
               style={{ transitionDelay: visible ? `${index * 100}ms` : '0ms' }}
             >
