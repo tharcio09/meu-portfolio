@@ -69,8 +69,9 @@ const Process = () => {
               key={step}
               className={cn(
                 'grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70',
-                'motion-safe:transition motion-safe:duration-600 motion-safe:ease-out',
-                visible ? 'motion-safe:opacity-100' : 'motion-safe:opacity-0',
+                'transition-[opacity,border-color,box-shadow,transform] duration-300 ease-out',
+                'hover:-translate-y-0.5 hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
+                visible ? 'opacity-100' : 'opacity-0',
                 index === processSteps.length - 1 &&
                   processSteps.length % 2 !== 0 &&
                   'sm:col-span-2'
