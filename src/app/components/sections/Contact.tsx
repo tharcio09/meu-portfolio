@@ -15,11 +15,7 @@ const RESUME_URL = '/curriculo-tharcio-santos.pdf';
 
 const Contact = () => {
   return (
-    <Section
-      id="contato"
-      spacing="editorial"
-      className="border-t border-border-light dark:border-border-dark"
-    >
+    <Section id="contato" spacing="editorial">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
