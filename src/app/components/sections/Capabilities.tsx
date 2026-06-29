@@ -1,7 +1,37 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import { capabilities } from '@/data/capabilities';
+import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 
 const Capabilities = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setVisible(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.12 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section
       id="habilidades"
@@ -25,11 +55,16 @@ const Capabilities = () => {
           </p>
         </div>
 
-        <div className="grid gap-4 pt-6 md:pt-8 lg:grid-cols-3">
+        <div ref={ref} className="grid gap-4 pt-6 md:pt-8 lg:grid-cols-3">
           {capabilities.map((item, index) => (
             <article
               key={item.title}
-              className="flex min-h-full flex-col border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:p-4 md:p-5"
+              className={cn(
+                'flex min-h-full flex-col border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:p-4 md:p-5',
+                'motion-safe:transition motion-safe:duration-600 motion-safe:ease-out',
+                visible ? 'motion-safe:opacity-100' : 'motion-safe:opacity-0'
+              )}
+              style={{ transitionDelay: visible ? `${index * 100}ms` : '0ms' }}
             >
               <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-light pb-3 dark:border-border-dark">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
