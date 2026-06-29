@@ -66,12 +66,9 @@ const Capabilities = () => {
               )}
               style={{ transitionDelay: visible ? `${index * 100}ms` : '0ms' }}
             >
-              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-light pb-3 dark:border-border-dark">
+              <div className="flex flex-wrap items-center gap-2 border-b border-border-light pb-3 dark:border-border-dark">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
                   scope/{String(index + 1).padStart(2, '0')}
-                </p>
-                <p className="border border-border-light px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-secondary-text dark:border-border-dark dark:text-dark-text">
-                  Contexto de uso
                 </p>
               </div>
 

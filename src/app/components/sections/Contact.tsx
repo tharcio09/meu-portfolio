@@ -56,7 +56,7 @@ const Contact = () => {
                 contact/actions
               </p>
               <span className="text-xs font-semibold text-secondary-text dark:text-dark-text">
-                04 canais
+                Canais de contato
               </span>
             </div>
 
