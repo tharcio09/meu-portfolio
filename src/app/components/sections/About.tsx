@@ -11,11 +11,6 @@ const About = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
           <div>
-            <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
-              <span className="h-px w-10 bg-current" aria-hidden="true" />
-              Sobre mim
-            </div>
-
             <div className="mt-6 border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 lg:max-w-64 lg:p-4">
               <div className="flex items-center justify-between gap-3 border-b border-border-light pb-3 dark:border-border-dark">
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
