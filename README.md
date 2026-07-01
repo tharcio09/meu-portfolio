@@ -16,18 +16,18 @@ Portfólio pessoal focado em aplicações web, projetos reais, processo de desen
 
 Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack Júnior. O portfólio reúne aplicações publicadas, um produto em construção, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
 
-A interface segue uma direção editorial de produto: hierarquia visual clara, leitura rápida, conteúdo organizado por evidências e uma paleta baseada em grafite, teal/ciano e superfícies neutras. Dark e light mode compartilham os mesmos tokens semânticos, com contraste, foco visível e estados interativos consistentes.
+A interface segue uma direção editorial: hierarquia visual clara, leitura rápida, conteúdo organizado por evidências e uma paleta baseada em grafite, teal/ciano e superfícies neutras. Dark e light mode compartilham os mesmos tokens semânticos, com contraste, foco visível e estados interativos consistentes.
 
 ---
 
 ## Proposta Visual e Estrutura
 
-- **Portfólio editorial de produto:** projetos apresentados por problema, solução, entrega e decisões técnicas.
+- **Portfólio editorial:** projetos apresentados por problema, solução, entrega e decisões técnicas.
 - **HelpFlow como case principal:** aplicação mais completa, com autenticação, regras de negócio, banco relacional e deploy.
 - **ManutFlow como produto em construção:** evolução documentada sem criar demonstrações ou resultados que ainda não existem.
 - **Projetos secundários compactos:** DevLinks, Lista de Mercado e Crypto Dashboard aparecem como evidências complementares.
 - **Processo visível:** seção "Como eu trabalho" apresenta o fluxo de análise, escopo, implementação, teste e revisão.
-- **Habilidades aplicadas:** tecnologias organizadas por contexto de uso, em vez de uma lista genérica de ferramentas.
+- **Competências:** tecnologias organizadas por contexto de uso, em vez de uma lista genérica de ferramentas.
 
 ---
 
@@ -92,13 +92,12 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 ## Seções do Portfólio
 
 1. **Hero:** posicionamento profissional, objetivo e acesso aos projetos e currículo.
-2. **Evidence Strip:** evidências técnicas resumidas para leitura rápida.
-3. **Projetos:** HelpFlow, ManutFlow e projetos secundários.
-4. **Processo:** fluxo incremental de estudo e desenvolvimento.
-5. **Habilidades aplicadas:** interface, backend e dados, qualidade e entrega.
-6. **Sobre:** formação, objetivo profissional e contexto profissional.
-7. **Trajetória:** conexão entre experiências anteriores e desenvolvimento de software.
-8. **Contato:** email, LinkedIn, GitHub e currículo.
+2. **Projetos:** HelpFlow, ManutFlow e projetos secundários.
+3. **Processo:** fluxo incremental de desenvolvimento com exemplo real do HelpFlow.
+4. **Competências:** frontend, backend, banco de dados, testes, PWA e evolução.
+5. **Sobre:** formação, experiência prévia e objetivo profissional.
+6. **Experiência:** habilidades transferidas e experiências anteriores.
+7. **Contato:** email, LinkedIn, GitHub e currículo.
 
 ---
 
