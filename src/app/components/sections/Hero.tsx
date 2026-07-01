@@ -32,8 +32,7 @@ const Hero = () => {
         <div className="stagger-3 animate-fade-up opacity-0 mt-7 max-w-2xl">
           <p className="text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
             Gosto de entender como as pessoas trabalham antes de transformar um problema em
-            software. Hoje construo aplicações com interface, autenticação, banco de dados, APIs e
-            deploy, enquanto busco minha primeira oportunidade em estágio ou posição júnior.
+            software. Busco minha primeira oportunidade em estágio ou posição júnior.
           </p>
         </div>
 
