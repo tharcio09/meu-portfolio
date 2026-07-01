@@ -17,12 +17,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Transição de tema — apenas propriedades visuais, sem afetar layout ou transform */
-  *,
-  *::before,
-  *::after {
-    transition-property: background-color, border-color, color, box-shadow, fill, stroke;
-    transition-duration: 220ms;
+  /* Transição de tema — apenas para elementos interativos */
+  a,
+  button {
+    transition-property: background-color, border-color, color, box-shadow;
+    transition-duration: 150ms;
     transition-timing-function: ease;
   }
 
