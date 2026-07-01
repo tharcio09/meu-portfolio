@@ -22,7 +22,7 @@ describe('conteúdo principal do redesign', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: 'Desenvolvo aplicações web full stack com foco em qualidade.',
+        name: 'Desenvolvo aplicações web full stack com autenticação, APIs e deploy.',
       })
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Explorar projetos/i })).toHaveAttribute(
