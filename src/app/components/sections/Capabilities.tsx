@@ -55,43 +55,37 @@ const Capabilities = () => {
           </p>
         </div>
 
-        <div ref={ref} className="grid gap-4 pt-6 md:pt-8 lg:grid-cols-3">
+        <div ref={ref} className="grid gap-4 pt-6 md:pt-8 md:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item, index) => (
             <article
               key={item.title}
               className={cn(
                 'flex min-h-full flex-col border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:p-4 md:p-5',
-                'transition-[opacity,border-color,box-shadow,transform] duration-300 ease-out',
-                'hover:-translate-y-0.5 hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
+                'transition-[opacity,border-color,box-shadow] duration-150 ease-out',
+                'hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
                 visible ? 'opacity-100' : 'opacity-0'
               )}
-              style={{ transitionDelay: visible ? `${index * 100}ms` : '0ms' }}
+              style={{ transitionDelay: visible ? `${index * 80}ms` : '0ms' }}
             >
-              <div className="flex flex-wrap items-center gap-2 border-b border-border-light pb-3 dark:border-border-dark">
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
-                  {item.title}
-                </p>
-              </div>
-
-              <h3 className="mt-4 text-xl font-bold tracking-tight text-primary-text dark:text-light-text sm:text-2xl">
+              <h3 className="text-lg font-bold tracking-tight text-primary-text dark:text-light-text sm:text-xl">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text lg:min-h-24">
+              <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
                 {item.description}
               </p>
 
-              <div className="mt-4 md:mt-5">
-                <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary-text dark:text-light-text">
+              <div className="mt-4">
+                <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-secondary-text dark:text-dark-text">
                   Tecnologias
                 </h4>
                 <ul
-                  className="mt-3 flex flex-wrap gap-1.5 sm:gap-2"
+                  className="mt-2 flex flex-wrap gap-1.5"
                   aria-label={`Tecnologias de ${item.title}`}
                 >
                   {item.technologies.map((technology) => (
                     <li
                       key={technology}
-                      className="border border-accent-border bg-accent-subtle px-2 py-1 text-xs font-medium text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light sm:px-2.5"
+                      className="border border-accent-border bg-accent-subtle px-2 py-0.5 text-xs font-medium text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light"
                     >
                       {technology}
                     </li>
@@ -99,14 +93,13 @@ const Capabilities = () => {
                 </ul>
               </div>
 
-              <div className="mt-5 border-t border-border-light pt-3 dark:border-border-dark sm:pt-4 lg:mt-auto">
-                <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-primary-text dark:text-light-text">
-                  Usado em
-                </h4>
-                <p className="mt-2 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-                  {item.usedIn.join(' · ')}
-                </p>
-              </div>
+              {item.usedIn.length > 0 && (
+                <div className="mt-auto pt-4">
+                  <p className="text-xs text-secondary-text dark:text-dark-text">
+                    {item.usedIn.join(' · ')}
+                  </p>
+                </div>
+              )}
             </article>
           ))}
         </div>

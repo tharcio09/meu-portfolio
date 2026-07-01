@@ -7,24 +7,45 @@ export type Capability = {
 
 export const capabilities: Capability[] = [
   {
-    title: 'Interface',
+    title: 'Frontend e UI',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
     description:
-      'Construção de interfaces responsivas, componentes reutilizáveis e páginas organizadas para aplicações web.',
-    usedIn: ['HelpFlow', 'ManutFlow', 'Portfólio', 'Crypto Dashboard'],
+      'Componentes reutilizáveis, rotas dinâmicas, estados assíncronos e layouts responsivos com foco em acessibilidade.',
+    usedIn: ['HelpFlow', 'ManutFlow', 'Crypto Dashboard'],
   },
   {
-    title: 'Backend e dados',
-    technologies: ['Node.js', 'APIs REST', 'Prisma', 'Supabase', 'PostgreSQL'],
+    title: 'Backend e autenticação',
+    technologies: ['Node.js', 'APIs REST', 'Prisma', 'NextAuth', 'Zod'],
     description:
-      'Criação de fluxos com autenticação, persistência de dados, regras de negócio e integração com banco relacional.',
+      'CRUD com validação, autenticação por roles (CLIENT/AGENT), rate limiting e persistência relacional com Prisma.',
+    usedIn: ['HelpFlow', 'ManutFlow'],
+  },
+  {
+    title: 'Banco de dados e infra',
+    technologies: ['PostgreSQL', 'Supabase', 'Vercel', 'Cloudinary'],
+    description:
+      'Modelagem relacional, RLS no Supabase, upload de imagens via Cloudinary e deploy contínuo no Vercel.',
     usedIn: ['HelpFlow', 'ManutFlow', 'DevLinks'],
   },
   {
-    title: 'Qualidade e entrega',
-    technologies: ['Git', 'GitHub', 'Cypress', 'Vercel', 'SEO', 'Testes manuais'],
+    title: 'Testes e qualidade',
+    technologies: ['Vitest', 'Cypress', 'Testes E2E'],
     description:
-      'Organização do fluxo de desenvolvimento, versionamento, validação de funcionalidades, deploy e melhoria de visibilidade do projeto.',
-    usedIn: ['DevLinks', 'Portfólio', 'HelpFlow'],
+      'Testes unitários com Vitest e testes end-to-end com Cypress no fluxo principal de autenticação e CRUD.',
+    usedIn: ['HelpFlow', 'DevLinks'],
+  },
+  {
+    title: 'PWA e mobile',
+    technologies: ['Service Worker', 'PWA', 'Offline-first'],
+    description:
+      'Aplicações progressivas com funcionamento offline, persistência local e compartilhamento nativo.',
+    usedIn: ['Lista de Mercado'],
+  },
+  {
+    title: 'Em evolução',
+    technologies: ['Docker', 'Testes de integração', 'Zod avançado'],
+    description:
+      'Containerização de aplicações, testes de integração além do unitário e validação de schemas complexos.',
+    usedIn: [],
   },
 ];
