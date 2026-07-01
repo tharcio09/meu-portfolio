@@ -25,7 +25,7 @@ const Hero = () => {
 
         <div className="stagger-2 mt-7">
           <h1 className="text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
-            Desenvolvo aplicações web full stack com foco em qualidade.
+            Desenvolvo aplicações web full stack com autenticação, APIs e deploy.
           </h1>
         </div>
 
