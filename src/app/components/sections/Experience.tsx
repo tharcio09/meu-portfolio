@@ -37,11 +37,8 @@ const Experience = () => {
               {trajectorySkills.map((skill, index) => (
                 <li
                   key={skill}
-                  className={`flex min-h-16 flex-col gap-2 border border-border-light bg-white/70 p-3 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card/70 dark:text-dark-text transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
+                  className={`flex min-h-16 items-center border border-border-light bg-white/70 px-3 py-2 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card/70 dark:text-dark-text transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
                 >
-                  <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-accent dark:text-accent-light">
-                    Habilidade {index + 1}
-                  </span>
                   {skill}
                 </li>
               ))}
