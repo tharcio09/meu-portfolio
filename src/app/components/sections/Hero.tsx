@@ -14,7 +14,7 @@ const Hero = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(15,118,110,0.14),transparent_34%),linear-gradient(135deg,rgba(15,118,110,0.06),transparent_48%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(45,212,191,0.16),transparent_34%),linear-gradient(135deg,rgba(45,212,191,0.07),transparent_48%)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-accent/5 to-transparent dark:from-accent-light/5"
       />
 
       <div className="mx-auto max-w-4xl">
@@ -25,7 +25,7 @@ const Hero = () => {
 
         <div className="stagger-2 mt-7">
           <h1 className="text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
-            Construo aplicações web com clareza, dados e evolução contínua.
+            Desenvolvo aplicações web full stack com foco em qualidade.
           </h1>
         </div>
 
