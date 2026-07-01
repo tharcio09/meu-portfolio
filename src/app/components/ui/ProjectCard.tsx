@@ -14,7 +14,7 @@ const ProjectCard = ({
   technicalHighlight,
 }: Project) => {
   return (
-    <article className="group grid min-h-full grid-rows-[auto_1fr] overflow-hidden border border-border-light bg-white/75 shadow-sm transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:border-border-dark dark:bg-dark-card/75 dark:hover:border-accent-border-dark">
+    <article className="group grid min-h-full grid-rows-[auto_1fr] overflow-hidden border border-border-light bg-white shadow-sm transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-border-dark">
       {imageUrl && (
         <div className="relative aspect-[2/1] overflow-hidden border-b border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-surface md:aspect-[16/9]">
           <Image

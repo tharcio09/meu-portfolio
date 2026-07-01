@@ -23,6 +23,7 @@
     transition-property: background-color, border-color, color, box-shadow;
     transition-duration: 150ms;
     transition-timing-function: ease;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:focus-visible:ring-accent-light dark:focus-visible:ring-offset-dark-bg;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -42,11 +43,6 @@
   h5,
   h6 {
     @apply font-heading font-bold;
-  }
-
-  a,
-  button {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 dark:focus-visible:ring-accent-light dark:focus-visible:ring-offset-dark-bg;
   }
 
   ::-webkit-scrollbar {
