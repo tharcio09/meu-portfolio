@@ -7,7 +7,7 @@ const About = () => {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
           <div>
-            <div className="mt-6 border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 lg:max-w-64 lg:p-4">
+            <div className="mt-6 border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card lg:max-w-64 lg:p-4">
               <div className="flex items-center justify-between gap-3 border-b border-border-light pb-3 dark:border-border-dark">
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
                   Perfil
@@ -65,7 +65,7 @@ const About = () => {
             </div>
 
             <div className="mt-8">
-              <article className="border border-border-light bg-white/70 p-4 dark:border-border-dark dark:bg-dark-card/70 md:p-5">
+              <article className="border border-border-light bg-white p-4 dark:border-border-dark dark:bg-dark-card md:p-5">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
                   Formação
                 </p>

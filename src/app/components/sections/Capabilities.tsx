@@ -56,7 +56,7 @@ const Capabilities = () => {
             <article
               key={item.title}
               className={cn(
-                'flex min-h-full flex-col border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:p-4 md:p-5',
+                'flex min-h-full flex-col border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card sm:p-4 md:p-5',
                 'transition-[border-color,box-shadow] duration-150 ease-out',
                 'hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
                 visible ? 'opacity-100' : 'opacity-0'

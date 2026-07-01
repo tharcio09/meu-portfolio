@@ -36,7 +36,7 @@ const Projects = () => {
 
         {featuredProject && featuredProject.imageUrl && (
           <article className="grid gap-8 border-b border-border-light py-10 dark:border-border-dark lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
-            <div className="relative overflow-hidden border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 sm:p-5">
+            <div className="relative overflow-hidden border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card sm:p-5">
               <div className="mb-3 flex items-center justify-between gap-4 border-b border-border-light pb-3 text-xs dark:border-border-dark">
                 <span className="font-mono font-semibold uppercase tracking-[0.16em] text-secondary-text dark:text-dark-text">
                   Produto em produção
@@ -74,7 +74,7 @@ const Projects = () => {
                   {featuredProject.casePoints.map((point) => (
                     <div
                       key={point.label}
-                      className="grid gap-2 border border-border-light bg-white/55 p-3 dark:border-border-dark dark:bg-dark-card/55 sm:grid-cols-[5.5rem_1fr] sm:gap-5"
+                      className="grid gap-2 border border-border-light bg-white p-3 dark:border-border-dark dark:bg-dark-card sm:grid-cols-[5.5rem_1fr] sm:gap-5"
                     >
                       <dt className="font-mono text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
                         {point.label}
@@ -105,7 +105,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ variant: 'outline', size: 'lg' }),
-                    'border-slate-400 bg-white/70 hover:bg-light-surface dark:border-slate-600 dark:bg-dark-card dark:hover:bg-dark-surface'
+                    'border-slate-400 bg-white hover:bg-light-surface dark:border-slate-600 dark:bg-dark-card dark:hover:bg-dark-surface'
                   )}
                 >
                   <GithubIcon className="h-4 w-4" />
@@ -148,7 +148,7 @@ const Projects = () => {
                 {buildingProject.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="border border-border-light bg-white/55 px-2.5 py-1 text-xs font-medium text-secondary-text dark:border-border-dark dark:bg-dark-card/55 dark:text-dark-text"
+                    className="border border-border-light bg-white px-2.5 py-1 text-xs font-medium text-secondary-text dark:border-border-dark dark:bg-dark-card dark:text-dark-text"
                   >
                     {tag}
                   </span>
@@ -165,7 +165,7 @@ const Projects = () => {
               </a>
             </div>
 
-            <div className="border border-border-light bg-white/70 p-5 shadow-sm dark:border-border-dark dark:bg-dark-card/70 md:p-7">
+            <div className="border border-border-light bg-white p-5 shadow-sm dark:border-border-dark dark:bg-dark-card md:p-7">
               <div className="flex items-center justify-between gap-4 border-b border-border-light pb-4 dark:border-border-dark">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
                   Registro de evolução

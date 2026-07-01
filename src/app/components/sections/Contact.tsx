@@ -46,7 +46,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70 md:p-5">
+          <div className="border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card md:p-5">
             <div className="border-b border-border-light pb-4 dark:border-border-dark">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
                 Canais de contato
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-4 flex flex-col gap-3">
-              <div className="flex flex-col gap-4 border border-border-light bg-light-card/70 p-3 dark:border-border-dark dark:bg-dark-surface/55 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-col gap-4 border border-border-light bg-light-card p-3 dark:border-border-dark dark:bg-dark-surface sm:flex-row sm:items-center sm:justify-between">
                 <span className="flex items-center gap-4">
                   <span
                     aria-hidden="true"
@@ -90,7 +90,7 @@ const Contact = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-4 border border-border-light bg-light-card/70 p-3 transition-colors hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface/55 dark:hover:border-accent-light dark:hover:text-accent-light"
+                  className="flex items-center justify-between gap-4 border border-border-light bg-light-card p-3 transition-colors hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface dark:hover:border-accent-light dark:hover:text-accent-light"
                 >
                   <span className="flex items-center gap-4">
                     <span
@@ -118,7 +118,7 @@ const Contact = () => {
                 href={RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between gap-4 border border-border-light bg-light-card/70 p-3 transition-colors hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface/55 dark:hover:border-accent-light dark:hover:text-accent-light"
+                className="flex items-center justify-between gap-4 border border-border-light bg-light-card p-3 transition-colors hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface dark:hover:border-accent-light dark:hover:text-accent-light"
               >
                 <span className="flex items-center gap-4">
                   <span

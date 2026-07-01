@@ -80,7 +80,7 @@ const Process = () => {
             <li
               key={item.step}
               className={cn(
-                'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70',
+                'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card',
                 'transition-[border-color,box-shadow] duration-150 ease-out',
                 'hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
                 visible ? 'opacity-100' : 'opacity-0',
