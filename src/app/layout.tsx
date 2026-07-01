@@ -189,7 +189,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </a>
           <div className="relative z-10 flex min-h-screen flex-col">
             <Navbar />
-            <main id="conteudo-principal" className="container mx-auto max-w-7xl flex-1">
+            <main id="conteudo-principal" className="flex-1">
               {children}
             </main>
             <Footer />
