@@ -40,10 +40,10 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'sticky top-0 z-50 border-b px-6 py-3 backdrop-blur-md transition-all duration-300',
+        'sticky top-0 z-50 border-b px-6 py-3 transition-all duration-150',
         scrolled
-          ? 'border-border-light/50 bg-light-bg/80 shadow-[0_1px_3px_rgba(0,0,0,0.06)] dark:border-border-dark/50 dark:bg-dark-bg/80 dark:shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
-          : 'border-border-light/0 bg-light-bg/95 dark:border-border-dark/0 dark:bg-dark-bg/95'
+          ? 'border-border-light bg-light-bg shadow-[0_1px_3px_rgba(0,0,0,0.06)] dark:border-border-dark dark:bg-dark-bg dark:shadow-[0_1px_3px_rgba(0,0,0,0.3)]'
+          : 'border-border-light/0 bg-light-bg dark:border-border-dark/0 dark:bg-dark-bg'
       )}
       role="navigation"
       aria-label="Navegação principal"
