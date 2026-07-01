@@ -51,13 +51,10 @@ const Contact = () => {
           </div>
 
           <div className="border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70 md:p-5">
-            <div className="flex items-center justify-between gap-4 border-b border-border-light pb-4 dark:border-border-dark">
+            <div className="border-b border-border-light pb-4 dark:border-border-dark">
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:text-accent-light">
                 Canais de contato
               </p>
-              <span className="text-xs font-semibold text-secondary-text dark:text-dark-text">
-                Canais de contato
-              </span>
             </div>
 
             <div className="mt-4 flex flex-col gap-3">
