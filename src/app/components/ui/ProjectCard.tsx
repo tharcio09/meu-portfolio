@@ -43,7 +43,7 @@ const ProjectCard = ({
         <h4 className="mt-3 text-xl font-bold tracking-tight text-primary-text dark:text-light-text">
           {shortTitle}
         </h4>
-        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+        <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
           {description}
         </p>
         {technicalHighlight && (
