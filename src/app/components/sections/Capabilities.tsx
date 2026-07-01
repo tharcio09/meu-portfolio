@@ -33,11 +33,7 @@ const Capabilities = () => {
   }, []);
 
   return (
-    <Section
-      id="habilidades"
-      spacing="editorial"
-      className="border-b border-border-light dark:border-border-dark"
-    >
+    <Section id="habilidades" spacing="editorial" className="">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-5 border-b border-border-light pb-6 dark:border-border-dark md:grid-cols-[0.75fr_1.25fr] md:items-end md:pb-8">
           <div>

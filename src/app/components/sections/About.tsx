@@ -3,11 +3,7 @@ import Section from '../ui/Section';
 
 const About = () => {
   return (
-    <Section
-      id="sobre-mim"
-      spacing="editorial"
-      className="border-b border-border-light dark:border-border-dark"
-    >
+    <Section id="sobre-mim" spacing="editorial" className="">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
           <div>

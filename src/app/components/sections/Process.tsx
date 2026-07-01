@@ -59,11 +59,7 @@ const Process = () => {
   }, []);
 
   return (
-    <Section
-      id="processo"
-      spacing="editorial"
-      className="border-b border-border-light dark:border-border-dark"
-    >
+    <Section id="processo" spacing="editorial" className="">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
         <div>
           <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">

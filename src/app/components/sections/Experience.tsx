@@ -5,11 +5,7 @@ const Experience = () => {
   if (experienciasAnteriores.length === 0) return null;
 
   return (
-    <Section
-      id="experiencia"
-      spacing="editorial"
-      className="border-b border-border-light dark:border-border-dark"
-    >
+    <Section id="experiencia" spacing="editorial" className="">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-8 border-b border-border-light pb-8 dark:border-border-dark md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>
