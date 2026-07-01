@@ -54,21 +54,22 @@ const About = () => {
               Sobre mim
             </h2>
 
-            <div className="mt-7 grid gap-3 text-base leading-relaxed text-secondary-text dark:text-dark-text md:grid-cols-2">
-              <p className="border border-border-light bg-white/55 p-4 dark:border-border-dark dark:bg-dark-card/55">
-                Sou estudante de Análise e Desenvolvimento de Sistemas e venho construindo projetos
-                próprios para consolidar fundamentos de frontend, backend, banco de dados,
-                autenticação, APIs, deploy e organização de código.
+            <div className="mt-7 space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
+              <p>
+                Sou estudante de Análise e Desenvolvimento de Sistemas na Anhanguera (conclusão em
+                junho de 2027). Venho construindo projetos próprios para aplicar fundamentos de
+                frontend, backend, banco de dados, autenticação e deploy.
               </p>
-              <p className="border border-border-light bg-white/55 p-4 dark:border-border-dark dark:bg-dark-card/55">
+              <p>
+                Antes da programação, trabalhei como auxiliar mecânico na Komaq (diagnóstico técnico
+                de equipamentos) e como auxiliar administrativo na EPOS (organização de demandas e
+                documentação de processos). Essas experiências me ensinaram a investigar problemas
+                com método antes de buscar soluções — uma habilidade que aplico diretamente no
+                debugging e na arquitetura de sistemas.
+              </p>
+              <p>
                 Busco uma oportunidade de estágio ou posição júnior em desenvolvimento web, com
                 abertura para atuar em frontend, backend ou full stack.
-              </p>
-              <p className="border-l-2 border-accent bg-accent-subtle/60 p-4 text-primary-text dark:border-accent-light dark:bg-accent-subtle-dark dark:text-light-text md:col-span-2">
-                Antes da área de tecnologia, tive experiências em rotinas administrativas e
-                manutenção, onde desenvolvi organização, atenção a processos, comunicação entre
-                áreas e investigação de problemas. Hoje aplico essa base na construção de sistemas
-                web com foco em clareza, estrutura e evolução contínua.
               </p>
             </div>
 
