@@ -171,7 +171,7 @@ const Projects = () => {
                   Registro de evolução
                 </p>
                 <span className="font-mono text-xs text-secondary-text dark:text-dark-text">
-                  build / ongoing
+                  em andamento
                 </span>
               </div>
               {buildingProject.casePoints && (
