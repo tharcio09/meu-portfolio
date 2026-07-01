@@ -59,7 +59,7 @@ const EvidenceStrip = () => {
           >
             <dt className="flex items-center justify-between gap-3">
               <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
-                metric/{item.index}
+                {item.title}
               </span>
               <span
                 className="h-2 w-2 rounded-full bg-accent dark:bg-accent-light"

@@ -19,7 +19,7 @@ const About = () => {
             <div className="mt-6 border border-border-light bg-white/70 p-3 shadow-sm dark:border-border-dark dark:bg-dark-card/70 lg:max-w-64 lg:p-4">
               <div className="flex items-center justify-between gap-3 border-b border-border-light pb-3 dark:border-border-dark">
                 <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
-                  profile/current
+                  Perfil
                 </p>
                 <span className="inline-flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
                   <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />

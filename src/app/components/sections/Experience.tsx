@@ -40,7 +40,7 @@ const Experience = () => {
                   className={`flex min-h-16 flex-col gap-2 border border-border-light bg-white/70 p-3 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card/70 dark:text-dark-text transition-[border-color,box-shadow,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
                 >
                   <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-accent dark:text-accent-light">
-                    base/{String(index + 1).padStart(2, '0')}
+                    Habilidade {index + 1}
                   </span>
                   {skill}
                 </li>
@@ -59,7 +59,7 @@ const Experience = () => {
                   className="grid gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70 transition-[border-color,box-shadow,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark sm:grid-cols-[4.5rem_1fr_auto] sm:gap-5"
                 >
                   <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
-                    role/{String(index + 1).padStart(2, '0')}
+                    Experiência {index + 1}
                   </span>
                   <div>
                     <h4 className="font-semibold text-primary-text dark:text-light-text">

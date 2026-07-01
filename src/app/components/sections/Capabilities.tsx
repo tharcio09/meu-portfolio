@@ -69,7 +69,7 @@ const Capabilities = () => {
             >
               <div className="flex flex-wrap items-center gap-2 border-b border-border-light pb-3 dark:border-border-dark">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
-                  scope/{String(index + 1).padStart(2, '0')}
+                  {item.title}
                 </p>
               </div>
 

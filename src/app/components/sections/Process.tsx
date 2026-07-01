@@ -79,7 +79,7 @@ const Process = () => {
               style={{ transitionDelay: visible ? `${index * 70}ms` : '0ms' }}
             >
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
-                step/{String(index + 1).padStart(2, '0')}
+                Passo {index + 1}
               </span>
               <p className="text-sm font-semibold text-primary-text dark:text-light-text">{step}</p>
               <span
