@@ -1,5 +1,4 @@
 import Hero from './components/sections/Hero';
-import EvidenceStrip from './components/sections/EvidenceStrip';
 import Capabilities from './components/sections/Capabilities';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <EvidenceStrip />
       <ScrollReveal>
         <Projects />
       </ScrollReveal>
