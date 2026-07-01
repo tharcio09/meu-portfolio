@@ -31,7 +31,7 @@ const Experience = () => {
         <div className="grid gap-10 pt-9 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           <div>
             <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary-text dark:text-light-text">
-              Base que levo para tecnologia
+              Habilidades transferidas
             </h3>
             <ul className="mt-4 grid grid-cols-2 gap-3">
               {trajectorySkills.map((skill, index) => (
@@ -50,24 +50,21 @@ const Experience = () => {
               Experiências anteriores
             </h3>
             <div className="mt-4 grid gap-3">
-              {experienciasAnteriores.map((item, index) => (
+              {experienciasAnteriores.map((item) => (
                 <article
                   key={`${item.role}-${item.org}`}
-                  className="grid gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70 transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark sm:grid-cols-[4.5rem_1fr_auto] sm:gap-5"
+                  className="grid gap-2 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70 transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark sm:gap-3"
                 >
-                  <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
-                    Experiência {index + 1}
-                  </span>
-                  <div>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <h4 className="font-semibold text-primary-text dark:text-light-text">
                       {item.role} · {item.org}
                     </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-                      {item.summary}
+                    <p className="text-xs tabular-nums text-secondary-text dark:text-dark-text shrink-0">
+                      {item.period}
                     </p>
                   </div>
-                  <p className="text-xs tabular-nums text-secondary-text dark:text-dark-text sm:text-right">
-                    {item.period}
+                  <p className="text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                    {item.summary}
                   </p>
                 </article>
               ))}
