@@ -23,8 +23,8 @@ const Hero = () => {
           Portfólio · Desenvolvimento web
         </div>
 
-        <div className="stagger-2 mt-7 overflow-hidden">
-          <h1 className="animate-reveal-up text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
+        <div className="stagger-2 mt-7">
+          <h1 className="text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
             Construo aplicações web com clareza, dados e evolução contínua.
           </h1>
         </div>
