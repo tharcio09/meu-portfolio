@@ -18,7 +18,7 @@ const Experience = () => {
               Trajetória
             </div>
             <h2 className="mt-5 text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-              Experiência que também constrói software.
+              Experiência
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end md:text-lg">

@@ -51,7 +51,7 @@ const About = () => {
 
           <div>
             <h2 className="max-w-3xl text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-              Projetos práticos, base operacional e vontade de evoluir.
+              Sobre mim
             </h2>
 
             <div className="mt-7 grid gap-3 text-base leading-relaxed text-secondary-text dark:text-dark-text md:grid-cols-2">

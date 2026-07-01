@@ -46,7 +46,7 @@ const Capabilities = () => {
               Competências
             </div>
             <h2 className="mt-5 text-3xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text sm:text-4xl md:text-5xl">
-              Habilidades aplicadas
+              Stack e competências
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end md:text-lg">

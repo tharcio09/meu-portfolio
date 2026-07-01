@@ -24,7 +24,7 @@ const Projects = () => {
               Trabalho selecionado
             </p>
             <h2 className="mt-4 text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-              Projetos como produtos, não apenas telas.
+              Projetos
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end md:text-lg">
@@ -204,7 +204,7 @@ const Projects = () => {
                 Outros projetos
               </p>
               <h3 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
-                Experimentos com objetivos diferentes.
+                Outros projetos
               </h3>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-secondary-text dark:text-dark-text">
