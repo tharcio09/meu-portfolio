@@ -71,7 +71,7 @@ const Process = () => {
             Processo
           </div>
           <h2 className="mt-5 max-w-md text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-            Como eu trabajo
+            Como eu Trabalho
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-secondary-text dark:text-dark-text">
             No HelpFlow, dividi o desenvolvimento em etapas pequenas e incrementais. Cada etapa gera
