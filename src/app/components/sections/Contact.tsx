@@ -24,7 +24,7 @@ const Contact = () => {
               Contato
             </div>
             <h2 className="mt-5 max-w-xl text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-              Vamos conversar sobre uma oportunidade.
+              Vamos conversar sobre uma oportunidade
             </h2>
             <div className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
               <p>
@@ -35,11 +35,7 @@ const Contact = () => {
                 times onde eu possa aprender, contribuir e evoluir com projetos reais.
               </p>
             </div>
-            <div className="mt-5 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <div className="inline-flex items-center gap-2 border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/30 dark:text-emerald-300">
-                <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
-                Aberto a oportunidades
-              </div>
+            <div className="mt-5">
               <a
                 href={`mailto:${EMAIL}`}
                 className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
@@ -68,7 +64,7 @@ const Contact = () => {
                   </span>
                   <span>
                     <span className="block font-semibold text-primary-text dark:text-light-text">
-                      Email
+                      E-mail
                     </span>
                     <span className="mt-1 block break-all text-sm text-secondary-text dark:text-dark-text">
                       {EMAIL}

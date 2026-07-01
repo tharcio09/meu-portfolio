@@ -16,7 +16,7 @@ describe('Contact', () => {
     render(<Contact />);
 
     expect(
-      screen.getByRole('heading', { name: 'Vamos conversar sobre uma oportunidade.' })
+      screen.getByRole('heading', { name: 'Vamos conversar sobre uma oportunidade' })
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /LinkedIn/i })).toHaveAttribute(
       'href',
