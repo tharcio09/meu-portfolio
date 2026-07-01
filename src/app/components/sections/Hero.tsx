@@ -47,7 +47,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <div className="stagger-4 animate-fade-up opacity-0 mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="stagger-5 animate-fade-up opacity-0 mt-8 flex flex-col gap-3 sm:flex-row">
           <a href="#projetos" className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}>
             Explorar projetos
             <ArrowRightIcon className="h-4 w-4" />

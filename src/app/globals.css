@@ -86,4 +86,8 @@
   .stagger-4 {
     animation-delay: 300ms;
   }
+
+  .stagger-5 {
+    animation-delay: 400ms;
+  }
 }
