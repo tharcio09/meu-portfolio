@@ -5,13 +5,30 @@ import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 
 const processSteps = [
-  'Análise do problema',
-  'Escopo pequeno',
-  'Implementação incremental',
-  'Teste manual',
-  'Revisão',
-  'Commit descritivo',
-  'Próximo ciclo',
+  {
+    step: 'Schema do banco',
+    detail: 'Modelei o banco com Prisma definindo User, Ticket e Comment com relacionamentos.',
+  },
+  {
+    step: 'API com rotas',
+    detail: 'Criei endpoints REST com Next.js para CRUD de tickets, autenticação e filtros.',
+  },
+  {
+    step: 'Autenticação',
+    detail: 'Implementei login com NextAuth, roles CLIENT/_AGENT e proteção de rotas.',
+  },
+  {
+    step: 'Interface',
+    detail: 'Construí o painel com React, formulários validados e estados de carregamento.',
+  },
+  {
+    step: 'Testes',
+    detail: 'Escrevi testes unitários com Vitest e E2E com Cypress no fluxo principal.',
+  },
+  {
+    step: 'Deploy',
+    detail: 'Publiquei no Vercel com variáveis de ambiente e banco no Supabase.',
+  },
 ];
 
 const Process = () => {
@@ -54,23 +71,22 @@ const Process = () => {
             Processo
           </div>
           <h2 className="mt-5 max-w-md text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-            Como eu trabalho
+            Como eu trabajo
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-secondary-text dark:text-dark-text">
-            Gosto de entender o problema antes de implementar e evoluir projetos em pequenas
-            tarefas. Meu fluxo passa por análise, definição de escopo, implementação incremental,
-            teste manual, revisão, commit descritivo e planejamento da próxima melhoria.
+            No HelpFlow, dividi o desenvolvimento em etapas pequenas e incrementais. Cada etapa gera
+            código funcional e testável antes de avançar para a próxima.
           </p>
         </div>
 
         <ol ref={ref} className="grid gap-3 sm:grid-cols-2">
-          {processSteps.map((step, index) => (
+          {processSteps.map((item, index) => (
             <li
-              key={step}
+              key={item.step}
               className={cn(
-                'grid min-h-20 grid-cols-[auto_1fr_auto] items-center gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70',
-                'transition-[opacity,border-color,box-shadow,transform] duration-300 ease-out',
-                'hover:-translate-y-0.5 hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
+                'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white/70 p-4 shadow-sm dark:border-border-dark dark:bg-dark-card/70',
+                'transition-[opacity,border-color,box-shadow] duration-150 ease-out',
+                'hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
                 visible ? 'opacity-100' : 'opacity-0',
                 index === processSteps.length - 1 &&
                   processSteps.length % 2 !== 0 &&
@@ -81,11 +97,14 @@ const Process = () => {
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
                 Passo {index + 1}
               </span>
-              <p className="text-sm font-semibold text-primary-text dark:text-light-text">{step}</p>
-              <span
-                className="h-2 w-2 rounded-full bg-accent dark:bg-accent-light"
-                aria-hidden="true"
-              />
+              <div>
+                <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+                  {item.step}
+                </p>
+                <p className="mt-1 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                  {item.detail}
+                </p>
+              </div>
             </li>
           ))}
         </ol>
