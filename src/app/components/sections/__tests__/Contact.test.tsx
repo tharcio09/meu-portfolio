@@ -32,9 +32,9 @@ describe('Contact', () => {
     );
   });
 
-  it('deve renderizar o botão de copiar email', () => {
+  it('deve renderizar o botão de copiar e-mail', () => {
     render(<Contact />);
-    expect(screen.getByRole('button', { name: /copiar email/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /copiar e-mail/i })).toBeInTheDocument();
   });
 
   it('deve mostrar o texto "Copiar" antes de clicar', () => {
@@ -46,7 +46,7 @@ describe('Contact', () => {
   it('deve mostrar "Copiado" após clicar no botão', async () => {
     const user = userEvent.setup();
     render(<Contact />);
-    await user.click(screen.getByRole('button', { name: /copiar email/i }));
+    await user.click(screen.getByRole('button', { name: /copiar e-mail/i }));
     // findByText espera o estado atualizar (assíncrono)
     expect(await screen.findByText('Copiado')).toBeInTheDocument();
   });
