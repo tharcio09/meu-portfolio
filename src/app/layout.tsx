@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     'Desenvolvedor Web',
     'Desenvolvedor Júnior',
     'Estágio Desenvolvimento Web',
-    'Portfolio Desenvolvedor',
+    'Portfólio Desenvolvedor',
     'React',
     'Next.js',
     'Node.js',

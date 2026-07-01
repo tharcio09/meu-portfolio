@@ -22,7 +22,7 @@ export const CopyEmailButton = () => {
   return (
     <Button
       onClick={handleCopyEmail}
-      aria-label={copied ? 'Email copiado' : 'Copiar email'}
+      aria-label={copied ? 'E-mail copiado' : 'Copiar e-mail'}
       variant="outline"
       size="sm"
       className={cn(
