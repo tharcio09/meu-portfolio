@@ -200,10 +200,7 @@ const Projects = () => {
         <div className="pt-10">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
-                Outros projetos
-              </p>
-              <h3 className="mt-3 text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
+              <h3 className="text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
                 Outros projetos
               </h3>
             </div>
