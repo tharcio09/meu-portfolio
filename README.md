@@ -46,6 +46,24 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
 - **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 14 testes em 4 arquivos cobrindo componentes, hooks e utilitários.
 
+### Métricas Lighthouse (produção)
+
+| Categoria      | Score |
+| -------------- | ----- |
+| Performance    | 98    |
+| Accessibility  | 100   |
+| Best Practices | 100   |
+| SEO            | 100   |
+
+| Core Web Vitals          | Valor |
+| ------------------------ | ----- |
+| First Contentful Paint   | 1.4s  |
+| Largest Contentful Paint | 2.3s  |
+| Total Blocking Time      | 40ms  |
+| Cumulative Layout Shift  | 0.005 |
+| Speed Index              | 2.3s  |
+| Time to Interactive      | 3.7s  |
+
 ---
 
 ## Projetos
