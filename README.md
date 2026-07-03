@@ -6,7 +6,7 @@ Portfólio pessoal focado em aplicações web, projetos reais, processo de desen
 
 [Ver versão pública atual](https://tharcio-portfolio.vercel.app) · [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/) · [Email](mailto:tharciosantos09@gmail.com)
 
-![Screenshot do redesign editorial do portfólio de Tharcio Santos](./screenshot-portfolio.PNG)
+![Screenshot do redesign editorial do portfólio de Tharcio Santos](./screenshot-portfolio.jpg)
 
 </div>
 
@@ -44,7 +44,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Performance:** imagens otimizadas, ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
-- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged.
+- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 14 testes em 4 arquivos cobrindo componentes, hooks e utilitários.
 
 ---
 
