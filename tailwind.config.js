@@ -39,7 +39,7 @@ module.exports = {
           subtle: '#e6f4f1',
           'subtle-dark': 'rgba(45,212,191,0.12)',
           border: '#99d5cb',
-          'border-dark': '#1f766e',
+          'border-dark': '#2dd4bf',
         },
       },
       keyframes: {
