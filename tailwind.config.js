@@ -70,6 +70,10 @@ module.exports = {
           '0%': { clipPath: 'inset(0 0 96% 0)' },
           '100%': { clipPath: 'inset(0 0 0% 0)' },
         },
+        'gradient-shift': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
       animation: {
         'fade-in': 'fade-in 0.8s ease-out forwards',
@@ -79,6 +83,7 @@ module.exports = {
         ping: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
         'stagger-in': 'stagger-in 0.5s ease-out forwards',
         'reveal-up': 'reveal-up 0.44s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'gradient-shift': 'gradient-shift 8s ease infinite',
       },
       backdropBlur: {
         xs: '2px',
