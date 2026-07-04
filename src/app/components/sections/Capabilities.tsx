@@ -52,15 +52,16 @@ const Capabilities = () => {
         </div>
 
         <div ref={ref} className="grid gap-4 pt-6 md:pt-8 md:grid-cols-2 lg:grid-cols-3">
-          {capabilities.map((item) => (
+          {capabilities.map((item, index) => (
             <article
               key={item.title}
               className={cn(
                 'flex min-h-full flex-col border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card sm:p-4 md:p-5',
-                'transition-[border-color,box-shadow] duration-150 ease-out',
-                'hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
-                visible ? 'opacity-100' : 'opacity-0'
+                'transition-all duration-300 ease-out',
+                'hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark',
+                visible ? 'animate-fade-up opacity-0' : 'opacity-0'
               )}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <h3 className="text-lg font-bold tracking-tight text-primary-text dark:text-light-text sm:text-xl">
                 {item.title}
