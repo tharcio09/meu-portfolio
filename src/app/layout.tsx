@@ -5,6 +5,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import { ReadingProgressBar } from './components/ui/ReadingProgressBar';
 import { ThemeProvider } from './components/ThemeProvider';
 
 const siteUrl = 'https://tharcio-portfolio.vercel.app';
@@ -184,6 +185,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         className={`${inter.variable} ${outfit.variable} min-h-screen bg-light-bg font-sans text-primary-text antialiased dark:bg-dark-bg dark:text-light-text`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ReadingProgressBar />
           <a href="#conteudo-principal" className="skip-link">
             Pular para o conteúdo
           </a>
