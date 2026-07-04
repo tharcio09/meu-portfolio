@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
 import { buttonVariants } from '../ui/Button';
@@ -7,10 +10,25 @@ import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
 
+type FilterKind = 'all' | 'featured' | 'building' | 'secondary';
+
+const filters: { kind: FilterKind; label: string }[] = [
+  { kind: 'all', label: 'Todos' },
+  { kind: 'featured', label: 'Destaque' },
+  { kind: 'building', label: 'Em construção' },
+  { kind: 'secondary', label: 'Secundários' },
+];
+
 const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState<FilterKind>('all');
+
   const featuredProject = projects.find((project) => project.kind === 'featured');
   const buildingProject = projects.find((project) => project.kind === 'building');
   const secondaryProjects = projects.filter((project) => project.kind === 'secondary');
+
+  const showFeatured = activeFilter === 'all' || activeFilter === 'featured';
+  const showBuilding = activeFilter === 'all' || activeFilter === 'building';
+  const showSecondary = activeFilter === 'all' || activeFilter === 'secondary';
 
   return (
     <Section
@@ -35,8 +53,32 @@ const Projects = () => {
           </p>
         </div>
 
-        {featuredProject && featuredProject.imageUrl && (
-          <article className="grid gap-8 border-b border-border-light py-10 dark:border-border-dark lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        {/* Filtros */}
+        <div className="flex flex-wrap gap-2 pt-6 md:pt-8">
+          {filters.map(({ kind, label }) => (
+            <button
+              key={kind}
+              onClick={() => setActiveFilter(kind)}
+              className={cn(
+                'border px-3 py-1.5 text-xs font-semibold transition-all duration-200',
+                activeFilter === kind
+                  ? 'border-accent bg-accent text-white shadow-sm dark:border-accent-light dark:bg-accent-light dark:text-dark-bg'
+                  : 'border-border-light bg-transparent text-secondary-text hover:border-accent hover:text-accent dark:border-border-dark dark:text-dark-text dark:hover:border-accent-light dark:hover:text-accent-light'
+              )}
+              aria-pressed={activeFilter === kind}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
+        {showFeatured && featuredProject && featuredProject.imageUrl && (
+          <article
+            className={cn(
+              'grid gap-8 border-b border-border-light py-10 animate-fade-up dark:border-border-dark lg:grid-cols-[1.15fr_0.85fr] lg:items-center'
+            )}
+            key={featuredProject.title}
+          >
             <div className="relative overflow-hidden border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card sm:p-5">
               <div className="mb-3 flex items-center justify-between gap-4 border-b border-border-light pb-3 text-xs dark:border-border-dark">
                 <span className="font-mono font-semibold uppercase tracking-[0.16em] text-secondary-text dark:text-dark-text">
@@ -128,8 +170,13 @@ const Projects = () => {
           </article>
         )}
 
-        {buildingProject && (
-          <article className="grid gap-8 border-b border-border-light py-10 dark:border-border-dark lg:grid-cols-[0.8fr_1.2fr]">
+        {showBuilding && buildingProject && (
+          <article
+            className={cn(
+              'grid gap-8 border-b border-border-light py-10 animate-fade-up dark:border-border-dark lg:grid-cols-[0.8fr_1.2fr]'
+            )}
+            key={buildingProject.title}
+          >
             <div>
               <div className="flex flex-wrap items-center gap-3">
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-amber-700 dark:text-amber-300">
@@ -198,25 +245,27 @@ const Projects = () => {
           </article>
         )}
 
-        <div className="pt-10">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <h3 className="text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
-                Outros projetos
-              </h3>
+        {showSecondary && (
+          <div className="pt-10 animate-fade-up" key="secondary-projects">
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+              <div>
+                <h3 className="text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
+                  Outros projetos
+                </h3>
+              </div>
+              <p className="max-w-md text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                Uma seleção compacta de aplicações que exploram upload, testes, PWA, estados
+                assíncronos e consumo de APIs.
+              </p>
             </div>
-            <p className="max-w-md text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-              Uma seleção compacta de aplicações que exploram upload, testes, PWA, estados
-              assíncronos e consumo de APIs.
-            </p>
-          </div>
 
-          <div className="mt-7 grid gap-5 md:grid-cols-3">
-            {secondaryProjects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
-            ))}
+            <div className="mt-7 grid gap-5 md:grid-cols-3">
+              {secondaryProjects.map((project) => (
+                <ProjectCard key={project.title} {...project} />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </RevealOnScroll>
     </Section>
   );
