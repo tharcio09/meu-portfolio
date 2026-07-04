@@ -33,7 +33,7 @@ const Experience = () => {
               {trajectorySkills.map((skill, index) => (
                 <li
                   key={skill}
-                  className={`flex min-h-16 items-center border border-border-light bg-white px-3 py-2 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card dark:text-dark-text transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
+                  className={`flex min-h-16 items-center border border-border-light bg-white px-3 py-2 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card dark:text-dark-text transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
                 >
                   {skill}
                 </li>
@@ -49,7 +49,7 @@ const Experience = () => {
               {experienciasAnteriores.map((item) => (
                 <article
                   key={`${item.role}-${item.org}`}
-                  className="grid gap-2 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card transition-[border-color,box-shadow] duration-150 ease-out hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark sm:gap-3"
+                  className="grid gap-2 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark sm:gap-3"
                 >
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
                     <h4 className="font-semibold text-primary-text dark:text-light-text">

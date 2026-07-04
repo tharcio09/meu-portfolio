@@ -81,13 +81,14 @@ const Process = () => {
               key={item.step}
               className={cn(
                 'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card',
-                'transition-[border-color,box-shadow] duration-150 ease-out',
-                'hover:border-accent-border hover:shadow-lg dark:hover:border-accent-border-dark',
-                visible ? 'opacity-100' : 'opacity-0',
+                'transition-all duration-300 ease-out',
+                'hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark',
+                visible ? 'animate-fade-up opacity-0' : 'opacity-0',
                 index === processSteps.length - 1 &&
                   processSteps.length % 2 !== 0 &&
                   'sm:col-span-2'
               )}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
                 Passo {index + 1}
