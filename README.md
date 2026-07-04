@@ -41,6 +41,12 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Conteúdo organizado:** projetos, habilidades, experiências e constantes vivem parcialmente em `src/data`; copies específicas de apresentação permanecem próximas das respectivas seções.
 - **Acessibilidade e responsividade:** navegação por teclado, foco visível, atributos ARIA, menu mobile e layouts adaptados para diferentes larguras.
 - **Interatividade controlada:** Navbar como Client Component para scroll spy, menu mobile e alternância de tema. Animações de entrada com IntersectionObserver e CSS transitions, sem dependências externas.
+- **Scroll reveal global:** componente `RevealOnScroll` reutilizável com fade-up em todas as seções ao entrar na viewport.
+- **Micro-interações:** cards com `hover:-translateY`, `hover:shadow-xl`, stagger animado e feedback visual com `scale` em botões.
+- **Barra de progresso de leitura:** `ReadingProgressBar` fixa no topo que preenche conforme o scroll, usando `scaleX` para performance.
+- **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Em construção / Secundários) com animações de entrada.
+- **Hero com gradiente animado e parallax:** gradiente teal/ciano animado (CSS keyframe) com parallax sutil via `translateY`.
+- **Componentização ampliada:** componentes reutilizáveis como `Button`, `ProjectCard`, `Section`, `RevealOnScroll` e `ReadingProgressBar`.
 - **Performance:** imagens otimizadas, ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
@@ -150,6 +156,10 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 - **Dados e interface:** informações reutilizadas por diferentes componentes ficam em `src/data`; textos editoriais específicos permanecem nos componentes das seções para manter contexto e legibilidade.
 - **Sistema de componentes com CVA:** `Button` usa `class-variance-authority` com `tailwind-merge` para centralizar variantes e estados.
 - **Navbar interativa:** a Navbar é um Client Component responsável pelo scroll spy e pela integração com o menu mobile e o alternador de tema.
+- **RevealOnScroll:** componente client wrapper reutilizável que usa `useScrollReveal` para animar elementos ao scroll. Substituiu observers duplicados em Capabilities e Process.
+- **ReadingProgressBar:** barra de progresso fixa no topo usando `scaleX` (GPU-acelerado) e estado `useState` para rastrear o scroll.
+- **Filtro de projetos:** `Projects.tsx` convertido para Client Component com `useState` para filtro por categoria e renderização condicional com `animate-fade-up`.
+- **Hero com animação CSS:** gradiente animado via keyframe `gradient-shift` no Tailwind, com parallax via `translateY` no evento scroll. Respeita `prefers-reduced-motion`.
 - **Ícones SVG locais:** os ícones vivem em `src/app/components/ui/Icons.tsx`, reduzindo dependências.
 - **CSS crítico otimizado:** o build usa `optimizeCss` com `critters` para reduzir bloqueios na renderização inicial.
 - **Analytics dinâmico:** o Analytics da Vercel é isolado em um componente client carregado dinamicamente.
