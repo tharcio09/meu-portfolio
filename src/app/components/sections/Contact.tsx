@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { RevealOnScroll } from '../ui/RevealOnScroll';
 import Section from '../ui/Section';
 import { EMAIL, redesSociais } from '@/data/constants';
 import { buttonVariants } from '../ui/Button';
@@ -16,7 +17,7 @@ const RESUME_URL = '/curriculo-tharcio-santos.pdf';
 const Contact = () => {
   return (
     <Section id="contato" spacing="editorial">
-      <div className="mx-auto max-w-6xl">
+      <RevealOnScroll className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <div>
             <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
@@ -143,7 +144,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </Section>
   );
 };

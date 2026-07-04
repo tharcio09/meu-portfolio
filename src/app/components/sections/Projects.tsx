@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { projects } from '@/data/projects';
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
+import { RevealOnScroll } from '../ui/RevealOnScroll';
 import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
@@ -17,7 +18,7 @@ const Projects = () => {
       spacing="editorial"
       className="border-b border-border-light dark:border-border-dark"
     >
-      <div className="mx-auto max-w-6xl">
+      <RevealOnScroll className="mx-auto max-w-6xl">
         <div className="grid gap-6 border-b border-border-light pb-8 dark:border-border-dark md:grid-cols-[0.75fr_1.25fr] md:items-end">
           <div>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
@@ -216,7 +217,7 @@ const Projects = () => {
             ))}
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </Section>
   );
 };

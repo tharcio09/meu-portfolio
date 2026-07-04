@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import { RevealOnScroll } from '../ui/RevealOnScroll';
 import Section from '../ui/Section';
 
 const About = () => {
   return (
     <Section id="sobre-mim" spacing="editorial" className="">
-      <div className="mx-auto max-w-6xl">
+      <RevealOnScroll className="mx-auto max-w-6xl">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
           <div>
             <div className="mt-6 border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card lg:max-w-64 lg:p-4">
@@ -102,7 +103,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </Section>
   );
 };

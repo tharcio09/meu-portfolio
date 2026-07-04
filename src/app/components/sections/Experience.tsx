@@ -1,4 +1,5 @@
 import { experienciasAnteriores, trajectorySkills } from '@/data/experience';
+import { RevealOnScroll } from '../ui/RevealOnScroll';
 import Section from '../ui/Section';
 
 const Experience = () => {
@@ -6,7 +7,7 @@ const Experience = () => {
 
   return (
     <Section id="experiencia" spacing="editorial" className="">
-      <div className="mx-auto max-w-6xl">
+      <RevealOnScroll className="mx-auto max-w-6xl">
         <div className="grid gap-8 border-b border-border-light pb-8 dark:border-border-dark md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>
             <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
@@ -67,7 +68,7 @@ const Experience = () => {
             </div>
           </div>
         </div>
-      </div>
+      </RevealOnScroll>
     </Section>
   );
 };
