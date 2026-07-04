@@ -1,36 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import { capabilities } from '@/data/capabilities';
 import { cn } from '@/lib/utils';
+import { useScrollReveal } from '@/app/hooks/useScrollReveal';
 import Section from '../ui/Section';
 
 const Capabilities = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.12 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const { ref, visible } = useScrollReveal<HTMLDivElement>(0.12);
 
   return (
     <Section id="habilidades" spacing="editorial" className="">
