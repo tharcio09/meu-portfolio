@@ -35,12 +35,12 @@ describe('conteúdo principal do redesign', () => {
     );
   });
 
-  it('mantém HelpFlow como case, ManutFlow em construção e três projetos secundários', () => {
+  it('mantém HelpFlow e ManutFlow como destaques e três projetos secundários', () => {
     render(<Projects />);
 
     expect(screen.getByText('Case principal · 01')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
-    expect(screen.getByText('Em desenvolvimento')).toBeInTheDocument();
+    expect(screen.getByText('Case secundário · 02')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 3, name: 'ManutFlow' })).toBeInTheDocument();
 
     const secondaryHeadings = screen.getAllByRole('heading', { level: 4 });
