@@ -6,19 +6,20 @@ describe('projects', () => {
     expect(projects.length).toBeGreaterThan(0);
   });
 
-  it('deve ter exatamente um projeto em destaque', () => {
+  it('deve ter exatamente dois projetos em destaque (HelpFlow e ManutFlow)', () => {
     const destaques = projects.filter((project) => project.kind === 'featured');
-    expect(destaques).toHaveLength(1);
+    expect(destaques).toHaveLength(2);
     expect(destaques[0].shortTitle).toBe('HelpFlow');
+    expect(destaques[1].shortTitle).toBe('ManutFlow');
   });
 
-  it('deve apresentar ManutFlow como produto em construção sem demo falsa', () => {
-    const emConstrucao = projects.filter((project) => project.kind === 'building');
+  it('ManutFlow deve ser featured com demoUrl e imageUrl', () => {
+    const manutflow = projects.find((p) => p.shortTitle === 'ManutFlow');
 
-    expect(emConstrucao).toHaveLength(1);
-    expect(emConstrucao[0].shortTitle).toBe('ManutFlow');
-    expect(emConstrucao[0]).not.toHaveProperty('demoUrl');
-    expect(emConstrucao[0]).not.toHaveProperty('imageUrl');
+    expect(manutflow).toBeTruthy();
+    expect(manutflow!.kind).toBe('featured');
+    expect(manutflow).toHaveProperty('demoUrl');
+    expect(manutflow).toHaveProperty('imageUrl');
   });
 
   it('deve manter os projetos secundários compactos e identificados', () => {
@@ -39,7 +40,7 @@ describe('projects', () => {
     projects.forEach((projeto) => {
       expect(projeto.title).toBeTruthy();
       expect(projeto.githubUrl).toBeTruthy();
-      expect(['featured', 'building', 'secondary']).toContain(projeto.kind);
+      expect(['featured', 'secondary']).toContain(projeto.kind);
     });
   });
 });
