@@ -10,7 +10,7 @@ import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
 
-type FilterKind = 'all' | 'featured' | 'building' | 'secondary';
+type FilterKind = 'all' | 'featured' | 'secondary';
 
 const filters: { kind: FilterKind; label: string }[] = [
   { kind: 'all', label: 'Todos' },
