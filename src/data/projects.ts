@@ -58,25 +58,37 @@ export const projects: Project[] = [
     title: 'ManutFlow — Controle de Manutenção',
     shortTitle: 'ManutFlow',
     description:
-      'Sistema em desenvolvimento para registrar equipamentos, gerenciar ordens de manutenção e acompanhar prioridade e status de cada atendimento.',
+      'Sistema completo para cadastro de equipamentos, abertura de ordens de serviço e dashboard com indicadores de status e prioridade.',
     casePoints: [
       {
-        label: 'Estado atual',
-        value: 'Dashboard com rotas, cadastro e listagem de equipamentos.',
+        label: 'Problema',
+        value:
+          'Empresas precisam controlar manutenção de equipamentos, registrar ordens de serviço e acompanhar prioridades.',
       },
       {
-        label: 'Base técnica',
-        value: 'Supabase com PostgreSQL, RLS habilitado e API de health check.',
+        label: 'Solução',
+        value:
+          'Sistema full stack com autenticação, CRUD de equipamentos e ordens, dashboard com auto-refresh e histórico de alterações.',
       },
       {
-        label: 'Evolução',
-        value: 'Evolução planejada: autenticação, responsáveis e domínios independentes.',
+        label: 'Segurança',
+        value: 'Três camadas: proxy.ts (Edge), getUser() (API) e Row Level Security (banco).',
       },
     ],
-    highlights: ['Construção incremental', 'Organização por domínio', 'Banco no Supabase'],
+    highlights: [
+      'Autenticação Supabase Auth com 3 camadas de segurança',
+      'Breadcrumbs, auto-refresh e loading skeletons',
+      'Isolamento de dados por usuário (RLS + user_id)',
+    ],
+    technicalHighlight:
+      'Autenticação em 3 camadas (proxy.ts, getUser(), RLS), isolamento de dados por user_id e deploy na Vercel.',
+    imageUrl: '/images/manutflow-screenshot.png',
+    imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
     githubUrl: 'https://github.com/tharciosantos/manutflow',
+    demoUrl: 'https://manutflow.vercel.app',
+    demoLabel: 'Acessar sistema',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'],
-    kind: 'building',
+    kind: 'featured',
   },
   {
     title: 'DevLinks — Perfil e Linktree',
