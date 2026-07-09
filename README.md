@@ -44,7 +44,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Scroll reveal global:** componente `RevealOnScroll` reutilizável com fade-up em todas as seções ao entrar na viewport.
 - **Micro-interações:** cards com `hover:-translateY`, `hover:shadow-xl`, stagger animado e feedback visual com `scale` em botões.
 - **Barra de progresso de leitura:** `ReadingProgressBar` fixa no topo que preenche conforme o scroll, usando `scaleX` para performance.
-- **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Em construção / Secundários) com animações de entrada.
+- **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Secundários) com animações de entrada.
 - **Hero com gradiente animado e parallax:** gradiente teal/ciano animado (CSS keyframe) com parallax sutil via `translateY`.
 - **Componentização ampliada:** componentes reutilizáveis como `Button`, `ProjectCard`, `Section`, `RevealOnScroll` e `ReadingProgressBar`.
 - **Performance:** imagens otimizadas, ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
@@ -81,12 +81,12 @@ Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de
 - **Stack:** Next.js, React, JavaScript, Prisma, Supabase, PostgreSQL, NextAuth, Zod, Vitest, Cypress
 - **Links:** [Aplicação](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
 
-### Produto em construção — ManutFlow
+### Case complementar — ManutFlow
 
-Sistema em desenvolvimento para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. A implementação atual inclui cadastro e gestão de equipamentos, ordens de serviço com controle de status, filtros, busca textual e dashboard com indicadores.
+Sistema completo para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. Inclui autenticação com Supabase Auth, três camadas de segurança (proxy.ts, getUser(), RLS), cadastro e gestão de equipamentos, ordens de serviço com controle de status, filtros, busca textual e dashboard com indicadores.
 
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL
-- **Link:** [Acompanhar no GitHub](https://github.com/tharciosantos/manutflow)
+- **Links:** [Aplicação](https://manutflow.vercel.app) · [Código](https://github.com/tharciosantos/manutflow)
 
 ### Projetos secundários
 
