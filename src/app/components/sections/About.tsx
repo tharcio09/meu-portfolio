@@ -49,7 +49,7 @@ const About = () => {
             <div className="mt-7 space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
               <p>
                 Sou estudante de Análise e Desenvolvimento de Sistemas na Anhanguera (conclusão em
-                junho de 2027). Venho construindo projetos próprios para aplicar fundamentos de
+                julho de 2027). Venho construindo projetos próprios para aplicar fundamentos de
                 frontend, backend, banco de dados, autenticação e deploy.
               </p>
               <p>
@@ -95,7 +95,7 @@ const About = () => {
                       Conclusão
                     </dt>
                     <dd className="mt-1 font-semibold text-primary-text dark:text-light-text">
-                      Junho de 2027
+                      Julho de 2027
                     </dd>
                   </div>
                 </dl>
