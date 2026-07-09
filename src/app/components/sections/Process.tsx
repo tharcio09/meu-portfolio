@@ -64,7 +64,6 @@ const Process = () => {
                   processSteps.length % 2 !== 0 &&
                   'sm:col-span-2'
               )}
-              style={{ animationDelay: `${index * 100}ms` }}
             >
               <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
                 Passo {index + 1}
