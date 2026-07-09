@@ -3,14 +3,12 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { NavLink } from '../../data/constants';
-import { navLinks, SECTION_IDS } from '../../data/constants';
+import { navLinks, SECTION_IDS, sectionIdFromHref } from '../../data/constants';
 import { buttonVariants } from './ui/Button';
 import { cn } from '@/lib/utils';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { MobileNav } from './MobileNav';
 import { useActiveSection } from '@/app/hooks/useScrollReveal';
-
-const sectionIdFromHref = (href: string) => (href.startsWith('#') ? href.slice(1) : '');
 
 const navLinkClass = (isActive: boolean) =>
   cn(

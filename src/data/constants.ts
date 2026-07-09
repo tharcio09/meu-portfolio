@@ -17,6 +17,8 @@ export const EMAIL = 'tharciosantos09@gmail.com';
 export const GITHUB_URL = 'https://github.com/tharciosantos';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 
+export const sectionIdFromHref = (href: string) => (href.startsWith('#') ? href.slice(1) : '');
+
 export const navLinks: NavLink[] = [
   { href: '#projetos', label: 'Projetos' },
   { href: '#processo', label: 'Processo' },

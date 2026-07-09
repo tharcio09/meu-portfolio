@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { NavLink } from '../../data/constants';
+import { sectionIdFromHref, type NavLink } from '../../data/constants';
 import { buttonVariants } from './ui/Button';
 import { cn } from '@/lib/utils';
 import { CloseIcon, MenuIcon } from './ui/Icons';
@@ -12,7 +12,6 @@ type MobileNavProps = {
   activeSection?: string;
 };
 
-const sectionIdFromHref = (href: string) => (href.startsWith('#') ? href.slice(1) : '');
 const MOBILE_MENU_ID = 'mobile-navigation-menu';
 
 export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
