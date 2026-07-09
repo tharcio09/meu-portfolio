@@ -48,7 +48,12 @@ const Hero = () => {
         </div>
 
         <div className="stagger-2 mt-7">
-          <h1 className="text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]">
+          <h1
+            className="text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]"
+            style={{
+              textShadow: '0 0 60px rgba(15,118,110,0.12), 0 0 120px rgba(15,118,110,0.06)',
+            }}
+          >
             Desenvolvo aplicações web full stack com autenticação, APIs e deploy.
           </h1>
         </div>
