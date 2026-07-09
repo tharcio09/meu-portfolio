@@ -15,7 +15,7 @@ const processSteps = [
   },
   {
     step: 'Autenticação',
-    detail: 'Implementei login com NextAuth, roles CLIENT/_AGENT e proteção de rotas.',
+    detail: 'Implementei login com NextAuth, roles CLIENT/AGENT e proteção de rotas.',
   },
   {
     step: 'Interface',
