@@ -4,7 +4,7 @@ Guia de contexto completo para agentes de IA trabalharem neste projeto.
 
 ## Stack
 
-- **Framework:** Next.js 15.3.0 (App Router)
+- **Framework:** Next.js 15.x (App Router)
 - **Linguagem:** TypeScript strict (target ES2017), React 19.1.0
 - **Estilização:** Tailwind CSS 3 com tema customizado (light/dark via `next-themes`, `attribute="class"`)
 - **Testes:** Vitest + React Testing Library (jsdom, globals: true)
@@ -88,14 +88,14 @@ type ExperienciaAnterior = {
 EMAIL = 'tharciosantos09@gmail.com';
 GITHUB_URL = 'https://github.com/tharciosantos';
 LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
-SECTION_IDS = {
-  projetos: 'projetos',
-  processo: 'processo',
-  habilidades: 'habilidades',
-  'sobre-mim': 'sobre-mim',
-  experiencia: 'experiencia',
-  contato: 'contato',
-} as const;
+SECTION_IDS = [
+  'projetos',
+  'processo',
+  'habilidades',
+  'sobre-mim',
+  'experiencia',
+  'contato',
+] as const;
 
 navLinks = [
   { href: '#projetos', label: 'Projetos' },
@@ -242,5 +242,12 @@ npm run test:run     # vitest (run once)
 npm run lint         # eslint src
 npm run format       # prettier --write .
 npm run format:check # prettier --check .
-n
 ```
+
+## Consistência de conteúdo
+
+- A conclusão de Análise e Desenvolvimento de Sistemas está prevista para **julho de 2027**.
+- O **ManutFlow está em produção** e deve ser apresentado de forma consistente no portfólio,
+  currículo e README.
+- Antes de publicar, conferir datas, status dos projetos, URLs de demonstração e informações
+  profissionais em todas as superfícies públicas.
