@@ -15,8 +15,7 @@ type FilterKind = 'all' | 'featured' | 'secondary';
 const filters: { kind: FilterKind; label: string }[] = [
   { kind: 'all', label: 'Todos' },
   { kind: 'featured', label: 'Destaque' },
-
-  { kind: 'secondary', label: 'Secundários' },
+  { kind: 'secondary', label: 'Outros projetos' },
 ];
 
 const Projects = () => {
@@ -74,7 +73,7 @@ const Projects = () => {
           featuredProjects.map((project, index) => (
             <article
               className={cn(
-                'grid gap-8 border-b border-border-light py-10 animate-fade-up dark:border-border-dark lg:grid-cols-[1.15fr_0.85fr] lg:items-center'
+                'grid gap-8 border-b border-border-light py-10 animate-fade-up dark:border-border-dark lg:grid-cols-[1.15fr_0.85fr] lg:items-start'
               )}
               key={project.title}
             >
@@ -104,7 +103,7 @@ const Projects = () => {
 
               <div>
                 <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
-                  Case {index === 0 ? 'principal' : 'secundário'} · 0{index + 1}
+                  Case {index === 0 ? 'principal' : 'complementar'} · 0{index + 1}
                 </p>
                 <h3 className="mt-4 text-4xl font-bold tracking-[-0.03em] text-primary-text dark:text-light-text">
                   {project.shortTitle}
@@ -112,6 +111,41 @@ const Projects = () => {
                 <p className="mt-4 text-lg leading-relaxed text-secondary-text dark:text-dark-text">
                   {project.description}
                 </p>
+
+                {(project.responsibility || project.challenge || project.decision) && (
+                  <dl className="mt-7 grid gap-3 sm:grid-cols-2">
+                    {project.responsibility && (
+                      <div className="border border-border-light bg-white p-3 dark:border-border-dark dark:bg-dark-card sm:col-span-2">
+                        <dt className="font-mono text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
+                          Minha responsabilidade
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                          {project.responsibility}
+                        </dd>
+                      </div>
+                    )}
+                    {project.challenge && (
+                      <div className="border border-border-light bg-white p-3 dark:border-border-dark dark:bg-dark-card">
+                        <dt className="font-mono text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
+                          Maior desafio
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                          {project.challenge}
+                        </dd>
+                      </div>
+                    )}
+                    {project.decision && (
+                      <div className="border border-border-light bg-white p-3 dark:border-border-dark dark:bg-dark-card">
+                        <dt className="font-mono text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
+                          Decisão técnica
+                        </dt>
+                        <dd className="mt-2 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                          {project.decision}
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
+                )}
 
                 {project.casePoints && (
                   <dl className="mt-7 grid gap-3">
@@ -129,6 +163,27 @@ const Projects = () => {
                       </div>
                     ))}
                   </dl>
+                )}
+
+                {project.evidence && project.evidence.length > 0 && (
+                  <div className="mt-6 border-l-2 border-accent pl-4 dark:border-accent-light">
+                    <p className="font-mono text-xs font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
+                      Evidências
+                    </p>
+                    <ul className="mt-3 grid gap-2 text-sm text-secondary-text dark:text-dark-text sm:grid-cols-2">
+                      {project.evidence.map((item) => (
+                        <li key={item}>• {item}</li>
+                      ))}
+                    </ul>
+                    {project.nextStep && (
+                      <p className="mt-3 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                        <span className="font-semibold text-primary-text dark:text-light-text">
+                          Próximo passo:
+                        </span>{' '}
+                        {project.nextStep}
+                      </p>
+                    )}
+                  </div>
                 )}
 
                 <div className="mt-6 flex flex-wrap gap-2">
