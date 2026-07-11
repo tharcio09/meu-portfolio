@@ -27,15 +27,11 @@ const Contact = () => {
             <h2 className="mt-5 max-w-xl text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
               Vamos conversar sobre uma oportunidade
             </h2>
-            <div className="mt-6 max-w-xl space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
-              <p>
-                Estou aberto a oportunidades de estágio ou posições júnior em desenvolvimento web.
-              </p>
-              <p>
-                Tenho interesse em atuar com frontend, backend ou full stack, principalmente em
-                times onde eu possa aprender, contribuir e evoluir com projetos reais.
-              </p>
-            </div>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-secondary-text dark:text-dark-text">
+              Estou aberto a oportunidades de estágio ou posições júnior em desenvolvimento web, com
+              interesse em frontend, backend ou full stack e em times onde eu possa aprender,
+              contribuir e evoluir com projetos reais.
+            </p>
             <div className="mt-5">
               <a
                 href={`mailto:${EMAIL}`}

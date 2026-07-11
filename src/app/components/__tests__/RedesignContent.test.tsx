@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import Footer from '../Footer';
+import About from '../sections/About';
 import Hero from '../sections/Hero';
 import Projects from '../sections/Projects';
 import { navLinks } from '@/data/constants';
@@ -52,6 +53,18 @@ describe('conteúdo principal do redesign', () => {
       'Lista de Mercado',
       'Crypto Dashboard',
     ]);
+  });
+
+  it('apresenta o perfil profissional sem repetir o histórico detalhado', () => {
+    render(<About />);
+
+    expect(
+      screen.getByText(/Minha experiência anterior com diagnóstico técnico/i)
+    ).toHaveTextContent('construção de sistemas');
+    expect(
+      screen.getByText(/Busco uma oportunidade de estágio ou posição júnior/i)
+    ).toHaveTextContent('frontend, backend ou full stack');
+    expect(screen.queryByText(/trabalhei como auxiliar mecânico/i)).not.toBeInTheDocument();
   });
 
   it('renderiza o Footer editorial e preserva os links profissionais', () => {

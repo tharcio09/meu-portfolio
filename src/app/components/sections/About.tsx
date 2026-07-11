@@ -53,15 +53,13 @@ const About = () => {
                 frontend, backend, banco de dados, autenticação e deploy.
               </p>
               <p>
-                Antes da programação, trabalhei como auxiliar mecânico na Komaq (diagnóstico técnico
-                de equipamentos) e como auxiliar administrativo na EPOS (organização de demandas e
-                documentação de processos). Essas experiências me ensinaram a investigar problemas
-                com método antes de buscar soluções — uma habilidade que aplico diretamente no
-                debugging e na arquitetura de sistemas.
+                Minha experiência anterior com diagnóstico técnico, organização de demandas e
+                documentação reforçou habilidades que aplico em debugging, análise de problemas e
+                construção de sistemas.
               </p>
               <p>
-                Busco uma oportunidade de estágio ou posição júnior em desenvolvimento web, com
-                abertura para atuar em frontend, backend ou full stack.
+                Busco uma oportunidade de estágio ou posição júnior, com abertura para frontend,
+                backend ou full stack.
               </p>
             </div>
 

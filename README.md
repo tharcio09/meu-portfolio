@@ -14,7 +14,7 @@ Portfólio pessoal focado em aplicações web, projetos reais, processo de desen
 
 ## Sobre
 
-Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack Júnior. O portfólio reúne aplicações publicadas, um produto em construção, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
+Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack Júnior. O portfólio reúne aplicações publicadas, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
 
 A interface segue uma direção editorial: hierarquia visual clara, leitura rápida, conteúdo organizado por evidências e uma paleta baseada em grafite, teal/ciano e superfícies neutras. Dark e light mode compartilham os mesmos tokens semânticos, com contraste, foco visível e estados interativos consistentes.
 
@@ -24,8 +24,8 @@ A interface segue uma direção editorial: hierarquia visual clara, leitura ráp
 
 - **Portfólio editorial:** projetos apresentados por problema, solução, entrega e decisões técnicas.
 - **HelpFlow como case principal:** aplicação mais completa, com autenticação, regras de negócio, banco relacional e deploy.
-- **ManutFlow como produto em construção:** evolução documentada sem criar demonstrações ou resultados que ainda não existem.
-- **Projetos secundários compactos:** DevLinks, Lista de Mercado e Crypto Dashboard aparecem como evidências complementares.
+- **ManutFlow como case complementar:** produto em produção com autenticação, isolamento de dados e gestão de manutenção.
+- **Projetos complementares compactos:** DevLinks, Lista de Mercado e Crypto Dashboard aparecem como evidências adicionais.
 - **Processo visível:** seção "Como eu trabalho" apresenta o fluxo de análise, escopo, implementação, teste e revisão.
 - **Competências:** tecnologias organizadas por contexto de uso, em vez de uma lista genérica de ferramentas.
 
@@ -39,20 +39,21 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Sistema de design próprio:** tokens semânticos no Tailwind para fundos, superfícies, textos, bordas e accent teal/ciano nos dois temas.
 - **Componentização:** componentes reutilizáveis com React e TypeScript, como `Button`, `ProjectCard` e `Section`.
 - **Conteúdo organizado:** projetos, habilidades, experiências e constantes vivem parcialmente em `src/data`; copies específicas de apresentação permanecem próximas das respectivas seções.
-- **Acessibilidade e responsividade:** navegação por teclado, foco visível, atributos ARIA, menu mobile e layouts adaptados para diferentes larguras.
+- **Acessibilidade e responsividade:** navegação por teclado, foco visível, atributos ARIA, focus trap no menu mobile e layouts adaptados para diferentes larguras.
 - **Interatividade controlada:** Navbar como Client Component para scroll spy, menu mobile e alternância de tema. Animações de entrada com IntersectionObserver e CSS transitions, sem dependências externas.
-- **Scroll reveal global:** componente `RevealOnScroll` reutilizável com fade-up em todas as seções ao entrar na viewport.
+- **Scroll reveal global:** componente `RevealOnScroll` reutilizável com IntersectionObserver, sem listeners redundantes de scroll.
 - **Micro-interações:** cards com `hover:-translateY`, `hover:shadow-xl`, stagger animado e feedback visual com `scale` em botões.
 - **Barra de progresso de leitura:** `ReadingProgressBar` fixa no topo que preenche conforme o scroll, usando `scaleX` para performance.
-- **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Secundários) com animações de entrada.
-- **Hero com gradiente animado e parallax:** gradiente teal/ciano animado (CSS keyframe) com parallax sutil via `translateY`.
-- **Componentização ampliada:** componentes reutilizáveis como `Button`, `ProjectCard`, `Section`, `RevealOnScroll` e `ReadingProgressBar`.
+- **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Outros projetos) com animações de entrada.
+- **Hero com gradiente animado e parallax:** Hero renderizado no servidor, com o fundo interativo isolado em um Client Component pequeno.
 - **Performance:** imagens otimizadas, ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
-- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 14 testes em 4 arquivos cobrindo componentes, hooks e utilitários.
+- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 29 testes em 6 arquivos cobrindo componentes, hooks e dados.
 
-### Métricas Lighthouse (produção)
+### Métricas Lighthouse (referência histórica)
+
+Resultados registrados em uma medição anterior da versão publicada. Devem ser executados novamente após mudanças relevantes de conteúdo, dependências ou performance.
 
 | Categoria      | Score |
 | -------------- | ----- |
@@ -88,7 +89,7 @@ Sistema completo para controle de equipamentos, ordens de manutenção, respons�
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL
 - **Links:** [Aplicação](https://manutflow.vercel.app) · [Código](https://github.com/tharciosantos/manutflow)
 
-### Projetos secundários
+### Projetos complementares
 
 #### DevLinks
 
@@ -116,7 +117,7 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 ## Seções do Portfólio
 
 1. **Hero:** posicionamento profissional, objetivo e acesso aos projetos e currículo.
-2. **Projetos:** HelpFlow, ManutFlow e projetos secundários.
+2. **Projetos:** HelpFlow, ManutFlow e projetos complementares.
 3. **Processo:** fluxo incremental de desenvolvimento com exemplo real do HelpFlow.
 4. **Competências:** frontend, backend, banco de dados, testes, PWA e evolução.
 5. **Sobre:** formação, experiência prévia e objetivo profissional.
@@ -157,9 +158,9 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 - **Sistema de componentes com CVA:** `Button` usa `class-variance-authority` com `tailwind-merge` para centralizar variantes e estados.
 - **Navbar interativa:** a Navbar é um Client Component responsável pelo scroll spy e pela integração com o menu mobile e o alternador de tema.
 - **RevealOnScroll:** componente client wrapper reutilizável que usa `useScrollReveal` para animar elementos ao scroll. Substituiu observers duplicados em Capabilities e Process.
-- **ReadingProgressBar:** barra de progresso fixa no topo usando `scaleX` (GPU-acelerado) e estado `useState` para rastrear o scroll.
+- **ReadingProgressBar:** barra de progresso fixa no topo atualizada por `ref` e `requestAnimationFrame`, sem renderização React a cada evento de scroll.
 - **Filtro de projetos:** `Projects.tsx` convertido para Client Component com `useState` para filtro por categoria e renderização condicional com `animate-fade-up`.
-- **Hero com animação CSS:** gradiente animado via keyframe `gradient-shift` no Tailwind, com parallax via `translateY` no evento scroll. Respeita `prefers-reduced-motion`.
+- **Hero com animação CSS:** conteúdo renderizado no servidor e parallax isolado em `HeroParallaxBackground`, limitado por `requestAnimationFrame` e compatível com `prefers-reduced-motion`.
 - **Ícones SVG locais:** os ícones vivem em `src/app/components/ui/Icons.tsx`, reduzindo dependências.
 - **CSS crítico otimizado:** o build usa `optimizeCss` com `critters` para reduzir bloqueios na renderização inicial.
 - **Analytics dinâmico:** o Analytics da Vercel é isolado em um componente client carregado dinamicamente.
