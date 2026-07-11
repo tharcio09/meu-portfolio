@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import Footer from '../Footer';
+import Navbar from '../Navbar';
 import About from '../sections/About';
 import Hero from '../sections/Hero';
 import Projects from '../sections/Projects';
@@ -15,6 +16,16 @@ describe('conteúdo principal do redesign', () => {
       { label: 'Sobre', href: '#sobre-mim' },
       { label: 'Contato', href: '#contato' },
     ]);
+  });
+
+  it('inclui a marca visível no nome acessível do link inicial', () => {
+    render(<Navbar />);
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Tharcio.dev — voltar para o início',
+      })
+    ).toHaveAttribute('href', '/');
   });
 
   it('renderiza a nova copy e os acessos principais do Hero', () => {
