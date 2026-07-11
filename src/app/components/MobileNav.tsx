@@ -19,6 +19,7 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
   const [isClosing, setIsClosing] = useState(false);
   const triggerButtonRef = useRef<HTMLButtonElement | null>(null);
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
+  const menuPanelRef = useRef<HTMLDivElement | null>(null);
   const closeTimeoutRef = useRef<number | null>(null);
 
   const handleClose = useCallback(() => {
@@ -45,17 +46,43 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') handleClose();
+      if (event.key === 'Escape') {
+        handleClose();
+        return;
+      }
+
+      if (event.key !== 'Tab' || isClosing) return;
+
+      const focusableElements = Array.from(
+        menuPanelRef.current?.querySelectorAll<HTMLElement>('a[href]') ?? []
+      );
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (!firstElement || !lastElement) return;
+
+      const focusIsOutsidePanel = !menuPanelRef.current?.contains(document.activeElement);
+      const shouldWrapBackward = event.shiftKey && document.activeElement === firstElement;
+      const shouldWrapForward = !event.shiftKey && document.activeElement === lastElement;
+
+      if (focusIsOutsidePanel || shouldWrapBackward || shouldWrapForward) {
+        event.preventDefault();
+        (event.shiftKey ? lastElement : firstElement).focus();
+      }
     };
 
     if (isOpen) document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
-  }, [handleClose, isOpen]);
+  }, [handleClose, isClosing, isOpen]);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (!isOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = previousOverflow;
     };
   }, [isOpen]);
 
@@ -107,7 +134,11 @@ export function MobileNav({ links, activeSection = '' }: MobileNavProps) {
 
       {isOpen && (
         <div
+          ref={menuPanelRef}
           id={MOBILE_MENU_ID}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Menu de navegação"
           className="fixed left-0 right-0 top-16 z-50 border-b border-border-light bg-light-card shadow-lg shadow-slate-900/10 dark:border-border-dark dark:bg-dark-bg dark:shadow-black/30 md:hidden"
           style={{
             opacity: isClosing ? 0 : 1,
