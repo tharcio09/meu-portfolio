@@ -13,6 +13,18 @@ describe('projects', () => {
     expect(destaques[1].shortTitle).toBe('ManutFlow');
   });
 
+  it('projetos em destaque devem apresentar autoria e evidências técnicas', () => {
+    const destaques = projects.filter((project) => project.kind === 'featured');
+
+    destaques.forEach((project) => {
+      expect(project.responsibility).toBeTruthy();
+      expect(project.challenge).toBeTruthy();
+      expect(project.decision).toBeTruthy();
+      expect(project.evidence?.length).toBeGreaterThan(0);
+      expect(project.nextStep).toBeTruthy();
+    });
+  });
+
   it('ManutFlow deve ser featured com demoUrl e imageUrl', () => {
     const manutflow = projects.find((p) => p.shortTitle === 'ManutFlow');
 

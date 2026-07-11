@@ -40,8 +40,11 @@ describe('conteúdo principal do redesign', () => {
 
     expect(screen.getByText('Case principal · 01')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
-    expect(screen.getByText('Case secundário · 02')).toBeInTheDocument();
+    expect(screen.getByText('Case complementar · 02')).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 3, name: 'ManutFlow' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Outros projetos' })).toBeInTheDocument();
+    expect(screen.getAllByText('Minha responsabilidade')).toHaveLength(2);
+    expect(screen.getAllByText('Decisão técnica')).toHaveLength(2);
 
     const secondaryHeadings = screen.getAllByRole('heading', { level: 4 });
     expect(secondaryHeadings.map((heading) => heading.textContent)).toEqual([

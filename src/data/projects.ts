@@ -12,6 +12,11 @@ export type Project = {
   highlights?: string[];
   outcome?: string;
   technicalHighlight?: string;
+  responsibility?: string;
+  challenge?: string;
+  decision?: string;
+  evidence?: string[];
+  nextStep?: string;
   casePoints?: {
     label: string;
     value: string;
@@ -45,6 +50,19 @@ export const projects: Project[] = [
     ],
     technicalHighlight:
       'Um fluxo completo de produto: autenticação, regras de negócio, banco relacional, interface e deploy.',
+    responsibility:
+      'Desenvolvimento completo do produto, da interface e das regras de negócio à persistência e ao deploy.',
+    challenge:
+      'Organizar autenticação, permissões, regras de negócio e histórico sem comprometer a clareza do fluxo.',
+    decision:
+      'Separar acessos com roles CLIENT/AGENT e centralizar validação com Zod e persistência com Prisma.',
+    evidence: [
+      'CRUD completo e rate limiting',
+      'Testes unitários com Vitest',
+      'Fluxo principal validado com Cypress E2E',
+      'Aplicação publicada com código aberto',
+    ],
+    nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
     imageUrl: '/images/helpflow-screenshot.png',
     imageAlt:
       'Interface do HelpFlow mostrando painel de gestão de chamados com lista de tickets, status e prioridade',
@@ -82,6 +100,19 @@ export const projects: Project[] = [
     ],
     technicalHighlight:
       'Autenticação em 3 camadas (proxy.ts, getUser(), RLS), isolamento de dados por user_id e deploy na Vercel.',
+    responsibility:
+      'Modelagem e implementação do sistema de equipamentos, ordens de serviço e indicadores operacionais.',
+    challenge:
+      'Garantir que cada usuário acesse apenas seus próprios equipamentos e ordens de manutenção.',
+    decision:
+      'Aplicar proteção em três camadas com proxy, getUser() na API e Row Level Security no banco.',
+    evidence: [
+      'Autenticação e isolamento por usuário',
+      'CRUD de equipamentos e ordens',
+      'Histórico de alterações e dashboard',
+      'Aplicação publicada na Vercel',
+    ],
+    nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.png',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
     githubUrl: 'https://github.com/tharciosantos/manutflow',
