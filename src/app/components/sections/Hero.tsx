@@ -1,45 +1,19 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
+import { HeroParallaxBackground } from '../ui/HeroParallaxBackground';
 
 const stackItems = ['Next.js', 'TypeScript', 'React', 'Node.js', 'Supabase'];
 
 const Hero = () => {
-  const [offsetY, setOffsetY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setOffsetY(window.scrollY * 0.3);
-    };
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <Section
       id="home"
       spacing="hero"
       className="relative overflow-hidden border-b border-border-light dark:border-border-dark"
     >
-      {/* Gradiente animado com parallax */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[length:200%_200%] bg-gradient-to-br from-accent/30 via-accent-light/10 to-accent/20 animate-gradient-shift dark:from-accent-light/30 dark:via-accent/15 dark:to-accent-light/20"
-        style={{ transform: `translateY(${offsetY}px)` }}
-      />
-
-      {/* Vinheta suave nas bordas */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-light-bg via-light-bg/50 to-transparent dark:from-dark-bg dark:via-dark-bg/50"
-      />
+      <HeroParallaxBackground />
 
       <div className="mx-auto max-w-4xl">
         <div className="stagger-1 animate-fade-up opacity-0 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
