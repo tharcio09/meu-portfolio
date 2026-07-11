@@ -41,11 +41,4 @@ export const capabilities: Capability[] = [
       'Aplicações progressivas com funcionamento offline, persistência local e compartilhamento nativo.',
     usedIn: ['Lista de Mercado'],
   },
-  {
-    title: 'Em evolução',
-    technologies: ['Docker', 'Testes de integração', 'Zod avançado'],
-    description:
-      'Containerização de aplicações, testes de integração além do unitário e validação de schemas complexos.',
-    usedIn: [],
-  },
 ];
