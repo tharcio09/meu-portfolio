@@ -18,6 +18,9 @@ describe('Contact', () => {
     expect(
       screen.getByRole('heading', { name: 'Vamos conversar sobre uma oportunidade' })
     ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Estou aberto a oportunidades de estágio ou posições júnior/i)
+    ).toHaveTextContent('contribuir e evoluir com projetos reais');
     expect(screen.getByRole('link', { name: /LinkedIn/i })).toHaveAttribute(
       'href',
       'https://www.linkedin.com/in/tharcio-santos-dev/'
