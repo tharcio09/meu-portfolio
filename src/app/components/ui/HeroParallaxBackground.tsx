@@ -33,7 +33,7 @@ export function HeroParallaxBackground() {
       <div
         ref={gradientRef}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-[length:200%_200%] bg-gradient-to-br from-accent/30 via-accent-light/10 to-accent/20 animate-gradient-shift dark:from-accent-light/30 dark:via-accent/15 dark:to-accent-light/20"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[length:200%_200%] bg-gradient-to-br from-accent/30 via-accent-light/10 to-accent/20 dark:from-accent-light/30 dark:via-accent/15 dark:to-accent-light/20"
       />
       <div
         aria-hidden="true"

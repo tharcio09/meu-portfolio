@@ -29,6 +29,7 @@ describe('performance de scroll', () => {
     frameCallback?.(0);
 
     expect(gradient).toHaveStyle({ transform: 'translateY(60px)' });
+    expect(gradient).not.toHaveClass('animate-gradient-shift');
   });
 
   it('não ativa o parallax quando reduced motion está habilitado', () => {
