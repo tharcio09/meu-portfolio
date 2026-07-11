@@ -15,17 +15,11 @@ export function useScrollReveal<T extends HTMLElement = HTMLElement>(threshold =
       return;
     }
 
-    const revealIfInView = () => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top <= window.innerHeight * (1 - threshold) && rect.bottom >= 0) {
-        setVisible(true);
-        return true;
-      }
-
-      return false;
-    };
-
-    if (revealIfInView()) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= window.innerHeight * (1 - threshold) && rect.bottom >= 0) {
+      setVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -38,13 +32,9 @@ export function useScrollReveal<T extends HTMLElement = HTMLElement>(threshold =
     );
 
     observer.observe(el);
-    window.addEventListener('scroll', revealIfInView, { passive: true });
-    window.addEventListener('resize', revealIfInView);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', revealIfInView);
-      window.removeEventListener('resize', revealIfInView);
     };
   }, [threshold]);
 
