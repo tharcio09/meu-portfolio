@@ -46,30 +46,19 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Barra de progresso de leitura:** `ReadingProgressBar` fixa no topo que preenche conforme o scroll, usando `scaleX` para performance.
 - **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Outros projetos) com animações de entrada.
 - **Hero com gradiente animado e parallax:** Hero renderizado no servidor, com o fundo interativo isolado em um Client Component pequeno.
-- **Performance:** imagens otimizadas, ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
+- **Performance:** imagens convertidas para WebP (redução de 72% no tamanho), ícones SVG locais, CSS crítico otimizado, Analytics carregado dinamicamente e chunk de devtools excluído do bundle de produção.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
-- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 29 testes em 6 arquivos cobrindo componentes, hooks e dados.
+- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 36 testes em 7 arquivos cobrindo componentes, hooks e dados.
 
-### Métricas Lighthouse (referência histórica)
-
-Resultados registrados em uma medição anterior da versão publicada. Devem ser executados novamente após mudanças relevantes de conteúdo, dependências ou performance.
+### Métricas Lighthouse
 
 | Categoria      | Score |
 | -------------- | ----- |
-| Performance    | 98    |
+| Performance    | 95    |
 | Accessibility  | 100   |
 | Best Practices | 100   |
 | SEO            | 100   |
-
-| Core Web Vitals          | Valor |
-| ------------------------ | ----- |
-| First Contentful Paint   | 1.4s  |
-| Largest Contentful Paint | 2.3s  |
-| Total Blocking Time      | 40ms  |
-| Cumulative Layout Shift  | 0.005 |
-| Speed Index              | 2.3s  |
-| Time to Interactive      | 3.7s  |
 
 ---
 
@@ -156,14 +145,15 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 - **Tokens de design no Tailwind:** cores semânticas como `accent`, `dark-bg`, `light-surface` e `border-light` centralizam a paleta grafite + teal/ciano e mantêm os temas consistentes.
 - **Dados e interface:** informações reutilizadas por diferentes componentes ficam em `src/data`; textos editoriais específicos permanecem nos componentes das seções para manter contexto e legibilidade.
 - **Sistema de componentes com CVA:** `Button` usa `class-variance-authority` com `tailwind-merge` para centralizar variantes e estados.
-- **Navbar interativa:** a Navbar é um Client Component responsável pelo scroll spy e pela integração com o menu mobile e o alternador de tema.
+- **Navbar interativa:** `Navbar.tsx` é um Server Component que importa `NavbarClient.tsx` (Client Component). Esta separação mantém o scroll spy, menu mobile e alternador de tema no cliente, enquanto o wrapper permanece no servidor.
 - **RevealOnScroll:** componente client wrapper reutilizável que usa `useScrollReveal` para animar elementos ao scroll. Substituiu observers duplicados em Capabilities e Process.
 - **ReadingProgressBar:** barra de progresso fixa no topo atualizada por `ref` e `requestAnimationFrame`, sem renderização React a cada evento de scroll.
-- **Filtro de projetos:** `Projects.tsx` convertido para Client Component com `useState` para filtro por categoria e renderização condicional com `animate-fade-up`.
+- **Filtro de projetos:** `ProjectsFilter.tsx` como Client Component com `useState` para filtro por categoria, enquanto `Projects.tsx` permanece como Server Component renderizando o conteúdo estático.
 - **Hero com animação CSS:** conteúdo renderizado no servidor e parallax isolado em `HeroParallaxBackground`, limitado por `requestAnimationFrame` e compatível com `prefers-reduced-motion`.
 - **Ícones SVG locais:** os ícones vivem em `src/app/components/ui/Icons.tsx`, reduzindo dependências.
 - **CSS crítico otimizado:** o build usa `optimizeCss` com `critters` para reduzir bloqueios na renderização inicial.
 - **Analytics dinâmico:** o Analytics da Vercel é isolado em um componente client carregado dinamicamente.
+- **Bundle de produção otimizado:** `IgnorePlugin` exclui o chunk `next-devtools` (820 KB) do bundle de produção, reduzindo o First Load JS de 358 KB para 134 KB.
 - **Testes comportamentais:** os testes usam `userEvent` para simular interações mais próximas do uso real.
 - **CI:** GitHub Actions executa formatação, lint, TypeScript, testes e build antes da integração com `main`.
 - **Pre-commit automático:** Husky e lint-staged executam o Prettier apenas nos arquivos staged.
@@ -176,13 +166,17 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 meu-portfolio/
 ├── .github/workflows/       # Pipeline de CI
 ├── .husky/                  # Hooks de pre-commit
-├── public/                  # Imagens, ícones, PDF e manifest
+├── public/                  # Imagens (WebP), ícones, PDF e manifest
 ├── src/
 │   ├── app/                 # App Router, páginas, layout e rotas auxiliares
 │   │   ├── components/      # Navbar, Footer, seções e componentes de UI
-│   │   └── hooks/           # Hooks customizados
+│   │   │   ├── __tests__/   # Testes de componentes
+│   │   │   ├── sections/    # Seções do portfólio (Hero, Projects, etc.)
+│   │   │   └── ui/          # Componentes reutilizáveis (Button, Icons, etc.)
+│   │   └── hooks/           # Hooks customizados (useScrollReveal, useActiveSection)
 │   ├── data/                # Projetos, habilidades, experiências e constantes
-│   └── lib/                 # Funções utilitárias
+│   │   └── __tests__/       # Testes de dados
+│   └── lib/                 # Funções utilitárias (cn)
 └── vitest.setup.ts          # Configuração global dos testes
 ```
 
