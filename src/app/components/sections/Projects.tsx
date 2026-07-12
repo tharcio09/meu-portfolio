@@ -1,6 +1,3 @@
-'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/data/projects';
 import { buttonVariants } from '../ui/Button';
@@ -9,23 +6,11 @@ import { RevealOnScroll } from '../ui/RevealOnScroll';
 import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
-
-type FilterKind = 'all' | 'featured' | 'secondary';
-
-const filters: { kind: FilterKind; label: string }[] = [
-  { kind: 'all', label: 'Todos' },
-  { kind: 'featured', label: 'Destaque' },
-  { kind: 'secondary', label: 'Outros projetos' },
-];
+import { ProjectsFilter } from './ProjectsFilter';
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState<FilterKind>('all');
-
   const featuredProjects = projects.filter((project) => project.kind === 'featured');
   const secondaryProjects = projects.filter((project) => project.kind === 'secondary');
-
-  const showFeatured = activeFilter === 'all' || activeFilter === 'featured';
-  const showSecondary = activeFilter === 'all' || activeFilter === 'secondary';
 
   return (
     <Section
@@ -50,27 +35,8 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Filtros */}
-        <div className="flex flex-wrap gap-2 pt-6 md:pt-8">
-          {filters.map(({ kind, label }) => (
-            <button
-              key={kind}
-              onClick={() => setActiveFilter(kind)}
-              className={cn(
-                'border px-3 py-1.5 text-xs font-semibold transition-all duration-200',
-                activeFilter === kind
-                  ? 'border-accent bg-accent text-white shadow-sm dark:border-accent-light dark:bg-accent-light dark:text-dark-bg'
-                  : 'border-border-light bg-transparent text-secondary-text hover:border-accent hover:text-accent dark:border-border-dark dark:text-dark-text dark:hover:border-accent-light dark:hover:text-accent-light'
-              )}
-              aria-pressed={activeFilter === kind}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {showFeatured &&
-          featuredProjects.map((project, index) => (
+        <ProjectsFilter
+          featuredContent={featuredProjects.map((project, index) => (
             <article
               className={cn(
                 'grid gap-8 border-b border-border-light py-10 animate-fade-up dark:border-border-dark lg:grid-cols-[1.15fr_0.85fr] lg:items-start'
@@ -225,28 +191,28 @@ const Projects = () => {
               </div>
             </article>
           ))}
-
-        {showSecondary && (
-          <div className="pt-10 animate-fade-up" key="secondary-projects">
-            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-              <div>
-                <h3 className="text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
-                  Outros projetos
-                </h3>
+          secondaryContent={
+            <div className="animate-fade-up pt-10">
+              <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+                <div>
+                  <h3 className="text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
+                    Outros projetos
+                  </h3>
+                </div>
+                <p className="max-w-md text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                  Uma seleção compacta de aplicações que exploram upload, testes, PWA, estados
+                  assíncronos e consumo de APIs.
+                </p>
               </div>
-              <p className="max-w-md text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-                Uma seleção compacta de aplicações que exploram upload, testes, PWA, estados
-                assíncronos e consumo de APIs.
-              </p>
-            </div>
 
-            <div className="mt-7 grid gap-5 md:grid-cols-3">
-              {secondaryProjects.map((project) => (
-                <ProjectCard key={project.title} {...project} />
-              ))}
+              <div className="mt-7 grid gap-5 md:grid-cols-3">
+                {secondaryProjects.map((project) => (
+                  <ProjectCard key={project.title} {...project} />
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          }
+        />
       </RevealOnScroll>
     </Section>
   );

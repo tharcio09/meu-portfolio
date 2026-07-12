@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
@@ -82,6 +82,25 @@ describe('conteúdo principal do redesign', () => {
       'Lista de Mercado',
       'Crypto Dashboard',
     ]);
+  });
+
+  it('filtra projetos mantendo o estado acessível dos controles', () => {
+    render(<Projects />);
+
+    const featuredFilter = screen.getByRole('button', { name: 'Destaque' });
+    const secondaryFilter = screen.getByRole('button', { name: 'Outros projetos' });
+
+    fireEvent.click(secondaryFilter);
+
+    expect(secondaryFilter).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.queryByRole('heading', { level: 3, name: 'HelpFlow' })).not.toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 4, name: 'DevLinks' })).toBeInTheDocument();
+
+    fireEvent.click(featuredFilter);
+
+    expect(featuredFilter).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 4, name: 'DevLinks' })).not.toBeInTheDocument();
   });
 
   it('apresenta o perfil profissional sem repetir o histórico detalhado', () => {
