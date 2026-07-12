@@ -21,7 +21,7 @@ const Hero = () => {
           Portfólio · Desenvolvimento web
         </div>
 
-        <div className="stagger-2 mt-7">
+        <div className="mt-7">
           <h1
             className="text-5xl font-extrabold leading-[0.98] tracking-[-0.045em] text-primary-text dark:text-light-text sm:text-6xl md:text-7xl lg:text-[4.5rem]"
             style={{
