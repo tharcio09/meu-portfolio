@@ -1,13 +1,8 @@
-'use client';
-
 import { capabilities } from '@/data/capabilities';
-import { cn } from '@/lib/utils';
-import { useScrollReveal } from '@/app/hooks/useScrollReveal';
 import Section from '../ui/Section';
+import { RevealOnScroll } from '../ui/RevealOnScroll';
 
 const Capabilities = () => {
-  const { ref, visible } = useScrollReveal<HTMLDivElement>(0.12);
-
   return (
     <Section id="habilidades" spacing="editorial" className="">
       <div className="mx-auto max-w-6xl">
@@ -27,16 +22,11 @@ const Capabilities = () => {
           </p>
         </div>
 
-        <div ref={ref} className="grid gap-4 pt-6 md:pt-8 md:grid-cols-2 lg:grid-cols-3">
+        <RevealOnScroll className="grid gap-4 pt-6 md:grid-cols-2 md:pt-8 lg:grid-cols-3">
           {capabilities.map((item) => (
             <article
               key={item.title}
-              className={cn(
-                'flex min-h-full flex-col border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card sm:p-4 md:p-5',
-                'transition-all duration-300 ease-out',
-                'hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark',
-                visible ? 'animate-fade-up opacity-0' : 'opacity-0'
-              )}
+              className="flex min-h-full flex-col border border-border-light bg-white p-3 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-border-dark sm:p-4 md:p-5"
             >
               <h3 className="text-lg font-bold tracking-tight text-primary-text dark:text-light-text sm:text-xl">
                 {item.title}
@@ -73,7 +63,7 @@ const Capabilities = () => {
               )}
             </article>
           ))}
-        </div>
+        </RevealOnScroll>
       </div>
     </Section>
   );

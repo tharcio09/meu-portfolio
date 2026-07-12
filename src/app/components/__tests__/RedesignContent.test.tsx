@@ -3,7 +3,9 @@ import { describe, expect, it } from 'vitest';
 import Footer from '../Footer';
 import Navbar from '../Navbar';
 import About from '../sections/About';
+import Capabilities from '../sections/Capabilities';
 import Hero from '../sections/Hero';
+import Process from '../sections/Process';
 import Projects from '../sections/Projects';
 import { navLinks } from '@/data/constants';
 
@@ -26,6 +28,22 @@ describe('conteúdo principal do redesign', () => {
         name: 'Tharcio.dev — voltar para o início',
       })
     ).toHaveAttribute('href', '/');
+  });
+
+  it('renderiza processo e competências após a conversão para servidor', () => {
+    render(
+      <>
+        <Process />
+        <Capabilities />
+      </>
+    );
+
+    expect(screen.getByRole('heading', { level: 2, name: 'Como eu Trabalho' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 2, name: 'Stack e competências' })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Passo 6')).toBeInTheDocument();
+    expect(screen.getByLabelText('Tecnologias de Frontend e UI')).toBeInTheDocument();
   });
 
   it('renderiza a nova copy e os acessos principais do Hero', () => {
