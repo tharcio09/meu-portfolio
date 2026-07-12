@@ -7,7 +7,6 @@ import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
 import { ProjectsFilter } from './ProjectsFilter';
-
 const Projects = () => {
   const featuredProjects = projects.filter((project) => project.kind === 'featured');
   const secondaryProjects = projects.filter((project) => project.kind === 'secondary');
