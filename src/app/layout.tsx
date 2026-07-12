@@ -24,7 +24,7 @@ const personJsonLd = {
   jobTitle: 'Desenvolvedor Full Stack Júnior',
   description:
     'Desenvolvedor Full Stack Júnior com projetos React, Next.js e Node.js em produção. Aplicações com autenticação, banco de dados, APIs e deploy ativo.',
-  image: `${siteUrl}/images/profile.png`,
+  image: `${siteUrl}/images/profile.webp`,
   sameAs: [githubUrl, linkedinUrl],
   knowsAbout: [
     'React',
