@@ -1,8 +1,14 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const webpack = require('next/dist/compiled/webpack/webpack-lib.js');
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
+
+const isProd = process.env.NODE_ENV === 'production';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,7 +17,7 @@ const nextConfig = {
   },
 
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: isProd,
   },
 
   images: {
@@ -22,8 +28,18 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
 
-  // Evita que o bundle do Dev Overlay (820 KB) vaze para produção
   devIndicators: false,
+
+  webpack: (config, { dev }) => {
+    if (!dev) {
+      config.plugins.push(
+        new webpack.IgnorePlugin({
+          resourceRegExp: /next-devtools/,
+        })
+      );
+    }
+    return config;
+  },
 };
 
 export default withBundleAnalyzer(nextConfig);
