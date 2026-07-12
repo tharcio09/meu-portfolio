@@ -21,6 +21,9 @@ const nextConfig = {
 
   poweredByHeader: false,
   compress: true,
+
+  // Evita que o bundle do Dev Overlay (820 KB) vaze para produção
+  devIndicators: false,
 };
 
 export default withBundleAnalyzer(nextConfig);
