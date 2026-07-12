@@ -63,7 +63,7 @@ export const projects: Project[] = [
       'Aplicação publicada com código aberto',
     ],
     nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
-    imageUrl: '/images/helpflow-screenshot.png',
+    imageUrl: '/images/helpflow-screenshot.webp',
     imageAlt:
       'Interface do HelpFlow mostrando painel de gestão de chamados com lista de tickets, status e prioridade',
     githubUrl: 'https://github.com/tharciosantos/helpflow',
@@ -113,7 +113,7 @@ export const projects: Project[] = [
       'Aplicação publicada na Vercel',
     ],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
-    imageUrl: '/images/manutflow-screenshot.png',
+    imageUrl: '/images/manutflow-screenshot.webp',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
     githubUrl: 'https://github.com/tharciosantos/manutflow',
     demoUrl: 'https://manutflow.vercel.app',
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     technicalHighlight:
       'Upload de imagem via Cloudinary, cache e invalidação com React Query, e testes end-to-end com Cypress no fluxo principal.',
     outcome: 'Upload · sincronização · testes E2E',
-    imageUrl: '/images/screenshot-devlinks.png',
+    imageUrl: '/images/screenshot-devlinks.webp',
     imageAlt: 'Interface do DevLinks exibindo página de perfil com links personalizados',
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
     demoUrl: 'https://devlinks-web-api.vercel.app/',
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     technicalHighlight:
       'PWA com service worker para uso offline, persistência local e compartilhamento da lista via WhatsApp.',
     outcome: 'PWA · offline-first · compartilhamento',
-    imageUrl: '/images/lista-mercado-screenshot.png',
+    imageUrl: '/images/lista-mercado-screenshot.webp',
     imageAlt: 'Interface mobile da Lista de Mercado com itens de compras',
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
     demoUrl: 'https://lista-mercado-sage.vercel.app/',
@@ -159,7 +159,7 @@ export const projects: Project[] = [
     technicalHighlight:
       'Consumo de API externa com rotas dinâmicas, busca client-side e estados assíncronos — loading, erro e exibição de dados.',
     outcome: 'API externa · rotas dinâmicas · estados assíncronos',
-    imageUrl: '/images/screenshot-crypto.png',
+    imageUrl: '/images/screenshot-crypto.webp',
     imageAlt: 'Dashboard de criptomoedas exibindo preços e variações',
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',

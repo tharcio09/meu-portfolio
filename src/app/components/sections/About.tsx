@@ -22,7 +22,7 @@ const About = () => {
               <div className="mt-3 grid grid-cols-[5.5rem_1fr] gap-4 lg:block">
                 <div className="relative aspect-square overflow-hidden border border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-card">
                   <Image
-                    src="/images/profile.png"
+                    src="/images/profile.webp"
                     alt="Foto de Tharcio Santos"
                     fill
                     className="object-cover"
