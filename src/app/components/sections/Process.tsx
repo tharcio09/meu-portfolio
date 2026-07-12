@@ -1,8 +1,6 @@
-'use client';
-
 import { cn } from '@/lib/utils';
-import { useScrollReveal } from '@/app/hooks/useScrollReveal';
 import Section from '../ui/Section';
+import { RevealOnScroll } from '../ui/RevealOnScroll';
 
 const processSteps = [
   {
@@ -32,8 +30,6 @@ const processSteps = [
 ];
 
 const Process = () => {
-  const { ref, visible } = useScrollReveal<HTMLOListElement>(0.12);
-
   return (
     <Section id="processo" spacing="editorial" className="">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
@@ -51,7 +47,7 @@ const Process = () => {
           </p>
         </div>
 
-        <ol ref={ref} className="grid gap-3 sm:grid-cols-2">
+        <RevealOnScroll as="ol" className="grid gap-3 sm:grid-cols-2">
           {processSteps.map((item, index) => (
             <li
               key={item.step}
@@ -59,7 +55,6 @@ const Process = () => {
                 'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card',
                 'transition-all duration-300 ease-out',
                 'hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark',
-                visible ? 'animate-fade-up opacity-0' : 'opacity-0',
                 index === processSteps.length - 1 &&
                   processSteps.length % 2 !== 0 &&
                   'sm:col-span-2'
@@ -78,7 +73,7 @@ const Process = () => {
               </div>
             </li>
           ))}
-        </ol>
+        </RevealOnScroll>
       </div>
     </Section>
   );
