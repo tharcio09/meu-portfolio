@@ -28,14 +28,14 @@ const Hero = () => {
               textShadow: '0 0 60px rgba(15,118,110,0.12), 0 0 120px rgba(15,118,110,0.06)',
             }}
           >
-            Desenvolvo aplicações web full stack com autenticação, APIs e deploy.
+            Desenvolvo aplicações web completas.
           </h1>
         </div>
 
         <div className="stagger-3 animate-fade-up opacity-0 mt-7 max-w-2xl">
           <p className="text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
-            Gosto de entender como as pessoas trabalham antes de transformar um problema em
-            software. Busco minha primeira oportunidade em estágio ou posição júnior.
+            Da interface ao banco de dados, crio projetos funcionais e bem estruturados, com foco em
+            usabilidade e boas práticas.
           </p>
         </div>
 
