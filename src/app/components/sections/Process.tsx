@@ -4,28 +4,28 @@ import { RevealOnScroll } from '../ui/RevealOnScroll';
 
 const processSteps = [
   {
-    step: 'Schema do banco',
-    detail: 'Modelei o banco com Prisma definindo User, Ticket e Comment com relacionamentos.',
+    step: 'Entendimento',
+    detail: 'Defino o problema, os usuários e o fluxo principal antes das decisões técnicas.',
   },
   {
-    step: 'API com rotas',
-    detail: 'Criei endpoints REST com Next.js para CRUD de tickets, autenticação e filtros.',
+    step: 'Planejamento',
+    detail: 'Divido o trabalho em entregas menores e organizo dados, regras e responsabilidades.',
   },
   {
-    step: 'Autenticação',
-    detail: 'Implementei login com NextAuth, roles CLIENT/AGENT e proteção de rotas.',
+    step: 'Implementação',
+    detail: 'Construo interface, regras de negócio e persistência de forma incremental.',
   },
   {
-    step: 'Interface',
-    detail: 'Construí o painel com React, formulários validados e estados de carregamento.',
+    step: 'Validação',
+    detail: 'Verifico fluxos, estados de carregamento e erro, responsividade e acessibilidade.',
   },
   {
-    step: 'Testes',
-    detail: 'Escrevi testes unitários com Vitest e E2E com Cypress no fluxo principal.',
+    step: 'Qualidade',
+    detail: 'Executo testes, TypeScript, lint e revisão do diff antes de consolidar a entrega.',
   },
   {
-    step: 'Deploy',
-    detail: 'Publiquei no Vercel com variáveis de ambiente e banco no Supabase.',
+    step: 'Entrega e evolução',
+    detail: 'Publico a aplicação, valido o ambiente e registro os próximos passos do produto.',
   },
 ];
 
@@ -39,11 +39,12 @@ const Process = () => {
             Processo
           </div>
           <h2 className="mt-5 max-w-md text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-            Como eu Trabalho
+            Como eu trabalho
           </h2>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-secondary-text dark:text-dark-text">
-            No HelpFlow, dividi o desenvolvimento em etapas pequenas e incrementais. Cada etapa gera
-            código funcional e testável antes de avançar para a próxima.
+            Organizo o desenvolvimento em etapas pequenas, do entendimento do problema à entrega.
+            Cada etapa reduz incertezas e mantém o projeto funcional, testável e pronto para
+            evoluir.
           </p>
         </div>
 

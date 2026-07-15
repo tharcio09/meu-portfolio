@@ -30,19 +30,22 @@ describe('conteúdo principal do redesign', () => {
     ).toHaveAttribute('href', '/');
   });
 
-  it('renderiza processo e competências após a conversão para servidor', () => {
-    render(
-      <>
-        <Process />
-        <Capabilities />
-      </>
-    );
+  it('apresenta um processo geral sem depender de um projeto específico', () => {
+    render(<Process />);
 
-    expect(screen.getByRole('heading', { level: 2, name: 'Como eu Trabalho' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'Como eu trabalho' })).toBeInTheDocument();
+    expect(screen.getByText(/Organizo o desenvolvimento em etapas pequenas/i)).toBeInTheDocument();
+    expect(screen.getByText('Passo 6')).toBeInTheDocument();
+    expect(screen.getByText('Entrega e evolução')).toBeInTheDocument();
+    expect(screen.queryByText(/HelpFlow/i)).not.toBeInTheDocument();
+  });
+
+  it('renderiza competências após a conversão para servidor', () => {
+    render(<Capabilities />);
+
     expect(
       screen.getByRole('heading', { level: 2, name: 'Stack e competências' })
     ).toBeInTheDocument();
-    expect(screen.getByText('Passo 6')).toBeInTheDocument();
     expect(screen.getByLabelText('Tecnologias de Frontend e UI')).toBeInTheDocument();
   });
 
