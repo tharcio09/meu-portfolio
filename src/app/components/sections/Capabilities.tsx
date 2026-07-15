@@ -17,8 +17,8 @@ const Capabilities = () => {
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end md:text-lg">
-            Tecnologias apresentadas pelo contexto em que são usadas: da construção da interface à
-            persistência de dados, validação e entrega do produto.
+            Competências demonstradas em projetos, com contexto de uso da interface à entrega do
+            produto.
           </p>
         </div>
 
@@ -36,13 +36,7 @@ const Capabilities = () => {
               </p>
 
               <div className="mt-4">
-                <h4 className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-secondary-text dark:text-dark-text">
-                  Tecnologias
-                </h4>
-                <ul
-                  className="mt-2 flex flex-wrap gap-1.5"
-                  aria-label={`Tecnologias de ${item.title}`}
-                >
+                <ul className="flex flex-wrap gap-1.5" aria-label={`Tecnologias de ${item.title}`}>
                   {item.technologies.map((technology) => (
                     <li
                       key={technology}
@@ -55,11 +49,12 @@ const Capabilities = () => {
               </div>
 
               {item.usedIn.length > 0 && (
-                <div className="mt-auto pt-4">
-                  <p className="text-xs text-secondary-text dark:text-dark-text">
-                    {item.usedIn.join(' · ')}
-                  </p>
-                </div>
+                <p className="mt-auto pt-4 text-xs text-secondary-text dark:text-dark-text">
+                  <span className="font-semibold text-primary-text dark:text-light-text">
+                    Aplicado em:
+                  </span>{' '}
+                  {item.usedIn.join(' · ')}
+                </p>
               )}
             </article>
           ))}

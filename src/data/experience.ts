@@ -6,13 +6,10 @@ export type ExperienciaAnterior = {
 };
 
 export const trajectorySkills = [
-  'Organização',
-  'Atenção a processos',
-  'Comunicação entre áreas',
+  'Organização e prazos',
   'Análise de problemas',
-  'Registro de informações',
-  'Responsabilidade com prazos',
-  'Rotinas operacionais',
+  'Documentação de processos',
+  'Comunicação entre áreas',
 ] as const;
 
 export const experienciasAnteriores: ExperienciaAnterior[] = [
