@@ -67,7 +67,7 @@ export function NavbarClient() {
                 key={link.href}
                 href={link.href}
                 className={navLinkClass(isActive)}
-                aria-current={isActive ? 'page' : undefined}
+                aria-current={isActive ? 'location' : undefined}
               >
                 {link.label}
               </Link>
@@ -84,7 +84,7 @@ export function NavbarClient() {
                 isCtaActive &&
                   'border-accent text-accent dark:border-accent-light dark:text-accent-light'
               )}
-              aria-current={isCtaActive ? 'page' : undefined}
+              aria-current={isCtaActive ? 'location' : undefined}
             >
               {ctaLink.label}
             </Link>
