@@ -9,7 +9,6 @@ export type Project = {
   demoLabel?: string;
   tags: string[];
   kind: 'featured' | 'building' | 'secondary';
-  highlights?: string[];
   outcome?: string;
   technicalHighlight?: string;
   responsibility?: string;
@@ -17,10 +16,6 @@ export type Project = {
   decision?: string;
   evidence?: string[];
   nextStep?: string;
-  casePoints?: {
-    label: string;
-    value: string;
-  }[];
 };
 
 export const projects: Project[] = [
@@ -29,27 +24,6 @@ export const projects: Project[] = [
     shortTitle: 'HelpFlow',
     description:
       'Sistema full stack para abertura, acompanhamento e gerenciamento de chamados internos.',
-    casePoints: [
-      {
-        label: 'Problema',
-        value: 'Organizar solicitações, responsáveis, prioridades e histórico de atendimento.',
-      },
-      {
-        label: 'Solução',
-        value: 'Painel autenticado com criação e gerenciamento de chamados, status e prioridade.',
-      },
-      {
-        label: 'Entrega',
-        value: 'Aplicação em produção com persistência relacional e código público.',
-      },
-    ],
-    highlights: [
-      'Autenticação com NextAuth e roles CLIENT/AGENT',
-      'CRUD completo com validação Zod e rate limiting',
-      'Testes Vitest e Cypress E2E',
-    ],
-    technicalHighlight:
-      'Um fluxo completo de produto: autenticação, regras de negócio, banco relacional, interface e deploy.',
     responsibility:
       'Desenvolvimento completo do produto, da interface e das regras de negócio à persistência e ao deploy.',
     challenge:
@@ -77,29 +51,6 @@ export const projects: Project[] = [
     shortTitle: 'ManutFlow',
     description:
       'Sistema completo para cadastro de equipamentos, abertura de ordens de serviço e dashboard com indicadores de status e prioridade.',
-    casePoints: [
-      {
-        label: 'Problema',
-        value:
-          'Empresas precisam controlar manutenção de equipamentos, registrar ordens de serviço e acompanhar prioridades.',
-      },
-      {
-        label: 'Solução',
-        value:
-          'Sistema full stack com autenticação, CRUD de equipamentos e ordens, dashboard com auto-refresh e histórico de alterações.',
-      },
-      {
-        label: 'Segurança',
-        value: 'Três camadas: proxy.ts (Edge), getUser() (API) e Row Level Security (banco).',
-      },
-    ],
-    highlights: [
-      'Autenticação Supabase Auth com 3 camadas de segurança',
-      'Breadcrumbs, auto-refresh e loading skeletons',
-      'Isolamento de dados por usuário (RLS + user_id)',
-    ],
-    technicalHighlight:
-      'Autenticação em 3 camadas (proxy.ts, getUser(), RLS), isolamento de dados por user_id e deploy na Vercel.',
     responsibility:
       'Modelagem e implementação do sistema de equipamentos, ordens de serviço e indicadores operacionais.',
     challenge:

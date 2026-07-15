@@ -112,41 +112,29 @@ const Projects = () => {
                   </dl>
                 )}
 
-                {project.casePoints && (
-                  <dl className="mt-7 grid gap-3">
-                    {project.casePoints.map((point) => (
-                      <div
-                        key={point.label}
-                        className="grid gap-2 border border-border-light bg-white p-3 dark:border-border-dark dark:bg-dark-card sm:grid-cols-[5.5rem_1fr] sm:gap-5"
-                      >
-                        <dt className="font-mono text-xs font-semibold uppercase tracking-wider text-accent dark:text-accent-light">
-                          {point.label}
-                        </dt>
-                        <dd className="text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-                          {point.value}
-                        </dd>
+                {(project.evidence || project.nextStep) && (
+                  <div className="mt-6 grid gap-4 sm:grid-cols-[1.2fr_0.8fr]">
+                    {project.evidence && project.evidence.length > 0 && (
+                      <div className="border-l-2 border-accent pl-4 dark:border-accent-light">
+                        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
+                          Implementado
+                        </p>
+                        <ul className="mt-3 grid gap-2 text-sm text-secondary-text dark:text-dark-text">
+                          {project.evidence.map((item) => (
+                            <li key={item}>• {item}</li>
+                          ))}
+                        </ul>
                       </div>
-                    ))}
-                  </dl>
-                )}
-
-                {project.evidence && project.evidence.length > 0 && (
-                  <div className="mt-6 border-l-2 border-accent pl-4 dark:border-accent-light">
-                    <p className="font-mono text-xs font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
-                      Evidências
-                    </p>
-                    <ul className="mt-3 grid gap-2 text-sm text-secondary-text dark:text-dark-text sm:grid-cols-2">
-                      {project.evidence.map((item) => (
-                        <li key={item}>• {item}</li>
-                      ))}
-                    </ul>
+                    )}
                     {project.nextStep && (
-                      <p className="mt-3 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
-                        <span className="font-semibold text-primary-text dark:text-light-text">
-                          Próximo passo:
-                        </span>{' '}
-                        {project.nextStep}
-                      </p>
+                      <div className="border-l-2 border-border-light pl-4 dark:border-border-dark">
+                        <p className="font-mono text-xs font-semibold uppercase tracking-wider text-primary-text dark:text-light-text">
+                          Próximo passo
+                        </p>
+                        <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
+                          {project.nextStep}
+                        </p>
+                      </div>
                     )}
                   </div>
                 )}

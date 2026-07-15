@@ -1,12 +1,9 @@
-import Image from 'next/image';
 import type { Project } from '@/data/projects';
 import { ExternalLinkIcon, GithubIcon } from './Icons';
 
 const ProjectCard = ({
   shortTitle,
   description,
-  imageUrl,
-  imageAlt,
   githubUrl,
   demoUrl,
   tags,
@@ -14,21 +11,8 @@ const ProjectCard = ({
   technicalHighlight,
 }: Project) => {
   return (
-    <article className="group grid min-h-full grid-rows-[auto_1fr] overflow-hidden border border-border-light bg-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-border-dark">
-      {imageUrl && (
-        <div className="relative aspect-[2/1] overflow-hidden border-b border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-surface md:aspect-[16/9]">
-          <Image
-            src={imageUrl}
-            alt={imageAlt ?? `Screenshot do projeto ${shortTitle}`}
-            fill
-            sizes="(max-width: 768px) 100vw, 33vw"
-            className="object-cover"
-            quality={78}
-          />
-        </div>
-      )}
-
-      <div className="flex flex-col p-4 md:p-5">
+    <article className="group flex min-h-full flex-col border border-border-light bg-white shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-border-dark">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
         <div className="flex items-start justify-between gap-3">
           {outcome && (
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
@@ -44,13 +28,8 @@ const ProjectCard = ({
           {shortTitle}
         </h4>
         <p className="mt-3 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-          {description}
+          {technicalHighlight ?? description}
         </p>
-        {technicalHighlight && (
-          <p className="mt-3 line-clamp-2 border-l-2 border-accent pl-3 text-xs leading-relaxed text-secondary-text dark:border-accent-light dark:text-dark-text md:mt-4">
-            {technicalHighlight}
-          </p>
-        )}
 
         <div className="mt-4 flex flex-wrap gap-2 md:mt-5">
           {tags.slice(0, 3).map((tag) => (
