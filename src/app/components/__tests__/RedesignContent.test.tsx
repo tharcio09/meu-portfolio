@@ -65,7 +65,7 @@ describe('conteúdo principal do redesign', () => {
     );
   });
 
-  it('mantém HelpFlow e ManutFlow como destaques e três projetos secundários', () => {
+  it('destaca HelpFlow e ManutFlow e mantém três projetos secundários compactos', () => {
     render(<Projects />);
 
     expect(screen.getByText('Case principal · 01')).toBeInTheDocument();
@@ -75,6 +75,9 @@ describe('conteúdo principal do redesign', () => {
     expect(screen.getByRole('button', { name: 'Outros projetos' })).toBeInTheDocument();
     expect(screen.getAllByText('Minha responsabilidade')).toHaveLength(2);
     expect(screen.getAllByText('Decisão técnica')).toHaveLength(2);
+    expect(screen.getAllByText('Implementado')).toHaveLength(2);
+    expect(screen.getAllByText('Próximo passo')).toHaveLength(2);
+    expect(screen.queryByText('Problema')).not.toBeInTheDocument();
 
     const secondaryHeadings = screen.getAllByRole('heading', { level: 4 });
     expect(secondaryHeadings.map((heading) => heading.textContent)).toEqual([
@@ -82,6 +85,7 @@ describe('conteúdo principal do redesign', () => {
       'Lista de Mercado',
       'Crypto Dashboard',
     ]);
+    expect(screen.getByText(/Upload de imagem via Cloudinary/i)).toBeInTheDocument();
   });
 
   it('filtra projetos mantendo o estado acessível dos controles', () => {
