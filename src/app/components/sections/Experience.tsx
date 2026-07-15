@@ -19,9 +19,8 @@ const Experience = () => {
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end md:text-lg">
-            Antes da programação, atuei em rotinas administrativas e de manutenção. Essas
-            experiências formaram uma base de organização, análise e comunicação que hoje aplico ao
-            desenvolvimento de sistemas.
+            Minha trajetória anterior à tecnologia inclui funções administrativas e de manutenção.
+            Delas, trago organização, análise de problemas e comunicação.
           </p>
         </div>
 
@@ -31,10 +30,10 @@ const Experience = () => {
               Habilidades transferidas
             </h3>
             <ul className="mt-4 grid grid-cols-2 gap-3">
-              {trajectorySkills.map((skill, index) => (
+              {trajectorySkills.map((skill) => (
                 <li
                   key={skill}
-                  className={`flex min-h-16 items-center border border-border-light bg-white px-3 py-2 text-sm text-secondary-text shadow-sm dark:border-border-dark dark:bg-dark-card dark:text-dark-text transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark${index === trajectorySkills.length - 1 && trajectorySkills.length % 2 !== 0 ? ' col-span-2' : ''}`}
+                  className="flex min-h-16 items-center border border-border-light bg-white px-3 py-2 text-sm text-secondary-text shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-accent-border hover:shadow-xl dark:border-border-dark dark:bg-dark-card dark:text-dark-text dark:hover:border-accent-border-dark"
                 >
                   {skill}
                 </li>

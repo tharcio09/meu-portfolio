@@ -34,7 +34,7 @@ const About = () => {
                     Tharcio Santos
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-                    Estudante de ADS e desenvolvedor full stack júnior.
+                    Desenvolvedor web em formação, com projetos full stack.
                   </p>
                 </div>
               </div>
@@ -46,20 +46,11 @@ const About = () => {
               Sobre mim
             </h2>
 
-            <div className="mt-7 space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
+            <div className="mt-7 text-base leading-relaxed text-secondary-text dark:text-dark-text">
               <p>
-                Sou estudante de Análise e Desenvolvimento de Sistemas na Anhanguera (conclusão em
-                julho de 2027). Venho construindo projetos próprios para aplicar fundamentos de
-                frontend, backend, banco de dados, autenticação e deploy.
-              </p>
-              <p>
-                Minha experiência anterior com diagnóstico técnico, organização de demandas e
-                documentação reforçou habilidades que aplico em debugging, análise de problemas e
-                construção de sistemas.
-              </p>
-              <p>
-                Busco uma oportunidade de estágio ou posição júnior, com abertura para frontend,
-                backend ou full stack.
+                Curso Análise e Desenvolvimento de Sistemas na Anhanguera, com conclusão prevista
+                para julho de 2027. Em projetos próprios, aplico frontend, backend, bancos de dados,
+                autenticação e deploy.
               </p>
             </div>
 

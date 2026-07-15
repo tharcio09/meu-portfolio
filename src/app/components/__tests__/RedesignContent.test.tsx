@@ -4,6 +4,7 @@ import Footer from '../Footer';
 import Navbar from '../Navbar';
 import About from '../sections/About';
 import Capabilities from '../sections/Capabilities';
+import Experience from '../sections/Experience';
 import Hero from '../sections/Hero';
 import Process from '../sections/Process';
 import Projects from '../sections/Projects';
@@ -47,6 +48,7 @@ describe('conteúdo principal do redesign', () => {
       screen.getByRole('heading', { level: 2, name: 'Stack e competências' })
     ).toBeInTheDocument();
     expect(screen.getByLabelText('Tecnologias de Frontend e UI')).toBeInTheDocument();
+    expect(screen.getAllByText('Aplicado em:')).toHaveLength(5);
   });
 
   it('renderiza a nova copy e os acessos principais do Hero', () => {
@@ -110,16 +112,24 @@ describe('conteúdo principal do redesign', () => {
     expect(screen.queryByRole('heading', { level: 4, name: 'DevLinks' })).not.toBeInTheDocument();
   });
 
-  it('apresenta o perfil profissional sem repetir o histórico detalhado', () => {
-    render(<About />);
+  it('separa perfil atual e trajetória anterior sem repetir a busca por vaga', () => {
+    render(
+      <>
+        <About />
+        <Experience />
+      </>
+    );
 
+    expect(screen.getByText(/Curso Análise e Desenvolvimento de Sistemas/i)).toHaveTextContent(
+      'julho de 2027'
+    );
+    expect(screen.getByText('Julho de 2027')).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'Experiência' })).toBeInTheDocument();
+    expect(screen.getByText('Organização e prazos')).toBeInTheDocument();
     expect(
-      screen.getByText(/Minha experiência anterior com diagnóstico técnico/i)
-    ).toHaveTextContent('construção de sistemas');
-    expect(
-      screen.getByText(/Busco uma oportunidade de estágio ou posição júnior/i)
-    ).toHaveTextContent('frontend, backend ou full stack');
-    expect(screen.queryByText(/trabalhei como auxiliar mecânico/i)).not.toBeInTheDocument();
+      screen.getByRole('heading', { level: 4, name: 'Auxiliar Mecânico · Komaq' })
+    ).toBeInTheDocument();
+    expect(screen.queryByText(/Busco uma oportunidade/i)).not.toBeInTheDocument();
   });
 
   it('renderiza o Footer editorial e preserva os links profissionais', () => {
