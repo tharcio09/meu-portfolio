@@ -99,10 +99,10 @@ export default function OpenGraphImage() {
           Tharcio Santos
         </div>
         <div style={{ maxWidth: 950, color: '#cbd5e1', fontSize: 34, lineHeight: 1.28 }}>
-          Desenvolvedor Full Stack com stack completa em produção.
+          Desenvolvo aplicações web completas.
         </div>
         <div style={{ maxWidth: 950, color: '#a8b4c7', fontSize: 30, lineHeight: 1.28 }}>
-          Aplicações com interface, autenticação, banco de dados, APIs e deploy ativo.
+          Da interface ao banco de dados, com foco em usabilidade e boas práticas.
         </div>
       </div>
 

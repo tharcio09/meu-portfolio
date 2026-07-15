@@ -1,7 +1,7 @@
 {
   "name": "Tharcio Santos | Desenvolvedor Full Stack",
   "short_name": "Tharcio.dev",
-  "description": "Portfólio de Tharcio Santos, desenvolvedor full stack com projetos React, Next.js e Node.js em produção.",
+  "description": "Portfólio de Tharcio Santos com aplicações web completas, da interface ao banco de dados, desenvolvidas com foco em usabilidade e boas práticas.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0d1117",
