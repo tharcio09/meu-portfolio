@@ -191,7 +191,7 @@ const Projects = () => {
             </article>
           ))}
           secondaryContent={
-            <div className="animate-fade-up pt-10">
+            <div key="secondary-projects" className="animate-fade-up pt-10">
               <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
                 <div>
                   <h3 className="text-3xl font-bold tracking-tight text-primary-text dark:text-light-text">
