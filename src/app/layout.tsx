@@ -8,13 +8,13 @@ import BackToTop from './components/BackToTop';
 import { ReadingProgressBar } from './components/ui/ReadingProgressBar';
 import { ThemeProvider } from './components/ThemeProvider';
 
+import { GITHUB_URL, LINKEDIN_URL } from '@/data/constants';
+
 const siteUrl = 'https://tharcio-portfolio.vercel.app';
 const siteName = 'Tharcio.dev';
 const siteTitle = 'Tharcio Santos | Desenvolvedor Full Stack';
 const siteDescription =
   'Portfólio de Tharcio Santos com aplicações web completas, da interface ao banco de dados, desenvolvidas com foco em usabilidade e boas práticas.';
-const githubUrl = 'https://github.com/tharciosantos';
-const linkedinUrl = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 
 const personJsonLd = {
   '@type': 'Person',
@@ -25,7 +25,7 @@ const personJsonLd = {
   description:
     'Desenvolvedor Full Stack Júnior que cria aplicações web completas, da interface ao banco de dados, com foco em usabilidade e boas práticas.',
   image: `${siteUrl}/images/profile.webp`,
-  sameAs: [githubUrl, linkedinUrl],
+  sameAs: [GITHUB_URL, LINKEDIN_URL],
   knowsAbout: [
     'React',
     'Next.js',
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     'Prisma',
     'Supabase',
   ],
-  authors: [{ name: 'Tharcio Santos', url: githubUrl }],
+  authors: [{ name: 'Tharcio Santos', url: GITHUB_URL }],
   creator: 'Tharcio Santos',
   publisher: 'Tharcio Santos',
   category: 'portfolio',
