@@ -1,11 +1,11 @@
 import type { MetadataRoute } from 'next';
 
-const siteUrl = 'https://tharcio-portfolio.vercel.app';
+import { SITE_URL } from '@/data/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${siteUrl}/`,
+      url: `${SITE_URL}/`,
     },
   ];
 }
