@@ -13,7 +13,8 @@ export type SocialLink = {
 
 export const EMAIL = 'tharciosantos09@gmail.com';
 
-/** URLs base exportadas para evitar duplicação entre Footer e Contact */
+/** URLs públicas centralizadas para evitar divergências entre as superfícies do portfólio */
+export const SITE_URL = 'https://tharcio-portfolio.vercel.app';
 export const GITHUB_URL = 'https://github.com/tharciosantos';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 

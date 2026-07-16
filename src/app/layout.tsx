@@ -8,9 +8,8 @@ import BackToTop from './components/BackToTop';
 import { ReadingProgressBar } from './components/ui/ReadingProgressBar';
 import { ThemeProvider } from './components/ThemeProvider';
 
-import { GITHUB_URL, LINKEDIN_URL } from '@/data/constants';
+import { GITHUB_URL, LINKEDIN_URL, SITE_URL } from '@/data/constants';
 
-const siteUrl = 'https://tharcio-portfolio.vercel.app';
 const siteName = 'Tharcio.dev';
 const siteTitle = 'Tharcio Santos | Desenvolvedor Full Stack';
 const siteDescription =
@@ -18,13 +17,13 @@ const siteDescription =
 
 const personJsonLd = {
   '@type': 'Person',
-  '@id': `${siteUrl}/#person`,
+  '@id': `${SITE_URL}/#person`,
   name: 'Tharcio Santos',
-  url: siteUrl,
+  url: SITE_URL,
   jobTitle: 'Desenvolvedor Full Stack Júnior',
   description:
     'Desenvolvedor Full Stack Júnior que cria aplicações web completas, da interface ao banco de dados, com foco em usabilidade e boas práticas.',
-  image: `${siteUrl}/images/profile.webp`,
+  image: `${SITE_URL}/images/profile.webp`,
   sameAs: [GITHUB_URL, LINKEDIN_URL],
   knowsAbout: [
     'React',
@@ -40,18 +39,18 @@ const personJsonLd = {
 
 const websiteJsonLd = {
   '@type': 'WebSite',
-  '@id': `${siteUrl}/#website`,
-  url: siteUrl,
+  '@id': `${SITE_URL}/#website`,
+  url: SITE_URL,
   name: 'Portfólio de Tharcio Santos',
-  author: { '@id': `${siteUrl}/#person` },
+  author: { '@id': `${SITE_URL}/#person` },
 };
 
 const profilePageJsonLd = {
   '@type': 'ProfilePage',
-  '@id': `${siteUrl}/#profilepage`,
-  url: siteUrl,
+  '@id': `${SITE_URL}/#profilepage`,
+  url: SITE_URL,
   name: 'Tharcio Santos | Desenvolvedor Full Stack',
-  mainEntity: { '@id': `${siteUrl}/#person` },
+  mainEntity: { '@id': `${SITE_URL}/#person` },
 };
 
 const jsonLd = {
@@ -74,7 +73,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   applicationName: siteName,
   title: {
     default: siteTitle,
@@ -102,12 +101,12 @@ export const metadata: Metadata = {
   publisher: 'Tharcio Santos',
   category: 'portfolio',
   alternates: {
-    canonical: siteUrl,
+    canonical: SITE_URL,
   },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
-    url: siteUrl,
+    url: SITE_URL,
     siteName,
     images: [
       {
