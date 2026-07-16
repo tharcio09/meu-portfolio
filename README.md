@@ -49,16 +49,18 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Performance:** imagens convertidas para WebP (redução de 72% no tamanho), ícones SVG locais, CSS crítico otimizado, Analytics carregado dinamicamente e chunk de devtools excluído do bundle de produção.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
-- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 36 testes em 7 arquivos cobrindo componentes, hooks e dados.
+- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 39 testes em 8 arquivos cobrindo componentes, hooks e dados.
 
-### Métricas Lighthouse
+### Metas Lighthouse
 
-| Categoria      | Score |
-| -------------- | ----- |
-| Performance    | 95    |
-| Accessibility  | 100   |
-| Best Practices | 100   |
-| SEO            | 100   |
+| Categoria      | Meta |
+| -------------- | ---- |
+| Performance    | ≥ 95 |
+| Accessibility  | ≥ 95 |
+| Best Practices | ≥ 95 |
+| SEO            | ≥ 95 |
+
+Os resultados medidos devem ser atualizados apenas após uma nova auditoria da versão publicada.
 
 ---
 
@@ -107,7 +109,7 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 
 1. **Hero:** posicionamento profissional, objetivo e acesso aos projetos e currículo.
 2. **Projetos:** HelpFlow, ManutFlow e projetos complementares.
-3. **Processo:** fluxo incremental de desenvolvimento com exemplo real do HelpFlow.
+3. **Processo:** fluxo geral de análise, escopo, implementação, validação e evolução incremental.
 4. **Competências:** frontend, backend, banco de dados, testes, PWA e evolução.
 5. **Sobre:** formação, experiência prévia e objetivo profissional.
 6. **Experiência:** habilidades transferidas e experiências anteriores.

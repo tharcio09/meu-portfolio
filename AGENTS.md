@@ -620,14 +620,12 @@ type Project = {
   demoLabel?: string;
   tags: string[];
   kind: 'featured' | 'building' | 'secondary';
-  highlights?: string[];
-  casePoints?: { label: string; value: string }[];
   outcome?: string;
   technicalHighlight?: string;
   responsibility?: string;
   challenge?: string;
   decision?: string;
-  evidence?: string;
+  evidence?: string[];
   nextStep?: string;
 };
 ```
