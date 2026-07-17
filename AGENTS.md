@@ -497,7 +497,7 @@ tharcioport/
     │   ├── not-found.tsx    # Página 404
     │   ├── globals.css      # Tailwind directives + estilos globais
     │   ├── opengraph-image.tsx, robots.ts, sitemap.ts
-    ├── data/                # about, capabilities, constants, experience, projects
+    ├── data/                # capabilities, constants, experience, projects
     │   └── __tests__/
     └── lib/
         └── utils.ts         # cn()
@@ -656,6 +656,7 @@ type ExperienciaAnterior = {
 
 ```typescript
 EMAIL = 'tharciosantos09@gmail.com';
+SITE_URL = 'https://tharcio-portfolio.vercel.app';
 GITHUB_URL = 'https://github.com/tharciosantos';
 LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
 SECTION_IDS = [
