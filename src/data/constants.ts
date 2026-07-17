@@ -17,6 +17,7 @@ export const EMAIL = 'tharciosantos09@gmail.com';
 export const SITE_URL = 'https://tharcio-portfolio.vercel.app';
 export const GITHUB_URL = 'https://github.com/tharciosantos';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
+export const RESUME_URL = '/curriculo-tharcio-santos.pdf';
 
 export const sectionIdFromHref = (href: string) => (href.startsWith('#') ? href.slice(1) : '');
 

@@ -1,4 +1,5 @@
 import { buttonVariants } from '../ui/Button';
+import { RESUME_URL } from '@/data/constants';
 import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
@@ -56,7 +57,7 @@ const Hero = () => {
             <ArrowRightIcon className="h-4 w-4" />
           </a>
           <a
-            href="/curriculo-tharcio-santos.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
