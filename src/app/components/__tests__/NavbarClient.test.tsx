@@ -6,7 +6,7 @@ const { useActiveSectionMock } = vi.hoisted(() => ({
   useActiveSectionMock: vi.fn(),
 }));
 
-vi.mock('@/app/hooks/useScrollReveal', () => ({
+vi.mock('@/app/hooks/useActiveSection', () => ({
   useActiveSection: useActiveSectionMock,
 }));
 
