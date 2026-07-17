@@ -49,7 +49,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Performance:** imagens convertidas para WebP (redução de 72% no tamanho), ícones SVG locais, CSS crítico otimizado, Analytics carregado dinamicamente e chunk de devtools excluído do bundle de produção.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
-- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged. 39 testes em 8 arquivos cobrindo componentes, hooks e dados.
+- **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged, com testes automatizados cobrindo componentes, hooks e dados.
 
 ### Metas Lighthouse
 
