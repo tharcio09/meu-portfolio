@@ -7,7 +7,7 @@ import { buttonVariants } from './ui/Button';
 import { cn } from '@/lib/utils';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { MobileNav } from './MobileNav';
-import { useActiveSection } from '@/app/hooks/useScrollReveal';
+import { useActiveSection } from '@/app/hooks/useActiveSection';
 
 const navLinkClass = (isActive: boolean) =>
   cn(
