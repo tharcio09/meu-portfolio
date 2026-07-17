@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
 import Section from '../ui/Section';
-import { EMAIL, redesSociais } from '@/data/constants';
+import { EMAIL, redesSociais, RESUME_URL } from '@/data/constants';
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import { CopyEmailButton } from '../ui/CopyEmailButton';
@@ -11,8 +11,6 @@ const icones: Record<string, ReactNode> = {
   LinkedIn: <LinkedinIcon className="h-5 w-5" />,
   GitHub: <GithubIcon className="h-5 w-5" />,
 };
-
-const RESUME_URL = '/curriculo-tharcio-santos.pdf';
 
 const Contact = () => {
   return (
