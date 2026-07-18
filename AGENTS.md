@@ -659,6 +659,7 @@ EMAIL = 'tharciosantos09@gmail.com';
 SITE_URL = 'https://tharcio-portfolio.vercel.app';
 GITHUB_URL = 'https://github.com/tharciosantos';
 LINKEDIN_URL = 'https://www.linkedin.com/in/tharcio-santos-dev/';
+RESUME_URL = '/curriculo-tharcio-santos.pdf';
 SECTION_IDS = [
   'projetos',
   'processo',
