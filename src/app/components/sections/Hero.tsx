@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="mx-auto max-w-4xl">
         <div className="stagger-1 animate-fade-up opacity-0 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-text dark:text-dark-text">
           <span className="h-px w-10 bg-accent dark:bg-accent-light" aria-hidden="true" />
-          Portfólio · Desenvolvimento web
+          Desenvolvedor Full Stack · Sistemas, APIs e Bancos de Dados
         </div>
 
         <div className="mt-7">
@@ -29,14 +29,14 @@ const Hero = () => {
               textShadow: '0 0 60px rgba(15,118,110,0.12), 0 0 120px rgba(15,118,110,0.06)',
             }}
           >
-            Desenvolvo aplicações web completas.
+            Desenvolvo sistemas completos, da interface aos dados.
           </h1>
         </div>
 
         <div className="stagger-3 animate-fade-up opacity-0 mt-7 max-w-2xl">
           <p className="text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
-            Da interface ao banco de dados, crio projetos funcionais e bem estruturados, com foco em
-            usabilidade e boas práticas.
+            Com projetos publicados e experiência técnica autônoma, desenvolvo aplicações web da
+            interface ao banco de dados, com foco em usabilidade e boas práticas.
           </p>
         </div>
 
