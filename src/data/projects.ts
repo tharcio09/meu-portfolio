@@ -52,7 +52,7 @@ export const projects: Project[] = [
     description:
       'Sistema completo para cadastro de equipamentos, abertura de ordens de serviço e dashboard com indicadores de status e prioridade.',
     responsibility:
-      'Modelagem e implementação do sistema de equipamentos, ordens de serviço e indicadores operacionais.',
+      'Modelagem e implementação do sistema de equipamentos, ordens de serviço e indicadores operacionais. A experiência prática com suporte e manutenção de TI ajudou a aproximar o produto de rotinas reais de equipamentos e manutenção.',
     challenge:
       'Garantir que cada usuário acesse apenas seus próprios equipamentos e ordens de manutenção.',
     decision:

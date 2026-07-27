@@ -57,8 +57,11 @@ describe('conteúdo principal do redesign', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: 'Desenvolvo aplicações web completas.',
+        name: 'Desenvolvo sistemas completos, da interface aos dados.',
       })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Com projetos publicados e experiência técnica autônoma/i)
     ).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Explorar projetos/i })).toHaveAttribute(
       'href',
@@ -82,6 +85,9 @@ describe('conteúdo principal do redesign', () => {
     expect(screen.getAllByText('Decisão técnica')).toHaveLength(2);
     expect(screen.getAllByText('Implementado')).toHaveLength(2);
     expect(screen.getAllByText('Próximo passo')).toHaveLength(2);
+    expect(
+      screen.getByText(/A experiência prática com suporte e manutenção de TI/i)
+    ).toBeInTheDocument();
     expect(screen.queryByText('Problema')).not.toBeInTheDocument();
 
     const secondaryHeadings = screen.getAllByRole('heading', { level: 4 });

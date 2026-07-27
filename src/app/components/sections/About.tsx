@@ -34,7 +34,7 @@ const About = () => {
                     Tharcio Santos
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-secondary-text dark:text-dark-text">
-                    Desenvolvedor web em formação, com projetos full stack.
+                    Desenvolvedor Full Stack em formação, com projetos publicados.
                   </p>
                 </div>
               </div>

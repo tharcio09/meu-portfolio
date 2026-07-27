@@ -26,9 +26,9 @@ const Contact = () => {
               Vamos conversar sobre uma oportunidade
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-secondary-text dark:text-dark-text">
-              Estou aberto a oportunidades de estágio ou posições júnior em desenvolvimento web, com
-              interesse em frontend, backend ou full stack e em times onde eu possa aprender,
-              contribuir e evoluir com projetos reais.
+              Estou aberto a oportunidades de estágio ou posições júnior em desenvolvimento de
+              software, com interesse em frontend, backend ou full stack e em times onde eu possa
+              aprender, contribuir e evoluir com projetos reais.
             </p>
             <div className="mt-5">
               <a
