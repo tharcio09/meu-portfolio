@@ -14,6 +14,13 @@ export const trajectorySkills = [
 
 export const experienciasAnteriores: ExperienciaAnterior[] = [
   {
+    period: 'Nov/2024 – Atual',
+    role: 'Técnico de Suporte e Manutenção de TI',
+    org: 'Autônomo',
+    summary:
+      'Atendimento técnico para manutenção e configuração de computadores, incluindo diagnóstico de desempenho, hardware e rede básica, backup e migração de arquivos e orientação a clientes.',
+  },
+  {
     period: 'Mai/2023 – Out/2023',
     role: 'Auxiliar Administrativo',
     org: 'EPOS',
