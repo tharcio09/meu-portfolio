@@ -127,6 +127,12 @@ describe('conteúdo principal do redesign', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'Experiência' })).toBeInTheDocument();
     expect(screen.getByText('Organização e prazos')).toBeInTheDocument();
     expect(
+      screen.getByRole('heading', {
+        level: 4,
+        name: 'Técnico de Suporte e Manutenção de TI · Autônomo',
+      })
+    ).toBeInTheDocument();
+    expect(
       screen.getByRole('heading', { level: 4, name: 'Auxiliar Mecânico · Komaq' })
     ).toBeInTheDocument();
     expect(screen.queryByText(/Busco uma oportunidade/i)).not.toBeInTheDocument();

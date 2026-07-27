@@ -19,8 +19,9 @@ const Experience = () => {
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end md:text-lg">
-            Minha trajetória anterior à tecnologia inclui funções administrativas e de manutenção.
-            Delas, trago organização, análise de problemas e comunicação.
+            Atuo de forma autônoma com suporte e manutenção de TI. Minha trajetória também inclui
+            funções administrativas e de manutenção, que reforçaram organização, análise de
+            problemas e comunicação.
           </p>
         </div>
 
@@ -43,7 +44,7 @@ const Experience = () => {
 
           <div>
             <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary-text dark:text-light-text">
-              Experiências anteriores
+              Experiências profissionais
             </h3>
             <div className="mt-4 grid gap-3">
               {experienciasAnteriores.map((item) => (
