@@ -80,7 +80,7 @@ export default function OpenGraphImage() {
             fontWeight: 700,
           }}
         >
-          Disponível para oportunidade júnior
+          Sistemas · APIs · Bancos de Dados
         </div>
       </div>
 
@@ -99,10 +99,10 @@ export default function OpenGraphImage() {
           Tharcio Santos
         </div>
         <div style={{ maxWidth: 950, color: '#cbd5e1', fontSize: 34, lineHeight: 1.28 }}>
-          Desenvolvo aplicações web completas.
+          Desenvolvo sistemas completos, da interface aos dados.
         </div>
         <div style={{ maxWidth: 950, color: '#a8b4c7', fontSize: 30, lineHeight: 1.28 }}>
-          Da interface ao banco de dados, com foco em usabilidade e boas práticas.
+          Aplicações web, APIs e bancos de dados com foco em usabilidade e boas práticas.
         </div>
       </div>
 
