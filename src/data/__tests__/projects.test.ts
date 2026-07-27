@@ -25,13 +25,25 @@ describe('projects', () => {
     });
   });
 
-  it('ManutFlow deve ser featured com demoUrl e imageUrl', () => {
+  it('ManutFlow deve apresentar evidências verificáveis de qualidade e segurança', () => {
     const manutflow = projects.find((p) => p.shortTitle === 'ManutFlow');
 
     expect(manutflow).toBeTruthy();
     expect(manutflow!.kind).toBe('featured');
     expect(manutflow).toHaveProperty('demoUrl');
     expect(manutflow).toHaveProperty('imageUrl');
+    expect(manutflow!.evidence).toContain('153 testes automatizados em 13 arquivos');
+    expect(manutflow!.evidence).toContain('Proteção em camadas com sessão, user_id e RLS');
+  });
+
+  it('HelpFlow deve evidenciar autenticação, autorização e testes', () => {
+    const helpflow = projects.find((p) => p.shortTitle === 'HelpFlow');
+
+    expect(helpflow).toBeTruthy();
+    expect(helpflow!.evidence).toContain(
+      'Autenticação por credenciais e GitHub, com recuperação de senha'
+    );
+    expect(helpflow!.evidence).toContain('Validação, rate limiting, testes unitários e E2E');
   });
 
   it('deve manter os projetos secundários compactos e identificados', () => {

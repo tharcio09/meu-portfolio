@@ -31,10 +31,10 @@ export const projects: Project[] = [
     decision:
       'Separar acessos com roles CLIENT/AGENT e centralizar validação com Zod e persistência com Prisma.',
     evidence: [
-      'CRUD completo e rate limiting',
-      'Testes unitários com Vitest',
-      'Fluxo principal validado com Cypress E2E',
-      'Aplicação publicada com código aberto',
+      'Autenticação por credenciais e GitHub, com recuperação de senha',
+      'Controle de acesso por perfil e propriedade de chamados',
+      'CRUD paginado de tickets com status e prioridades',
+      'Validação, rate limiting, testes unitários e E2E',
     ],
     nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
     imageUrl: '/images/helpflow-screenshot.webp',
@@ -58,10 +58,10 @@ export const projects: Project[] = [
     decision:
       'Aplicar proteção em três camadas com proxy, getUser() na API e Row Level Security no banco.',
     evidence: [
-      'Autenticação e isolamento por usuário',
-      'CRUD de equipamentos e ordens',
-      'Histórico de alterações e dashboard',
-      'Aplicação publicada na Vercel',
+      '153 testes automatizados em 13 arquivos',
+      'CRUD completo com busca, filtros, paginação e histórico',
+      'Proteção em camadas com sessão, user_id e RLS',
+      'Dashboard operacional com prazos, indicadores e ordens urgentes',
     ],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.webp',
