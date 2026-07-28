@@ -54,7 +54,7 @@ const About = () => {
               </p>
               <p>
                 Também atuo com suporte e manutenção de TI, onde diagnostico e resolvo problemas de
-                hardware, software e rede — experiência que reforça minha capacidade de solucionar
+                hardware, software e rede. Essa experiência reforça minha capacidade de solucionar
                 problemas com método e atenção aos detalhes.
               </p>
             </div>

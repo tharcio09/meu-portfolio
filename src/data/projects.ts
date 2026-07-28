@@ -20,7 +20,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'HelpFlow — Sistema de Help Desk',
+    title: 'HelpFlow: Sistema de Help Desk',
     shortTitle: 'HelpFlow',
     description:
       'Sistema full stack para abertura, acompanhamento e gerenciamento de chamados internos.',
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     kind: 'featured',
   },
   {
-    title: 'ManutFlow — Controle de Manutenção',
+    title: 'ManutFlow: Controle de Manutenção',
     shortTitle: 'ManutFlow',
     description:
       'Sistema completo para cadastro de equipamentos, abertura de ordens de serviço e dashboard com indicadores de status e prioridade.',
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     kind: 'featured',
   },
   {
-    title: 'DevLinks — Perfil e Linktree',
+    title: 'DevLinks: Perfil e Linktree',
     shortTitle: 'DevLinks',
     description:
       'Página de perfil com links personalizados, upload de avatar e dados sincronizados entre cliente e servidor.',
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     kind: 'secondary',
   },
   {
-    title: 'Lista de Mercado — PWA',
+    title: 'Lista de Mercado: PWA',
     shortTitle: 'Lista de Mercado',
     description:
       'Aplicação mobile para organizar compras por setores, funcionar sem internet e compartilhar a lista via WhatsApp.',
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     description:
       'Consulta de preços e variações de criptomoedas com busca, páginas de detalhe e tratamento de estados de carregamento e erro.',
     technicalHighlight:
-      'Consumo de API externa com rotas dinâmicas, busca client-side e estados assíncronos — loading, erro e exibição de dados.',
+      'Consumo de API externa com rotas dinâmicas, busca client-side e estados assíncronos, incluindo loading, erro e exibição de dados.',
     outcome: 'API externa · rotas dinâmicas · estados assíncronos',
     imageUrl: '/images/screenshot-crypto.webp',
     imageAlt: 'Dashboard de criptomoedas exibindo preços e variações',

@@ -49,7 +49,7 @@ export function NavbarClient() {
         <Link
           href="/"
           className="group inline-flex items-center gap-2 text-base font-bold tracking-[-0.02em] text-primary-text transition-colors hover:text-accent dark:text-light-text dark:hover:text-accent-light"
-          aria-label="Tharcio.dev — voltar para o início"
+          aria-label="Tharcio.dev, voltar para o início"
         >
           <span className="inline-flex h-7 w-7 items-center justify-center border border-accent bg-accent text-xs font-extrabold text-white transition-colors group-hover:bg-accent-hover dark:border-accent-light dark:bg-accent-light dark:text-dark-bg dark:group-hover:bg-accent-light-hover">
             T
