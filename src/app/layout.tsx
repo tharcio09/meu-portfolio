@@ -13,16 +13,16 @@ import { GITHUB_URL, LINKEDIN_URL, SITE_URL } from '@/data/constants';
 const siteName = 'Tharcio.dev';
 const siteTitle = 'Tharcio Santos | Desenvolvedor Full Stack';
 const siteDescription =
-  'Portfólio de Tharcio Santos com aplicações web completas, da interface ao banco de dados, desenvolvidas com foco em usabilidade e boas práticas.';
+  'Portfólio de Tharcio Santos, desenvolvedor Full Stack com sistemas, APIs e bancos de dados, com foco em segurança, usabilidade e boas práticas.';
 
 const personJsonLd = {
   '@type': 'Person',
   '@id': `${SITE_URL}/#person`,
   name: 'Tharcio Santos',
   url: SITE_URL,
-  jobTitle: 'Desenvolvedor Full Stack Júnior',
+  jobTitle: 'Desenvolvedor Full Stack',
   description:
-    'Desenvolvedor Full Stack Júnior que cria aplicações web completas, da interface ao banco de dados, com foco em usabilidade e boas práticas.',
+    'Desenvolvedor Full Stack com experiência em sistemas, APIs e bancos de dados, com foco em segurança, usabilidade e boas práticas.',
   image: `${SITE_URL}/images/profile.webp`,
   sameAs: [GITHUB_URL, LINKEDIN_URL],
   knowsAbout: [
@@ -83,9 +83,12 @@ export const metadata: Metadata = {
   keywords: [
     'Tharcio Santos',
     'Desenvolvedor Full Stack',
+    'Desenvolvedor de Software',
     'Desenvolvedor Web',
     'Desenvolvedor Júnior',
     'Estágio Desenvolvimento Web',
+    'APIs REST',
+    'Bancos de Dados',
     'Portfólio Desenvolvedor',
     'React',
     'Next.js',
