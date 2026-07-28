@@ -17,6 +17,7 @@ describe('conteúdo principal do redesign', () => {
       { label: 'Processo', href: '#processo' },
       { label: 'Habilidades', href: '#habilidades' },
       { label: 'Sobre', href: '#sobre-mim' },
+      { label: 'Experiência', href: '#experiencia' },
       { label: 'Contato', href: '#contato' },
     ]);
   });
@@ -26,7 +27,7 @@ describe('conteúdo principal do redesign', () => {
 
     expect(
       screen.getByRole('link', {
-        name: 'Tharcio.dev — voltar para o início',
+        name: 'Tharcio.dev, voltar para o início',
       })
     ).toHaveAttribute('href', '/');
   });
@@ -48,7 +49,7 @@ describe('conteúdo principal do redesign', () => {
       screen.getByRole('heading', { level: 2, name: 'Stack e competências' })
     ).toBeInTheDocument();
     expect(screen.getByLabelText('Tecnologias de Frontend e UI')).toBeInTheDocument();
-    expect(screen.getAllByText('Aplicado em:')).toHaveLength(5);
+    expect(screen.getByLabelText('Tecnologias de Versionamento e ferramentas')).toBeInTheDocument();
   });
 
   it('renderiza a nova copy e os acessos principais do Hero', () => {
@@ -147,9 +148,7 @@ describe('conteúdo principal do redesign', () => {
   it('renderiza o Footer editorial e preserva os links profissionais', () => {
     render(<Footer />);
 
-    expect(
-      screen.getByText('Tharcio Santos — Desenvolvedor Full Stack Júnior')
-    ).toBeInTheDocument();
+    expect(screen.getByText('Tharcio Santos, Desenvolvedor Full Stack Júnior')).toBeInTheDocument();
     expect(
       screen.getByText('Projetos reais, aprendizado contínuo e construção de sistemas web.')
     ).toBeInTheDocument();

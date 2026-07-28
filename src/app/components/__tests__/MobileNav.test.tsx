@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MobileNav } from '../MobileNav';
-import type { NavLink } from '@/data/constants';
+import { navLinks, type NavLink } from '@/data/constants';
 
 const links: NavLink[] = [
   { href: '#projetos', label: 'Projetos' },
@@ -46,6 +46,17 @@ describe('MobileNav', () => {
     openMenu();
 
     expect(screen.getByRole('link', { name: 'Projetos' })).toHaveFocus();
+  });
+
+  it('exibe Experiência a partir da fonte centralizada de navegação', () => {
+    render(<MobileNav links={navLinks} />);
+
+    openMenu();
+
+    expect(screen.getByRole('link', { name: 'Experiência' })).toHaveAttribute(
+      'href',
+      '#experiencia'
+    );
   });
 
   it('fecha com Escape e restaura o foco no botão', () => {

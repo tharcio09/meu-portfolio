@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="font-semibold text-primary-text dark:text-light-text">
-            Tharcio Santos — Desenvolvedor Full Stack Júnior
+            Tharcio Santos, Desenvolvedor Full Stack Júnior
           </p>
           <p className="mt-2 text-sm text-secondary-text dark:text-dark-text">
             Projetos reais, aprendizado contínuo e construção de sistemas web.

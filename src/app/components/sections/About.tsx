@@ -46,11 +46,16 @@ const About = () => {
               Sobre mim
             </h2>
 
-            <div className="mt-7 text-base leading-relaxed text-secondary-text dark:text-dark-text">
+            <div className="mt-7 space-y-4 text-base leading-relaxed text-secondary-text dark:text-dark-text">
               <p>
                 Curso Análise e Desenvolvimento de Sistemas na Anhanguera, com conclusão prevista
                 para julho de 2027. Em projetos próprios, aplico frontend, backend, bancos de dados,
                 autenticação e deploy.
+              </p>
+              <p>
+                Também atuo com suporte e manutenção de TI, onde diagnostico e resolvo problemas de
+                hardware, software e rede. Essa experiência reforça minha capacidade de solucionar
+                problemas com método e atenção aos detalhes.
               </p>
             </div>
 

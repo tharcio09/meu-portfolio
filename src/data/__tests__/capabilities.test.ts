@@ -30,4 +30,11 @@ describe('capabilities', () => {
       expect(capability.technologies.length).toBeGreaterThan(0);
     });
   });
+
+  it('inclui Git e GitHub nas tecnologias', () => {
+    const versionamento = capabilities.find((c) => c.title === 'Versionamento e ferramentas');
+    expect(versionamento).toBeTruthy();
+    expect(versionamento!.technologies).toContain('Git');
+    expect(versionamento!.technologies).toContain('GitHub');
+  });
 });
