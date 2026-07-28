@@ -38,4 +38,10 @@ export const capabilities: Capability[] = [
       'Experiência offline, persistência local e compartilhamento em dispositivos móveis.',
     usedIn: ['Lista de Mercado'],
   },
+  {
+    title: 'Versionamento e ferramentas',
+    technologies: ['Git', 'GitHub', 'GitHub Actions'],
+    description: 'Controle de versão, integração contínua e automação de qualidade do código.',
+    usedIn: ['HelpFlow', 'ManutFlow', 'DevLinks', 'Lista de Mercado', 'Crypto Dashboard'],
+  },
 ];

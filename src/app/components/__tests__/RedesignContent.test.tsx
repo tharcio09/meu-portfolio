@@ -17,6 +17,7 @@ describe('conteúdo principal do redesign', () => {
       { label: 'Processo', href: '#processo' },
       { label: 'Habilidades', href: '#habilidades' },
       { label: 'Sobre', href: '#sobre-mim' },
+      { label: 'Experiência', href: '#experiencia' },
       { label: 'Contato', href: '#contato' },
     ]);
   });
@@ -48,7 +49,7 @@ describe('conteúdo principal do redesign', () => {
       screen.getByRole('heading', { level: 2, name: 'Stack e competências' })
     ).toBeInTheDocument();
     expect(screen.getByLabelText('Tecnologias de Frontend e UI')).toBeInTheDocument();
-    expect(screen.getAllByText('Aplicado em:')).toHaveLength(5);
+    expect(screen.getByLabelText('Tecnologias de Versionamento e ferramentas')).toBeInTheDocument();
   });
 
   it('renderiza a nova copy e os acessos principais do Hero', () => {

@@ -26,6 +26,7 @@ export const navLinks: NavLink[] = [
   { href: '#processo', label: 'Processo' },
   { href: '#habilidades', label: 'Habilidades' },
   { href: '#sobre-mim', label: 'Sobre' },
+  { href: '#experiencia', label: 'Experiência' },
   { href: '#contato', label: 'Contato', cta: true },
 ];
 
