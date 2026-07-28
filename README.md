@@ -2,7 +2,7 @@
 
 # Tharcio Santos — Portfólio
 
-Portfólio pessoal focado em aplicações web, projetos reais, processo de desenvolvimento, habilidades aplicadas e evolução incremental.
+Portfólio de Tharcio Santos, Desenvolvedor Full Stack com foco em sistemas, APIs e bancos de dados.
 
 [Ver versão pública atual](https://tharcio-portfolio.vercel.app) · [LinkedIn](https://www.linkedin.com/in/tharcio-santos-dev/) · [Email](mailto:tharciosantos09@gmail.com)
 
@@ -14,7 +14,7 @@ Portfólio pessoal focado em aplicações web, projetos reais, processo de desen
 
 ## Sobre
 
-Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor Full Stack Júnior. O portfólio reúne aplicações publicadas, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
+Este projeto apresenta minha trajetória como estudante de Análise e Desenvolvimento de Sistemas e Desenvolvedor Full Stack. O portfólio reúne sistemas publicados, habilidades demonstradas em contexto e o processo que uso para evoluir cada projeto.
 
 A interface segue uma direção editorial: hierarquia visual clara, leitura rápida, conteúdo organizado por evidências e uma paleta baseada em grafite, teal/ciano e superfícies neutras. Dark e light mode compartilham os mesmos tokens semânticos, com contraste, foco visível e estados interativos consistentes.
 
@@ -23,8 +23,8 @@ A interface segue uma direção editorial: hierarquia visual clara, leitura ráp
 ## Proposta Visual e Estrutura
 
 - **Portfólio editorial:** projetos apresentados por problema, solução, entrega e decisões técnicas.
-- **HelpFlow como case principal:** aplicação mais completa, com autenticação, regras de negócio, banco relacional e deploy.
-- **ManutFlow como case complementar:** produto em produção com autenticação, isolamento de dados e gestão de manutenção.
+- **HelpFlow como case principal:** aplicação com autenticação, recuperação de senha, controle de acesso, regras de negócio, banco relacional e deploy.
+- **ManutFlow como case complementar:** produto em produção com autenticação, isolamento de dados, gestão de manutenção e 153 testes automatizados em 13 arquivos.
 - **Projetos complementares compactos:** DevLinks, Lista de Mercado e Crypto Dashboard aparecem como evidências adicionais.
 - **Processo visível:** seção "Como eu trabalho" apresenta o fluxo de análise, escopo, implementação, teste e revisão.
 - **Competências:** tecnologias organizadas por contexto de uso, em vez de uma lista genérica de ferramentas.
@@ -47,7 +47,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Outros projetos) com animações de entrada.
 - **Hero com gradiente animado e parallax:** Hero renderizado no servidor, com o fundo interativo isolado em um Client Component pequeno.
 - **Performance:** imagens convertidas para WebP (redução de 72% no tamanho), ícones SVG locais, CSS crítico otimizado, Analytics carregado dinamicamente e chunk de devtools excluído do bundle de produção.
-- **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card e `themeColor` por preferência de tema.
+- **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card, Schema.org e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
 - **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged, com testes automatizados cobrindo componentes, hooks e dados.
 
@@ -68,8 +68,9 @@ Os resultados medidos devem ser atualizados apenas após uma nova auditoria da v
 
 ### Case principal — HelpFlow
 
-Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de chamados internos, com autenticação por sessão, controle de acesso, banco relacional e aplicação publicada.
+Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de chamados internos, com autenticação por credenciais e GitHub, recuperação de senha, controle de acesso por perfil e propriedade dos chamados.
 
+- **Destaques:** CRUD paginado de tickets, validação com Zod, rate limiting e testes unitários e E2E.
 - **Stack:** Next.js, React, JavaScript, Prisma, Supabase, PostgreSQL, NextAuth, Zod, Vitest, Cypress
 - **Links:** [Aplicação](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
 
@@ -77,6 +78,7 @@ Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de
 
 Sistema completo para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. Inclui autenticação com Supabase Auth, três camadas de segurança (proxy.ts, getUser(), RLS), cadastro e gestão de equipamentos, ordens de serviço com controle de status, filtros, busca textual e dashboard com indicadores.
 
+- **Destaques:** 153 testes automatizados em 13 arquivos, CRUD com busca, filtros, paginação, histórico e acompanhamento de prazos.
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL
 - **Links:** [Aplicação](https://manutflow.vercel.app) · [Código](https://github.com/tharciosantos/manutflow)
 
@@ -107,12 +109,12 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 
 ## Seções do Portfólio
 
-1. **Hero:** posicionamento profissional, objetivo e acesso aos projetos e currículo.
+1. **Hero:** posicionamento Full Stack em sistemas, APIs e bancos de dados, com acesso aos projetos e currículo.
 2. **Projetos:** HelpFlow, ManutFlow e projetos complementares.
 3. **Processo:** fluxo geral de análise, escopo, implementação, validação e evolução incremental.
 4. **Competências:** frontend, backend, banco de dados, testes, PWA e evolução.
-5. **Sobre:** formação, experiência prévia e objetivo profissional.
-6. **Experiência:** habilidades transferidas e experiências anteriores.
+5. **Sobre:** formação, perfil profissional e foco de atuação.
+6. **Experiência:** atuação técnica autônoma em suporte e manutenção de TI, além de experiências anteriores.
 7. **Contato:** email, LinkedIn, GitHub e currículo.
 
 ---
