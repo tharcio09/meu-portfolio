@@ -53,5 +53,9 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,json,md,yml,yaml}": "prettier --write"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "unrs-resolver@1.11.1": true
   }
 }
