@@ -3,6 +3,7 @@ import { projects } from '@/data/projects';
 import { buttonVariants } from '../ui/Button';
 import { cn } from '@/lib/utils';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
+import { Pill } from '../ui/Pill';
 import ProjectCard from '../ui/ProjectCard';
 import Section from '../ui/Section';
 import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
@@ -141,12 +142,7 @@ const Projects = () => {
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="border border-accent-border bg-accent-subtle px-2.5 py-1 text-xs font-medium text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light"
-                    >
-                      {tag}
-                    </span>
+                    <Pill key={tag}>{tag}</Pill>
                   ))}
                 </div>
 

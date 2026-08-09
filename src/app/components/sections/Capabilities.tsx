@@ -1,6 +1,8 @@
 import { capabilities } from '@/data/capabilities';
+import { cn } from '@/lib/utils';
 import Section from '../ui/Section';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
+import { pillVariants } from '../ui/Pill';
 
 const Capabilities = () => {
   return (
@@ -40,7 +42,7 @@ const Capabilities = () => {
                   {item.technologies.map((technology) => (
                     <li
                       key={technology}
-                      className="border border-accent-border bg-accent-subtle px-2 py-0.5 text-xs font-medium text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light"
+                      className={cn(pillVariants({ variant: 'accent', size: 'sm' }))}
                     >
                       {technology}
                     </li>

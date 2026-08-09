@@ -1,5 +1,5 @@
-import { GITHUB_URL, LINKEDIN_URL, EMAIL } from '@/data/constants';
-import { GithubIcon, LinkedinIcon, MailIcon } from './ui/Icons';
+import { GITHUB_URL, LINKEDIN_URL, EMAIL, RESUME_URL } from '@/data/constants';
+import { GithubIcon, LinkedinIcon, MailIcon, DocumentIcon } from './ui/Icons';
 
 const Footer = () => {
   return (
@@ -29,34 +29,46 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex gap-5">
+        <div className="flex flex-col items-start gap-4 md:items-end">
           <a
-            href={GITHUB_URL}
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub de Tharcio Santos"
-            className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline dark:text-accent-light"
           >
-            <GithubIcon className="h-5 w-5" />
+            <DocumentIcon className="h-4 w-4" />
+            Baixar currículo
           </a>
 
-          <a
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn de Tharcio Santos"
-            className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
-          >
-            <LinkedinIcon className="h-5 w-5" />
-          </a>
+          <div className="flex gap-5">
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Tharcio Santos"
+              className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
+            >
+              <GithubIcon className="h-5 w-5" />
+            </a>
 
-          <a
-            href={`mailto:${EMAIL}`}
-            aria-label="Enviar e-mail para Tharcio Santos"
-            className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
-          >
-            <MailIcon className="h-5 w-5" />
-          </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Tharcio Santos"
+              className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
+            >
+              <LinkedinIcon className="h-5 w-5" />
+            </a>
+
+            <a
+              href={`mailto:${EMAIL}`}
+              aria-label="Enviar e-mail para Tharcio Santos"
+              className="text-xl text-secondary-text transition-colors hover:text-accent dark:text-dark-text dark:hover:text-accent-light"
+            >
+              <MailIcon className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
