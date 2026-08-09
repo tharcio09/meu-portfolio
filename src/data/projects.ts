@@ -8,7 +8,7 @@ export type Project = {
   demoUrl?: string;
   demoLabel?: string;
   tags: string[];
-  kind: 'featured' | 'building' | 'secondary';
+  kind: 'featured' | 'secondary';
   outcome?: string;
   technicalHighlight?: string;
   responsibility?: string;

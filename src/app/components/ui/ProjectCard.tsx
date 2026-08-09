@@ -1,5 +1,6 @@
 import type { Project } from '@/data/projects';
 import { ExternalLinkIcon, GithubIcon } from './Icons';
+import { pillVariants } from './Pill';
 
 const ProjectCard = ({
   shortTitle,
@@ -33,10 +34,7 @@ const ProjectCard = ({
 
         <div className="mt-4 flex flex-wrap gap-2 md:mt-5">
           {tags.slice(0, 3).map((tag) => (
-            <span
-              key={tag}
-              className="border border-border-light px-2 py-0.5 text-xs font-medium text-secondary-text dark:border-border-dark dark:text-dark-text"
-            >
+            <span key={tag} className={pillVariants({ variant: 'muted', size: 'sm' })}>
               {tag}
             </span>
           ))}

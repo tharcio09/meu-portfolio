@@ -1,6 +1,7 @@
 import { buttonVariants } from '../ui/Button';
 import { RESUME_URL } from '@/data/constants';
 import { cn } from '@/lib/utils';
+import { Pill } from '../ui/Pill';
 import Section from '../ui/Section';
 import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
 import { HeroParallaxBackground } from '../ui/HeroParallaxBackground';
@@ -42,12 +43,7 @@ const Hero = () => {
 
         <div className="stagger-4 animate-fade-up opacity-0 mt-6 flex flex-wrap items-center gap-3">
           {stackItems.map((item) => (
-            <span
-              key={item}
-              className="border border-accent-border bg-accent-subtle px-2.5 py-1 text-xs font-medium text-accent dark:border-accent-border-dark dark:bg-accent-subtle-dark dark:text-accent-light"
-            >
-              {item}
-            </span>
+            <Pill key={item}>{item}</Pill>
           ))}
         </div>
 
