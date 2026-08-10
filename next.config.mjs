@@ -17,7 +17,7 @@ const nextConfig = {
   },
 
   compiler: {
-    removeConsole: isProd,
+    removeConsole: isProd ? { exclude: ['error'] } : false,
   },
 
   images: {
