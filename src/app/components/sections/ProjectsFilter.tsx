@@ -21,6 +21,7 @@ export function ProjectsFilter({ featuredContent, secondaryContent }: ProjectsFi
 
   const showFeatured = activeFilter === 'all' || activeFilter === 'featured';
   const showSecondary = activeFilter === 'all' || activeFilter === 'secondary';
+  const activeLabel = filters.find((filter) => filter.kind === activeFilter)?.label;
 
   return (
     <>
@@ -41,6 +42,10 @@ export function ProjectsFilter({ featuredContent, secondaryContent }: ProjectsFi
           </button>
         ))}
       </div>
+
+      <p className="sr-only" aria-live="polite">
+        Filtro ativo: {activeLabel}
+      </p>
 
       {showFeatured && featuredContent}
       {showSecondary && secondaryContent}
