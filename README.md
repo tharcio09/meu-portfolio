@@ -157,7 +157,7 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 - **Ícones SVG locais:** os ícones vivem em `src/app/components/ui/Icons.tsx`, reduzindo dependências.
 - **CSS crítico otimizado:** o build usa `optimizeCss` com `critters` para reduzir bloqueios na renderização inicial.
 - **Analytics dinâmico:** o Analytics da Vercel é isolado em um componente client carregado dinamicamente.
-- **Bundle de produção otimizado:** `IgnorePlugin` exclui o chunk `next-devtools` (820 KB) do bundle de produção, reduzindo o First Load JS de 358 KB para 134 KB.
+- **Bundle de produção otimizado:** build via **Turbopack** (padrão do Next 16) mantém o First Load JS por volta de 134 KB sem config customizada de bundler.
 - **Testes comportamentais:** os testes usam `userEvent` para simular interações mais próximas do uso real.
 - **CI:** GitHub Actions executa formatação, lint, TypeScript, testes e build antes da integração com `main`.
 - **Pre-commit automático:** Husky e lint-staged executam o Prettier apenas nos arquivos staged.

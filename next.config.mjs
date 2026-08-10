@@ -1,8 +1,4 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
-const webpack = require('next/dist/compiled/webpack/webpack-lib.js');
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -29,17 +25,6 @@ const nextConfig = {
   compress: true,
 
   devIndicators: false,
-
-  webpack: (config, { dev }) => {
-    if (!dev) {
-      config.plugins.push(
-        new webpack.IgnorePlugin({
-          resourceRegExp: /next-devtools/,
-        })
-      );
-    }
-    return config;
-  },
 };
 
 export default withBundleAnalyzer(nextConfig);

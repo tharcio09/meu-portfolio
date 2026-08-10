@@ -48,25 +48,10 @@ describe('useScrollReveal', () => {
     expect(observerConstructor).not.toHaveBeenCalled();
   });
 
-  it('torna o conteúdo visível quando já está na viewport', () => {
-    vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue({
-      top: 100,
-      bottom: 200,
-    } as DOMRect);
-
+  it('revela via callback inicial do observer quando já está na viewport', () => {
     render(createElement(TestComponent));
 
-    expect(screen.getByTestId('target')).toHaveTextContent('visível');
-    expect(observerConstructor).not.toHaveBeenCalled();
-  });
-
-  it('observa e revela um elemento inicialmente fora da viewport', () => {
-    vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue({
-      top: 2000,
-      bottom: 2100,
-    } as DOMRect);
-
-    render(createElement(TestComponent));
+    expect(screen.getByTestId('target')).toHaveTextContent('oculto');
     expect(observe).toHaveBeenCalledWith(screen.getByTestId('target'));
 
     act(() => {
@@ -77,11 +62,21 @@ describe('useScrollReveal', () => {
     expect(unobserve).toHaveBeenCalled();
   });
 
+  it('observa e revela um elemento inicialmente fora da viewport', () => {
+    render(createElement(TestComponent));
+
+    expect(observe).toHaveBeenCalledWith(screen.getByTestId('target'));
+    expect(screen.getByTestId('target')).toHaveTextContent('oculto');
+
+    act(() => {
+      observerCallback([{ isIntersecting: true } as IntersectionObserverEntry], {} as never);
+    });
+
+    expect(screen.getByTestId('target')).toHaveTextContent('visível');
+    expect(unobserve).toHaveBeenCalled();
+  });
+
   it('não registra listeners redundantes de scroll ou resize', () => {
-    vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue({
-      top: 2000,
-      bottom: 2100,
-    } as DOMRect);
     const addEventListener = vi.spyOn(window, 'addEventListener');
 
     render(createElement(TestComponent));
