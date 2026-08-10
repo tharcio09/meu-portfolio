@@ -4,23 +4,19 @@ import { useEffect, useRef, useState } from 'react';
 
 export function useScrollReveal<T extends HTMLElement = HTMLElement>(threshold = 0.12) {
   const ref = useRef<T | null>(null);
-  const [visible, setVisible] = useState(false);
+  // Reduced motion revela imediatamente — checagem no estado inicial
+  // evita setState síncrono dentro do effect (regra react-hooks v6).
+  const [visible, setVisible] = useState(
+    () =>
+      typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || visible) return;
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setVisible(true);
-      return;
-    }
-
-    const rect = el.getBoundingClientRect();
-    if (rect.top <= window.innerHeight * (1 - threshold) && rect.bottom >= 0) {
-      setVisible(true);
-      return;
-    }
-
+    // O IntersectionObserver reporta a interseção inicial ao observar,
+    // cobrindo também elementos já visíveis no carregamento.
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -36,7 +32,7 @@ export function useScrollReveal<T extends HTMLElement = HTMLElement>(threshold =
     return () => {
       observer.disconnect();
     };
-  }, [threshold]);
+  }, [threshold, visible]);
 
   return { ref, visible };
 }

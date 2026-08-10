@@ -1,18 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from './ui/Icons';
 
+// Detecta renderização no cliente sem setState em effect —
+// evita mismatch de hidratação ao renderizar o tema apenas no browser.
+const subscribe = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
 export const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
   const [rotation, setRotation] = useState(0);
   const { resolvedTheme, setTheme } = useTheme();
   const isDark = resolvedTheme === 'dark';
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   if (!mounted) {
     return null;
