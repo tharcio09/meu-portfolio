@@ -261,7 +261,7 @@ tipo(escopo): descrição (≤ 72 caracteres)
 | `refactor` | Mudança interna sem mudar comportamento | `refactor(hooks): extrai lógica para hook`        |
 | `perf`     | Melhoria de performance                 | `perf(images): adiciona lazy loading nas imagens` |
 | `test`     | Testes                                  | `test(contact): cobre validação de formulário`    |
-| `build`    | Build system ou dependências            | `build(deps): atualiza next para 15.3.0`          |
+| `build`    | Build system ou dependências            | `build(deps): atualiza next para 16.3.0`          |
 | `ci`       | CI/CD                                   | `ci(actions): adiciona cache ao workflow`         |
 | `chore`    | Manutenção geral                        | `chore: remove console.log de debug`              |
 | `revert`   | Reversão de commit                      | `revert: volta commit abc1234 que quebrou build`  |
@@ -304,7 +304,7 @@ git commit -m "perf(images): adiciona lazy loading nos projetos"
 git commit -m "test(button): adiciona teste para variante outline"
 
 # Build
-git commit -m "build(deps): atualiza next para 15.3.0"
+git commit -m "build(deps): atualiza next para 16.3.0"
 
 # CI
 git commit -m "ci(actions): adiciona cache para acelerar build"
@@ -433,8 +433,8 @@ Responda: **O quê?** · **Por quê?** · **Como?** · **Impacto?**
 
 | Camada          | Tecnologia                                      |
 | --------------- | ----------------------------------------------- |
-| **Framework**   | Next.js 15.x (App Router)                       |
-| **Linguagem**   | TypeScript strict (ES2017), React 19.1.0        |
+| **Framework**   | Next.js 16.x (App Router, Turbopack)            |
+| **Linguagem**   | TypeScript strict (ES2022), React 19.2          |
 | **Estilização** | Tailwind CSS 3.x (dark mode: `class`)           |
 | **Testes**      | Vitest + React Testing Library (jsdom, globals) |
 | **Lint/Format** | ESLint (flat config) + Prettier                 |
@@ -449,32 +449,55 @@ Responda: **O quê?** · **Por quê?** · **Como?** · **Impacto?**
 
 ```jsonc
 // tsconfig.json
-{ "compilerOptions": { "strict": true, "paths": { "@/*": ["./src/*"] } } }
+{ "compilerOptions": { "target": "ES2022", "strict": true, "paths": { "@/*": ["./src/*"] } } }
 ```
 
 ```jsonc
-// .prettierrc (implícito)
-{ "semi": true, "singleQuote": true, "tabWidth": 2, "printWidth": 100 }
+// .prettierrc
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "endOfLine": "auto",
+}
 ```
 
-```jsonc
-// ESLint
-extends: ['next/core-web-vitals', 'next/typescript', 'prettier']
+```js
+// eslint.config.mjs — flat config do eslint-config-next@16 (exports nativos)
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
+import nextTypescript from 'eslint-config-next/typescript';
+import prettierConfig from 'eslint-config-prettier/flat';
+
+export default [
+  {
+    ignores: ['.next/**', 'node_modules/**', 'out/**', 'build/**', 'coverage/**', 'next-env.d.ts'],
+  },
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  prettierConfig,
+];
 ```
+
+> ⚠️ O `eslint-config-next@16` exporta configs flat nativas — `FlatCompat` (`@eslint/eslintrc`) não funciona mais aqui.
 
 ### 10.3 Scripts
 
-| Comando                | Descrição                 |
-| ---------------------- | ------------------------- |
-| `npm run dev`          | Next.js dev server        |
-| `npm run build`        | Next.js build             |
-| `npm run lint`         | ESLint                    |
-| `npm run lint:fix`     | ESLint auto-fix           |
-| `npm run format`       | Prettier — formatar       |
-| `npm run format:check` | Prettier — verificar      |
-| `npm run test`         | Vitest (watch)            |
-| `npm run test:run`     | Vitest (run once)         |
-| `npm run analyze`      | Build com bundle analyzer |
+| Comando                 | Descrição                             |
+| ----------------------- | ------------------------------------- |
+| `npm run dev`           | Next.js dev server                    |
+| `npm run build`         | Next.js build (Turbopack)             |
+| `npm start`             | Server com build gerado               |
+| `npm run lint`          | ESLint                                |
+| `npm run lint:fix`      | ESLint auto-fix                       |
+| `npm run format`        | Prettier — formatar                   |
+| `npm run format:check`  | Prettier — verificar                  |
+| `npm run test`          | Vitest (watch)                        |
+| `npm run test:run`      | Vitest (run once)                     |
+| `npm run test:coverage` | Vitest com cobertura (threshold ≥80%) |
+| `npm run test:watch`    | Vitest (watch interativo)             |
+| `npm run analyze`       | Build com bundle analyzer             |
 
 ---
 
@@ -827,11 +850,11 @@ Executado em push/PR para `main` (Node 20):
 
 **Job 2 — build-and-test** (após quality):
 
-1. `npm run test:run` · 2. `npm run build`
+1. `npm run test:coverage` (Valida threshold de cobertura ≥ 80% stmts) · 2. `npm run build` (com cache do `.next`)
 
 ### 18.3 Husky + lint-staged
 
-- **pre-commit:** `npx lint-staged` (Prettier em `*.{js,jsx,ts,tsx,css,json,md,yml,yaml}`)
+- **pre-commit:** `npx lint-staged` (ESLint `--fix` + Prettier em `*.{js,jsx,ts,tsx}`; Prettier em `*.{css,json,md,yml,yaml}`)
 
 ### 18.4 Quando Usar Cada Tipo de Teste
 
@@ -849,11 +872,12 @@ Executado em push/PR para `main` (Node 20):
 
 ### 19.1 Boas Práticas
 
+- **Bundler:** **Turbopack** (padrão do Next 16) — sem config customizada de bundler
 - **Imagens:** formatos `.avif`/`.webp` (configurado), `loading="lazy"` abaixo da dobra
 - **Bundle:** prefira dynamic imports; evite imports grandes desnecessários
 - **Re-renders:** evite `useEffect` desnecessário; prefira estado derivado
 - **CSS:** `experimental.optimizeCss: true` ativo
-- **Console:** `removeConsole` em produção
+- **Console:** `removeConsole` em produção com `{ exclude: ['error'] }` (preserva `console.error` do `error.tsx`)
 - **Compressão:** `compress: true` ativo
 
 ### 19.2 Métricas Alvo
@@ -877,7 +901,7 @@ Executado em push/PR para `main` (Node 20):
 - Metadata completa em `layout.tsx`: title (`%s | Tharcio Santos`), description, keywords, Open Graph, Twitter cards
 - Schema.org JSON-LD: Person, WebSite, ProfilePage
 - Sitemap (`sitemap.ts`) + Robots (`robots.ts`)
-- OG image dinâmica (`opengraph-image.tsx`)
+- OG image estática pré-gerada no build (`opengraph-image.tsx`, rota `○`)
 
 ### 20.3 Acessibilidade
 
@@ -1108,9 +1132,10 @@ refactor(hooks): extrai useActiveSection do Navbar para hook próprio
 
 ---
 
-> **Versão 2.0** · Fonte única de verdade para agentes de IA · Mantido por Tharcio Santos
+> **Versão 2.1** · Fonte única de verdade para agentes de IA · Mantido por Tharcio Santos
 >
-> | Versão | Data     | Mudanças                                       |
-> | ------ | -------- | ---------------------------------------------- |
-> | 1.0    | —        | Documentação inicial do projeto                |
-> | 2.0    | Jul/2026 | Manual operacional completo para agentes de IA |
+> | Versão | Data     | Mudanças                                                                                                   |
+> | ------ | -------- | ---------------------------------------------------------------------------------------------------------- |
+> | 1.0    | —        | Documentação inicial do projeto                                                                            |
+> | 2.0    | Jul/2026 | Manual operacional completo para agentes de IA                                                             |
+> | 2.1    | Ago/2026 | Alinha stack à migração Next 16 (Turbopack), flat config do ESLint, CI com cobertura e pre-commit com lint |
