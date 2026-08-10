@@ -10,5 +10,25 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './vitest.setup.ts',
     globals: true,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json-summary'],
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: [
+        'src/app/layout.tsx',
+        'src/app/page.tsx',
+        'src/app/error.tsx',
+        'src/app/not-found.tsx',
+        'src/app/opengraph-image.tsx',
+        'src/app/robots.ts',
+        'src/app/sitemap.ts',
+      ],
+      thresholds: {
+        statements: 80,
+        branches: 75,
+        functions: 75,
+        lines: 80,
+      },
+    },
   },
 });
