@@ -35,7 +35,7 @@ A interface segue uma direção editorial: hierarquia visual clara, leitura ráp
 
 Mais do que uma vitrine, este repositório reúne práticas aplicadas em frontend e engenharia de software:
 
-- **Arquitetura moderna:** Next.js 15 com App Router, componentes organizados por responsabilidade e dados compartilhados fora da interface quando apropriado.
+- **Arquitetura moderna:** Next.js 16 (Turbopack) com App Router, componentes organizados por responsabilidade e dados compartilhados fora da interface quando apropriado.
 - **Sistema de design próprio:** tokens semânticos no Tailwind para fundos, superfícies, textos, bordas e accent teal/ciano nos dois temas.
 - **Componentização:** componentes reutilizáveis com React e TypeScript, como `Button`, `ProjectCard` e `Section`.
 - **Conteúdo organizado:** projetos, habilidades, experiências e constantes vivem parcialmente em `src/data`; copies específicas de apresentação permanecem próximas das respectivas seções.
@@ -46,7 +46,7 @@ Mais do que uma vitrine, este repositório reúne práticas aplicadas em fronten
 - **Barra de progresso de leitura:** `ReadingProgressBar` fixa no topo que preenche conforme o scroll, usando `scaleX` para performance.
 - **Filtro de projetos:** botões interativos por categoria (Todos / Destaque / Outros projetos) com animações de entrada.
 - **Hero com gradiente animado e parallax:** Hero renderizado no servidor, com o fundo interativo isolado em um Client Component pequeno.
-- **Performance:** imagens convertidas para WebP (redução de 72% no tamanho), ícones SVG locais, CSS crítico otimizado, Analytics carregado dinamicamente e chunk de devtools excluído do bundle de produção.
+- **Performance:** bundle otimizado via **Turbopack** (padrão do Next 16), imagens convertidas para WebP (redução de 72% no tamanho), ícones SVG locais, CSS crítico otimizado e Analytics carregado dinamicamente.
 - **SEO técnico:** sitemap, `robots.txt`, Open Graph, Twitter Card, Schema.org e `themeColor` por preferência de tema.
 - **Integração contínua:** GitHub Actions validando formatação, lint, tipos, testes e build.
 - **Qualidade de código:** Vitest, Testing Library, ESLint, Prettier, Husky e lint-staged, com testes automatizados cobrindo componentes, hooks e dados.
@@ -123,8 +123,8 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 
 ### Core
 
-- [Next.js](https://nextjs.org/) 15 — App Router, renderização, Image Optimization e OG images
-- [React](https://react.dev/) 19.1
+- [Next.js](https://nextjs.org/) 16 — App Router, renderização (Turbopack), Image Optimization e OG images
+- [React](https://react.dev/) 19.2
 - [TypeScript](https://www.typescriptlang.org/) 5.7
 - [Tailwind CSS](https://tailwindcss.com/) 3.4
 
@@ -160,7 +160,7 @@ Dashboard para consulta de criptomoedas com busca, rotas dinâmicas, renderizaç
 - **Bundle de produção otimizado:** build via **Turbopack** (padrão do Next 16) mantém o First Load JS por volta de 134 KB sem config customizada de bundler.
 - **Testes comportamentais:** os testes usam `userEvent` para simular interações mais próximas do uso real.
 - **CI:** GitHub Actions executa formatação, lint, TypeScript, testes e build antes da integração com `main`.
-- **Pre-commit automático:** Husky e lint-staged executam o Prettier apenas nos arquivos staged.
+- **Pre-commit automático:** Husky e lint-staged executam ESLint e Prettier nos arquivos staged.
 
 ---
 
@@ -190,7 +190,7 @@ meu-portfolio/
 
 ### Pré-requisitos
 
-- Node.js 18+
+- Node.js 20+
 - npm
 
 ### Instalação
