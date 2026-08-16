@@ -7,6 +7,8 @@ export type Project = {
   githubUrl: string;
   demoUrl?: string;
   demoLabel?: string;
+  demoNote?: string;
+  metrics?: string[];
   tags: string[];
   kind: 'featured' | 'secondary';
   outcome?: string;
@@ -33,9 +35,12 @@ export const projects: Project[] = [
     evidence: [
       'Autenticação por credenciais e GitHub, com recuperação de senha',
       'Controle de acesso por perfil e propriedade de chamados',
+      'Acesso de demonstração com 1-clique (visões Client e Agent)',
       'CRUD paginado de tickets com status e prioridades',
       'Validação, rate limiting, testes unitários e E2E',
     ],
+    demoNote: 'Acesso rápido com 1-clique para perfis de Solicitante (Client) e Agente (Suporte).',
+    metrics: ['RBAC (Client/Agent)', 'NextAuth + JWT', 'CRUD Paginado'],
     nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
     imageUrl: '/images/helpflow-screenshot.webp',
     imageAlt:
@@ -61,8 +66,11 @@ export const projects: Project[] = [
       '153 testes automatizados em 13 arquivos',
       'CRUD completo com busca, filtros, paginação e histórico',
       'Proteção em camadas com sessão, user_id e RLS',
+      'Acesso de demonstração com 1-clique e dados pré-carregados',
       'Dashboard operacional com prazos, indicadores e ordens urgentes',
     ],
+    demoNote: 'Acesso rápido com 1-clique com equipamentos e ordens de serviço pré-cadastrados.',
+    metrics: ['153 testes automatizados', '3 camadas de segurança', 'Supabase RLS'],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.webp',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',

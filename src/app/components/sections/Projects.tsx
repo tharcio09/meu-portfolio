@@ -68,9 +68,23 @@ const Projects = () => {
               </div>
 
               <div>
-                <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
-                  Case {index === 0 ? 'principal' : 'complementar'} · 0{index + 1}
-                </p>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
+                    Case {index === 0 ? 'principal' : 'complementar'} · 0{index + 1}
+                  </p>
+                  {project.metrics && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.metrics.map((metric) => (
+                        <span
+                          key={metric}
+                          className="border border-border-light bg-light-surface px-2 py-0.5 font-mono text-[11px] font-semibold text-secondary-text dark:border-border-dark dark:bg-dark-surface dark:text-dark-text"
+                        >
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 <h3 className="mt-4 text-4xl font-bold tracking-[-0.03em] text-primary-text dark:text-light-text">
                   {project.shortTitle}
                 </h3>
@@ -145,6 +159,21 @@ const Projects = () => {
                     <Pill key={tag}>{tag}</Pill>
                   ))}
                 </div>
+
+                {project.demoNote && (
+                  <div className="mt-6 flex items-start gap-2.5 border border-border-light bg-light-surface p-3 text-xs leading-relaxed text-secondary-text dark:border-border-dark dark:bg-dark-surface dark:text-dark-text sm:items-center">
+                    <span
+                      className="mt-0.5 inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-500 sm:mt-0"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      <strong className="font-semibold text-primary-text dark:text-light-text">
+                        Acesso rápido:
+                      </strong>{' '}
+                      {project.demoNote}
+                    </span>
+                  </div>
+                )}
 
                 <div className="mt-7 grid gap-3 sm:grid-cols-2">
                   <a
