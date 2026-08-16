@@ -85,7 +85,7 @@ const Contact = () => {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between gap-4 border border-border-light bg-light-card p-3 transition-colors hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface dark:hover:border-accent-light dark:hover:text-accent-light"
+                  className="group flex items-center justify-between gap-4 border border-border-light bg-light-card p-3 transition-all hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface dark:hover:border-accent-light dark:hover:text-accent-light"
                 >
                   <span className="flex items-center gap-4">
                     <span
@@ -103,7 +103,7 @@ const Contact = () => {
                       </span>
                     </span>
                   </span>
-                  <span className="shrink-0 whitespace-nowrap text-sm font-semibold text-accent dark:text-accent-light">
+                  <span className="shrink-0 whitespace-nowrap text-sm font-semibold text-accent transition-transform duration-200 group-hover:translate-x-1 dark:text-accent-light">
                     {link.action} →
                   </span>
                 </a>
@@ -113,7 +113,7 @@ const Contact = () => {
                 href={RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-between gap-4 border border-border-light bg-light-card p-3 transition-colors hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface dark:hover:border-accent-light dark:hover:text-accent-light"
+                className="group flex items-center justify-between gap-4 border border-border-light bg-light-card p-3 transition-all hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-surface dark:hover:border-accent-light dark:hover:text-accent-light"
               >
                 <span className="flex items-center gap-4">
                   <span
@@ -131,7 +131,7 @@ const Contact = () => {
                     </span>
                   </span>
                 </span>
-                <span className="shrink-0 whitespace-nowrap text-sm font-semibold text-accent dark:text-accent-light">
+                <span className="shrink-0 whitespace-nowrap text-sm font-semibold text-accent transition-transform duration-200 group-hover:translate-x-1 dark:text-accent-light">
                   Abrir →
                 </span>
               </a>

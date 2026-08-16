@@ -43,7 +43,7 @@ const Projects = () => {
               )}
               key={project.title}
             >
-              <div className="relative overflow-hidden border border-border-light bg-white p-3 shadow-sm dark:border-border-dark dark:bg-dark-card sm:p-5">
+              <div className="group/img relative overflow-hidden border border-border-light bg-white p-3 shadow-sm transition-all duration-300 hover:border-accent/40 hover:shadow-md dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-light/40 sm:p-5">
                 <div className="mb-3 flex items-center justify-between gap-4 border-b border-border-light pb-3 text-xs dark:border-border-dark">
                   <span className="font-mono font-semibold uppercase tracking-[0.16em] text-secondary-text dark:text-dark-text">
                     Produto em produção
@@ -60,7 +60,7 @@ const Projects = () => {
                       alt={project.imageAlt ?? `Screenshot do projeto ${project.title}`}
                       fill
                       sizes="(max-width: 1024px) 100vw, 55vw"
-                      className="object-contain p-2"
+                      className="object-contain p-2 transition-transform duration-500 ease-out group-hover/img:scale-[1.03] motion-reduce:transform-none"
                       quality={82}
                     />
                   )}

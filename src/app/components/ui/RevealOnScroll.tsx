@@ -24,7 +24,7 @@ export function RevealOnScroll<T extends ElementType = 'div'>({
     <Tag
       ref={ref}
       className={cn(
-        'transition-all duration-700 ease-out',
+        'transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none',
         visible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0',
         className
       )}

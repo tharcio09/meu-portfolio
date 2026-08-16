@@ -93,6 +93,26 @@ const About = () => {
                     </dd>
                   </div>
                 </dl>
+
+                <div className="mt-5 border-t border-border-light pt-4 dark:border-border-dark">
+                  <div className="flex items-center justify-between text-xs text-secondary-text dark:text-dark-text">
+                    <span>Evolução acadêmica</span>
+                    <span className="font-mono font-medium text-accent dark:text-accent-light">
+                      Previsão de formatura · Jul/2027
+                    </span>
+                  </div>
+                  <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full border border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-surface">
+                    <div
+                      className="h-full rounded-full bg-accent dark:bg-accent-light transition-all duration-1000 ease-out"
+                      style={{ width: '45%' }}
+                      role="progressbar"
+                      aria-valuenow={45}
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-label="Progresso da graduação em ADS"
+                    />
+                  </div>
+                </div>
               </article>
             </div>
           </div>
