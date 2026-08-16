@@ -70,7 +70,7 @@ Os resultados medidos devem ser atualizados apenas após uma nova auditoria da v
 
 Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de chamados internos, com autenticação por credenciais e GitHub, recuperação de senha, controle de acesso por perfil e propriedade dos chamados.
 
-- **Destaques:** CRUD paginado de tickets, validação com Zod, rate limiting e testes unitários e E2E.
+- **Destaques:** Acesso demo com 1-clique (perfis Client e Agent), CRUD paginado de tickets, validação com Zod, rate limiting e testes unitários e E2E.
 - **Stack:** Next.js, React, JavaScript, Prisma, Supabase, PostgreSQL, NextAuth, Zod, Vitest, Cypress
 - **Links:** [Aplicação](https://helpflow.vercel.app/) · [Código](https://github.com/tharciosantos/helpflow)
 
@@ -78,7 +78,7 @@ Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de
 
 Sistema completo para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. Inclui autenticação com Supabase Auth, três camadas de segurança (proxy.ts, getUser(), RLS), cadastro e gestão de equipamentos, ordens de serviço com controle de status, filtros, busca textual e dashboard com indicadores.
 
-- **Destaques:** 153 testes automatizados em 13 arquivos, CRUD com busca, filtros, paginação, histórico e acompanhamento de prazos.
+- **Destaques:** Acesso demo com 1-clique e dados pré-carregados, 153 testes automatizados em 13 arquivos, CRUD com busca, filtros, paginação, histórico e acompanhamento de prazos.
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL
 - **Links:** [Aplicação](https://manutflow.vercel.app) · [Código](https://github.com/tharciosantos/manutflow)
 
