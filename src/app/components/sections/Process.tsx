@@ -61,7 +61,7 @@ const Process = () => {
                   'sm:col-span-2'
               )}
             >
-              <span className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:text-accent-light">
+              <span className="inline-flex items-center border border-accent/25 bg-accent-subtle px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:border-accent-light/25 dark:bg-accent-subtle-dark dark:text-accent-light">
                 Passo {index + 1}
               </span>
               <div>
