@@ -48,15 +48,12 @@ describe('MobileNav', () => {
     expect(screen.getByRole('link', { name: 'Projetos' })).toHaveFocus();
   });
 
-  it('exibe Experiência a partir da fonte centralizada de navegação', () => {
+  it('exibe Sobre a partir da fonte centralizada de navegação', () => {
     render(<MobileNav links={navLinks} />);
 
     openMenu();
 
-    expect(screen.getByRole('link', { name: 'Experiência' })).toHaveAttribute(
-      'href',
-      '#experiencia'
-    );
+    expect(screen.getByRole('link', { name: 'Sobre' })).toHaveAttribute('href', '#sobre-mim');
   });
 
   it('fecha com Escape e restaura o foco no botão', () => {

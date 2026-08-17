@@ -2,20 +2,21 @@ import { describe, it, expect } from 'vitest';
 import { navLinks, SECTION_IDS } from '../constants';
 
 describe('constants', () => {
-  it('navLinks contém link para experiência', () => {
-    const experiencia = navLinks.find((l) => l.href === '#experiencia');
-    expect(experiencia).toBeTruthy();
-    expect(experiencia!.label).toBe('Experiência');
+  it('navLinks contém link para sobre', () => {
+    const sobre = navLinks.find((l) => l.href === '#sobre-mim');
+    expect(sobre).toBeTruthy();
+    expect(sobre!.label).toBe('Sobre');
   });
 
-  it('SECTION_IDS contém experiencia', () => {
-    expect(SECTION_IDS).toContain('experiencia');
+  it('SECTION_IDS contém sobre-mim', () => {
+    expect(SECTION_IDS).toContain('sobre-mim');
   });
 
-  it('href de experiência está sincronizado com SECTION_IDS', () => {
-    const experienciaLink = navLinks.find((l) => l.label === 'Experiência');
-    expect(experienciaLink).toBeTruthy();
-    expect(SECTION_IDS).toContain(experienciaLink!.href.replace('#', ''));
+  it('todos os hrefs de navLinks estão sincronizados com SECTION_IDS', () => {
+    navLinks.forEach((link) => {
+      const id = link.href.replace('#', '');
+      expect(SECTION_IDS).toContain(id);
+    });
   });
 
   it('Contato permanece como CTA', () => {

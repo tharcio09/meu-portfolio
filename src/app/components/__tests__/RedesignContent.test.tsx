@@ -4,7 +4,6 @@ import Footer from '../Footer';
 import Navbar from '../Navbar';
 import About from '../sections/About';
 import Capabilities from '../sections/Capabilities';
-import Experience from '../sections/Experience';
 import Hero from '../sections/Hero';
 import Process from '../sections/Process';
 import Projects from '../sections/Projects';
@@ -17,7 +16,6 @@ describe('conteúdo principal do redesign', () => {
       { label: 'Processo', href: '#processo' },
       { label: 'Habilidades', href: '#habilidades' },
       { label: 'Sobre', href: '#sobre-mim' },
-      { label: 'Experiência', href: '#experiencia' },
       { label: 'Contato', href: '#contato' },
     ]);
   });
@@ -37,8 +35,8 @@ describe('conteúdo principal do redesign', () => {
 
     expect(screen.getByRole('heading', { level: 2, name: 'Como eu trabalho' })).toBeInTheDocument();
     expect(screen.getByText(/Organizo o desenvolvimento em etapas pequenas/i)).toBeInTheDocument();
-    expect(screen.getByText('Passo 6')).toBeInTheDocument();
-    expect(screen.getByText('Entrega e evolução')).toBeInTheDocument();
+    expect(screen.getByText('04')).toBeInTheDocument();
+    expect(screen.getByText('Qualidade & Entrega')).toBeInTheDocument();
     expect(screen.queryByText(/HelpFlow/i)).not.toBeInTheDocument();
   });
 
@@ -46,10 +44,10 @@ describe('conteúdo principal do redesign', () => {
     render(<Capabilities />);
 
     expect(
-      screen.getByRole('heading', { level: 2, name: 'Stack e competências' })
+      screen.getByRole('heading', { level: 2, name: 'Stack e tecnologias' })
     ).toBeInTheDocument();
-    expect(screen.getByLabelText('Tecnologias de Frontend e UI')).toBeInTheDocument();
-    expect(screen.getByLabelText('Tecnologias de Versionamento e ferramentas')).toBeInTheDocument();
+    expect(screen.getByLabelText('Tecnologias de Frontend & UI')).toBeInTheDocument();
+    expect(screen.getByLabelText('Tecnologias de Testes & Versionamento')).toBeInTheDocument();
   });
 
   it('renderiza a nova copy e os acessos principais do Hero', () => {
@@ -74,64 +72,35 @@ describe('conteúdo principal do redesign', () => {
     );
   });
 
-  it('destaca HelpFlow e ManutFlow e mantém três projetos secundários compactos', () => {
+  it('destaca projetos e permite alternar entre eles pelas abas', () => {
     render(<Projects />);
 
-    expect(screen.getByText('Case principal · 01')).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /HelpFlow/i })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /ManutFlow/i })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /DevLinks/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
-    expect(screen.getByText('Case complementar · 02')).toBeInTheDocument();
+    expect(screen.getByText('Minha responsabilidade')).toBeInTheDocument();
+    expect(screen.getByText('Decisão técnica')).toBeInTheDocument();
+    expect(screen.getByText('Implementado')).toBeInTheDocument();
+  });
+
+  it('alterna o projeto ativo ao clicar em uma aba', () => {
+    render(<Projects />);
+
+    const manutFlowTab = screen.getByRole('tab', { name: /ManutFlow/i });
+    fireEvent.click(manutFlowTab);
+
+    expect(manutFlowTab).toHaveAttribute('aria-selected', 'true');
     expect(screen.getByRole('heading', { level: 3, name: 'ManutFlow' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Outros projetos' })).toBeInTheDocument();
-    expect(screen.getAllByText('Minha responsabilidade')).toHaveLength(2);
-    expect(screen.getAllByText('Decisão técnica')).toHaveLength(2);
-    expect(screen.getAllByText('Implementado')).toHaveLength(2);
-    expect(screen.getAllByText('Próximo passo')).toHaveLength(2);
-    expect(
-      screen.getByText(/A experiência prática com suporte e manutenção de TI/i)
-    ).toBeInTheDocument();
-    expect(screen.queryByText('Problema')).not.toBeInTheDocument();
-
-    const secondaryHeadings = screen.getAllByRole('heading', { level: 4 });
-    expect(secondaryHeadings.map((heading) => heading.textContent)).toEqual([
-      'DevLinks',
-      'Lista de Mercado',
-      'Crypto Dashboard',
-    ]);
-    expect(screen.getByText(/Upload de imagem via Cloudinary/i)).toBeInTheDocument();
-  });
-
-  it('filtra projetos mantendo o estado acessível dos controles', () => {
-    render(<Projects />);
-
-    const featuredFilter = screen.getByRole('button', { name: 'Destaque' });
-    const secondaryFilter = screen.getByRole('button', { name: 'Outros projetos' });
-
-    fireEvent.click(secondaryFilter);
-
-    expect(secondaryFilter).toHaveAttribute('aria-pressed', 'true');
     expect(screen.queryByRole('heading', { level: 3, name: 'HelpFlow' })).not.toBeInTheDocument();
-    expect(screen.getByRole('heading', { level: 4, name: 'DevLinks' })).toBeInTheDocument();
-
-    fireEvent.click(featuredFilter);
-
-    expect(featuredFilter).toHaveAttribute('aria-pressed', 'true');
-    expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
-    expect(screen.queryByRole('heading', { level: 4, name: 'DevLinks' })).not.toBeInTheDocument();
   });
 
-  it('separa perfil atual e trajetória anterior sem repetir a busca por vaga', () => {
-    render(
-      <>
-        <About />
-        <Experience />
-      </>
-    );
+  it('unifica perfil atual, formação e trajetória anterior com clareza', () => {
+    render(<About />);
 
-    expect(screen.getByText(/Curso Análise e Desenvolvimento de Sistemas/i)).toHaveTextContent(
-      'julho de 2027'
-    );
+    expect(screen.getByRole('heading', { level: 2, name: 'Sobre mim' })).toBeInTheDocument();
+    expect(screen.getByText('Análise e Desenvolvimento de Sistemas')).toBeInTheDocument();
     expect(screen.getByText('Julho de 2027')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { level: 2, name: 'Experiência' })).toBeInTheDocument();
     expect(screen.getByText('Organização e prazos')).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {

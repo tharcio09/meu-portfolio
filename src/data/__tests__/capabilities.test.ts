@@ -32,7 +32,7 @@ describe('capabilities', () => {
   });
 
   it('inclui Git e GitHub nas tecnologias', () => {
-    const versionamento = capabilities.find((c) => c.title === 'Versionamento e ferramentas');
+    const versionamento = capabilities.find((c) => c.title === 'Testes & Versionamento');
     expect(versionamento).toBeTruthy();
     expect(versionamento!.technologies).toContain('Git');
     expect(versionamento!.technologies).toContain('GitHub');
