@@ -244,6 +244,7 @@ export function ProjectScreenShowcase({
                   quality={90}
                   priority={idx === 0}
                   draggable={false}
+                  unoptimized
                 />
               </div>
             ))}
@@ -358,6 +359,7 @@ export function ProjectScreenShowcase({
               quality={90}
               priority
               decoding="async"
+              unoptimized
             />
 
             {/* Botão Anterior no Modal */}

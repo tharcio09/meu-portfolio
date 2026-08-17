@@ -76,6 +76,7 @@ export function ProjectTabs({ projects }: ProjectTabsProps) {
         {/* Coluna do Showcase Visual e Ações Rápidas */}
         <div className="space-y-3.5 sm:space-y-4 w-full min-w-0">
           <ProjectScreenShowcase
+            key={current.shortTitle}
             screens={current.screens ?? []}
             title={current.title}
             defaultImageUrl={current.imageUrl}
