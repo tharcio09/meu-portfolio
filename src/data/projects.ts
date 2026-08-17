@@ -39,8 +39,9 @@ export const projects: Project[] = [
       'CRUD paginado de tickets com status e prioridades',
       'Validação, rate limiting, testes unitários e E2E',
     ],
-    demoNote: 'Acesso rápido com 1-clique para perfis de Solicitante (Client) e Agente (Suporte).',
-    metrics: ['RBAC (Client/Agent)', 'NextAuth + JWT', 'CRUD Paginado'],
+    demoNote:
+      'Inclui simulador interativo na tela inicial e acesso demo com 1-clique para Solicitante e Agente.',
+    metrics: ['Simulador Interativo', 'RBAC (Client/Agent)', 'NextAuth + JWT'],
     nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
     imageUrl: '/images/helpflow-screenshot.webp',
     imageAlt:
@@ -69,8 +70,9 @@ export const projects: Project[] = [
       'Acesso de demonstração com 1-clique e dados pré-carregados',
       'Dashboard operacional com prazos, indicadores e ordens urgentes',
     ],
-    demoNote: 'Acesso rápido com 1-clique com equipamentos e ordens de serviço pré-cadastrados.',
-    metrics: ['161 testes automatizados', '3 camadas de segurança', 'Supabase RLS'],
+    demoNote:
+      'Inclui simulador interativo de ordens e acesso demo com 1-clique com equipamentos pré-cadastrados.',
+    metrics: ['161 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.webp',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',

@@ -2,10 +2,8 @@ import type { ReactNode } from 'react';
 import { RevealOnScroll } from '../ui/RevealOnScroll';
 import Section from '../ui/Section';
 import { EMAIL, redesSociais, RESUME_URL } from '@/data/constants';
-import { buttonVariants } from '../ui/Button';
-import { cn } from '@/lib/utils';
 import { CopyEmailButton } from '../ui/CopyEmailButton';
-import { ArrowRightIcon, DocumentIcon, GithubIcon, LinkedinIcon, MailIcon } from '../ui/Icons';
+import { DocumentIcon, GithubIcon, LinkedinIcon, MailIcon } from '../ui/Icons';
 
 const icones: Record<string, ReactNode> = {
   LinkedIn: <LinkedinIcon className="h-5 w-5" />,
@@ -30,14 +28,19 @@ const Contact = () => {
               software, com interesse em frontend, backend ou full stack e em times onde eu possa
               aprender, contribuir e evoluir com projetos reais.
             </p>
-            <div className="mt-5">
-              <a
-                href={`mailto:${EMAIL}`}
-                className={cn(buttonVariants({ variant: 'primary', size: 'lg' }))}
-              >
-                Entrar em contato
-                <ArrowRightIcon className="h-4 w-4" />
-              </a>
+            <div className="mt-6 flex flex-col gap-2.5 border-l-2 border-accent pl-4 dark:border-accent-light">
+              <div className="flex items-center gap-2 text-xs font-semibold text-emerald-700 dark:text-emerald-300">
+                <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+                <span>Disponível para contratação</span>
+              </div>
+              <p className="text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                Interesse em{' '}
+                <strong className="text-primary-text dark:text-light-text">Estágio</strong> ou{' '}
+                <strong className="text-primary-text dark:text-light-text">
+                  Desenvolvimento Júnior
+                </strong>{' '}
+                · Atuação Remota, Híbrida ou Presencial (Caeté / BH e região).
+              </p>
             </div>
           </div>
 

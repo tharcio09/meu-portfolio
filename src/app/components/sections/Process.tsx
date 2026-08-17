@@ -48,27 +48,32 @@ const Process = () => {
           </p>
         </div>
 
-        <RevealOnScroll as="ol" className="grid gap-3 sm:grid-cols-2">
+        <RevealOnScroll as="ol" className="grid gap-4 sm:grid-cols-2 relative">
           {processSteps.map((item, index) => (
             <li
               key={item.step}
               className={cn(
-                'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card',
-                'transition-all duration-300 ease-out',
-                'hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark',
+                'group relative flex flex-col justify-between border-l-2 border-accent bg-white/70 p-4 shadow-sm transition-all duration-300 ease-out dark:border-accent-light dark:bg-dark-card/70 sm:p-5',
+                'hover:-translate-y-0.5 hover:bg-white hover:shadow-md dark:hover:bg-dark-card',
+                'border-t border-r border-b border-border-light dark:border-border-dark',
                 index === processSteps.length - 1 &&
                   processSteps.length % 2 !== 0 &&
                   'sm:col-span-2'
               )}
             >
-              <span className="inline-flex items-center border border-accent/25 bg-accent-subtle px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:border-accent-light/25 dark:bg-accent-subtle-dark dark:text-accent-light">
-                Passo {index + 1}
-              </span>
               <div>
-                <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+                <div className="flex items-center justify-between gap-2 border-b border-border-light pb-2.5 dark:border-border-dark">
+                  <span className="inline-flex items-center font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
+                    Passo {index + 1}
+                  </span>
+                  <span className="font-mono text-xs font-semibold text-secondary-text/60 dark:text-dark-text/60">
+                    0{index + 1} / 06
+                  </span>
+                </div>
+                <h3 className="mt-3 text-base font-bold text-primary-text dark:text-light-text">
                   {item.step}
-                </p>
-                <p className="mt-1 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                </h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
                   {item.detail}
                 </p>
               </div>

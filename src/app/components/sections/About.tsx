@@ -95,22 +95,17 @@ const About = () => {
                 </dl>
 
                 <div className="mt-5 border-t border-border-light pt-4 dark:border-border-dark">
-                  <div className="flex items-center justify-between text-xs text-secondary-text dark:text-dark-text">
-                    <span>Evolução acadêmica</span>
-                    <span className="font-mono font-medium text-accent dark:text-accent-light">
-                      Previsão de formatura · Jul/2027
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-secondary-text dark:text-dark-text">
+                    <span className="flex items-center gap-1.5 font-medium text-primary-text dark:text-light-text">
+                      <span
+                        className="h-1.5 w-1.5 rounded-full bg-accent dark:bg-accent-light"
+                        aria-hidden="true"
+                      />
+                      Graduação Tecnológica Superior
                     </span>
-                  </div>
-                  <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full border border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-surface">
-                    <div
-                      className="h-full rounded-full bg-accent dark:bg-accent-light transition-all duration-1000 ease-out"
-                      style={{ width: '45%' }}
-                      role="progressbar"
-                      aria-valuenow={45}
-                      aria-valuemin={0}
-                      aria-valuemax={100}
-                      aria-label="Progresso da graduação em ADS"
-                    />
+                    <span className="font-mono text-accent dark:text-accent-light">
+                      Previsão de formatura · Julho de 2027
+                    </span>
                   </div>
                 </div>
               </article>
