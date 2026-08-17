@@ -42,24 +42,24 @@ const About = () => {
                 </span>
               </div>
 
-              <div className="mt-3 flex items-center gap-4">
-                <div className="relative h-16 w-16 shrink-0 overflow-hidden border border-border-light bg-light-surface dark:border-border-dark dark:bg-dark-card">
+              <div className="mt-3.5 flex flex-col sm:flex-row sm:items-center gap-4">
+                <div className="relative h-28 w-28 sm:h-32 sm:w-32 shrink-0 overflow-hidden rounded-xl border-2 border-border-light bg-light-surface shadow-md dark:border-border-dark dark:bg-dark-card">
                   <Image
                     src="/images/profile.webp"
                     alt="Foto de Tharcio Santos"
                     fill
                     className="object-cover"
-                    sizes="64px"
+                    sizes="(max-width: 640px) 112px, 128px"
                   />
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-primary-text dark:text-light-text">
+                <div className="space-y-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-primary-text dark:text-light-text">
                     Tharcio Santos
                   </h3>
-                  <p className="text-xs text-secondary-text dark:text-dark-text">
+                  <p className="text-xs sm:text-sm font-medium text-secondary-text dark:text-dark-text">
                     Desenvolvedor Full Stack Júnior
                   </p>
-                  <p className="mt-0.5 text-[11px] font-mono text-accent dark:text-accent-light">
+                  <p className="text-xs font-mono text-accent dark:text-accent-light">
                     Caeté / BH e Região · Remoto
                   </p>
                 </div>
