@@ -63,14 +63,14 @@ export const projects: Project[] = [
     decision:
       'Aplicar proteção em três camadas com proxy, getUser() na API e Row Level Security no banco.',
     evidence: [
-      '153 testes automatizados em 13 arquivos',
+      '161 testes automatizados em 15 arquivos',
       'CRUD completo com busca, filtros, paginação e histórico',
       'Proteção em camadas com sessão, user_id e RLS',
       'Acesso de demonstração com 1-clique e dados pré-carregados',
       'Dashboard operacional com prazos, indicadores e ordens urgentes',
     ],
     demoNote: 'Acesso rápido com 1-clique com equipamentos e ordens de serviço pré-cadastrados.',
-    metrics: ['153 testes automatizados', '3 camadas de segurança', 'Supabase RLS'],
+    metrics: ['161 testes automatizados', '3 camadas de segurança', 'Supabase RLS'],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.webp',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
