@@ -26,19 +26,11 @@ export const navLinks: NavLink[] = [
   { href: '#processo', label: 'Processo' },
   { href: '#habilidades', label: 'Habilidades' },
   { href: '#sobre-mim', label: 'Sobre' },
-  { href: '#experiencia', label: 'Experiência' },
   { href: '#contato', label: 'Contato', cta: true },
 ];
 
 /** IDs estáveis para scroll spy — manter sincronizado com os hrefs de navLinks. */
-export const SECTION_IDS = [
-  'projetos',
-  'processo',
-  'habilidades',
-  'sobre-mim',
-  'experiencia',
-  'contato',
-] as const;
+export const SECTION_IDS = ['projetos', 'processo', 'habilidades', 'sobre-mim', 'contato'] as const;
 
 export const redesSociais: SocialLink[] = [
   {

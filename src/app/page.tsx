@@ -1,7 +1,6 @@
 import Hero from './components/sections/Hero';
 import Capabilities from './components/sections/Capabilities';
 import About from './components/sections/About';
-import Experience from './components/sections/Experience';
 import Projects from './components/sections/Projects';
 import Process from './components/sections/Process';
 import Contact from './components/sections/Contact';
@@ -15,7 +14,6 @@ export default function Home() {
       <Process />
       <Capabilities />
       <About />
-      <Experience />
       <Contact />
       <ClientAnalytics />
     </div>

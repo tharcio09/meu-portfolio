@@ -7,41 +7,27 @@ export type Capability = {
 
 export const capabilities: Capability[] = [
   {
-    title: 'Frontend e UI',
-    technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    description:
-      'Interfaces responsivas, componentes reutilizáveis e estados de carregamento e erro.',
+    title: 'Frontend & UI',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+    description: 'Interfaces modernas, componentes modulares, acessibilidade e responsividade.',
     usedIn: ['HelpFlow', 'ManutFlow', 'Crypto Dashboard'],
   },
   {
-    title: 'Backend e autenticação',
-    technologies: ['Node.js', 'APIs REST', 'Prisma', 'NextAuth', 'Zod'],
-    description: 'APIs, CRUD, validação e regras de acesso para fluxos autenticados.',
+    title: 'Backend & Segurança',
+    technologies: ['Node.js', 'APIs REST', 'NextAuth', 'Zod', 'Prisma'],
+    description: 'Controle de acesso em camadas (RBAC), autenticação JWT e validação de esquemas.',
     usedIn: ['HelpFlow', 'ManutFlow'],
   },
   {
-    title: 'Banco de dados e infra',
-    technologies: ['PostgreSQL', 'Supabase', 'Vercel', 'Cloudinary'],
-    description: 'Modelagem relacional, controle de acesso a dados, uploads e deploy.',
+    title: 'Bancos de Dados & Infra',
+    technologies: ['PostgreSQL', 'Supabase', 'Row Level Security', 'Vercel'],
+    description: 'Modelagem relacional, isolamento de dados por tenant com RLS e deploy contínuo.',
     usedIn: ['HelpFlow', 'ManutFlow', 'DevLinks'],
   },
   {
-    title: 'Testes e qualidade',
-    technologies: ['Vitest', 'Cypress'],
-    description: 'Validação automatizada de regras e fluxos principais.',
-    usedIn: ['HelpFlow', 'DevLinks'],
-  },
-  {
-    title: 'PWA e mobile',
-    technologies: ['Service Worker', 'PWA', 'Offline-first'],
-    description:
-      'Experiência offline, persistência local e compartilhamento em dispositivos móveis.',
-    usedIn: ['Lista de Mercado'],
-  },
-  {
-    title: 'Versionamento e ferramentas',
-    technologies: ['Git', 'GitHub', 'GitHub Actions'],
-    description: 'Controle de versão, integração contínua e automação de qualidade do código.',
-    usedIn: ['HelpFlow', 'ManutFlow', 'DevLinks', 'Lista de Mercado', 'Crypto Dashboard'],
+    title: 'Testes & Versionamento',
+    technologies: ['Vitest', 'Cypress', 'Git', 'GitHub', 'GitHub Actions'],
+    description: 'Testes automatizados (unitários e E2E), integração contínua (CI) e fluxo Git.',
+    usedIn: ['HelpFlow', 'ManutFlow', 'DevLinks'],
   },
 ];
