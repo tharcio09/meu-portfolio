@@ -22,6 +22,8 @@ export default defineConfig({
         'src/app/opengraph-image.tsx',
         'src/app/robots.ts',
         'src/app/sitemap.ts',
+        'src/app/components/ClientAnalytics.tsx',
+        'src/app/components/ThemeProvider.tsx',
       ],
       thresholds: {
         statements: 80,

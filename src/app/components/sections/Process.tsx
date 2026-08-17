@@ -5,70 +5,67 @@ import { RevealOnScroll } from '../ui/RevealOnScroll';
 const processSteps = [
   {
     step: 'Entendimento',
-    detail: 'Defino o problema, os usuários e o fluxo principal antes das decisões técnicas.',
+    detail: 'Mapeio o problema real, os perfis de usuários e o fluxo operacional antes do código.',
   },
   {
-    step: 'Planejamento',
-    detail: 'Divido o trabalho em entregas menores e organizo dados, regras e responsabilidades.',
+    step: 'Arquitetura',
+    detail: 'Modelo entidades, permissões de acesso (RBAC/RLS) e contratos de API seguros.',
   },
   {
-    step: 'Implementação',
-    detail: 'Construo interface, regras de negócio e persistência de forma incremental.',
+    step: 'Construção',
+    detail: 'Desenvolvo a interface e a lógica de negócio com TypeScript e componentes limpos.',
   },
   {
-    step: 'Validação',
-    detail: 'Verifico fluxos, estados de carregamento e erro, responsividade e acessibilidade.',
-  },
-  {
-    step: 'Qualidade',
-    detail: 'Executo testes, TypeScript, lint e revisão do diff antes de consolidar a entrega.',
-  },
-  {
-    step: 'Entrega e evolução',
-    detail: 'Publico a aplicação, valido o ambiente e registro os próximos passos do produto.',
+    step: 'Qualidade & Entrega',
+    detail: 'Aplico testes automatizados, validação de acessibilidade e deploy contínuo.',
   },
 ];
 
 const Process = () => {
   return (
-    <Section id="processo" spacing="editorial" className="">
-      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
-        <div>
-          <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
-            <span className="h-px w-10 bg-current" aria-hidden="true" />
-            Processo
+    <Section
+      id="processo"
+      spacing="editorial"
+      className="border-b border-border-light dark:border-border-dark"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="grid gap-4 border-b border-border-light pb-6 dark:border-border-dark md:grid-cols-[0.75fr_1.25fr] md:items-end">
+          <div>
+            <div className="flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent dark:text-accent-light">
+              <span className="h-px w-10 bg-current" aria-hidden="true" />
+              Método
+            </div>
+            <h2 className="mt-2 text-3xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-4xl">
+              Como eu trabalho
+            </h2>
           </div>
-          <h2 className="mt-5 max-w-md text-4xl font-bold tracking-[-0.035em] text-primary-text dark:text-light-text md:text-5xl">
-            Como eu trabalho
-          </h2>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-secondary-text dark:text-dark-text">
-            Organizo o desenvolvimento em etapas pequenas, do entendimento do problema à entrega.
-            Cada etapa reduz incertezas e mantém o projeto funcional, testável e pronto para
-            evoluir.
+          <p className="max-w-xl text-sm leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end">
+            Organizo o desenvolvimento em etapas pequenas e previsíveis, do entendimento do problema
+            à entrega com testes e deploy.
           </p>
         </div>
 
-        <RevealOnScroll as="ol" className="grid gap-3 sm:grid-cols-2">
+        <RevealOnScroll as="ol" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((item, index) => (
             <li
               key={item.step}
               className={cn(
-                'grid min-h-20 grid-cols-[auto_1fr] items-start gap-3 border border-border-light bg-white p-4 shadow-sm dark:border-border-dark dark:bg-dark-card',
-                'transition-all duration-300 ease-out',
-                'hover:-translate-y-1 hover:border-accent-border hover:shadow-xl dark:hover:border-accent-border-dark',
-                index === processSteps.length - 1 &&
-                  processSteps.length % 2 !== 0 &&
-                  'sm:col-span-2'
+                'flex flex-col justify-between border border-border-light bg-white/60 p-4 shadow-sm transition-all duration-200 hover:border-accent/50 dark:border-border-dark dark:bg-dark-card/60'
               )}
             >
-              <span className="inline-flex items-center border border-accent/25 bg-accent-subtle px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent dark:border-accent-light/25 dark:bg-accent-subtle-dark dark:text-accent-light">
-                Passo {index + 1}
-              </span>
               <div>
-                <p className="text-sm font-semibold text-primary-text dark:text-light-text">
+                <div className="flex items-center justify-between border-b border-border-light pb-2 text-xs dark:border-border-dark">
+                  <span className="font-mono font-bold text-accent dark:text-accent-light">
+                    0{index + 1}
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-secondary-text dark:text-dark-text">
+                    Fase
+                  </span>
+                </div>
+                <h3 className="mt-3 text-base font-bold text-primary-text dark:text-light-text">
                   {item.step}
-                </p>
-                <p className="mt-1 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
                   {item.detail}
                 </p>
               </div>

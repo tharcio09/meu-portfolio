@@ -1,9 +1,16 @@
+export type ProjectScreen = {
+  label: string;
+  imageUrl: string;
+  caption: string;
+};
+
 export type Project = {
   title: string;
   shortTitle: string;
   description: string;
   imageUrl?: string;
   imageAlt?: string;
+  screens?: ProjectScreen[];
   githubUrl: string;
   demoUrl?: string;
   demoLabel?: string;
@@ -39,12 +46,40 @@ export const projects: Project[] = [
       'CRUD paginado de tickets com status e prioridades',
       'Validação, rate limiting, testes unitários e E2E',
     ],
-    demoNote: 'Acesso rápido com 1-clique para perfis de Solicitante (Client) e Agente (Suporte).',
-    metrics: ['RBAC (Client/Agent)', 'NextAuth + JWT', 'CRUD Paginado'],
+    demoNote:
+      'Inclui simulador interativo na tela inicial e acesso demo com 1-clique para Solicitante e Agente.',
+    metrics: ['Simulador Interativo', 'RBAC (Client/Agent)', 'NextAuth + JWT'],
     nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
     imageUrl: '/images/helpflow-screenshot.webp',
     imageAlt:
       'Interface do HelpFlow mostrando painel de gestão de chamados com lista de tickets, status e prioridade',
+    screens: [
+      {
+        label: 'Início',
+        imageUrl: '/images/helpflow/home-demonstracao.webp',
+        caption: 'Página inicial com demonstração e simulador de chamados',
+      },
+      {
+        label: 'Login',
+        imageUrl: '/images/helpflow/login.webp',
+        caption: 'Acesso instantâneo para Solicitante e Suporte',
+      },
+      {
+        label: 'Solicitante',
+        imageUrl: '/images/helpflow/dashboard-solicitante.webp',
+        caption: 'Painel do cliente para abertura e acompanhamento de tickets',
+      },
+      {
+        label: 'Agente',
+        imageUrl: '/images/helpflow/dashboard-agent.webp',
+        caption: 'Painel do suporte com triagem e fila de chamados',
+      },
+      {
+        label: 'Detalhes',
+        imageUrl: '/images/helpflow/detalhe-ticket-agent.webp',
+        caption: 'Ficha detalhada do chamado e histórico de mensagens',
+      },
+    ],
     githubUrl: 'https://github.com/tharciosantos/helpflow',
     demoUrl: 'https://helpflow.vercel.app/',
     demoLabel: 'Acessar aplicação',
@@ -69,11 +104,39 @@ export const projects: Project[] = [
       'Acesso de demonstração com 1-clique e dados pré-carregados',
       'Dashboard operacional com prazos, indicadores e ordens urgentes',
     ],
-    demoNote: 'Acesso rápido com 1-clique com equipamentos e ordens de serviço pré-cadastrados.',
-    metrics: ['161 testes automatizados', '3 camadas de segurança', 'Supabase RLS'],
+    demoNote:
+      'Inclui simulador interativo de ordens e acesso demo com 1-clique com equipamentos pré-cadastrados.',
+    metrics: ['161 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.webp',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
+    screens: [
+      {
+        label: 'Início',
+        imageUrl: '/images/manutflow/preview-landing.webp',
+        caption: 'Página inicial com simulador interativo de ordens',
+      },
+      {
+        label: 'Login',
+        imageUrl: '/images/manutflow/preview-login.webp',
+        caption: 'Acesso instantâneo de demonstração com 1-clique',
+      },
+      {
+        label: 'Dashboard',
+        imageUrl: '/images/manutflow/preview-dashboard.webp',
+        caption: 'Painel operacional com métricas de SLA e ordens urgentes',
+      },
+      {
+        label: 'Equipamentos',
+        imageUrl: '/images/manutflow/preview-equipamentos.webp',
+        caption: 'Inventário de equipamentos com QR Code e histórico',
+      },
+      {
+        label: 'Ordens OS',
+        imageUrl: '/images/manutflow/preview-ordens.webp',
+        caption: 'Listagem e filtros de ordens por prioridade e prazo',
+      },
+    ],
     githubUrl: 'https://github.com/tharciosantos/manutflow',
     demoUrl: 'https://manutflow.vercel.app',
     demoLabel: 'Acessar sistema',
@@ -81,48 +144,116 @@ export const projects: Project[] = [
     kind: 'featured',
   },
   {
-    title: 'DevLinks: Perfil e Linktree',
+    title: 'DevLinks: Agregador de Links',
     shortTitle: 'DevLinks',
     description:
-      'Página de perfil com links personalizados, upload de avatar e dados sincronizados entre cliente e servidor.',
+      'Plataforma completa de gerenciamento e compartilhamento de links estilo Linktree, com autenticação JWT, upload de avatar via Cloudinary e perfil público.',
     technicalHighlight:
-      'Upload de imagem via Cloudinary, cache e invalidação com React Query, e testes end-to-end com Cypress no fluxo principal.',
+      'Upload de imagem via Cloudinary, cache e invalidação com TanStack Query, e testes end-to-end com Cypress no fluxo principal.',
     outcome: 'Upload · sincronização · testes E2E',
+    metrics: ['Testes E2E Cypress', 'Cloudinary CDN', 'TanStack Query'],
+    demoNote:
+      'Inclui botão de acesso rápido de demonstração com credenciais e links pré-carregados.',
     imageUrl: '/images/screenshot-devlinks.webp',
-    imageAlt: 'Interface do DevLinks exibindo página de perfil com links personalizados',
+    imageAlt: 'Dashboard do DevLinks com gerenciamento de links e perfil público',
+    screens: [
+      {
+        label: 'Login',
+        imageUrl: '/images/devlinks/tela-login.webp',
+        caption: 'Acesso seguro e botão de demonstração com 1-clique',
+      },
+      {
+        label: 'Cadastro',
+        imageUrl: '/images/devlinks/tela-cadastro.webp',
+        caption: 'Criação de conta simples e rápida para novos usuários',
+      },
+      {
+        label: 'Dashboard',
+        imageUrl: '/images/devlinks/tela-dashboard.webp',
+        caption: 'Gerenciamento de links, especialidade e upload de avatar',
+      },
+      {
+        label: 'Público',
+        imageUrl: '/images/devlinks/tela-perfil-publico.webp',
+        caption: 'Página de perfil pública compartilhável para redes e bio',
+      },
+    ],
     githubUrl: 'https://github.com/tharciosantos/devlinks-web',
     demoUrl: 'https://devlinks-web-api.vercel.app/',
-    tags: ['React', 'React Query', 'Cloudinary', 'Cypress'],
+    demoLabel: 'Acessar aplicação',
+    tags: ['React', 'TanStack Query', 'Cloudinary', 'Cypress', 'Tailwind CSS', 'Node.js'],
     kind: 'secondary',
   },
   {
     title: 'Lista de Mercado: PWA',
     shortTitle: 'Lista de Mercado',
     description:
-      'Aplicação mobile para organizar compras por setores, funcionar sem internet e compartilhar a lista via WhatsApp.',
+      'Aplicação web progressiva para organizar compras por corredores, calcular o progresso da compra em tempo real, auto-categorizar produtos e compartilhar no WhatsApp.',
     technicalHighlight:
-      'PWA com service worker para uso offline, persistência local e compartilhamento da lista via WhatsApp.',
-    outcome: 'PWA · offline-first · compartilhamento',
-    imageUrl: '/images/lista-mercado-screenshot.webp',
-    imageAlt: 'Interface mobile da Lista de Mercado com itens de compras',
+      'PWA offline-first com Service Worker, banco local de 220 itens em 11 setores, auto-categorização inteligente e exportação formatada para o WhatsApp.',
+    outcome: 'PWA · 220 itens · 100% offline',
+    metrics: ['PWA Offline Ready', '220 Itens Mapeados', '11 Setores'],
+    demoNote:
+      'Instalável no smartphone com funcionamento offline e exportação estruturada para o WhatsApp.',
+    imageUrl: '/images/lista-mercado/tela-lista-pendentes.webp',
+    imageAlt: 'Interface do Lista de Mercado com lista de produtos e setores',
+    screens: [
+      {
+        label: 'Lista Vazia',
+        imageUrl: '/images/lista-mercado/tela-lista-vazia.webp',
+        caption: 'Tela inicial com atalho para carregar Lista Mestra de 220 itens',
+      },
+      {
+        label: 'Pendentes',
+        imageUrl: '/images/lista-mercado/tela-lista-pendentes.webp',
+        caption: 'Itens organizados por setores e auto-categorização inteligente',
+      },
+      {
+        label: 'Carrinho',
+        imageUrl: '/images/lista-mercado/tela-carrinho.webp',
+        caption: 'Acompanhamento de progresso e conferência de itens no carrinho',
+      },
+    ],
     githubUrl: 'https://github.com/tharciosantos/lista-mercado',
     demoUrl: 'https://lista-mercado-sage.vercel.app/',
-    tags: ['React', 'Vite', 'PWA', 'Tailwind CSS'],
+    demoLabel: 'Acessar PWA',
+    tags: ['React', 'Vite', 'PWA', 'Tailwind CSS', 'Offline-First'],
     kind: 'secondary',
   },
   {
     title: 'Crypto Dashboard',
     shortTitle: 'Crypto Dashboard',
     description:
-      'Consulta de preços e variações de criptomoedas com busca, páginas de detalhe e tratamento de estados de carregamento e erro.',
+      'Painel financeiro para consulta de cotações, variações de 24h, indicadores de mercado e páginas dinâmicas detalhadas por ativo.',
     technicalHighlight:
-      'Consumo de API externa com rotas dinâmicas, busca client-side e estados assíncronos, incluindo loading, erro e exibição de dados.',
-    outcome: 'API externa · rotas dinâmicas · estados assíncronos',
-    imageUrl: '/images/screenshot-crypto.webp',
-    imageAlt: 'Dashboard de criptomoedas exibindo preços e variações',
+      'Consumo da CoinGecko API no Next.js App Router, rotas dinâmicas /coin/[id], blindagem com dados de contingência e filtros client-side.',
+    outcome: 'FinTech · CoinGecko API · rotas dinâmicas',
+    metrics: ['CoinGecko API Live', 'Next.js App Router', 'FinTech UI'],
+    demoNote:
+      'Monitoramento em tempo real com KPIs de mercado, filtros por altas/baixas e estatísticas detalhadas.',
+    imageUrl: '/images/crypto-dashboard/tela-mercado.webp',
+    imageAlt: 'Dashboard de criptomoedas com cotações, KPIs e filtros',
+    screens: [
+      {
+        label: 'Mercado',
+        imageUrl: '/images/crypto-dashboard/tela-mercado.webp',
+        caption: 'Painel geral com KPIs de mercado e cotações em tempo real',
+      },
+      {
+        label: 'Altas',
+        imageUrl: '/images/crypto-dashboard/tela-maiores-altas.webp',
+        caption: 'Filtro dinâmico por maiores altas e variação percentual de 24h',
+      },
+      {
+        label: 'Detalhes',
+        imageUrl: '/images/crypto-dashboard/tela-detalhes-ativo.webp',
+        caption: 'Página individual do ativo com faixa de preço 24h e estatísticas',
+      },
+    ],
     githubUrl: 'https://github.com/tharciosantos/crypto-dashboard',
     demoUrl: 'https://crypto-dashboard-five-sandy.vercel.app/',
-    tags: ['Next.js', 'React', 'API externa'],
+    demoLabel: 'Acessar dashboard',
+    tags: ['Next.js', 'React', 'CoinGecko API', 'Tailwind CSS', 'FinTech'],
     kind: 'secondary',
   },
 ];

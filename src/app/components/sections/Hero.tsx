@@ -44,8 +44,8 @@ const Hero = () => {
 
         <div className="stagger-3 animate-fade-up opacity-0 mt-7 max-w-2xl">
           <p className="text-base leading-relaxed text-secondary-text dark:text-dark-text md:text-lg">
-            Com projetos publicados e experiência técnica autônoma, desenvolvo aplicações web da
-            interface ao banco de dados, com foco em usabilidade e boas práticas.
+            Com projetos publicados e experiência técnica autônoma, construo aplicações web focadas
+            em usabilidade, controle de acesso seguro e cobertura consistente de testes.
           </p>
         </div>
 
@@ -72,6 +72,36 @@ const Hero = () => {
             <DocumentIcon className="h-4 w-4 transition-transform duration-200 ease-out group-hover:-translate-y-0.5" />
             Baixar currículo
           </a>
+        </div>
+
+        {/* Faixa de Métricas Rápidas */}
+        <div className="stagger-6 animate-fade-up opacity-0 mt-12 grid grid-cols-1 gap-3 border-t border-border-light pt-8 dark:border-border-dark sm:grid-cols-3 sm:gap-4">
+          <div className="border border-border-light bg-white/70 p-3.5 shadow-sm dark:border-border-dark dark:bg-dark-card/70">
+            <span className="font-mono text-xl font-bold tracking-tight text-primary-text dark:text-light-text sm:text-2xl">
+              2 Sistemas
+            </span>
+            <p className="mt-1 text-xs text-secondary-text dark:text-dark-text">
+              Full stack em produção com simulador interativo
+            </p>
+          </div>
+
+          <div className="border border-border-light bg-white/70 p-3.5 shadow-sm dark:border-border-dark dark:bg-dark-card/70">
+            <span className="font-mono text-xl font-bold tracking-tight text-accent dark:text-accent-light sm:text-2xl">
+              161+ Testes
+            </span>
+            <p className="mt-1 text-xs text-secondary-text dark:text-dark-text">
+              Automatizados cobrindo fluxos críticos e APIs
+            </p>
+          </div>
+
+          <div className="border border-border-light bg-white/70 p-3.5 shadow-sm dark:border-border-dark dark:bg-dark-card/70">
+            <span className="font-mono text-xl font-bold tracking-tight text-primary-text dark:text-light-text sm:text-2xl">
+              Segurança
+            </span>
+            <p className="mt-1 text-xs text-secondary-text dark:text-dark-text">
+              Isolamento em camadas (RBAC e Supabase RLS)
+            </p>
+          </div>
         </div>
       </div>
     </Section>
