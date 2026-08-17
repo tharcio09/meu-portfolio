@@ -48,35 +48,29 @@ const Process = () => {
           </p>
         </div>
 
-        <RevealOnScroll as="ol" className="grid gap-4 sm:grid-cols-2 relative">
+        <RevealOnScroll as="ol" className="grid gap-3 sm:grid-cols-2">
           {processSteps.map((item, index) => (
             <li
               key={item.step}
               className={cn(
-                'group relative flex flex-col justify-between border-l-2 border-accent bg-white/70 p-4 shadow-sm transition-all duration-300 ease-out dark:border-accent-light dark:bg-dark-card/70 sm:p-5',
-                'hover:-translate-y-0.5 hover:bg-white hover:shadow-md dark:hover:bg-dark-card',
-                'border-t border-r border-b border-border-light dark:border-border-dark',
+                'flex flex-col border border-border-light bg-white/60 p-4 shadow-sm transition-all duration-200 hover:border-accent/50 dark:border-border-dark dark:bg-dark-card/60',
                 index === processSteps.length - 1 &&
                   processSteps.length % 2 !== 0 &&
                   'sm:col-span-2'
               )}
             >
-              <div>
-                <div className="flex items-center justify-between gap-2 border-b border-border-light pb-2.5 dark:border-border-dark">
-                  <span className="inline-flex items-center font-mono text-[11px] font-bold uppercase tracking-[0.16em] text-accent dark:text-accent-light">
-                    Passo {index + 1}
-                  </span>
-                  <span className="font-mono text-xs font-semibold text-secondary-text/60 dark:text-dark-text/60">
-                    0{index + 1} / 06
-                  </span>
-                </div>
-                <h3 className="mt-3 text-base font-bold text-primary-text dark:text-light-text">
+              <div className="flex items-center gap-2">
+                <span className="font-mono text-xs font-bold text-accent dark:text-accent-light">
+                  Passo {index + 1}
+                </span>
+                <span className="text-border-light dark:text-border-dark">·</span>
+                <h3 className="text-sm font-bold text-primary-text dark:text-light-text">
                   {item.step}
                 </h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
-                  {item.detail}
-                </p>
               </div>
+              <p className="mt-2 text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                {item.detail}
+              </p>
             </li>
           ))}
         </RevealOnScroll>

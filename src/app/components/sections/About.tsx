@@ -93,21 +93,6 @@ const About = () => {
                     </dd>
                   </div>
                 </dl>
-
-                <div className="mt-5 border-t border-border-light pt-4 dark:border-border-dark">
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-secondary-text dark:text-dark-text">
-                    <span className="flex items-center gap-1.5 font-medium text-primary-text dark:text-light-text">
-                      <span
-                        className="h-1.5 w-1.5 rounded-full bg-accent dark:bg-accent-light"
-                        aria-hidden="true"
-                      />
-                      Graduação Tecnológica Superior
-                    </span>
-                    <span className="font-mono text-accent dark:text-accent-light">
-                      Previsão de formatura · Julho de 2027
-                    </span>
-                  </div>
-                </div>
               </article>
             </div>
           </div>
