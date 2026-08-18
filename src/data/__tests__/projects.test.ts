@@ -6,11 +6,11 @@ describe('projects', () => {
     expect(projects.length).toBeGreaterThan(0);
   });
 
-  it('deve ter exatamente dois projetos em destaque (HelpFlow e ManutFlow)', () => {
+  it('deve ter exatamente dois projetos em destaque (ManutFlow e HelpFlow)', () => {
     const destaques = projects.filter((project) => project.kind === 'featured');
     expect(destaques).toHaveLength(2);
-    expect(destaques[0].shortTitle).toBe('HelpFlow');
-    expect(destaques[1].shortTitle).toBe('ManutFlow');
+    expect(destaques[0].shortTitle).toBe('ManutFlow');
+    expect(destaques[1].shortTitle).toBe('HelpFlow');
   });
 
   it('projetos em destaque devem apresentar autoria e evidências técnicas', () => {
@@ -32,7 +32,7 @@ describe('projects', () => {
     expect(manutflow!.kind).toBe('featured');
     expect(manutflow).toHaveProperty('demoUrl');
     expect(manutflow).toHaveProperty('imageUrl');
-    expect(manutflow!.evidence).toContain('161 testes automatizados em 15 arquivos');
+    expect(manutflow!.evidence).toContain('163 testes automatizados em 15 arquivos');
     expect(manutflow!.evidence).toContain('Proteção em camadas com sessão, user_id e RLS');
   });
 
