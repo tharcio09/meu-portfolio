@@ -75,10 +75,10 @@ describe('conteúdo principal do redesign', () => {
   it('destaca projetos e permite alternar entre eles pelas abas', () => {
     render(<Projects />);
 
-    expect(screen.getByRole('tab', { name: /HelpFlow/i })).toBeInTheDocument();
     expect(screen.getByRole('tab', { name: /ManutFlow/i })).toBeInTheDocument();
+    expect(screen.getByRole('tab', { name: /HelpFlow/i })).toBeInTheDocument();
     expect(screen.getByRole('tab', { name: /DevLinks/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 3, name: 'ManutFlow' })).toBeInTheDocument();
     expect(screen.getByText('Minha responsabilidade')).toBeInTheDocument();
     expect(screen.getByText('Decisão técnica')).toBeInTheDocument();
     expect(screen.getByText('Implementado')).toBeInTheDocument();
@@ -87,12 +87,12 @@ describe('conteúdo principal do redesign', () => {
   it('alterna o projeto ativo ao clicar em uma aba', () => {
     render(<Projects />);
 
-    const manutFlowTab = screen.getByRole('tab', { name: /ManutFlow/i });
-    fireEvent.click(manutFlowTab);
+    const helpFlowTab = screen.getByRole('tab', { name: /HelpFlow/i });
+    fireEvent.click(helpFlowTab);
 
-    expect(manutFlowTab).toHaveAttribute('aria-selected', 'true');
-    expect(screen.getByRole('heading', { level: 3, name: 'ManutFlow' })).toBeInTheDocument();
-    expect(screen.queryByRole('heading', { level: 3, name: 'HelpFlow' })).not.toBeInTheDocument();
+    expect(helpFlowTab).toHaveAttribute('aria-selected', 'true');
+    expect(screen.getByRole('heading', { level: 3, name: 'HelpFlow' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 3, name: 'ManutFlow' })).not.toBeInTheDocument();
   });
 
   it('unifica perfil atual, formação e trajetória anterior com clareza', () => {

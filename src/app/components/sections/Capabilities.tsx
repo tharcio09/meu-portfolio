@@ -41,7 +41,7 @@ const Capabilities = () => {
           {capabilities.map((item) => (
             <article
               key={item.title}
-              className="flex flex-col justify-between border border-border-light bg-white/60 p-4 shadow-sm transition-all duration-200 hover:border-accent/40 dark:border-border-dark dark:bg-dark-card/60"
+              className="flex h-full flex-col justify-between border border-border-light bg-white/60 p-4 shadow-sm transition-all duration-200 hover:border-accent/40 dark:border-border-dark dark:bg-dark-card/60"
             >
               <div>
                 <div className="flex items-center gap-2.5 border-b border-border-light pb-3 dark:border-border-dark">

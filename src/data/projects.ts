@@ -29,6 +29,63 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: 'ManutFlow: Controle de Manutenção',
+    shortTitle: 'ManutFlow',
+    description:
+      'Sistema completo para cadastro de equipamentos, abertura de ordens de serviço e dashboard com indicadores de status e prioridade.',
+    responsibility:
+      'Modelagem e implementação do sistema de equipamentos, ordens de serviço e indicadores operacionais. A experiência prática com suporte e manutenção de TI ajudou a aproximar o produto de rotinas reais de equipamentos e manutenção.',
+    challenge:
+      'Garantir que cada usuário acesse apenas seus próprios equipamentos e ordens de manutenção.',
+    decision:
+      'Aplicar proteção em três camadas com proxy, getUser() na API e Row Level Security no banco.',
+    evidence: [
+      '163 testes automatizados em 15 arquivos',
+      'CRUD completo com busca, filtros, paginação e histórico',
+      'Proteção em camadas com sessão, user_id e RLS',
+      'Acesso de demonstração com 1-clique e dados pré-carregados',
+      'Dashboard operacional com prazos, indicadores e ordens urgentes',
+    ],
+    demoNote:
+      'Inclui simulador interativo de ordens e acesso demo com 1-clique com equipamentos pré-cadastrados.',
+    metrics: ['163 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
+    nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
+    imageUrl: '/images/manutflow-screenshot.webp',
+    imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
+    screens: [
+      {
+        label: 'Início',
+        imageUrl: '/images/manutflow/preview-landing.webp',
+        caption: 'Página inicial com simulador interativo de ordens',
+      },
+      {
+        label: 'Login',
+        imageUrl: '/images/manutflow/preview-login.webp',
+        caption: 'Acesso instantâneo de demonstração com 1-clique',
+      },
+      {
+        label: 'Dashboard',
+        imageUrl: '/images/manutflow/preview-dashboard.webp',
+        caption: 'Painel operacional com métricas de SLA e ordens urgentes',
+      },
+      {
+        label: 'Equipamentos',
+        imageUrl: '/images/manutflow/preview-equipamentos.webp',
+        caption: 'Inventário de equipamentos com QR Code e histórico',
+      },
+      {
+        label: 'Ordens OS',
+        imageUrl: '/images/manutflow/preview-ordens.webp',
+        caption: 'Listagem e filtros de ordens por prioridade e prazo',
+      },
+    ],
+    githubUrl: 'https://github.com/tharciosantos/manutflow',
+    demoUrl: 'https://manutflow.vercel.app',
+    demoLabel: 'Acessar sistema',
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'],
+    kind: 'featured',
+  },
+  {
     title: 'HelpFlow: Sistema de Help Desk',
     shortTitle: 'HelpFlow',
     description:
@@ -84,63 +141,6 @@ export const projects: Project[] = [
     demoUrl: 'https://helpflow.vercel.app/',
     demoLabel: 'Acessar aplicação',
     tags: ['Next.js', 'React', 'JavaScript', 'Prisma', 'Supabase', 'NextAuth'],
-    kind: 'featured',
-  },
-  {
-    title: 'ManutFlow: Controle de Manutenção',
-    shortTitle: 'ManutFlow',
-    description:
-      'Sistema completo para cadastro de equipamentos, abertura de ordens de serviço e dashboard com indicadores de status e prioridade.',
-    responsibility:
-      'Modelagem e implementação do sistema de equipamentos, ordens de serviço e indicadores operacionais. A experiência prática com suporte e manutenção de TI ajudou a aproximar o produto de rotinas reais de equipamentos e manutenção.',
-    challenge:
-      'Garantir que cada usuário acesse apenas seus próprios equipamentos e ordens de manutenção.',
-    decision:
-      'Aplicar proteção em três camadas com proxy, getUser() na API e Row Level Security no banco.',
-    evidence: [
-      '161 testes automatizados em 15 arquivos',
-      'CRUD completo com busca, filtros, paginação e histórico',
-      'Proteção em camadas com sessão, user_id e RLS',
-      'Acesso de demonstração com 1-clique e dados pré-carregados',
-      'Dashboard operacional com prazos, indicadores e ordens urgentes',
-    ],
-    demoNote:
-      'Inclui simulador interativo de ordens e acesso demo com 1-clique com equipamentos pré-cadastrados.',
-    metrics: ['161 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
-    nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
-    imageUrl: '/images/manutflow-screenshot.webp',
-    imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
-    screens: [
-      {
-        label: 'Início',
-        imageUrl: '/images/manutflow/preview-landing.webp',
-        caption: 'Página inicial com simulador interativo de ordens',
-      },
-      {
-        label: 'Login',
-        imageUrl: '/images/manutflow/preview-login.webp',
-        caption: 'Acesso instantâneo de demonstração com 1-clique',
-      },
-      {
-        label: 'Dashboard',
-        imageUrl: '/images/manutflow/preview-dashboard.webp',
-        caption: 'Painel operacional com métricas de SLA e ordens urgentes',
-      },
-      {
-        label: 'Equipamentos',
-        imageUrl: '/images/manutflow/preview-equipamentos.webp',
-        caption: 'Inventário de equipamentos com QR Code e histórico',
-      },
-      {
-        label: 'Ordens OS',
-        imageUrl: '/images/manutflow/preview-ordens.webp',
-        caption: 'Listagem e filtros de ordens por prioridade e prazo',
-      },
-    ],
-    githubUrl: 'https://github.com/tharciosantos/manutflow',
-    demoUrl: 'https://manutflow.vercel.app',
-    demoLabel: 'Acessar sistema',
-    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL'],
     kind: 'featured',
   },
   {

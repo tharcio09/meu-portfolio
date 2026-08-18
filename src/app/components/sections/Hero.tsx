@@ -1,9 +1,9 @@
 import { buttonVariants } from '../ui/Button';
-import { RESUME_URL } from '@/data/constants';
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from '@/data/constants';
 import { cn } from '@/lib/utils';
 import { Pill } from '../ui/Pill';
 import Section from '../ui/Section';
-import { ArrowRightIcon, DocumentIcon } from '../ui/Icons';
+import { ArrowRightIcon, DocumentIcon, GithubIcon, LinkedinIcon } from '../ui/Icons';
 import { HeroParallaxBackground } from '../ui/HeroParallaxBackground';
 
 const stackItems = ['Next.js', 'TypeScript', 'React', 'Node.js', 'Supabase'];
@@ -55,7 +55,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <div className="stagger-5 animate-fade-up opacity-0 mt-8 flex flex-col gap-3 sm:flex-row">
+        <div className="stagger-5 animate-fade-up opacity-0 mt-8 flex flex-wrap items-center gap-3">
           <a
             href="#projetos"
             className={cn(buttonVariants({ variant: 'primary', size: 'lg' }), 'group shadow-md')}
@@ -72,6 +72,33 @@ const Hero = () => {
             <DocumentIcon className="h-4 w-4 transition-transform duration-200 ease-out group-hover:-translate-y-0.5" />
             Baixar currículo
           </a>
+
+          <div className="flex items-center gap-2 sm:ml-1">
+            <a
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Tharcio Santos"
+              className={cn(
+                buttonVariants({ variant: 'outline', size: 'icon' }),
+                'h-11 w-11 border-border-light bg-white hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-light dark:hover:text-accent-light'
+              )}
+            >
+              <GithubIcon className="h-4 w-4" />
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Tharcio Santos"
+              className={cn(
+                buttonVariants({ variant: 'outline', size: 'icon' }),
+                'h-11 w-11 border-border-light bg-white hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-light dark:hover:text-accent-light'
+              )}
+            >
+              <LinkedinIcon className="h-4 w-4" />
+            </a>
+          </div>
         </div>
 
         {/* Faixa de Métricas Rápidas */}
@@ -87,7 +114,7 @@ const Hero = () => {
 
           <div className="border border-border-light bg-white/70 p-3.5 shadow-sm dark:border-border-dark dark:bg-dark-card/70">
             <span className="font-mono text-xl font-bold tracking-tight text-accent dark:text-accent-light sm:text-2xl">
-              161+ Testes
+              220+ Testes
             </span>
             <p className="mt-1 text-xs text-secondary-text dark:text-dark-text">
               Automatizados cobrindo fluxos críticos e APIs
