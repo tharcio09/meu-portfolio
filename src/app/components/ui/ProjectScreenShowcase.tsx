@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
+import { SearchIcon, ChevronLeftIcon, ChevronRightIcon, CloseIcon } from './Icons';
 import { cn } from '@/lib/utils';
 
 export type ProjectScreen = {
@@ -13,13 +14,24 @@ export type ProjectScreen = {
 type ProjectScreenShowcaseProps = {
   screens: ProjectScreen[];
   title: string;
+  demoUrl?: string;
   defaultImageUrl?: string;
   defaultImageAlt?: string;
 };
 
+function extractDomain(url?: string): string {
+  if (!url) return 'app.local';
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url.replace(/^https?:\/\//, '').split('/')[0] || 'app.local';
+  }
+}
+
 export function ProjectScreenShowcase({
   screens,
   title,
+  demoUrl,
   defaultImageUrl,
   defaultImageAlt,
 }: ProjectScreenShowcaseProps) {
@@ -151,9 +163,7 @@ export function ProjectScreenShowcase({
               title="Ampliar visualização em tela cheia com alta resolução"
               aria-label="Ampliar tela do projeto em alta resolução"
             >
-              <span className="text-xs" aria-hidden="true">
-                🔍
-              </span>
+              <SearchIcon className="h-3.5 w-3.5 text-secondary-text dark:text-dark-text" />
               <span className="font-sans font-medium text-[11px] sm:text-xs">Ampliar</span>
             </button>
           </div>
@@ -214,15 +224,7 @@ export function ProjectScreenShowcase({
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
             </div>
             <span className="font-mono text-[8px] sm:text-[9px] text-secondary-text dark:text-dark-text truncate max-w-[160px] sm:max-w-none">
-              {title.toLowerCase().includes('helpflow')
-                ? 'helpflow.vercel.app'
-                : title.toLowerCase().includes('devlinks')
-                  ? 'devlinks-web-api.vercel.app'
-                  : title.toLowerCase().includes('mercado')
-                    ? 'lista-mercado-sage.vercel.app'
-                    : title.toLowerCase().includes('crypto')
-                      ? 'crypto-dashboard-five-sandy.vercel.app'
-                      : 'manutflow.vercel.app'}
+              {extractDomain(demoUrl)}
             </span>
             <span className="h-1.5 w-1.5 shrink-0" aria-hidden="true" />
           </div>
@@ -263,7 +265,7 @@ export function ProjectScreenShowcase({
                 className="absolute left-1.5 sm:left-2 top-1/2 -translate-y-1/2 z-20 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-border-light bg-white/95 text-primary-text opacity-85 sm:opacity-0 shadow-md backdrop-blur-sm transition-all hover:bg-white group-hover/showcase:opacity-95 dark:border-border-dark dark:bg-dark-surface/95 dark:text-light-text dark:hover:bg-dark-surface cursor-pointer text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-light active:scale-95"
                 aria-label="Tela anterior"
               >
-                ‹
+                <ChevronLeftIcon className="h-4 w-4" />
               </button>
               <button
                 type="button"
@@ -274,7 +276,7 @@ export function ProjectScreenShowcase({
                 className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 z-20 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-border-light bg-white/95 text-primary-text opacity-85 sm:opacity-0 shadow-md backdrop-blur-sm transition-all hover:bg-white group-hover/showcase:opacity-95 dark:border-border-dark dark:bg-dark-surface/95 dark:text-light-text dark:hover:bg-dark-surface cursor-pointer text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-light active:scale-95"
                 aria-label="Próxima tela"
               >
-                ›
+                <ChevronRightIcon className="h-4 w-4" />
               </button>
             </>
           )}
@@ -340,7 +342,7 @@ export function ProjectScreenShowcase({
                 className="px-3 sm:px-4 py-2 rounded-lg sm:rounded-xl bg-dark-surface hover:bg-dark-card active:scale-95 text-light-text text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer border border-border-dark shadow-md min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light"
                 aria-label="Fechar tela cheia"
               >
-                <span aria-hidden="true">✕</span>
+                <CloseIcon className="h-3.5 w-3.5" />
                 <span className="font-mono text-[11px] sm:text-xs">Fechar</span>
               </button>
             </div>
@@ -371,7 +373,7 @@ export function ProjectScreenShowcase({
                 aria-label="Tela anterior"
                 title="Tela anterior"
               >
-                ‹
+                <ChevronLeftIcon className="h-6 w-6 sm:h-8 sm:w-8" />
               </button>
             )}
 
@@ -384,7 +386,7 @@ export function ProjectScreenShowcase({
                 aria-label="Próxima tela"
                 title="Próxima tela"
               >
-                ›
+                <ChevronRightIcon className="h-6 w-6 sm:h-8 sm:w-8" />
               </button>
             )}
           </div>
