@@ -79,10 +79,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub de Tharcio Santos"
-              className={cn(
-                buttonVariants({ variant: 'outline', size: 'icon' }),
-                'h-11 w-11 border-border-light bg-white hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-light dark:hover:text-accent-light'
-              )}
+              className={cn(buttonVariants({ variant: 'outline', size: 'icon' }), 'h-11 w-11')}
             >
               <GithubIcon className="h-4 w-4" />
             </a>
@@ -91,10 +88,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn de Tharcio Santos"
-              className={cn(
-                buttonVariants({ variant: 'outline', size: 'icon' }),
-                'h-11 w-11 border-border-light bg-white hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-card dark:hover:border-accent-light dark:hover:text-accent-light'
-              )}
+              className={cn(buttonVariants({ variant: 'outline', size: 'icon' }), 'h-11 w-11')}
             >
               <LinkedinIcon className="h-4 w-4" />
             </a>

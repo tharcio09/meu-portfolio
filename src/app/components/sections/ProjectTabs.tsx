@@ -109,6 +109,7 @@ export function ProjectTabs({ projects }: ProjectTabsProps) {
             key={current.shortTitle}
             screens={current.screens ?? []}
             title={current.title}
+            demoUrl={current.demoUrl}
             defaultImageUrl={current.imageUrl}
             defaultImageAlt={current.imageAlt}
           />

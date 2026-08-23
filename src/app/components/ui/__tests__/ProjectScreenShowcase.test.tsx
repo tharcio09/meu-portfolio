@@ -161,4 +161,16 @@ describe('ProjectScreenShowcase', () => {
     const { container } = render(<ProjectScreenShowcase screens={[]} title="Vazio" />);
     expect(container.firstChild).toBeNull();
   });
+
+  it('exibe o domínio extraído dinamicamente a partir de demoUrl', () => {
+    render(
+      <ProjectScreenShowcase
+        screens={mockScreens}
+        title="HelpFlow"
+        demoUrl="https://helpflow.vercel.app/demo"
+      />
+    );
+
+    expect(screen.getByText('helpflow.vercel.app')).toBeInTheDocument();
+  });
 });
