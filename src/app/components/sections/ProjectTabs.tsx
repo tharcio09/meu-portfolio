@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import type { Project } from '@/data/projects';
 import { buttonVariants } from '../ui/Button';
 import { Pill } from '../ui/Pill';
@@ -14,7 +14,32 @@ type ProjectTabsProps = {
 
 export function ProjectTabs({ projects }: ProjectTabsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const current = projects[activeIndex] ?? projects[0];
+
+  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
+    const total = projects.length;
+    let nextIndex = index;
+
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      nextIndex = (index + 1) % total;
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      nextIndex = (index - 1 + total) % total;
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      nextIndex = 0;
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      nextIndex = total - 1;
+    }
+
+    if (nextIndex !== index) {
+      setActiveIndex(nextIndex);
+      tabRefs.current[nextIndex]?.focus();
+    }
+  };
 
   return (
     <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6 w-full min-w-0">
@@ -29,13 +54,18 @@ export function ProjectTabs({ projects }: ProjectTabsProps) {
           return (
             <button
               key={p.shortTitle}
+              ref={(el) => {
+                tabRefs.current[idx] = el;
+              }}
               role="tab"
               aria-selected={isActive}
+              tabIndex={isActive ? 0 : -1}
               aria-controls={`project-panel-${idx}`}
               id={`project-tab-${idx}`}
               onClick={() => setActiveIndex(idx)}
+              onKeyDown={(e) => handleKeyDown(e, idx)}
               className={cn(
-                'group flex shrink-0 items-center gap-1.5 sm:gap-2 border px-3 sm:px-3.5 py-1.5 sm:py-2 text-xs font-semibold transition-all duration-200 cursor-pointer min-h-[36px] sm:min-h-[40px]',
+                'group flex shrink-0 items-center gap-1.5 sm:gap-2 border px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-semibold transition-all duration-200 cursor-pointer min-h-[40px] sm:min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-light',
                 isActive
                   ? 'border-accent bg-accent text-white shadow-sm dark:border-accent-light dark:bg-accent-light dark:text-dark-bg'
                   : 'border-border-light bg-white text-secondary-text hover:border-accent/40 hover:text-accent dark:border-border-dark dark:bg-dark-card dark:text-dark-text dark:hover:border-accent-light/40 dark:hover:text-accent-light'

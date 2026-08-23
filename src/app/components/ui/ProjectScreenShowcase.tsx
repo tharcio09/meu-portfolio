@@ -143,16 +143,18 @@ export function ProjectScreenShowcase({
               </span>
             </div>
 
-            {/* Botão de Ampliação Claro, Compacto e Sem Quebra */}
+            {/* Botão de Ampliação Claro, Compacto com Tokens Semânticos */}
             <button
               type="button"
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-100 dark:border-slate-700 shadow-xs transition-all cursor-pointer shrink-0 min-h-[30px]"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-light-surface hover:bg-white text-primary-text border border-border-light dark:bg-dark-surface dark:hover:bg-dark-card dark:text-light-text dark:border-border-dark shadow-xs transition-all cursor-pointer shrink-0 min-h-[36px] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-light"
               title="Ampliar visualização em tela cheia com alta resolução"
-              aria-label="Ampliar tela do projeto"
+              aria-label="Ampliar tela do projeto em alta resolução"
             >
-              <span className="text-xs">🔍</span>
-              <span className="font-sans font-medium text-[11px]">Ampliar</span>
+              <span className="text-xs" aria-hidden="true">
+                🔍
+              </span>
+              <span className="font-sans font-medium text-[11px] sm:text-xs">Ampliar</span>
             </button>
           </div>
 
@@ -202,16 +204,16 @@ export function ProjectScreenShowcase({
           )}
         </div>
 
-        {/* Moldura de Navegador com Aspect Ratio Fixo */}
-        <div className="relative aspect-[16/9] w-full min-w-0 overflow-hidden rounded border border-border-light bg-slate-100 shadow-inner dark:border-border-dark dark:bg-[#0b132b]">
+        {/* Moldura de Navegador com Aspect Ratio Fixo e Tokens Semânticos */}
+        <div className="relative aspect-[16/9] w-full min-w-0 overflow-hidden rounded border border-border-light bg-light-surface shadow-inner dark:border-border-dark dark:bg-dark-card">
           {/* Barra de Janela do Navegador */}
-          <div className="absolute top-0 left-0 right-0 z-20 flex h-6 items-center justify-between border-b border-border-light bg-slate-200/90 px-2 sm:px-2.5 backdrop-blur-sm dark:border-white/10 dark:bg-slate-900/90">
+          <div className="absolute top-0 left-0 right-0 z-20 flex h-6 items-center justify-between border-b border-border-light bg-light-surface/95 px-2 sm:px-2.5 backdrop-blur-sm dark:border-border-dark dark:bg-dark-surface/95">
             <div className="flex items-center gap-1 shrink-0" aria-hidden="true">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500/80" />
               <span className="h-1.5 w-1.5 rounded-full bg-amber-500/80" />
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500/80" />
             </div>
-            <span className="font-mono text-[8px] sm:text-[9px] text-slate-600 dark:text-slate-400 truncate max-w-[160px] sm:max-w-none">
+            <span className="font-mono text-[8px] sm:text-[9px] text-secondary-text dark:text-dark-text truncate max-w-[160px] sm:max-w-none">
               {title.toLowerCase().includes('helpflow')
                 ? 'helpflow.vercel.app'
                 : title.toLowerCase().includes('devlinks')
@@ -244,13 +246,12 @@ export function ProjectScreenShowcase({
                   quality={90}
                   priority={idx === 0}
                   draggable={false}
-                  unoptimized
                 />
               </div>
             ))}
           </div>
 
-          {/* Botões de Navegação Manual (< e >) */}
+          {/* Botões de Navegação Manual (< e >) com Touch Targets Otimizados */}
           {total > 1 && (
             <>
               <button
@@ -259,7 +260,7 @@ export function ProjectScreenShowcase({
                   e.stopPropagation();
                   prevSlide();
                 }}
-                className="absolute left-1.5 sm:left-2 top-1/2 -translate-y-1/2 z-20 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border border-border-light bg-white/90 text-primary-text opacity-70 sm:opacity-0 shadow-md backdrop-blur-sm transition-all hover:bg-white group-hover/showcase:opacity-90 dark:border-border-dark dark:bg-dark-bg/90 dark:text-light-text dark:hover:bg-dark-bg cursor-pointer text-sm sm:text-base"
+                className="absolute left-1.5 sm:left-2 top-1/2 -translate-y-1/2 z-20 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-border-light bg-white/95 text-primary-text opacity-85 sm:opacity-0 shadow-md backdrop-blur-sm transition-all hover:bg-white group-hover/showcase:opacity-95 dark:border-border-dark dark:bg-dark-surface/95 dark:text-light-text dark:hover:bg-dark-surface cursor-pointer text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-light active:scale-95"
                 aria-label="Tela anterior"
               >
                 ‹
@@ -270,7 +271,7 @@ export function ProjectScreenShowcase({
                   e.stopPropagation();
                   nextSlide();
                 }}
-                className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 z-20 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border border-border-light bg-white/90 text-primary-text opacity-70 sm:opacity-0 shadow-md backdrop-blur-sm transition-all hover:bg-white group-hover/showcase:opacity-90 dark:border-border-dark dark:bg-dark-bg/90 dark:text-light-text dark:hover:bg-dark-bg cursor-pointer text-sm sm:text-base"
+                className="absolute right-1.5 sm:right-2 top-1/2 -translate-y-1/2 z-20 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-border-light bg-white/95 text-primary-text opacity-85 sm:opacity-0 shadow-md backdrop-blur-sm transition-all hover:bg-white group-hover/showcase:opacity-95 dark:border-border-dark dark:bg-dark-surface/95 dark:text-light-text dark:hover:bg-dark-surface cursor-pointer text-sm sm:text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent dark:focus-visible:ring-accent-light active:scale-95"
                 aria-label="Próxima tela"
               >
                 ›
@@ -300,7 +301,7 @@ export function ProjectScreenShowcase({
       {/* Modal Lightbox de Alta Resolução em Tela Cheia (Com suporte a Swipe no Mobile) */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950/96 p-2.5 sm:p-6 overflow-hidden transition-opacity duration-200 transform-gpu"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-dark-bg/95 p-2.5 sm:p-6 overflow-hidden backdrop-blur-md transition-opacity duration-200 transform-gpu"
           onClick={() => setIsModalOpen(false)}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
@@ -311,43 +312,43 @@ export function ProjectScreenShowcase({
         >
           {/* Card Flutuante da Barra Superior do Modal */}
           <div
-            className="w-full max-w-6xl mb-2 sm:mb-3.5 p-2.5 sm:p-4 bg-slate-900 border border-slate-800 rounded-xl sm:rounded-2xl shadow-xl flex items-center justify-between gap-2 sm:gap-3 text-white shrink-0"
+            className="w-full max-w-6xl mb-2 sm:mb-3.5 p-2.5 sm:p-4 bg-dark-card border border-border-dark rounded-xl sm:rounded-2xl shadow-xl flex items-center justify-between gap-2 sm:gap-3 text-light-text shrink-0"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                <span className="font-extrabold text-xs sm:text-base text-white tracking-tight">
+                <span className="font-extrabold text-xs sm:text-base text-light-text tracking-tight">
                   {title}
                 </span>
-                <span className="text-slate-600">·</span>
-                <span className="font-mono text-[10px] sm:text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                <span className="text-dark-text">·</span>
+                <span className="font-mono text-[10px] sm:text-xs font-bold text-accent-light bg-accent-subtle-dark px-2 py-0.5 rounded-md border border-accent-border-dark">
                   0{currentIndex + 1} / 0{total} · {activeItem.label}
                 </span>
               </div>
-              <p className="text-[11px] sm:text-xs text-slate-300 truncate mt-0.5 sm:mt-1">
+              <p className="text-[11px] sm:text-xs text-dark-text truncate mt-0.5 sm:mt-1">
                 {activeItem.caption}
               </p>
             </div>
 
             <div className="flex items-center gap-2 shrink-0">
-              <span className="text-[11px] font-mono text-slate-400 hidden lg:inline">
+              <span className="text-[11px] font-mono text-dark-text hidden lg:inline">
                 Navegue com as setas ou deslize na tela
               </span>
               <button
                 type="button"
                 onClick={() => setIsModalOpen(false)}
-                className="px-2.5 sm:px-3.5 py-1.5 rounded-lg sm:rounded-xl bg-slate-800 hover:bg-slate-700 active:scale-95 text-white text-xs font-bold flex items-center gap-1 transition-all cursor-pointer border border-slate-700 shadow-md min-h-[36px]"
+                className="px-3 sm:px-4 py-2 rounded-lg sm:rounded-xl bg-dark-surface hover:bg-dark-card active:scale-95 text-light-text text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer border border-border-dark shadow-md min-h-[40px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light"
                 aria-label="Fechar tela cheia"
               >
-                <span>✕</span>
+                <span aria-hidden="true">✕</span>
                 <span className="font-mono text-[11px] sm:text-xs">Fechar</span>
               </button>
             </div>
           </div>
 
-          {/* Imagem em Resolução Máxima (1920x1080) com Controles Laterais */}
+          {/* Imagem em Resolução Máxima com Controles Laterais */}
           <div
-            className="relative w-full max-w-6xl aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl flex items-center justify-center shrink-0 transform-gpu"
+            className="relative w-full max-w-6xl aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden bg-dark-bg border border-border-dark shadow-2xl flex items-center justify-center shrink-0 transform-gpu"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -359,15 +360,14 @@ export function ProjectScreenShowcase({
               quality={90}
               priority
               decoding="async"
-              unoptimized
             />
 
-            {/* Botão Anterior no Modal */}
+            {/* Botão Anterior no Modal com Touch Target Confortável (≥44px) */}
             {total > 1 && (
               <button
                 type="button"
                 onClick={prevSlide}
-                className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-20 h-9 w-9 sm:h-14 sm:w-14 rounded-full bg-slate-900/85 hover:bg-slate-900 active:scale-95 text-white text-lg sm:text-2xl flex items-center justify-center border border-slate-700/80 backdrop-blur-sm transition-all cursor-pointer shadow-xl"
+                className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 z-20 min-h-[44px] min-w-[44px] sm:h-14 sm:w-14 rounded-full bg-dark-card/90 hover:bg-dark-card active:scale-95 text-light-text text-lg sm:text-2xl flex items-center justify-center border border-border-dark backdrop-blur-sm transition-all cursor-pointer shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light"
                 aria-label="Tela anterior"
                 title="Tela anterior"
               >
@@ -375,12 +375,12 @@ export function ProjectScreenShowcase({
               </button>
             )}
 
-            {/* Botão Próximo no Modal */}
+            {/* Botão Próximo no Modal com Touch Target Confortável (≥44px) */}
             {total > 1 && (
               <button
                 type="button"
                 onClick={nextSlide}
-                className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-20 h-9 w-9 sm:h-14 sm:w-14 rounded-full bg-slate-900/85 hover:bg-slate-900 active:scale-95 text-white text-lg sm:text-2xl flex items-center justify-center border border-slate-700/80 backdrop-blur-sm transition-all cursor-pointer shadow-xl"
+                className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 z-20 min-h-[44px] min-w-[44px] sm:h-14 sm:w-14 rounded-full bg-dark-card/90 hover:bg-dark-card active:scale-95 text-light-text text-lg sm:text-2xl flex items-center justify-center border border-border-dark backdrop-blur-sm transition-all cursor-pointer shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-light"
                 aria-label="Próxima tela"
                 title="Próxima tela"
               >
