@@ -63,8 +63,8 @@ export const projects: Project[] = [
         badge: 'Supabase RLS',
       },
       {
-        label: 'Suíte de 163 Testes',
-        url: 'https://github.com/tharciosantos/manutflow/blob/main/vitest.config.ts',
+        label: '163 Testes por Feature (Domínio)',
+        url: 'https://github.com/tharciosantos/manutflow/tree/main/src/features',
         badge: 'Vitest',
       },
     ],
