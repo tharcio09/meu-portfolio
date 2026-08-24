@@ -43,6 +43,20 @@ export function ProjectTabs({ projects }: ProjectTabsProps) {
 
   return (
     <div className="mt-6 sm:mt-8 space-y-4 sm:space-y-6 w-full min-w-0">
+      {/* Guia de Navegação e Contador de Projetos */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2">
+        <p className="text-xs font-medium text-secondary-text dark:text-dark-text flex items-center gap-1.5">
+          <span
+            className="h-1.5 w-1.5 rounded-full bg-accent dark:bg-accent-light"
+            aria-hidden="true"
+          />
+          <span>Selecione um projeto para ver telas, arquitetura e regras de negócio:</span>
+        </p>
+        <span className="font-mono text-[11px] font-semibold text-accent dark:text-accent-light self-start sm:self-auto">
+          {projects.length} projetos disponíveis
+        </span>
+      </div>
+
       {/* Barra de Abas de Projetos */}
       <div
         role="tablist"

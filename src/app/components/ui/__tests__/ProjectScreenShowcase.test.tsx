@@ -25,8 +25,8 @@ describe('ProjectScreenShowcase', () => {
   it('renderiza corretamente com as telas e os segmentos', () => {
     render(<ProjectScreenShowcase screens={mockScreens} title="HelpFlow" />);
 
-    expect(screen.getByText('Tour Visual')).toBeInTheDocument();
-    expect(screen.getByText('01 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Telas do Sistema')).toBeInTheDocument();
+    expect(screen.getByText('Tela 01 de 03')).toBeInTheDocument();
     expect(screen.getByText('Início')).toBeInTheDocument();
     expect(screen.getByText('Login')).toBeInTheDocument();
     expect(screen.getByText('Painel')).toBeInTheDocument();
@@ -39,7 +39,7 @@ describe('ProjectScreenShowcase', () => {
     const loginBtn = screen.getByRole('button', { name: /Ir para tela: Login/i });
     fireEvent.click(loginBtn);
 
-    expect(screen.getByText('02 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 02 de 03')).toBeInTheDocument();
     expect(screen.getByText(/Tela de autenticação/i)).toBeInTheDocument();
   });
 
@@ -50,22 +50,22 @@ describe('ProjectScreenShowcase', () => {
     const prevBtn = screen.getByRole('button', { name: /Tela anterior/i });
 
     fireEvent.click(nextBtn);
-    expect(screen.getByText('02 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 02 de 03')).toBeInTheDocument();
 
     fireEvent.click(prevBtn);
-    expect(screen.getByText('01 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 01 de 03')).toBeInTheDocument();
   });
 
   it('avança automaticamente com o timer de auto-play', () => {
     render(<ProjectScreenShowcase screens={mockScreens} title="HelpFlow" />);
 
-    expect(screen.getByText('01 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 01 de 03')).toBeInTheDocument();
 
     act(() => {
       vi.advanceTimersByTime(4000);
     });
 
-    expect(screen.getByText('02 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 02 de 03')).toBeInTheDocument();
   });
 
   it('pausa o auto-play ao passar o mouse por cima e retoma ao sair', () => {
@@ -79,7 +79,7 @@ describe('ProjectScreenShowcase', () => {
     });
 
     // Não deve ter avançado enquanto pausado
-    expect(screen.getByText('01 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 01 de 03')).toBeInTheDocument();
 
     fireEvent.mouseLeave(container);
 
@@ -88,7 +88,7 @@ describe('ProjectScreenShowcase', () => {
     });
 
     // Deve avançar após o mouse sair
-    expect(screen.getByText('02 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 02 de 03')).toBeInTheDocument();
   });
 
   it('abre o modal de ampliação em tela cheia e permite fechar com o botão e com a tecla ESC', () => {
@@ -102,10 +102,10 @@ describe('ProjectScreenShowcase', () => {
 
     // Navega no modal com setas do teclado
     fireEvent.keyDown(document, { key: 'ArrowRight' });
-    expect(screen.getByText('02 / 03 · Login')).toBeInTheDocument();
+    expect(screen.getByText('Tela 02 de 03 · Login')).toBeInTheDocument();
 
     fireEvent.keyDown(document, { key: 'ArrowLeft' });
-    expect(screen.getByText('01 / 03 · Início')).toBeInTheDocument();
+    expect(screen.getByText('Tela 01 de 03 · Início')).toBeInTheDocument();
 
     // Fecha com tecla Escape
     fireEvent.keyDown(document, { key: 'Escape' });
@@ -134,14 +134,14 @@ describe('ProjectScreenShowcase', () => {
     fireEvent.touchMove(container, { targetTouches: [{ clientX: 100 }] });
     fireEvent.touchEnd(container);
 
-    expect(screen.getByText('02 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 02 de 03')).toBeInTheDocument();
 
     // Desliza para a direita (slide anterior)
     fireEvent.touchStart(container, { targetTouches: [{ clientX: 100 }] });
     fireEvent.touchMove(container, { targetTouches: [{ clientX: 200 }] });
     fireEvent.touchEnd(container);
 
-    expect(screen.getByText('01 / 03')).toBeInTheDocument();
+    expect(screen.getByText('Tela 01 de 03')).toBeInTheDocument();
   });
 
   it('renderiza fallback caso não haja lista de telas', () => {

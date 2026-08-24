@@ -24,7 +24,7 @@ module.exports = {
         'light-text': '#edf6f3',
         'dark-text': '#9fb2ae',
         'primary-text': '#12201f',
-        'secondary-text': '#52615f',
+        'secondary-text': '#425250',
 
         /* Bordas */
         'border-light': '#dce5e2',
