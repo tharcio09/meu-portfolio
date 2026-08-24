@@ -24,7 +24,7 @@ A interface segue uma direção editorial: hierarquia visual clara, leitura ráp
 
 - **Portfólio editorial:** projetos apresentados por problema, solução, entrega e decisões técnicas.
 - **HelpFlow como case principal:** aplicação com autenticação, recuperação de senha, controle de acesso, regras de negócio, banco relacional e deploy.
-- **ManutFlow como case complementar:** produto em produção com autenticação, isolamento de dados, gestão de manutenção e 153 testes automatizados em 13 arquivos.
+- **ManutFlow como case complementar:** produto em produção com autenticação, isolamento de dados, gestão de manutenção e 163 testes automatizados em 15 arquivos.
 - **Projetos complementares compactos:** DevLinks, Lista de Mercado e Crypto Dashboard aparecem como evidências adicionais.
 - **Processo visível:** seção "Como eu trabalho" apresenta o fluxo de análise, escopo, implementação, teste e revisão.
 - **Competências:** tecnologias organizadas por contexto de uso, em vez de uma lista genérica de ferramentas.
@@ -78,7 +78,7 @@ Sistema de help desk Full Stack para abertura, acompanhamento e gerenciamento de
 
 Sistema completo para controle de equipamentos, ordens de manutenção, responsáveis, prioridades e histórico. Inclui autenticação com Supabase Auth, três camadas de segurança (proxy.ts, getUser(), RLS), cadastro e gestão de equipamentos, ordens de serviço com controle de status, filtros, busca textual e dashboard com indicadores.
 
-- **Destaques:** Acesso demo com 1-clique e dados pré-carregados, 153 testes automatizados em 13 arquivos, CRUD com busca, filtros, paginação, histórico e acompanhamento de prazos.
+- **Destaques:** Acesso demo com 1-clique e dados pré-carregados, 163 testes automatizados em 15 arquivos, CRUD com busca, filtros, paginação, histórico e acompanhamento de prazos.
 - **Stack:** Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL
 - **Links:** [Aplicação](https://manutflow.vercel.app) · [Código](https://github.com/tharciosantos/manutflow)
 
