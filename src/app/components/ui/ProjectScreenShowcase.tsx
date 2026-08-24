@@ -147,11 +147,11 @@ export function ProjectScreenShowcase({
           <div className="flex items-center justify-between text-xs gap-2 min-w-0">
             <div className="flex items-center gap-1.5 min-w-0">
               <span className="font-mono text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent dark:text-accent-light shrink-0">
-                Tour Visual
+                Telas do Sistema
               </span>
               <span className="text-secondary-text dark:text-dark-text">·</span>
               <span className="font-mono text-[10px] sm:text-[11px] font-semibold text-secondary-text dark:text-dark-text shrink-0">
-                0{currentIndex + 1} / 0{total}
+                Tela 0{currentIndex + 1} de 0{total}
               </span>
             </div>
 
@@ -324,7 +324,7 @@ export function ProjectScreenShowcase({
                 </span>
                 <span className="text-dark-text">·</span>
                 <span className="font-mono text-[10px] sm:text-xs font-bold text-accent-light bg-accent-subtle-dark px-2 py-0.5 rounded-md border border-accent-border-dark">
-                  0{currentIndex + 1} / 0{total} · {activeItem.label}
+                  Tela 0{currentIndex + 1} de 0{total} · {activeItem.label}
                 </span>
               </div>
               <p className="text-[11px] sm:text-xs text-dark-text truncate mt-0.5 sm:mt-1">

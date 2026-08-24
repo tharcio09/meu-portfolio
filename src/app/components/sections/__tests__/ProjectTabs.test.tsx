@@ -43,6 +43,11 @@ describe('ProjectTabs', () => {
   it('renderiza a lista de abas com índices e abre a primeira aba por padrão', () => {
     render(<ProjectTabs projects={mockProjects} />);
 
+    expect(
+      screen.getByText(/Selecione um projeto para ver telas, arquitetura e regras de negócio:/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText('3 projetos disponíveis')).toBeInTheDocument();
+
     const tabs = screen.getAllByRole('tab');
     expect(tabs).toHaveLength(3);
     expect(tabs[0]).toHaveAttribute('aria-selected', 'true');

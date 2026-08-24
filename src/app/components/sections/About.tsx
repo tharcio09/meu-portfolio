@@ -68,6 +68,19 @@ const About = () => {
                   </p>
                 </div>
               </div>
+
+              {/* Parágrafo de Motivação & Propósito */}
+              <div className="mt-4 border-t border-border-light pt-3.5 dark:border-border-dark">
+                <p className="text-xs leading-relaxed text-secondary-text dark:text-dark-text">
+                  Minha transição para a programação nasceu ao diagnosticar e resolver problemas
+                  técnicos no suporte: percebi que queria ir além da manutenção de máquinas e passar
+                  a{' '}
+                  <strong className="font-semibold text-primary-text dark:text-light-text">
+                    construir sistemas completos, seguros e confiáveis
+                  </strong>{' '}
+                  que resolvam dores reais das pessoas e empresas.
+                </p>
+              </div>
             </div>
 
             {/* Card de Formação Acadêmica */}
