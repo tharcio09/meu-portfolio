@@ -90,7 +90,7 @@ export const projects: Project[] = [
       {
         label: 'Equipamentos',
         imageUrl: '/images/manutflow/preview-equipamentos.webp',
-        caption: 'Inventário de equipamentos com QR Code e histórico',
+        caption: 'Inventário de equipamentos com busca, filtros e histórico',
       },
       {
         label: 'Ordens OS',

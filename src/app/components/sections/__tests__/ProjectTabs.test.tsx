@@ -20,7 +20,7 @@ const mockProjects: Project[] = [
   {
     title: 'ManutFlow — Gestão de Manutenção',
     shortTitle: 'ManutFlow',
-    description: 'Sistema de manutenção com 153 testes',
+    description: 'Sistema de manutenção com 163 testes',
     githubUrl: 'https://github.com/test/manutflow',
     demoUrl: 'https://manutflow.vercel.app',
     tags: ['Next.js', 'TypeScript', 'Supabase'],
