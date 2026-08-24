@@ -94,4 +94,29 @@ describe('ProjectTabs', () => {
       'true'
     );
   });
+
+  it('renderiza os deep links de arquitetura do GitHub quando disponíveis', () => {
+    const projectsWithLinks: Project[] = [
+      {
+        ...mockProjects[0],
+        architectureLinks: [
+          {
+            label: 'Segurança RLS e Proxy',
+            url: 'https://github.com/test/helpflow#rls',
+            badge: 'Supabase RLS',
+          },
+        ],
+      },
+    ];
+
+    render(<ProjectTabs projects={projectsWithLinks} />);
+
+    expect(screen.getByText('Arquitetura no GitHub')).toBeInTheDocument();
+    expect(screen.getByText('Segurança RLS e Proxy')).toBeInTheDocument();
+    expect(screen.getByText('[Supabase RLS]')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Segurança RLS e Proxy/i })).toHaveAttribute(
+      'href',
+      'https://github.com/test/helpflow#rls'
+    );
+  });
 });

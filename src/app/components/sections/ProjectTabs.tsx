@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import type { Project } from '@/data/projects';
 import { buttonVariants } from '../ui/Button';
 import { Pill } from '../ui/Pill';
-import { ExternalLinkIcon, GithubIcon } from '../ui/Icons';
+import { ExternalLinkIcon, GithubIcon, CodeIcon } from '../ui/Icons';
 import { ProjectScreenShowcase } from '../ui/ProjectScreenShowcase';
 import { cn } from '@/lib/utils';
 
@@ -225,6 +225,36 @@ export function ProjectTabs({ projects }: ProjectTabsProps) {
               <p className="mt-1 text-[11px] sm:text-xs leading-relaxed text-secondary-text dark:text-dark-text">
                 {current.technicalHighlight}
               </p>
+            </div>
+          )}
+
+          {/* Deep Links de Arquitetura no GitHub */}
+          {current.architectureLinks && current.architectureLinks.length > 0 && (
+            <div className="border border-border-light bg-light-surface/60 p-2.5 sm:p-3 dark:border-border-dark dark:bg-dark-surface/60 min-w-0">
+              <p className="font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-accent dark:text-accent-light flex items-center gap-1.5">
+                <CodeIcon className="h-3.5 w-3.5" />
+                Arquitetura no GitHub
+              </p>
+              <div className="mt-2 flex flex-wrap gap-1.5 min-w-0">
+                {current.architectureLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/link inline-flex items-center gap-1.5 rounded-sm border border-border-light bg-white px-2 py-1 text-[11px] font-medium text-secondary-text shadow-2xs transition-all hover:border-accent hover:text-accent dark:border-border-dark dark:bg-dark-card dark:text-dark-text dark:hover:border-accent-light dark:hover:text-accent-light"
+                    title={`Ver ${link.label} no GitHub`}
+                  >
+                    {link.badge && (
+                      <span className="font-mono text-[9px] font-bold text-accent dark:text-accent-light">
+                        [{link.badge}]
+                      </span>
+                    )}
+                    <span>{link.label}</span>
+                    <ExternalLinkIcon className="h-3 w-3 opacity-60 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  </a>
+                ))}
+              </div>
             </div>
           )}
 

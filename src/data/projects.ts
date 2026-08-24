@@ -4,6 +4,12 @@ export type ProjectScreen = {
   caption: string;
 };
 
+export type ArchitectureLink = {
+  label: string;
+  url: string;
+  badge?: string;
+};
+
 export type Project = {
   title: string;
   shortTitle: string;
@@ -24,6 +30,7 @@ export type Project = {
   challenge?: string;
   decision?: string;
   evidence?: string[];
+  architectureLinks?: ArchitectureLink[];
   nextStep?: string;
 };
 
@@ -49,6 +56,18 @@ export const projects: Project[] = [
     demoNote:
       'Inclui simulador interativo de ordens e acesso demo com 1-clique com equipamentos pré-cadastrados.',
     metrics: ['163 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
+    architectureLinks: [
+      {
+        label: 'Segurança RLS e Proxy',
+        url: 'https://github.com/tharciosantos/manutflow/blob/main/src/proxy.ts',
+        badge: 'Supabase RLS',
+      },
+      {
+        label: 'Suíte de 163 Testes',
+        url: 'https://github.com/tharciosantos/manutflow/blob/main/vitest.config.ts',
+        badge: 'Vitest',
+      },
+    ],
     nextStep: 'Ampliar os testes automatizados e evoluir os indicadores operacionais do dashboard.',
     imageUrl: '/images/manutflow-screenshot.webp',
     imageAlt: 'Dashboard do ManutFlow com indicadores de equipamentos e ordens de serviço',
@@ -106,6 +125,23 @@ export const projects: Project[] = [
     demoNote:
       'Inclui simulador interativo na tela inicial e acesso demo com 1-clique para Solicitante e Agente.',
     metrics: ['Simulador Interativo', 'RBAC (Client/Agent)', 'NextAuth + JWT'],
+    architectureLinks: [
+      {
+        label: 'Modelagem Prisma & PostgreSQL',
+        url: 'https://github.com/tharciosantos/helpflow/blob/main/prisma/schema.prisma',
+        badge: 'Prisma Schema',
+      },
+      {
+        label: 'Autorização RBAC de Tickets',
+        url: 'https://github.com/tharciosantos/helpflow/blob/main/src/lib/ticketAuthorization.js',
+        badge: 'RBAC (Client/Agent)',
+      },
+      {
+        label: 'Validações Zod & Schemas',
+        url: 'https://github.com/tharciosantos/helpflow/blob/main/src/lib/schemas.js',
+        badge: 'Zod',
+      },
+    ],
     nextStep: 'Ampliar os testes de integração e adicionar observabilidade aos fluxos críticos.',
     imageUrl: '/images/helpflow-screenshot.webp',
     imageAlt:
@@ -152,6 +188,18 @@ export const projects: Project[] = [
       'Upload de imagem via Cloudinary, cache e invalidação com TanStack Query, e testes end-to-end com Cypress no fluxo principal.',
     outcome: 'Upload · sincronização · testes E2E',
     metrics: ['Testes E2E Cypress', 'Cloudinary CDN', 'TanStack Query'],
+    architectureLinks: [
+      {
+        label: 'Testes E2E Cypress',
+        url: 'https://github.com/tharciosantos/devlinks-web/tree/main/cypress',
+        badge: 'Cypress',
+      },
+      {
+        label: 'API Client & Services',
+        url: 'https://github.com/tharciosantos/devlinks-web/blob/main/src/services/api.js',
+        badge: 'API Client',
+      },
+    ],
     demoNote:
       'Inclui botão de acesso rápido de demonstração com credenciais e links pré-carregados.',
     imageUrl: '/images/screenshot-devlinks.webp',
@@ -193,6 +241,13 @@ export const projects: Project[] = [
       'PWA offline-first com Service Worker, banco local de 220 itens em 11 setores, auto-categorização inteligente e exportação formatada para o WhatsApp.',
     outcome: 'PWA · 220 itens · 100% offline',
     metrics: ['PWA Offline Ready', '220 Itens Mapeados', '11 Setores'],
+    architectureLinks: [
+      {
+        label: 'PWA Offline & Service Worker',
+        url: 'https://github.com/tharciosantos/lista-mercado/blob/main/vite.config.js',
+        badge: 'Offline-First',
+      },
+    ],
     demoNote:
       'Instalável no smartphone com funcionamento offline e exportação estruturada para o WhatsApp.',
     imageUrl: '/images/lista-mercado/tela-lista-pendentes.webp',
@@ -229,6 +284,18 @@ export const projects: Project[] = [
       'Consumo da CoinGecko API no Next.js App Router, rotas dinâmicas /coin/[id], blindagem com dados de contingência e filtros client-side.',
     outcome: 'FinTech · CoinGecko API · rotas dinâmicas',
     metrics: ['CoinGecko API Live', 'Next.js App Router', 'FinTech UI'],
+    architectureLinks: [
+      {
+        label: 'Rotas App Router',
+        url: 'https://github.com/tharciosantos/crypto-dashboard/tree/main/src/app',
+        badge: 'App Router',
+      },
+      {
+        label: 'Dados de Contingência (Fallback)',
+        url: 'https://github.com/tharciosantos/crypto-dashboard/blob/main/src/data/fallbackCoins.js',
+        badge: 'Resiliência',
+      },
+    ],
     demoNote:
       'Monitoramento em tempo real com KPIs de mercado, filtros por altas/baixas e estatísticas detalhadas.',
     imageUrl: '/images/crypto-dashboard/tela-mercado.webp',
