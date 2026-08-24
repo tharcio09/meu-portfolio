@@ -67,4 +67,12 @@ describe('projects', () => {
       expect(['featured', 'secondary']).toContain(projeto.kind);
     });
   });
+
+  it('projetos principais devem conter deep links de arquitetura válidos', () => {
+    const manutflow = projects.find((p) => p.shortTitle === 'ManutFlow');
+    expect(manutflow?.architectureLinks).toBeDefined();
+    expect(manutflow!.architectureLinks!.length).toBeGreaterThan(0);
+    expect(manutflow!.architectureLinks![0]).toHaveProperty('label');
+    expect(manutflow!.architectureLinks![0].url).toContain('github.com');
+  });
 });
