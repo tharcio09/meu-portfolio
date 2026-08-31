@@ -21,8 +21,9 @@ const Projects = () => {
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-relaxed text-secondary-text dark:text-dark-text md:justify-self-end">
-            Sistemas full stack e aplicações publicadas em produção com autenticação, testes
-            automatizados e regras de negócio. Navegue pelas abas abaixo para explorar cada solução.
+            Sistemas full stack e aplicações publicadas com demonstração interativa, autenticação,
+            testes automatizados e regras de negócio. Navegue pelas abas abaixo para explorar cada
+            solução.
           </p>
         </div>
 

@@ -102,13 +102,13 @@ const Hero = () => {
               2 Sistemas
             </span>
             <p className="mt-1 text-xs text-secondary-text dark:text-dark-text">
-              Full stack em produção com simulador interativo
+              Publicados com demo em 1 clique e simulador
             </p>
           </div>
 
           <div className="border border-border-light bg-white/70 p-3.5 shadow-sm dark:border-border-dark dark:bg-dark-card/70">
             <span className="font-mono text-xl font-bold tracking-tight text-accent dark:text-accent-light sm:text-2xl">
-              220+ Testes
+              250+ Testes
             </span>
             <p className="mt-1 text-xs text-secondary-text dark:text-dark-text">
               Automatizados cobrindo fluxos críticos e APIs
