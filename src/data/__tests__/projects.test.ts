@@ -32,7 +32,7 @@ describe('projects', () => {
     expect(manutflow!.kind).toBe('featured');
     expect(manutflow).toHaveProperty('demoUrl');
     expect(manutflow).toHaveProperty('imageUrl');
-    expect(manutflow!.evidence).toContain('163 testes automatizados em 15 arquivos');
+    expect(manutflow!.evidence).toContain('169 testes automatizados em 17 arquivos');
     expect(manutflow!.evidence).toContain('Proteção em camadas com sessão, user_id e RLS');
   });
 

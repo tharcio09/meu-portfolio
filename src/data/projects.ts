@@ -47,7 +47,7 @@ export const projects: Project[] = [
     decision:
       'Aplicar proteção em três camadas com proxy, getUser() na API e Row Level Security no banco.',
     evidence: [
-      '163 testes automatizados em 15 arquivos',
+      '169 testes automatizados em 17 arquivos',
       'CRUD completo com busca, filtros, paginação e histórico',
       'Proteção em camadas com sessão, user_id e RLS',
       'Acesso de demonstração com 1-clique e dados pré-carregados',
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     ],
     demoNote:
       'Inclui simulador interativo de ordens e acesso demo com 1-clique com equipamentos pré-cadastrados.',
-    metrics: ['163 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
+    metrics: ['169 testes automatizados', 'Simulador Industrial', 'Supabase RLS'],
     architectureLinks: [
       {
         label: 'Segurança RLS e Proxy',
@@ -63,7 +63,7 @@ export const projects: Project[] = [
         badge: 'Supabase RLS',
       },
       {
-        label: '163 Testes por Feature (Domínio)',
+        label: '169 Testes por Feature (Domínio)',
         url: 'https://github.com/tharciosantos/manutflow/tree/main/src/features',
         badge: 'Vitest',
       },
